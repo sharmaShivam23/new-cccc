@@ -4,7 +4,7 @@ import './App.css'
 const App = () => {
   return (
     <div className='text-center text-4xl'>
-      HOME
+      home
     </div>
   )
 }
