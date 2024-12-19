@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Splash = () => {
   return (
     <>
-      <div className='bg-black h-screen w-screen flex justify-center items-center flex-col'>
+      <div className='bg-gradient-to-t from-violet-900 via-violet-600 to-violet-950 h-screen w-screen flex justify-center items-center flex-col'>
         
         <motion.div  initial={{   rotate: 0, scale: 0 }} whileInView={{  rotate: 360, scale: 1 }} transition={{ duration: 4, ease: "easeOut" }} className='' >
         {/* <motion.div  initial={{  x: window.innerWidth < 400 ? -100 : -800, rotate: 0, scale: 1 }} whileInView={{ x: 0, rotate: 360, scale: 1 }} transition={{ duration: 4, ease: "easeOut" }} className='' > */}

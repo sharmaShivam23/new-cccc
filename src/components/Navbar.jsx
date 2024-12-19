@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../images/logo.svg'
 
-const Navbar = () => {
+const nav = () => {
   return (
     <>
       <div className='flex justify-between'>
@@ -22,4 +22,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default nav

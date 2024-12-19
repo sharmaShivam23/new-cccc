@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  background-color: black;
+}
+
+/* .landing{
+  background-color: red;
+  max-width: 90.3vw;
+  margin: auto;
+} */
+
+@media (max-width : 500px){
+  .landing{
+    max-width: 100vw;
+    margin: 0px;
+  }
+}

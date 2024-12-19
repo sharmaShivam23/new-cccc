@@ -8,6 +8,7 @@ import Navbar from "./Navbar";
 import Splash from "./Splash";
 import Contact from "./Contact";
 import Events from "./Events";
+import { Motion } from "./Motion";
 
 
 const Home = () => {
@@ -27,8 +28,9 @@ const Home = () => {
         <Splash />
       ) : (
         <>
-        <div className="m-4">
+        <div className="">
           {/* <Navbar /> */}
+          <Motion/>
           <Landing />
           <About />
           <Team />
