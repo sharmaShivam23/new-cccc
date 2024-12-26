@@ -15,9 +15,10 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 export const Motion = () => {
   return (
-    <div className="z-50">
+    <div className="z-50 ">
       <Sidebar />
       {/* <ExampleContent/> */}
       <ResNavbar />
@@ -42,7 +43,7 @@ const Sidebar = () => {
       layout
       onHoverStart={handle}
       onHoverEnd={handles}
-      className={`z-50 fixed  top-2 h-[95.7vh] hidden cursor-pointer sm:block  border-r-2 shrink-0 border-violet-800 bg-black p-3`}
+      className={`z-50 fixed  top-2 h-[95.7vh] hidden cursor-pointer sm:block  border-r-2 shrink-0 border-violet-800 bg-zinc-800 p-3`}
       style={{ width: open ? "235px" : "fit-content" }}
     >
       <TitleSection open={open} />
@@ -72,9 +73,9 @@ const Sidebar = () => {
           open={open}
         />
         <Option
-          to="#achievements"
+          to="#faculty"
           Icon={GiAchievement}
-          title="Achievements"
+          title="faculty"
           selected={selected}
           setSelected={setSelected}
           open={open}
@@ -125,6 +126,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
           </motion.span>
         )}
         <a href={to} className="absolute inset-0"></a>
+        {/* <Link to={to}></Link> */}
         {notifs && (
           <motion.span
             initial={{ scale: 0, opacity: 0 }}
@@ -227,15 +229,15 @@ const ToggleClose = ({ open, setOpen }) => {
 
 const ResNavbar = () => {
   return (
-    <div className="block sm:hidden fixed left-0 w-full bottom-0 z-50 border-t-2 border-violet-800">
-      <div className="icons flex text-white bg-black h-16 justify-evenly items-center text-2xl">
-        <motion.div
+    <div className="block sm:hidden fixed left-0 w-full  bottom-0 right-0 z-50 border-t-2 border-violet-800">
+      <div className="icons flex text-white bg-black h-16 justify-evenly items-center text-3xl">
+        {/* <motion.div
           initial={{ x: -80, rotate: 360 }}
           whileInView={{ x: 0, rotate: 0 }}
           transition={{ duration: 3 }}
-        >
+        > */}
           <img src={CCC} className="h-10" alt="" />
-        </motion.div>
+        {/* </motion.div> */}
         <div className="border-r border-violet-600 h-full pb-3 mt-3 mb-3"></div>
         {/* <div className='border-white border-2 m-1 h-full'></div> */}
         <a href="#">
@@ -250,11 +252,12 @@ const ResNavbar = () => {
         <a href="#contact">
           <GiAchievement />
         </a>
-        <a href="#achievements">
+        <a href="#about">
           <FaPhoneVolume />
         </a>
       </div>
     </div>
+    // <div></div>
   );
 };
 
@@ -264,6 +267,8 @@ const Social = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
+  const [isHovered4, setIsHovered4] = useState(false);
+  const [isHovered5, setIsHovered5] = useState(false);
   return (
     <div className="bg-black text-white hidden  fixed w-16 h-[95.7vh] border-l-2 border-violet-700 mt-2 right-0 top-0 sm:flex justify-center items-center flex-col gap-10 text-4xl cursor-pointer z-50">
       <a href="#">
@@ -307,18 +312,42 @@ const Social = () => {
           } transition-opacity duration-200`}
         >
           <div 
-            className={`absolute right-20 top-96 bg-white text-lg text-blue-800 font-serif font-bold p-2 rounded-xl  px-10`}
+            className={`absolute right-20 top-[370px] bg-white text-lg text-blue-800 font-serif font-bold p-2 rounded-xl  px-10`}
           >
             Linkedln
           </div>
-          <div className="h-3 w-3 bg-white absolute rotate-45 bottom-[406px] right-[74px]"></div>
+          <div className="h-3 w-3 bg-white absolute rotate-45 bottom-[390px] right-[74px]"></div>
         </div>
       </a>
       <a href="#contact">
-        <FaFacebook className="hover:text-blue-600"/>
+        <FaFacebook className={`hover:text-blue-600 relative hover:scale-125 transition-all duration-1000 ease-in-out delay-0`}  onMouseEnter={() => setIsHovered4(true)} 
+                onMouseLeave={() => setIsHovered4(false)}/>
+                 <div 
+           className={`${
+            isHovered4 ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-200`}
+        >
+        <div className="text-white text-xs absolute right-16 flex bottom-72 ">
+        <div className=" bg-white p-4 px-12 rounded-lg font-bold text-blue-700">Facebook
+        </div>
+        <div className="h-3 w-3  transform rotate-45 top-[14px] relative right-[5px]  bg-white"></div>
+        </div>
+        </div>
       </a>
       <a href="#achievements">
-        <IoLogoYoutube className="hover:text-red-600"/>
+        <IoLogoYoutube className="hover:text-red-600 relative hover:scale-125 transition-all duration-1000 ease-in-out delay-0"  onMouseEnter={() => setIsHovered5(true)} 
+                onMouseLeave={() => setIsHovered5(false)}/>
+                 <div 
+           className={`${
+            isHovered5 ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-200`}
+        >
+        <div className="text-white text-xs absolute right-16 flex bottom-52 ">
+        <div className=" bg-white p-4 px-12 rounded-lg font-bold text-red-700">Youtube
+        </div>
+        <div className="h-3 w-3  transform rotate-45 top-[14px] relative right-[5px]  bg-white"></div>
+        </div>
+        </div>
       </a>
     </div>
   );

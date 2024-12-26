@@ -2,13 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Landing from "./Landing";
 import About from "./About";
-import Team from "./Team";
+import Faculty from "./Faculty";
 // import Contact from "./Contact";
 import Navbar from "./Navbar";
 import Splash from "./Splash";
 import Contact from "./Contact";
 import Events from "./Events";
 import { Motion } from "./Motion";
+import {TeamCards} from "./TeamCards";
 
 
 const Home = () => {
@@ -28,16 +29,16 @@ const Home = () => {
         <Splash />
       ) : (
         <>
-        <div className="">
-          {/* <Navbar /> */}
           <Motion/>
+        <div className="flex justify-center items-center flex-col overflow-hidden">
+          {/* <Navbar /> */}
           <Landing />
           <About />
-          <Team />
+          <Faculty />
           <Events/>
+          <TeamCards/>
           <Contact/>
           </div>
-          {/* <Contact /> */}
         </>
       )}
     </div>
