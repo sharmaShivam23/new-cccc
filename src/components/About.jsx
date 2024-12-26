@@ -35,22 +35,22 @@ const About = () => {
             whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
             // transition={{ duration: 1 }}
             transition={{type: "spring", stiffness: 50, duration: 1}}
-            className="w-full lg:w-1/2 text-lg md:text-2xl font-serif text-center lg:text-left"
+            className="w-full px-2 lg:w-1/2  md:text-2xl  font-serif text-center lg:text-left"
           >
-            <p>
+            <p className="">
               Cloud Computing Cell has been a part of Ajay Kumar Garg
               Engineering College since February 2016.
             </p>
-            <p>
+            <p className="">
               The members are exposed to the latest Cloud Technologies that
               enable them to be market-ready, thereby increasing their
               opportunities in placement and research.
             </p>
-            <p>
+            <p className="">
               It provides a platform for students to compute, manage, and deploy
               cloud-related services.
             </p>
-            <p>
+            <p className="">
               The Cell is coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and
               Dr. Parneet Kaur, faculty members of the IT department.
             </p>

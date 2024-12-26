@@ -25,7 +25,7 @@ const Faculty = () => {
             <img
               src={sir}
               alt="Cloud Computing Cell Faculty"
-              className="rounded-lg object-cover h-[250px] sm:h-[400px]  shadow-lg"
+              className="rounded-lg object-cover h-[200px] sm:h-[400px]  shadow-lg"
             />
           </motion.div>
 
@@ -33,7 +33,7 @@ const Faculty = () => {
             initial={{ scale: 0, rotateX: 180 }}
             whileInView={{ scale: 1, rotateX: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-8/12 text-lg md:text-3xl font-extralight tracking-wider  text-center  lg:text-left"
+            className="w-full lg:w-8/12 text-xs md:text-3xl font-extralight tracking-wider  text-center  lg:text-left"
           >
             Santosh Mishra, Assistant Professor in I department, having 15 years
             of teachin and 3 years of industry experience as Java software
