@@ -18,3 +18,11 @@ body{
     margin: 0px;
   }
 }
+
+/* .container:hover .content{
+  transform: translateX(0);
+}
+
+.container:hover .img{
+  transform: translateX(100%);
+} */
