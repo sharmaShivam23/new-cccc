@@ -30,7 +30,7 @@ const Home = () => {
       ) : (
         <>
           <Motion/>
-        <div className="flex justify-center items-center flex-col overflow-hidden">
+        <div className="flex justify-center items-center p-6 flex-col overflow-hidden">
           {/* <Navbar /> */}
           <Landing />
           <About />
