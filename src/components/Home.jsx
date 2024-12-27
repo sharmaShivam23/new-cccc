@@ -10,10 +10,12 @@ import Contact from "./Contact";
 import Events from "./Events";
 import { Motion } from "./Motion";
 import {TeamCards} from "./TeamCards";
+import Carousel from "./Carousel";
 
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,7 +32,7 @@ const Home = () => {
       ) : (
         <>
           <Motion/>
-        <div className="flex justify-center items-center p-6 flex-col overflow-hidden">
+        <div className="flex justify-center items-center p-4 pt-0 flex-col overflow-hidden">
           {/* <Navbar /> */}
           <Landing />
           <About />
@@ -38,6 +40,7 @@ const Home = () => {
           <Events/>
           <TeamCards/>
           <Contact/>
+          <Carousel/>
           </div>
         </>
       )}
