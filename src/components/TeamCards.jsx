@@ -5,6 +5,9 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 import imgfooter from "../images/imgfooter.png"
+import rec1 from "../images/rec1.png"
+import rec2 from "../images/rec2.png"
+import rec3 from "../images/rec3.png"
 
 export const TeamCards = () => {
   return (
@@ -88,7 +91,7 @@ const FouthYear = () => {
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div initial={{opacity : 0 , rotateY : 90}} whileInView={{opacity : 1 , rotateY : 0}} transition={{duration : 1 , ease : "easeInOut"}} key={index} className="flex justify-center items-center">
-            <div className="relative w-[20rem] cursor-pointer h-[25rem] overflow-hidden border-2 border-[#32CD32] bg-white rounded-2xl group">
+            <div className="relative w-[20rem] cursor-pointer h-[25rem] overflow-hidden border-2 border-[#32CD32] bg-white rounded-3xl hover:rounded-none group">
               {/* Team member image */}
               <div className="w-full img h-full flex justify-center items-center flex-col transform group-hover:translate-x-full   transition-all duration-500">
                 <img
@@ -101,7 +104,7 @@ const FouthYear = () => {
                   <p className="text-2xl font-bold text-black">
                     {details.name}
                   </p>
-                  <img src={imgfooter} className="w-full absolute bottom-0 left-0" alt="" />
+                  <img src={rec1} className="w-full absolute bottom-0 left-0" alt="" />
                 </div>
               </div>
 
@@ -208,6 +211,7 @@ const ThirdYear = () => {
                   <p className="text-2xl font-bold text-black">
                     {details.name}
                   </p>
+                  <img src={rec3} className="w-full absolute bottom-0 left-0" alt="" />
                 </div>
               </div>
 
@@ -313,6 +317,7 @@ const SecondYear = () => {
                   <p className="text-2xl font-bold text-black">
                     {details.name}
                   </p>
+                  <img src={rec2} className="w-full absolute bottom-0 left-0" alt="" />
                 </div>
               </div>
 
