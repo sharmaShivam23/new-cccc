@@ -25,7 +25,6 @@
 
 
 import { transform } from 'framer-motion';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -52,9 +51,23 @@ export default {
           '100%' : { transform : 'translateX(0%)  rotate(0deg)' , opacity : '1'  },
         },
         click : {
-          '0%' : {  opacity : '1'   },
-          '100%' : {   opacity : '0'  },
-        }
+          '0%' : { opacity : '1' },
+          '100%' : { opacity : '0' },
+        },
+        sUp: {
+          '0%': { transform: 'translateY(200%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-5%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+        },
       },
       animation: {
         zoomUp: 'zoomUp 3s ease-in-out',
@@ -62,9 +75,10 @@ export default {
         slideOut: 'slideOut 3s ease-in-out',
         slideo: 'slideo 3s ease-in-out',
         click: 'click 3s ease-in-out',
+        bounce: 'bounce 2s infinite',
+        su: 'sUp 1s ease-in-out',
       },
     },
   },
   plugins: [],
 }
-
