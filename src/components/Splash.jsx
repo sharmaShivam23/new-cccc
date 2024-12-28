@@ -3,6 +3,7 @@ import React from 'react';
 import CCC from '../images/CCC.png';
 import { motion } from 'framer-motion';
 
+
 const Splash = () => {
   return (
     <>

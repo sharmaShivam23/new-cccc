@@ -11,6 +11,7 @@ import Events from "./Events";
 import { Motion } from "./Motion";
 import {TeamCards} from "./TeamCards";
 import Carousel from "./Carousel";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -34,6 +35,7 @@ const Home = () => {
           <Motion/>
         <div className="flex justify-center items-center p-4 pt-0 flex-col overflow-hidden">
           {/* <Navbar /> */}
+          <Footer></Footer>
           <Landing />
           <About />
           <Faculty />
