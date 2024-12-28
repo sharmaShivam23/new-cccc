@@ -8,6 +8,7 @@ import imgfooter from "../images/imgfooter.png"
 import rec1 from "../images/rec1.png"
 import rec2 from "../images/rec2.png"
 import rec3 from "../images/rec3.png"
+import Raghav from '../images/Raghav.jpg'
 
 export const TeamCards = () => {
   return (
@@ -31,53 +32,55 @@ export const TeamCards = () => {
 const FouthYear = () => {
   const obj = [
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "Shivam Sharma our fourth year member. ",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
+    
+      
   ];
 
   return (
@@ -136,57 +139,59 @@ const FouthYear = () => {
 
 
 const ThirdYear = () => {
+  
   const obj = [
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "Shivam Sharma our fourth year member. ",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
+    
+      
   ];
-
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
       {/* Section Heading */}
@@ -244,53 +249,55 @@ const ThirdYear = () => {
 const SecondYear = () => {
   const obj = [
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "Shivam Sharma our fourth year member. ",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: shivamsharma,
-      domain: "Web Development",
-      name: "Shivam Sharma",
-      about: "hello",
+      img: Raghav,
+      domain: "App Development",
+      name: "Raghav Agrawal",
+      about: "Raghav Agrawal our fourth year member. ",
     },
+    
+      
   ];
 
   return (

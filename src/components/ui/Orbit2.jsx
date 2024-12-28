@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 import CCC from "../../images/CCC.png";
 import { motion } from "framer-motion";
 
-export default function OrbitingCircles({
+export default function Orbit2({
   className,
   reverse,
   duration = 20,
   delay = 10,
-  radius = 100,
+  radius = 80,
   path = true
 }) {
   return (
@@ -125,7 +125,7 @@ export default function OrbitingCircles({
            ease: "linear", 
          }}
         >
-        <img src={CCC} className="h-14" alt="CCC" />
+        {/* <img src={CCC} className="h-14" alt="CCC" /> */}
         </motion.div>
         
       </div>
