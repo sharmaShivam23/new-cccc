@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 export const BorderBeam = ({
   className,
-  size = 200,
+  size = 500,
   duration = 15,
   anchor = 90,
   borderWidth = 1.5,

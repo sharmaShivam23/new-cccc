@@ -12,6 +12,9 @@ import { Motion } from "./Motion";
 import {TeamCards} from "./TeamCards";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
+import Footer2 from "./Footer2";
+import Number from "./Number";
+import Map from "./Map";
 
 
 const Home = () => {
@@ -42,7 +45,10 @@ const Home = () => {
           <Events/>
           <Carousel/>
           <Contact/>
+          <Map/>
           <TeamCards/>
+          <Number/>
+          <Footer2/>
           </div>
         </>
       )}
