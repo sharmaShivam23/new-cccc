@@ -10,6 +10,7 @@ import img from "../images/img.svg";
 import main from "../images/main.png";
 import cloudimg from "../images/cloudimg.png";
 import cloud from "../images/cloud.jpg";
+import { BorderBeam } from "./BorderBeam";
 
 
 const Landing = () => {
@@ -76,7 +77,7 @@ const Landing = () => {
             autem ratione quos incidunt!e nemo perferendis sint?
           </p>
           <div className="btn flex items-start gap-20 mt-8">
-            <button className="border-2 border-white p-1 sm:p-4  rounded-xl">
+            <button className="border-2 border-white p-1  sm:p-4 rounded-xl">
               Know More
             </button>
             <button className="border-2 border-white p-1  sm:p-4 rounded-xl">

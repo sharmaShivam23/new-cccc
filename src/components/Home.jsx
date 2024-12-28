@@ -15,7 +15,7 @@ import Carousel from "./Carousel";
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
+// 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -38,9 +38,9 @@ const Home = () => {
           <About />
           <Faculty />
           <Events/>
-          <TeamCards/>
-          <Contact/>
           <Carousel/>
+          <Contact/>
+          <TeamCards/>
           </div>
         </>
       )}
