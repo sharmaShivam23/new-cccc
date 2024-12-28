@@ -2,6 +2,7 @@ import React from "react";
 import Team from "../images/Team.svg";
 import team from "../images/23team.png";
 import { motion } from "framer-motion";
+import InteractiveHoverButton from "./ui/interactive-hover-button";
 
 const About = () => {
   return (
@@ -56,6 +57,10 @@ const About = () => {
             </p>
           </motion.div>
         </section>
+        <div className="flex justify-center items-center mt-7">
+        <InteractiveHoverButton className="text-black font-bold mb-2">More About Us</InteractiveHoverButton>
+        </div>
+       
       </div>
     </div>
   );
