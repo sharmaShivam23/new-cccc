@@ -6,7 +6,7 @@
 import { cn } from "@/lib/utils";
 import CCC from "../../images/CCC.png";
 import { motion } from "framer-motion";
-
+import Meteors from "./meteors";
 export default function OrbitingCircles({
   className,
   reverse,
@@ -17,6 +17,7 @@ export default function OrbitingCircles({
 }) {
   return (
     <>
+     <Meteors/>
       {path && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +42,7 @@ export default function OrbitingCircles({
           />
           {/* Second Circle with increased border width */}
           <circle
-            className="stroke-gray-500 stroke-8 dark:stroke-white/10"
+            className="stroke-gray-600 stroke-8 dark:stroke-white/10"
             cx="50%"
             cy="50%"
             r={radius + 100}
@@ -50,10 +51,26 @@ export default function OrbitingCircles({
           />
           {/* Third Circle with increased border width */}
           <circle
-            className="stroke-gray-500 stroke-8 dark:stroke-white/10"
+            className="stroke-gray-700 stroke-8 dark:stroke-white/10"
             cx="50%"
             cy="50%"
             r={radius + 200}
+            fill="none"
+            // style={{ strokeWidth: 3 }}
+          />
+          <circle
+            className="stroke-gray-800 stroke-8 dark:stroke-white/10"
+            cx="50%"
+            cy="50%"
+            r={radius + 300}
+            fill="none"
+            // style={{ strokeWidth: 3 }}
+          />
+          <circle
+            className="stroke-gray-900 stroke-8 dark:stroke-white/10"
+            cx="50%"
+            cy="50%"
+            r={radius + 400}
             fill="none"
             // style={{ strokeWidth: 3 }}
           />
@@ -111,7 +128,7 @@ export default function OrbitingCircles({
           className
         )}
       >
-        <span className="text-center text-xs dark:text-white font-bold text-white h-16 w-16 bg-violet-600 rounded-full flex justify-center items-center">
+        <span className="text-center -z-10 text-xs dark:text-white font-bold text-white h-16 w-16 bg-violet-600 rounded-full flex justify-center items-center hover:bg-white hover:text-black  hover:shadow-xl shadow-white transition-all cursor-pointer duration-1000 delay-0">
           Deploy
         </span>
       </div>

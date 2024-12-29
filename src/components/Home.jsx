@@ -15,6 +15,7 @@ import Footer from "./Footer";
 import Footer2 from "./Footer2";
 import Number from "./Number";
 import Map from "./Map";
+import {Event} from "./Event";
 
 
 const Home = () => {
@@ -36,13 +37,14 @@ const Home = () => {
       ) : (
         <>
           <Motion/>
-        <div className="flex justify-center items-center p-4 pt-0 flex-col overflow-hidden">
+        <div className="flex justify-center  items-center p-4 pt-0 flex-col overflow-hidden">
           {/* <Navbar /> */}
           <Footer></Footer>
           <Landing />
           <About />
           <Faculty />
-          <Events/>
+          {/* <Events/> */}
+          <Event/>
           <Carousel/>
           <Contact/>
           <Map/>
