@@ -167,12 +167,16 @@
 // export default HoverCard;
 
 
+
+
+
+
 import React from 'react'
 
 const Events = () => {
   return (
-    <div id="events h-screen w-full">
-      
+    <div id="events h-screen w-screen  bg-red-400">
+      jbjkjkbjkbj
     </div>
   )
 }

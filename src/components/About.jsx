@@ -6,7 +6,7 @@ import InteractiveHoverButton from "./ui/interactive-hover-button";
 
 const About = () => {
   return (
-    <div id="team" className="h-auto  sm:h-screen w-full flex justify-center items-center  m-5">
+    <div id="team" className="h-auto  sm:h-auto w-full flex justify-center items-center  m-5">
       <div className="h-auto psud  bg-neutral-800 text-white sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto">
         <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}

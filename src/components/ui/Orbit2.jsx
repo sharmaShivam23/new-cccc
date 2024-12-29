@@ -6,6 +6,7 @@
 import { cn } from "@/lib/utils";
 import CCC from "../../images/CCC.png";
 import { motion } from "framer-motion";
+import Meteors from "./meteors";
 
 export default function Orbit2({
   className,
@@ -17,6 +18,7 @@ export default function Orbit2({
 }) {
   return (
     <>
+    <Meteors/>
       {path && (
         <svg
           xmlns="http://www.w3.org/2000/svg"

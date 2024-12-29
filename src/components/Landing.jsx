@@ -40,7 +40,7 @@ const Landing = () => {
       </div>
 
       {/* CONTENT */}
-      <div className="sm:flex block justify-center gap-0  sm:gap-20 items-center">
+      <div className="lg:flex block justify-center gap-0  sm:gap-20 items-center">
         {/* left */}
         <motion.div
           initial={{ x: -100 }}
@@ -58,19 +58,19 @@ const Landing = () => {
           transition={{ duration: 1 }}
           className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
         >
-          <h1 className="text-xl md:text-2xl underline text-slate-400 tracking-wide">
+          <h1 className="text-xl lg:text-2xl underline text-slate-400 tracking-wide">
             About Us
           </h1>
-          <p className="text-xs md:text-2xl font-semibold mt-6">
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
             College since February 2016.
           </p>
-          <p className="text-xs md:text-2xl font-semibold mt-6">
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
             College since February 2016. Lorem ipsum dolor sit, amet consectetur
             adipisicing elit. Soluta cumque atium.
           </p>
-          <p className="text-xs md:text-2xl font-semibold mt-6">
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
             College since February 2016. Lorem, ipsum dolor sit amet consectetur
             adipisicing elit. Blanditiis voluptatibus dicta iusto
