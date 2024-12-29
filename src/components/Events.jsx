@@ -1,184 +1,180 @@
-// import React from 'react'
-
-// const Events = () => {
-//   return (
-//     <div id="events" className='h-screen w-screen bg-green-300 flex justify-center items-center text-3xl font-bold'>
-//       Events
-//     </div>
-//   )
-// }
-
-// export default Events
-
-
-///*************** */
-// import React, { useState } from 'react';
-
-// const HoverCard = () => {
-//   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-//   const [hover, setHover] = useState(false);
-
-//   const handleMouseMove = (e) => {
-//     const { clientX, clientY } = e;
-//     setMousePosition({ x: clientX, y: clientY });
-//   };
-
-//   const handleMouseEnter = () => setHover(true);
-//   const handleMouseLeave = () => setHover(false);
-
-//   // Calculating translation and rotation based on mouse position
-//   const rotateX = (mousePosition.y - window.innerHeight / 2) / 20;
-//   const rotateY = (mousePosition.x - window.innerWidth / 2) / 20;
-//   const translateZ = (mousePosition.y - window.innerHeight / 2) / 50;
-//   const translateX = (mousePosition.x - window.innerWidth / 2) / 20;
-//   const translateY = (mousePosition.y - window.innerHeight / 2) / 20;
-
-//   return (
-//     <div className='h-screen w-screen flex justify-center items-center max-w-[90vw]  m-auto'>
-//     <div
-//       className="relative w-[1000px] h-[500px] ml-80 bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all"
-//       onMouseEnter={handleMouseEnter}
-//       onMouseLeave={handleMouseLeave}
-//       onMouseMove={handleMouseMove}
-//       style={{
-//         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${translateZ}px) translateX(${translateX}px) translateY(${translateY}px)`,
-//         transition: 'transform 0.1s ease-out',
-//       }}
-//     >
-//       {/* Background Gradient Effect */}
-//       <div
-//         className={`absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-600 to-pink-500 transition-all duration-300`}
-//         style={{
-//           // backgroundPosition: `${mousePosition.x / 10}px ${mousePosition.y / 10}px`,
-//         }}
-//       ></div>
-
-//       {/* Card Content */}
-//       <div className="relative z-10 text-white p-6 flex flex-col justify-center items-center h-full">
-//         <h1 className="text-3xl font-bold mb-4">Card Title</h1>
-//         <p className="text-lg">
-//           Th
-//         </p>
-//       </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HoverCard;
 
 
 
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import dev from "../EventsImg/dev.png";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
+import devclash from '../EventsImg/devclash.png';
+import graphicon from '../EventsImg/graphicon.png';
+import hacker from '../EventsImg/hacker.png';
+import nimbus from '../EventsImg/nimbus.png';
+import spocc from '../EventsImg/spocc.png';
+import spocc22 from '../EventsImg/spocc22.jpg';
+import spocc23 from '../EventsImg/spocc23.jpg';
+import buzz from '../EventsImg/buzz.jpg';
+import hackerp from '../EventsImg/hackerp.jpg';
+import graphiconp from '../EventsImg/graphiconp.jpg';
+import nimbusp from '../EventsImg/nimbusp.jpg';
 
-// import React, { useState, useRef, useEffect } from "react";
-
-// const HoverCard = () => {
-//   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-//   const requestRef = useRef();
-//   const lastTime = useRef(0);
-
-//   const handleMouseEnter = (e) => {
-//     const { left, top } = e.target.getBoundingClientRect();
-//     const x = e.clientX - left;
-//     const y = e.clientY - top;
-//     setMousePosition({ x, y });
-//   };
-
-//   const handleMouseMove = (e) => {
-//     const { left, top } = e.target.getBoundingClientRect();
-//     const x = e.clientX - left;
-//     const y = e.clientY - top;
-//     setMousePosition({ x, y });
-//   };
-
-//   const handleMouseLeave = () => {
-//     setMousePosition({ x: 0, y: 0 });
-//   };
-
-//   const calculateRotation = () => {
-//     const centerX = 100; // Half of card width (350px)
-//     const centerY = 200; // Half of card height (500px)
-//     const offsetX = (mousePosition.x - centerX) / centerX; // Normalized X
-//     const offsetY = (mousePosition.y - centerY) / centerY; // Normalized Y
-
-//     // Rotation effect
-//     const rotateX = offsetY * 15; // Increase for more noticeable rotation
-//     const rotateY = -offsetX * 15; // Inverted for proper direction
-
-//     // 3D translation for weight effect
-//     const translateX = offsetX * 10; // Small translation on X axis
-//     const translateY = offsetY * 10; // Small translation on Y axis
-
-//     return {
-//       transform: `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate3d(${translateX}px, ${translateY}px, 0)`,
-//     };
-//   };
-
-//   useEffect(() => {
-//     // Debounce to optimize performance
-//     const handleMouseMoveDebounced = (e) => {
-//       const now = performance.now();
-//       if (now - lastTime.current >= 16) { // Only update every 16ms (60 FPS)
-//         const { left, top } = e.target.getBoundingClientRect();
-//         const x = e.clientX - left;
-//         const y = e.clientY - top;
-//         setMousePosition({ x, y });
-//         lastTime.current = now;
-//       }
-//     };
-
-//     const cardElement = document.querySelector(".hover-card");
-
-//     cardElement.addEventListener("mousemove", handleMouseMoveDebounced);
-
-//     return () => {
-//       cardElement.removeEventListener("mousemove", handleMouseMoveDebounced);
-//     };
-//   }, []);
-
-//   return (
-//     <div className="h-screen w-screen flex justify-center items-center">
-//       <div
-//         className="hover-card relative w-[850px] h-[500px] bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-//         onMouseEnter={handleMouseEnter}
-//         onMouseLeave={handleMouseLeave}
-//         style={calculateRotation()}
-//       >
-//         {/* Gradient background effect */}
-//         <div
-//           className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 opacity-70 transition-all duration-300 ease-in-out"
-//           style={{
-//             backgroundPosition: `${(mousePosition.x / 350) * 100}% ${(mousePosition.y / 500) * 100}%`,
-//           }}
-//         ></div>
-
-//         {/* Card content */}
-//         <div className="relative z-10 text-white p-6 flex flex-col justify-center items-center h-full">
-//           <h1 className="text-3xl font-bold mb-4">Interactive Card</h1>
-//           <p className="text-lg">
-//             Move your pointer around to interact with the card.
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HoverCard;
-
-
-
-
-
-
-import React from 'react'
-
-const Events = () => {
+export const Events = () => {
   return (
-    <div id="events h-screen w-screen  bg-red-400">
-      jbjkjkbjkbj
+    <div className="flex justify-center items-center flex-col">
+      <EventCarousel />
+      <EventImages />
     </div>
-  )
-}
+  );
+};
 
-export default Events
+const EventCarousel = () => {
+  return (
+    <div className="sm:h-[80vh] sm:mb-20 mb-3 h-[60vh]  w-screen  flex justify-center relative text-center">
+      <div className="container mx-auto h-[47rem]  sm:w-screen w-[350px]  sm:h-[40rem] p-[2rem] relative">
+        <motion.h1
+          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
+          whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
+          className="text-white text-center text-2xl sm:text-5xl mb-20 md:text-6xl underline font-bold"
+        >
+          Events
+        </motion.h1>
+
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView="4"
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 2.5,
+          }}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true,
+          }}
+          navigation={{
+            nextEl: ".forward",
+            prevEl: ".backward",
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 3000, 
+            disableOnInteraction: false, 
+            stopOnHover: true, 
+          }}
+          breakpoints={{
+            600: {
+              slidesPerView: 2,
+            },
+            1000: {
+              slidesPerView: 4,
+            },
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} 
+          className="swiper w-[100%]   relative p-5 h-[30%] sm:h-[80%]"
+        >
+      
+          <SwiperSlide>
+            <img
+              src={dev}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={spocc22}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg1"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={hackerp}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg2"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={nimbusp}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg3"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={spocc23}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg4"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={graphiconp}
+              className="w-full h-full object-cover border-4 border-white rounded-3xl"
+              alt="devimg4"
+            />
+          </SwiperSlide>
+
+          <div className="absolute bottom-0 left-0 right-0 flex justify-between px-4 z-50 space-x-0">
+            <div className="backward text-white text-3xl z-50 transform rotate-180 cursor-pointer">
+              <IoMdArrowRoundForward />
+            </div>
+            <div className="forward text-white text-3xl z-50 cursor-pointer">
+              <IoMdArrowRoundForward />
+            </div>
+          </div>
+
+          <div className="swiper-pagination w-[15rem] mx-auto mt-4 z-50"></div>
+        </Swiper>
+      </div>
+    </div>
+  );
+};
+
+const EventImages = () => {
+  return (
+    <div className="text-white text-4xl flex flex-col justify-center items-center max-w-[90vw] h-auto">
+      <motion.div initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex relative justify-center items-center">
+        <img src={devclash} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+      </motion.div>
+      <motion.div initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex relative justify-center items-center">
+        <img src={graphicon} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+      </motion.div>
+      <motion.div initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex relative justify-center items-center">
+        <img src={hacker} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+      </motion.div>
+      <motion.div initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex relative justify-center items-center">
+        <img src={nimbus} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+      </motion.div>
+      <motion.div initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex relative justify-center items-center">
+        <img src={spocc} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+      </motion.div>
+    </div>
+  );
+};

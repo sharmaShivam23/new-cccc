@@ -10,7 +10,7 @@ const Number = () => {
       <div className="flex justify-around sm:gap-20 gap-10  flex-col sm:flex-row w-full max-w-4xl">
      
         <div className="flex flex-col items-center">
-          <div className="text-white">Followers</div>
+          <div className="text-white mb-5">Followers</div>
           <div className="flex items-center">
             <NumberTicker
               value={1300}
@@ -25,7 +25,7 @@ const Number = () => {
 
       
         <div className="flex flex-col items-center">
-          <div className="text-white">Members</div>
+          <div className="text-white mb-5">Members</div>
           <div className="flex items-center">
             <NumberTicker
               value={50}
@@ -40,7 +40,7 @@ const Number = () => {
 
        
         <div className="flex flex-col items-center">
-          <div className="text-white">Hackathons</div>
+          <div className="text-white mb-5">Hackathons</div>
           <div className="flex items-center">
             <NumberTicker
               value={4}

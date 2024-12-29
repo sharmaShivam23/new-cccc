@@ -12,7 +12,7 @@ import Raghav from '../images/Raghav.jpg'
 
 export const TeamCards = () => {
   return (
-    <>
+    <div className="max-w-[90vw] m-auto">
       <motion.h1
         initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -25,7 +25,7 @@ export const TeamCards = () => {
       <FouthYear />
       <ThirdYear />
       <SecondYear />
-    </>
+    </div>
   );
 };
 

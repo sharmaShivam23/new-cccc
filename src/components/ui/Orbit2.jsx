@@ -25,14 +25,14 @@ export default function Orbit2({
           version="1.1"
           className="pointer-events-none absolute inset-0 w-full h-full"
         >
-          {/* First Circle with increased border width */}
+        
           {path && (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           className="pointer-events-none absolute inset-0 w-full h-full"
         >
-          {/* First Circle with increased border width */}
+         
           <circle
             className="stroke-gray-500 stroke-16 dark:stroke-white/10"
             cx="50%"
@@ -41,7 +41,7 @@ export default function Orbit2({
             fill="none"
             // style={{ strokeWidth: 3 }}
           />
-          {/* Second Circle with increased border width */}
+        
           <circle
             className="stroke-gray-500 stroke-8 dark:stroke-white/10"
             cx="50%"
@@ -50,7 +50,7 @@ export default function Orbit2({
             fill="none"
             // style={{ strokeWidth: 3 }}
           />
-          {/* Third Circle with increased border width */}
+          
           <circle
             className="stroke-gray-500 stroke-8 dark:stroke-white/10"
             cx="50%"
@@ -65,7 +65,7 @@ export default function Orbit2({
         </svg>
       )}
 
-      {/* Rotating "Think" text on the first circle */}
+     
       <div
         style={{
           "--duration": duration,
@@ -87,7 +87,7 @@ export default function Orbit2({
         style={{
           "--duration": duration,
           "--radius": radius + 100, 
-          "--delay": -delay + 2, // Slight delay for "Develop"
+          "--delay": -delay + 2, 
         }}
         className={cn(
           "absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full  [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10",

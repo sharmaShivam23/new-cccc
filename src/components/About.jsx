@@ -1,67 +1,94 @@
+
+
+
+
+
+
 import React from "react";
-import Team from "../images/Team.svg";
-import team from "../images/23team.png";
-import { motion } from "framer-motion";
-import InteractiveHoverButton from "./ui/interactive-hover-button";
+import {  motion } from "framer-motion";
+import img from "../images/img.svg";
+import main from "../images/main.png";
+import cloudimg from "../images/cloudimg.png";
+import cloud from "../images/cloud.jpg";
+import { BorderBeam } from "./BorderBeam";
+import ShimmerButton from "./ui/shimmer-button";
+import { useNavigate } from "react-router-dom";
+
 
 const About = () => {
+  const navigate = useNavigate()
+  const contact = () => {
+    navigate('/Contact')
+  }
   return (
-    <div id="team" className="h-auto  sm:h-auto w-full flex justify-center items-center  m-5">
-      <div className="h-auto psud  bg-neutral-800 text-white sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto">
-        <motion.h1
+    <div className="flex justify-center items-center ">
+    <div className="h-auto p-8 w-screen sm:max-w-[80vw] flex  m-auto flex-col">
+      <div className="flex justify-center items-center text-center text-white ">
+        {/* head */}
+        <motion.div
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5 }}
-          className="text-white text-center text-2xl sm:text-5xl sm:mb-10 mb-4 md:text-6xl underline font-bold"
+          transition={{ duration: 2, ease: "easeInOut" }}
+          className="head text-center relative   w-full flex flex-col justify-center items-center "
         >
-          Who Are We
-        </motion.h1>
-
-        <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
-          <motion.div
-            initial={{ rotateX: 360 }}
-            whileInView={{ rotateX: 0 }}
-            transition={{ duration: 1 }}
-            className="w-full lg:w-1/2  flex justify-center items-center"
-          >
-            <img
-              src={team}
-              alt="Cloud Computing Cell Team"
-              className="rounded-lg object-cover shadow-lg w-[85%]"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
-            whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
-            // transition={{ duration: 1 }}
-            transition={{type: "spring", stiffness: 50, duration: 1}}
-            className="w-full px-2 lg:w-1/2  text-xs md:text-2xl  font-serif text-center lg:text-left"
-          >
-            <p className="">
-              Cloud Computing Cell has been a part of Ajay Kumar Garg
-              Engineering College since February 2016.
-            </p>
-            <p className="">
-              The members are exposed to the latest Cloud Technologies that
-              enable them to be market-ready, thereby increasing their
-              opportunities in placement and research.
-            </p>
-            <p className="">
-              It provides a platform for students to compute, manage, and deploy
-              cloud-related services.
-            </p>
-            <p className="">
-              The Cell is coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and
-              Dr. Parneet Kaur, faculty members of the IT department.
-            </p>
-          </motion.div>
-        </section>
-        <div className="flex justify-center items-center mt-7">
-        <InteractiveHoverButton className="text-black font-bold mb-2">More About Us</InteractiveHoverButton>
-        </div>
-       
+          <p className="text-3xl md:text-4xl font-bold mt-6">
+            CLOUD COMPUTING CELL
+          </p>
+          <p  className="mt-2 text-xl md:text-2xl font-semibold">
+            Think
+            <span  className="ml-3 border-r-2 mr-3 border-white"></span>
+            Develop
+            <span className="ml-3 mr-3 border-r-2"></span>
+            Deploy
+          </p>
+        </motion.div>
       </div>
+
+      {/* CONTENT */}
+      <div className="lg:flex block justify-center gap-0  sm:gap-20 items-center">
+        {/* left */}
+        <motion.div
+          initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+          className="left lg:w-5/12 w-full"
+        >
+          <img src={cloud} alt="" className=" w-full  sm:static" />
+        </motion.div>
+
+        {/* right */}
+        <motion.div
+          initial={{ translateX:100 }}
+          whileInView={{ translateX: 0 }}
+          transition={{ duration: 1 }}
+          className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
+        >
+          <h1 className="text-xl lg:text-2xl underline text-slate-400 tracking-wide">
+            About Us
+          </h1>
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
+            Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+            College since February 2016.
+          </p>
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
+            Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+            College since February 2016. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Soluta cumque atium.
+          </p>
+          <p className="text-xs sm:text-lg xl:text-2xl font-semibold mt-6">
+            Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+            College since February 2016. Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Blanditiis voluptatibus dicta iusto
+            exercitationem, repellendus et repellat vero dignissimos nesciunt
+            autem ratione quos incidunt!e nemo perferendis sint?
+          </p>
+          <div className="btn flex items-start gap-20 mt-8">
+          <ShimmerButton className="font-bold">Know More</ShimmerButton>
+           <ShimmerButton className="font-bold" onClick={contact}>Contact Us</ShimmerButton>
+          </div>
+        </motion.div>
+      </div>
+    </div>
     </div>
   );
 };
@@ -72,80 +99,110 @@ export default About;
 
 
 
+
+
+
+
+
+
+
+
 // import React from "react";
-// import Team from "../images/Team.svg";
-// import team from "../images/23team.png";
-// import { motion } from "framer-motion";
-// import { BorderBeam } from "@/components/BorderBeam"; // Import BorderBeam component
+// import {  motion } from "framer-motion";
+// import img from "../images/img.svg";
+// import main from "../images/main.png";
+// import cloudimg from "../images/cloudimg.png";
+// import cloud from "../images/cloud.jpg";
+// import { BorderBeam } from "./BorderBeam";
+// import { Button } from "./ui/button";
+// import ShimmerButton from "./ui/shimmer-button";
+
+
+
 
 // const About = () => {
 //   return (
-//     <div id="team" className="h-auto sm:h-screen w-full flex justify-center items-center m-5 relative">
-//       {/* Add BorderBeam component here */}
-//       <BorderBeam 
-//         size={720}  // Adjust size if needed
-//         duration={15}  // Adjust duration if needed
-//         anchor={90}  // Default value (adjust if needed)
-//         borderWidth={2}  // Border width
-//         colorFrom="#ffaa40"  // Border color start
-//         colorTo="#9c40ff"  // Border color end
-//         delay={0.5}  // Delay for animation (adjust as needed)
-//         className="absolute inset-0 z-0"  // Ensure the BorderBeam covers the container and sits behind content
-//       />
-      
-//       {/* Content inside the container */}
-//       <div className="h-auto bg-neutral-800 text-white sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto relative z-10">
-//         <motion.h1
+//     <div className="flex justify-center items-center ">
+//     <div className="h-auto  w-screen sm:max-w-[80vw] flex  m-auto flex-col">
+//       <div className="flex justify-center items-center text-center text-white ">
+//         {/* head */}
+//         <motion.div
 //           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
 //           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-//           transition={{ duration: 1.5, delay: 0.5 }}
-//           className="text-white text-center text-2xl sm:text-5xl sm:mb-10 mb-4 md:text-6xl underline font-bold"
+//           transition={{ duration: 2, ease: "easeInOut" }}
+//           viewport={{ once: true }}
+//           className="head text-center relative   w-full flex flex-col justify-center items-center "
 //         >
-//           Who Are We
-//         </motion.h1>
-
-//         <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
-//           <motion.div
-//             initial={{ rotateX: 360 }}
-//             whileInView={{ rotateX: 0 }}
-//             transition={{ duration: 1 }}
-//             className="w-full lg:w-1/2 flex justify-center items-center"
-//           >
-//             <img
-//               src={team}
-//               alt="Cloud Computing Cell Team"
-//               className="rounded-lg object-cover shadow-lg w-[85%]"
-//             />
-//           </motion.div>
-
-//           <motion.div
-//             initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
-//             whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
-//             transition={{ type: "spring", stiffness: 50, duration: 1 }}
-//             className="w-full px-2 lg:w-1/2 text-xs md:text-2xl font-serif text-center lg:text-left"
-//           >
-//             <p>
-//               Cloud Computing Cell has been a part of Ajay Kumar Garg
-//               Engineering College since February 2016.
-//             </p>
-//             <p>
-//               The members are exposed to the latest Cloud Technologies that
-//               enable them to be market-ready, thereby increasing their
-//               opportunities in placement and research.
-//             </p>
-//             <p>
-//               It provides a platform for students to compute, manage, and deploy
-//               cloud-related services.
-//             </p>
-//             <p>
-//               The Cell is coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and
-//               Dr. Parneet Kaur, faculty members of the IT department.
-//             </p>
-//           </motion.div>
-//         </section>
+//           <p className="text-3xl md:text-4xl font-bold mt-6">
+//             CLOUD COMPUTING CELL
+//           </p>
+//           <p  className="mt-2 text-xl md:text-2xl font-semibold">
+//             Think
+//             <span  className="ml-3 border-r-2 mr-3 border-white"></span>
+//             Develop
+//             <span className="ml-3 mr-3 border-r-2"></span>
+//             Deploy
+//           </p>
+//         </motion.div>
 //       </div>
+
+//       {/* CONTENT */}
+//       <div className="sm:flex block justify-center gap-0  sm:gap-20 items-center">
+//         {/* left */}
+//         <motion.div
+//           initial={{ x: -100 }}
+//           whileInView={{ x: 0 }}
+//           transition={{ duration: 1 }}
+//           className="left lg:w-6/12 w-full"
+//         >
+//           <img src={cloud} alt="" className=" w-full  sm:static" />
+//         </motion.div>
+
+//         {/* right */}
+//         <motion.div
+//           initial={{ translateX:100 }}
+//           whileInView={{ translateX: 0 }}
+//           transition={{ duration: 1 }}
+//           className="right lg:w-6/12 w-full text-white flex-col p-2 mt-10"
+//         >
+//           <h1 className="text-xl md:text-2xl underline text-slate-400 tracking-wide">
+//             About Us
+//           </h1>
+//           <p className="text-xs md:text-2xl font-semibold mt-6">
+//             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+//             College since February 2016.
+//           </p>
+//           <p className="text-xs md:text-2xl font-semibold mt-6">
+//             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+//             College since February 2016. Lorem ipsum dolor sit, amet consectetur
+//             adipisicing elit. Soluta cumque atium.
+//           </p>
+//           <p className="text-xs md:text-2xl font-semibold mt-6">
+//             Cloud Computing Cell has been a part of Ajay Kumar Garg Engineering
+//             College since February 2016. Lorem, ipsum dolor sit amet consectetur
+//             adipisicing elit. Blanditiis voluptatibus dicta iusto
+//             exercitationem, repellendus et repellat vero dignissimos nesciunt
+//             autem ratione quos incidunt!e nemo perferendis sint?
+//           </p>
+//           <div className="btn flex items-start gap-20 mt-8">
+//             {/* <button className="border-2 border-white p-1  sm:p-4 rounded-xl">
+//               Know More
+//             </button> */}
+//             {/* <ShimmerButton/> */}
+//             <ShimmerButton>Know More</ShimmerButton>
+//             <ShimmerButton>Know More</ShimmerButton>
+//           </div>
+//         </motion.div>
+//       </div>
+//     </div>
 //     </div>
 //   );
 // };
 
 // export default About;
+
+
+
+
+
+

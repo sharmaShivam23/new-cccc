@@ -1,59 +1,35 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Landing from "./Landing";
 import About from "./About";
+import Team from "./Team";
 import Faculty from "./Faculty";
-// import Contact from "./Contact";
-import Navbar from "./Navbar";
 import Splash from "./Splash";
 import Contact from "./Contact";
-import Events from "./Events";
-import { Motion } from "./Motion";
-import {TeamCards} from "./TeamCards";
+import { TeamCards } from "./TeamCards";
 import Carousel from "./Carousel";
-import Footer from "./Footer";
-import Footer2 from "./Footer2";
+import Landing from "./Landing";
 import Number from "./Number";
 import Map from "./Map";
-import {Event} from "./Event";
-
+import Footer from "./Footer";
+import { Navbar } from "./Navbar";
 
 const Home = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-// 
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    },4000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  
 
   return (
     <div>
-      {!isLoaded ? (
-        <Splash />
-      ) : (
         <>
-          <Motion/>
-        <div className="flex justify-center  items-center p-4 pt-0 flex-col overflow-hidden">
-          {/* <Navbar /> */}
-          <Footer></Footer>
-          <Landing />
-          <About />
-          <Faculty />
-          {/* <Events/> */}
-          <Event/>
-          <Carousel/>
-          <Contact/>
-          <Map/>
-          <TeamCards/>
-          <Number/>
-          <Footer2/>
+          <Navbar />
+          <div className="flex justify-center  items-center p-4 pt-0 flex-col overflow-hidden">
+            <Landing></Landing>
+            <About />
+            <Faculty />
+            <Team />
+            <Carousel />
+            <Number />
+            <Map />
           </div>
         </>
-      )}
     </div>
   );
 };
