@@ -34,6 +34,9 @@ export default {
   ],
   theme: {
   	extend: {
+			fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
   		keyframes: {
   			zoomUp: {
   				'0%': {

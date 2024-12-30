@@ -50,7 +50,7 @@ const EventCarousel = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView="4"
+          // slidesPerView="4"
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -72,8 +72,8 @@ const EventCarousel = () => {
             stopOnHover: true, 
           }}
           breakpoints={{
-            600: {
-              slidesPerView: 2,
+            500: {
+              slidesPerView: 4,
             },
             1000: {
               slidesPerView: 4,

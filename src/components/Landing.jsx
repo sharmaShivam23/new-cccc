@@ -14,7 +14,7 @@ const Landing = () => {
         duration={120}          
         delay={500}              
         startOnView={true}       
-        className="text-white text-center text-lg sm:text-4xl  mt-4"
+        className="text-white text-center text-lg sm:text-4xl  mt-7"
       >
         {"WELCOME! TO CLOUD COMPUTING CELL"} 
       </TypingAnimation>
