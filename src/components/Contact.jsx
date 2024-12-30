@@ -1,9 +1,10 @@
 import React from "react";
+import Map from "./Map";
 
 const Contact = () => {
   return (
     <>
-   
+     
       <div
         id="contact"
         className="flex  justify-center  items-center bg-gray-1000 flex-col h-screen w-full sm:max-w-[90vw] m-auto"
@@ -54,6 +55,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      <Map/>
       
 
     {/* map */}

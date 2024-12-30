@@ -3,15 +3,25 @@ import team from "../images/23team.png";
 import { motion } from "framer-motion";
 import InteractiveHoverButton from "./ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
+import bgcards from "../images/bgcards.svg";
 
 const Team = () => {
-   const navigate = useNavigate()
-   const teamcard = () => {
-    navigate('/TeamCards')
-   }
+  const navigate = useNavigate();
+  const teamcard = () => {
+    navigate("/TeamCards");
+  };
   return (
-    <div id="team" className="h-auto  sm:h-auto w-full flex justify-center items-center  m-5">
-      <div className="h-auto psud  bg-neutral-800 text-white sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto">
+    <div
+      id="team"
+      className="h-auto  sm:h-auto w-full flex justify-center items-center p-5  m-5"
+    >
+      <div
+       style={{
+        backgroundImage: `url(${bgcards})`,
+        backgroundSize: "cover"
+      }}
+        className="h-auto psud   text-white sm:p-9 w-full bg-neutral-800 border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto"
+      >
         <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -39,7 +49,7 @@ const Team = () => {
             initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
             whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
             // transition={{ duration: 1 }}
-            transition={{type: "spring", stiffness: 50, duration: 1}}
+            transition={{ type: "spring", stiffness: 50, duration: 1 }}
             className="w-full px-2 lg:w-1/2  text-xs md:text-2xl  font-serif text-center lg:text-left"
           >
             <p className="">
@@ -62,19 +72,19 @@ const Team = () => {
           </motion.div>
         </section>
         <div className="flex justify-center items-center mt-7">
-        <InteractiveHoverButton onClick={teamcard} className="text-black font-bold mb-2">More Team Us</InteractiveHoverButton>
+          <InteractiveHoverButton
+            onClick={teamcard}
+            className="text-black text-xs sm:text-xl font-extrabold mb-2"
+          >
+            More
+          </InteractiveHoverButton>
         </div>
-       
       </div>
     </div>
   );
 };
 
 export default Team;
-
-
-
-
 
 // import React from "react";
 // import Team from "../images/Team.svg";
@@ -86,7 +96,7 @@ export default Team;
 //   return (
 //     <div id="team" className="h-auto sm:h-screen w-full flex justify-center items-center m-5 relative">
 //       {/* Add BorderBeam component here */}
-//       <BorderBeam 
+//       <BorderBeam
 //         size={720}  // Adjust size if needed
 //         duration={15}  // Adjust duration if needed
 //         anchor={90}  // Default value (adjust if needed)
@@ -96,7 +106,7 @@ export default Team;
 //         delay={0.5}  // Delay for animation (adjust as needed)
 //         className="absolute inset-0 z-0"  // Ensure the BorderBeam covers the container and sits behind content
 //       />
-      
+
 //       {/* Content inside the container */}
 //       <div className="h-auto bg-neutral-800 text-white sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto relative z-10">
 //         <motion.h1
