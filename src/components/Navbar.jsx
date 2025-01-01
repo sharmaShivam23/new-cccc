@@ -43,7 +43,7 @@ const Sidebar = () => {
       layout
       onHoverStart={handle}
       onHoverEnd={handles}
-      className={`z-50 fixed  top-2 h-[95.7vh] hidden cursor-pointer sm:block  border-r-2 shrink-0 border-violet-800 bg-zinc-800 p-3`}
+      className={`z-50 fixed  top-0 h-[100vh] hidden cursor-pointer sm:block  border-r-2 shrink-0 border-violet-800 bg-zinc-800 p-3`}
       style={{ width: open ? "235px" : "fit-content" }}
     >
       <TitleSection open={open} />
@@ -270,7 +270,7 @@ const Social = () => {
   const [isHovered4, setIsHovered4] = useState(false);
   const [isHovered5, setIsHovered5] = useState(false);
   return (
-    <div className="bg-black text-white hidden  fixed w-16 h-[95.7vh] border-l-2 border-violet-700 mt-2 right-0 top-0 sm:flex justify-center items-center flex-col gap-10 text-4xl cursor-pointer z-50">
+    <div className="bg-black text-white hidden  fixed w-16 h-[100vh] border-l-2 border-violet-700 mt-0 right-0 top-0 sm:flex justify-center items-center flex-col gap-10 text-4xl cursor-pointer z-50">
       <a href="#">
         <FaSquareInstagram className="cursor-pointer    hover:text-orange-500 relative hover:scale-125 transition-all duration-1000 ease-in-out delay-0"  onMouseEnter={() => setIsHovered(true)} 
                 onMouseLeave={() => setIsHovered(false)} />

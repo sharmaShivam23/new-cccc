@@ -149,31 +149,31 @@ const EventImages = () => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-        <img src={devclash} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={devclash} className="sm:w-[40vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-        <img src={graphicon} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={graphicon} className="sm:w-[40vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-        <img src={hacker} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={hacker} className="sm:w-[40vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-        <img src={nimbus} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={nimbus} className="sm:w-[40vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-        <img src={spocc} className="sm:w-[60vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={spocc} className="sm:w-[40vw] w-[70vw] sm:m-8 m-4 animate-bounce" alt="" />
       </motion.div>
     </div>
   );

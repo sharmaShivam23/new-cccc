@@ -28,7 +28,7 @@ const Footer = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Quam, laboriosam? Lorem ipsum dolor, sit amet consectetur adipisicing.
         </p>
-        <div className="text-white z-50 text-xl md:text-xl mt-4 font-bold">
+        <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
           <ShimmerButton className="cursor-pointer hover:scale-125 transition-all ease-in-out duration-1000 delay-0">
             Start Now
           </ShimmerButton>
@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <div className="border-[1px] border-gray-800 w-full absolute bottom-24"></div>
 
-      <div className="icons text-white z-50 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
+      <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
         <FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
         <FaLinkedin className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
         <FaSquareInstagram className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
