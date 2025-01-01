@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import InteractiveHoverButton from "./ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
 import bgcards from "../images/bgcards.svg";
+import black from '../images/black.jpeg'
+import orbitbg from '../images/orbitbg.jpeg'
 
 const Team = () => {
   const navigate = useNavigate();
@@ -13,13 +15,17 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="h-auto  sm:h-auto w-full flex justify-center items-center p-5  m-5"
+      className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center  m-5"
+     
     >
       <div
-       style={{
-        backgroundImage: `url(${bgcards})`,
-        backgroundSize: "cover"
-      }}
+      //  style={{
+      //   backgroundImage: `url(${orbitbg})`,
+      //   backgroundSize: "50%",
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat : "no-repeat"        
+                    
+      // }}
         className="h-auto psud   text-white sm:p-9 w-full bg-neutral-800 border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto"
       >
         <motion.h1
@@ -33,11 +39,12 @@ const Team = () => {
 
         <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
           <motion.div
-            initial={{ rotateX: 360 }}
-            whileInView={{ rotateX: 0 }}
+            initial={{filter: "blur(10px)", opacity: 0 }}
+            whileInView={{filter: "blur(0px)", opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2  flex justify-center items-center"
           >
+            
             <img
               src={team}
               alt="Cloud Computing Cell Team"
@@ -48,7 +55,6 @@ const Team = () => {
           <motion.div
             initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
             whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
-            // transition={{ duration: 1 }}
             transition={{ type: "spring", stiffness: 50, duration: 1 }}
             className="w-full px-2 lg:w-1/2  text-xs md:text-2xl  font-serif text-center lg:text-left"
           >

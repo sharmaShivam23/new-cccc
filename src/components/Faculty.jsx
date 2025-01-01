@@ -6,7 +6,7 @@ import sir from "../images/sir.png";
 const Faculty = () => {
   return (
     <div id="faculty" className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center  m-5">
-      <div className="h-auto psud bg-neutral-800 text-white p-2 sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto">
+      <div  className="h-auto psud   bg-neutral-900 text-white p-2 sm:p-9 w-full border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto">
         <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -33,7 +33,7 @@ const Faculty = () => {
             initial={{ scale: 0, rotateX: 180 }}
             whileInView={{ scale: 1, rotateX: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full lg:w-8/12 text-xs md:text-3xl font-extralight tracking-wider  text-center  lg:text-left"
+            className="w-full lg:w-8/12 text-xs md:text-3xl  font-extralight tracking-wider  text-center  lg:text-left"
           >
             Santosh Mishra, Assistant Professor in I department, having 15 years
             of teachin and 3 years of industry experience as Java software

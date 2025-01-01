@@ -34,9 +34,12 @@ export default {
   ],
   theme: {
   	extend: {
-			fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
-      },
+  		fontFamily: {
+  			sans: [
+  				'Poppins',
+  				'sans-serif'
+  			]
+  		},
   		keyframes: {
   			zoomUp: {
   				'0%': {
@@ -110,6 +113,16 @@ export default {
   					animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
   				}
   			},
+  			bounce2: {
+  				'0%, 100%': {
+  					transform: 'translateY(-7%)',
+  					animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+  				},
+  				'50%': {
+  					transform: 'translateY(0)',
+  					animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+  				}
+  			},
   			'shimmer-slide': {
   				to: {
   					transform: 'translate(calc(100cqw - 100%), 0)'
@@ -154,6 +167,17 @@ export default {
   					transform: 'rotate(215deg) translateX(-500px)',
   					opacity: '0'
   				}
+  			},
+  			shine: {
+  				'0%': {
+  					'background-position': '0% 0%'
+  				},
+  				'50%': {
+  					'background-position': '100% 100%'
+  				},
+  				to: {
+  					'background-position': '0% 0%'
+  				}
   			}
   		},
   		animation: {
@@ -164,12 +188,14 @@ export default {
   			slideo: 'slideo 3s ease-in-out',
   			click: 'click 3s ease-in-out',
   			bounce: 'bounce 2s infinite',
+  			bounce2: 'bounce2 2s infinite',
   			su: 'sUp 1s ease-in-out',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-  			meteor: 'meteor 5s linear infinite'
+  			meteor: 'meteor 5s linear infinite',
+  			shine: 'shine var(--duration) infinite linear'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

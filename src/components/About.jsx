@@ -80,8 +80,8 @@ const About = () => {
               nesciunt autem ratione quos incidunt!e nemo perferendis sint?
             </p>
             <div className="btn flex items-start gap-20 mt-8">
-              <ShimmerButton className="font-bold">Know More</ShimmerButton>
-              <ShimmerButton className="font-bold" onClick={contact}>
+              <ShimmerButton className="font-bold text-xs sm:text-xl">Know More</ShimmerButton>
+              <ShimmerButton className="font-bold text-xs sm:text-xl" onClick={contact}>
                 Contact Us
               </ShimmerButton>
             </div>
