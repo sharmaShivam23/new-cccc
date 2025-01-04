@@ -275,10 +275,6 @@ const Shufle = () => {
     { id: 12, src: spocc23, text: "Image 9" },
     { id: 12, src: spocc23, text: "Image 9" },
     { id: 12, src: spocc23, text: "Image 9" },
-    // { id: 12, src: spocc23, text: "Image 9" },
-    // { id: 12, src: spocc23, text: "Image 9" },
-    // { id: 12, src: spocc23, text: "Image 9" },
-    // { id: 12, src: spocc23, text: "Image 9" },
   ]);
 
   return (
@@ -323,7 +319,7 @@ const Text = () => {
   return (
     <div className="text-white xl:w-6/12 lg:ml-8 w-full p-2 flex flex-col">
       {close && <Recrutingno />}
-      <p className="md:text-6xl text-3xl font-bold m-3  mb-4 sm:mb-12 font-sans">
+      <p className="md:text-5xl text-3xl font-bold m-3  mb-4 sm:mb-12 font-sans">
         Let's have a look on our star achievers
       </p>
       <p className="md:text-3xl text-xl ml-5">
