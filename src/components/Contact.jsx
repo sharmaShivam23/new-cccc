@@ -1,15 +1,33 @@
 import React from "react";
 import Map from "./Map";
-
+// import bgwave from '../images/bgwave.svg'
+// import bgcircle from '../images/bgcircle.svg'
+import bgwave from '../images/bgwave.png'
+import bgcircle from '../images/bgcircle.png'
 const Contact = () => {
   return (
     <>
      
       <div
         id="contact"
+        style={{
+          // backgroundImage: `url(${bgwave})`,
+          backgroundRepeat : "no-repeat",  
+          backgroundSize : "cover",  
+          height : "100vh",
+          width : "100vw"
+      }}
         className="flex  justify-center  items-center bg-gray-1000 flex-col h-screen w-full sm:max-w-[90vw] m-auto"
       >
-        <div className="text-white flex justify-center items-center flex-col w-11/12 md:w-8/12 lg:w-6/12 xl:w-4/12 shadow-xl shadow-slate-900 bg-gradient-to-t from-stone-800 to-transparent h-auto py-5 rounded-2xl m-10">
+        <div 
+         style={{
+          backgroundImage: `url(${bgcircle})`,
+          backgroundRepeat : "no-repeat",  
+          backgroundSize : "cover",  
+          // height : "100vh",
+          // width : "100vw"
+      }}
+        className="text-white flex justify-center border-2 border-white items-center flex-col w-11/12 md:w-8/12 lg:w-6/12 xl:w-4/12 shadow-xl shadow-slate-900 bg-gradient-to-t  from-stone-800 to-transparent h-auto py-5 backdrop-blur-xl rounded-2xl m-10">
           <h1 className="text-4xl  block text-center">
             Let's connect Networks
           </h1>

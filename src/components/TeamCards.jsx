@@ -29,40 +29,6 @@ import shreeyaAggarwal from "../3yearImg/shreeyaAggarwal.jpg";
 import shreyaMohan from "../3yearImg/shreyaMohan.jpg";
 import Diya from "../3yearImg/Diya.jpg";
 
-// import { use } from "react";
-// export const TeamCards = () => {
-
-//   const [four , setfour] = useState(false)
-//   return (
-//     <div className="max-w-[90vw] m-auto">
-//       <motion.h1
-//         initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-//         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-//         transition={{ duration: 1.5, delay: 0.5 }}
-//         viewport={{once : true}}
-//         className="text-white text-center text-xl sm:text-3xl  md:text-4xl underline font-bold  mb-6 mt-6"
-//       >
-//         OUR TEAM MEMBERS
-//       </motion.h1>
-//       <Buttons four={four} setfour={setfour}/>
-//       {four && <FouthYear/>}
-//       {/* <FouthYear />
-//       <ThirdYear />
-//       <SecondYear /> */}
-//     </div>
-//   );
-// };
-
-// const Buttons = ({four , setfour}) => {
-//   return(
-//     <div className="max-w-[90vw] m-auto flex justify-evenly">
-//     <ShimmerButton onClick={setfour(true)}>4th Year</ShimmerButton>
-//     {/* <ShimmerButton onClick={three}>3rd Year</ShimmerButton>
-//      <ShimmerButton onlLick={four}>2nd Year</ShimmerButton> */}
-
-//     </div>
-//   )
-// }
 
 export const TeamCards = () => {
   const [activeYear, setActiveYear] = useState("four");
@@ -183,7 +149,7 @@ const FouthYear = () => {
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
       <h1 className="mb-10 text-2xl font-serif font-extrabold underline text-[#6E45AC]">
-        Fourth Year
+      (Batch 2021-2025)
       </h1>
 
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -196,7 +162,7 @@ const FouthYear = () => {
             className="flex justify-center items-center"
           >
             <div className="relative w-[20rem] cursor-pointer h-[25rem] overflow-hidden border-2 border-[#6E45AC] bg-white rounded-3xl hover:rounded-none group">
-              {/* Team member image */}
+
               <div className="w-full img h-full flex justify-center items-center flex-col transform group-hover:translate-x-full   transition-all damber-500">
                 <img
                   src={details.img}
@@ -338,12 +304,12 @@ const ThirdYear = () => {
   ];
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
-      {/* Section Heading */}
+     
 
       <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-[#66E0CE]">
-        Third Year
+      (Batch 2022-2026)
       </h1>
-      {/* Team Card Grid */}
+      
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div
@@ -354,7 +320,7 @@ const ThirdYear = () => {
             className="flex justify-center items-center"
           >
             <div className="relative w-[20rem]  cursor-pointer h-[25rem] overflow-hidden border-2 border-[#66E0CE] bg-white rounded-2xl group">
-              {/* Team Member Image */}
+             
               <div className="w-full img h-full flex justify-center items-center flex-col transition-all ">
                 <img
                   src={details.img}
@@ -374,7 +340,7 @@ const ThirdYear = () => {
                 </div>
               </div>
 
-              {/* Hover Content */}
+           
               <div className="absolute content top-0 left-0 w-full h-full border-[#66E0CE] bg-[#66E0CE] flex justify-center items-center text-red-400 transition-all duration-700 ease-in-out transform group-hover:translate-x-0  -translate-x-full flex-col">
                 <div className="tags text-5xl p-3  flex gap-3 text-black">
                   <a href="">
@@ -453,12 +419,12 @@ const SecondYear = () => {
 
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
-      {/* Section Heading */}
+    
 
       <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-amber-500">
-        Second Year
+        (Batch 2023-2027)
       </h1>
-      {/* Team Card Grid */}
+      
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div

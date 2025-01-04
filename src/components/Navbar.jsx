@@ -57,7 +57,7 @@ const Sidebar = () => {
           open={open}
         />
         <Option
-          to="/TeamCards"
+          to="/Team"
           Icon={FaPeopleGroup}
           title="Team"
           selected={selected}
@@ -172,9 +172,9 @@ const TitleSection = ({ open }) => {
             </motion.div>
           )}
         </div>
-        {open && (
+        {/* {open && (
           <FiChevronDown className="text-white mr-2 text-xl font-bold" />
-        )}
+        )} */}
       </div>
     </div>
   );
@@ -209,7 +209,7 @@ const ToggleClose = ({ open, setOpen }) => {
             }`}
           />
         </div>
-        {open && (
+        {/* {open && (
           <motion.span
             layout
             initial={{ opacity: 0, y: 12 }}
@@ -217,9 +217,9 @@ const ToggleClose = ({ open, setOpen }) => {
             transition={{ delay: 0.125 }}
             className="text-lg font-bold  text-white"
           >
-            Hide
+        
           </motion.span>
-        )}
+        )} */}
       </div>
     </motion.button>
   );
@@ -243,7 +243,7 @@ const ResNavbar = () => {
         <Link to="/">
           <FaHome className="hover:scale-110" />
         </Link>
-        <Link to="/TeamCards">
+        <Link to="/Team">
           <FaPeopleGroup />
         </Link>
         <Link to="/Events">
@@ -335,7 +335,7 @@ const Social = () => {
         </div>
       </a>
 
-      <a href="#achievements">
+      <a href="#achievements" className="">
         <IoLogoYoutube className="hover:text-red-600 relative hover:scale-125 transition-all duration-1000 ease-in-out delay-0"  onMouseEnter={() => setIsHovered5(true)} 
                 onMouseLeave={() => setIsHovered5(false)}/>
                  <div 
@@ -343,11 +343,13 @@ const Social = () => {
             isHovered5 ? "opacity-100" : "opacity-0"
           } transition-opacity duration-200`}
         >
-        <div className="text-white text-xs absolute right-16 flex bottom-52 ">
+
+          <div className="text absolute text-white bg-red-600  right-20 top-96LO">Youtube</div>
+        {/* <div className="text-white text-xs absolute right-16 flex bottom-52 ">
         <div className=" bg-white p-4 px-12 rounded-lg font-bold text-red-700">Youtube
         </div>
         <div className="h-3 w-3  transform rotate-45 top-[14px] relative right-[5px]  bg-white"></div>
-        </div>
+        </div> */}
         </div>
       </a>
     </div>

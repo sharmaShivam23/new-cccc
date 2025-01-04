@@ -13,6 +13,11 @@ import { BrowserRouter as Router, Route, Routes , useLocation} from "react-route
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Register } from "./components/Register";
+import { Edevclash } from "./components/Edevclash";
+import {Egraphicon} from "./components/Egraphicon";
+import {Ehackeroverflow} from "./components/Ehackeroverflow";
+import {Enimbus} from "./components/Enimbus";
+import {Espocc} from "./components/Espocc";
 
  
 const App = () => {
@@ -38,9 +43,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Events" element={<Events />} />
-          <Route path="/TeamCards" element={<TeamCards />} />
+          <Route path="/Team" element={<TeamCards />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/Devclash" element={<Edevclash />} />
+          <Route path="/Graphicon" element={<Egraphicon />} />
+          <Route path="/HackerOverflow" element={<Ehackeroverflow />} />
+          <Route path="/Nimbus" element={<Enimbus />} />
+          <Route path="/Spocc" element={<Espocc />} />
         </Routes>
           <Navbar />
            <Footer />

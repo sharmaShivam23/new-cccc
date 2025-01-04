@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import img2 from "../images/img2.svg";
 import sir from "../images/sir.png";
+import TypingAnimation from "./ui/typing-animation";
 
 const Faculty = () => {
   return (
@@ -29,7 +30,7 @@ const Faculty = () => {
             />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0, rotateX: 180 }}
             whileInView={{ scale: 1, rotateX: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -42,7 +43,15 @@ const Faculty = () => {
             Programming knowledge of Java, C, C++, Python and PHP. Areas of
             research are different meta-heuristics Optimization algorithms like
             PSO, MFO, GSA, GA et{" "}
-          </motion.div>
+          </motion.div> */}
+           <TypingAnimation
+                        duration={5}
+                        delay={0}
+                        startOnView={true}
+                        className="w-full lg:w-8/12 text-xs md:text-3xl  font-extralight tracking-wider  text-center  lg:text-left"
+                      >
+              {" Santosh Mishra, Assistant Professor in I department, having 15 year of teachin and 3 years of industry experience as Java software developer. Gold faculty partner of Infosys. Awarded with content guru award. Was mentor of Hackathon winning team of 2019.Programming knowledge of Java, C, C++, Python and PHP. Areas of research are different meta-heuristics Optimization algorithms likePSO, MFO, GSA, GA etc"}
+                      </TypingAnimation>
         </section>
       </div>
     </div>

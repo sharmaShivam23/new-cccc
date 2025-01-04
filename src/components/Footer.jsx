@@ -9,6 +9,7 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -39,7 +40,7 @@ const Footer = () => {
         <img src={CCC} className="h-10 mr-4 mb-2 animate-bounce" alt="" />
         <p>Cloud Computing Cell</p>
       </div>
-      <div className="border-[1px] border-gray-800 w-full absolute bottom-24"></div>
+      <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
 
       <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
         <FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
@@ -51,11 +52,12 @@ const Footer = () => {
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
         <ul className="text-white cursor-pointer sm:text-xl text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
-          <li>Home</li>
-          <li>Events</li>
-          <li>Team</li>
-          <li>Register</li>
-          <li>Contact</li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/Events">Events</Link></li>
+          <li><Link to="/TeamCards">Team</Link></li>
+          <li><Link to="/Contact">Contact</Link></li>
+          <li><Link to="/Register">Register</Link></li>
+
         </ul>
       </div>
 
