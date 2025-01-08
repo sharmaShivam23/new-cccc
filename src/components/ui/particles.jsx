@@ -251,7 +251,7 @@ const Particles = ({
   };
 
   return (
-    <div className="    absolute inset-0 z-0">
+    <div className="    absolute inset-0 -z-10">
     (<div
       className={cn("pointer-events-none", className)}
       ref={canvasContainerRef}

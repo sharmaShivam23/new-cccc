@@ -320,7 +320,7 @@ const Text = () => {
     <div className="text-white xl:w-6/12 lg:ml-8 w-full p-2 flex flex-col">
       {close && <Recrutingno />}
       <p className="md:text-5xl text-3xl font-bold m-3  mb-4 sm:mb-12 font-sans">
-        Let's have a look on our star achievers
+        Let's have a look on our <br/> star achievers
       </p>
       <p className="md:text-3xl text-xl ml-5">
         <TypingAnimation

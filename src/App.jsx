@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Splash from "./components/Splash";
-import Contact from "./components/Contact";
+
 import { Events } from "./components/Events";
 import Home from "./components/Home";
 import { TeamCards } from "./components/TeamCards";
@@ -18,6 +18,7 @@ import {Egraphicon} from "./components/Egraphicon";
 import {Ehackeroverflow} from "./components/Ehackeroverflow";
 import {Enimbus} from "./components/Enimbus";
 import {Espocc} from "./components/Espocc";
+import { Contact } from "./components/Contact";
 
  
 const App = () => {

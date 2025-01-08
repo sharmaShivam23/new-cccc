@@ -15,12 +15,16 @@ import card2bg from "../images/card2bg.svg";
 import card3bg from "../images/card3bg.svg";
 import adityaKumar from "../3yearImg/adityaKumar.jpeg";
 import harshSingh from "../3yearImg/harshSingh.jpeg";
+import harshSingh2 from "../3yearImg/harshSingh2.jpeg";
 import kratikaGupta from "../3yearImg/kratikaGupta.jpg";
 import akhandSingh from "../3yearImg/akhandSingh.jpg";
+import akhandSingh2 from "../3yearImg/akhandSingh2.jpg";
 import akshatSingh from "../3yearImg/akshatSingh.jpg";
 import arpitaAsthana from "../3yearImg/arpitaAsthana.jpg";
 import sachendraGangwar from "../3yearImg/sachendraGangwar.jpg";
+import sachendraGangwar2 from "../3yearImg/sachendraGangwar2.jpg";
 import sahil from "../3yearImg/sahil.jpg";
+import sahil2 from "../3yearImg/sahil2.jpg";
 import yashMishra from "../3yearImg/yashMishra.jpg";
 import prakharSrivastava from "../3yearImg/prakharSrivastava.jpg";
 import manoj from "../3yearImg/manoj.jpg";
@@ -28,6 +32,10 @@ import kritika from "../3yearImg/kritika.jpg";
 import shreeyaAggarwal from "../3yearImg/shreeyaAggarwal.jpg";
 import shreyaMohan from "../3yearImg/shreyaMohan.jpg";
 import Diya from "../3yearImg/Diya.jpg";
+import axios from "axios";
+import Loading from "./Loading";
+import { useEffect } from "react";
+import { ToastContainer, toast } from 'react-toastify';
 
 
 export const TeamCards = () => {
@@ -167,7 +175,7 @@ const FouthYear = () => {
                 <img
                   src={details.img}
                   alt={details.name}
-                  className="h-[13rem] w-[13rem] rounded-full border-2 border-[#6E45AC] shadow-2xl shadow-[#6E45AC]"
+                  className="h-[13rem] w-[13rem] rounded-full object-cover border-2 border-[#6E45AC] shadow-2xl shadow-[#6E45AC]"
                 />
                 <div className="mt-6 text-center">
                   <p className="text-xl text-black">{details.domain}</p>
@@ -204,14 +212,20 @@ const FouthYear = () => {
           </motion.div>
         ))}
       </div>
+    
     </div>
   );
 };
 
+
+
+
+
+
 const ThirdYear = () => {
   const obj = [
     {
-      img: sachendraGangwar,
+      img: sachendraGangwar2,
       domain: "App Development",
       name: "Raghav Agrawal",
       about: "Raghav Agrawal our fourth year member. ",
@@ -223,7 +237,7 @@ const ThirdYear = () => {
       about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: harshSingh,
+      img: harshSingh2,
       domain: "App Development",
       name: "Raghav Agrawal",
       about: "Raghav Agrawal our fourth year member. ",
@@ -235,7 +249,7 @@ const ThirdYear = () => {
       about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: sahil,
+      img: sahil2,
       domain: "App Development",
       name: "Raghav Agrawal",
       about: "Raghav Agrawal our fourth year member. ",
@@ -247,7 +261,7 @@ const ThirdYear = () => {
       about: "Raghav Agrawal our fourth year member. ",
     },
     {
-      img: akhandSingh,
+      img: akhandSingh2,
       domain: "App Development",
       name: "Raghav Agrawal",
       about: "Raghav Agrawal our fourth year member. ",
@@ -321,11 +335,11 @@ const ThirdYear = () => {
           >
             <div className="relative w-[20rem]  cursor-pointer h-[25rem] overflow-hidden border-2 border-[#66E0CE] bg-white rounded-2xl group">
              
-              <div className="w-full img h-full flex justify-center items-center flex-col transition-all ">
+              <div className="w-full img h-full  flex justify-center items-center flex-col   transition-all ">
                 <img
                   src={details.img}
                   alt={details.name}
-                  className="h-[13rem] w-[13rem] rounded-full border-2 border-[#66E0CE] shadow-2xl shadow-[#66E0CE]"
+                  className="h-[13rem] w-[13rem] object-cover scale-90 rounded-full border-2 border-[#66E0CE] shadow-2xl shadow-[#66E0CE]"
                 />
                 <div className="mt-6 text-center">
                   <p className="text-xl text-black">{details.domain}</p>
@@ -365,66 +379,57 @@ const ThirdYear = () => {
   );
 };
 
+
+
 const SecondYear = () => {
-  const obj = [
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-  ];
+
+  const [obj , setObj] = useState([])
+  const [loading , setLoading] = useState(false)
+
+  useEffect(() => {
+    const  api = async() =>
+   {
+    setLoading(true)
+    try{
+     const response =  await axios.get("https://website-9egw.onrender.com/api/members/2ndyear")
+     setObj(response.data)
+     console.log(response.data);
+     
+    }
+    catch(error){
+      console.log(error);
+      console.log(error.message);
+      if(error.message === "Network Error"){
+      toast.error("Please! connect to Network")
+      }
+    }
+    finally{
+      setLoading(false)
+    }
+  }
+  api()
+
+},[])
+
+
+  
 
   return (
+    <>
+     <ToastContainer />
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
     
-
+       {loading ? 
+          <h1 className="mb-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
+      </h1> 
+      : 
+      
       <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-amber-500">
         (Batch 2023-2027)
       </h1>
-      
+}
+       
+       {loading ? <Loading/> : (
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div
@@ -437,9 +442,9 @@ const SecondYear = () => {
             <div className="relative w-[20rem]  cursor-pointer h-[25rem] overflow-hidden border-2 border-amber-500 bg-white rounded-2xl group">
               <div className="w-full img h-full flex justify-center items-center flex-col transition-all damber-500">
                 <img
-                  src={details.img}
+                  src={details.profile}
                   alt={details.name}
-                  className="h-[13rem] w-[13rem] rounded-full border-2 border-amber-500 shadow-2xl shadow-amber-500"
+                  className="h-[13rem] w-[13rem] rounded-full border-2 object-contain overflow-hidden   border-amber-500 shadow-2xl shadow-amber-500"
                 />
                 <div className="mt-6 text-center">
                   <p className="text-xl text-black">{details.domain}</p>
@@ -456,24 +461,28 @@ const SecondYear = () => {
 
               <div className="absolute content top-0 left-0 w-full h-full bg-amber-500 flex justify-center items-center text-red-400 transition-all duration-700 ease-in-out transform group-hover:translate-y-0  translate-y-full flex-col">
                 <div className="tags text-5xl p-3  flex gap-3 text-black">
-                  <a href="">
+                  <a href={details.linkedin}>
                     <FaLinkedin />
                   </a>
-                  <a href="">
+                  <a href={details.github}>
                     <FaSquareGithub />
                   </a>
-                  <a href="">
+                  <a href={details.instagram}>
                     <FaSquareInstagram />
                   </a>
                 </div>
                 <p className="mb-4 text-black font-mono p-5 text-center">
-                  {details.about}
+                  {details.about || "2nd year student of cloud computing cell"}
                 </p>
               </div>
             </div>
           </motion.div>
         ))}
       </div>
+      )}
     </div>
+    </>
   );
 };
+
+

@@ -10,14 +10,12 @@ import orbitbg from '../images/orbitbg.jpeg'
 const Team = () => {
   const navigate = useNavigate();
   const teamcard = () => {
-    navigate("/TeamCards");
+    navigate("/Team");
   };
   return (
     <div
       id="team"
-      className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center  m-5"
-     
-    >
+      className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center  m-5">
       <div
       //  style={{
       //   backgroundImage: `url(${orbitbg})`,
