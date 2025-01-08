@@ -98,8 +98,8 @@ const Sidebar = () => {
 const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
   return (
     <>
-    {/* <Link to={to}> */}
-    <a href={to}>
+    {/* <a href={to}> */}
+    <Link to={to}>
       <motion.button
         layout
         onClick={() => setSelected(title)}
@@ -116,7 +116,6 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
           className="grid h-full text-3xl  w-10 place-content-center "
         >
           <Icon />
-          {/* <Link to={to}><Icon/> */}
           
         </motion.div>
         {open && (
@@ -131,8 +130,6 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
              {title}
           </motion.span>
         )}
-        {/* <a href={to} className="absolute inset-0"></a> */}
-        {/* <Link to={to}></Link> */}
         {notifs && (
           <motion.span
             initial={{ scale: 0, opacity: 0 }}
@@ -153,8 +150,8 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
   {/* <Link/> */}
      
        
-      </a>
-      {/* <Link/>  */}
+      {/* </a> */}
+      </Link>
     </>
   );
 };

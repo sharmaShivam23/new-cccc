@@ -101,7 +101,7 @@ export const Contact = () => {
   return (
     <>
      <Particles/>
-    <div id="contact" className='md:h-screen z-10 h-auto w-screen bg-red- max-w-[90vw] m-auto p-4 block md:flex'>
+    <div id="contact" className='md:h-screen z-10 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p-4 block md:flex'>
       <Video/>
       <Form/>
       </div>
@@ -123,7 +123,7 @@ const Video = () => {
 
 const Form = () => {
   return(
-    <div className='flex justify-center items-center text-white  w-auto md:w-1/2 bg-yellow- flex-col h-auto md:h-screen p-2'>
+    <div className='flex justify-center items-center text-white  w-full md:w-1/2 bg-yellow- flex-col h-auto md:h-screen p-2'>
 
       <div className="text flex justify-center items-center flex-col">
         <p className='sm:text-3xl text-2xl text-center text-white font-bold'>Welcome to Cloud Computing</p>

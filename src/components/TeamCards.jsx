@@ -444,7 +444,7 @@ const SecondYear = () => {
                 <img
                   src={details.profile}
                   alt={details.name}
-                  className="h-[13rem] w-[13rem] rounded-full border-2 object-contain overflow-hidden   border-amber-500 shadow-2xl shadow-amber-500"
+                  className="h-[13rem] w-[13rem] rounded-full border-2 object-cover overflow-hidden   border-amber-500 shadow-2xl shadow-amber-500"
                 />
                 <div className="mt-6 text-center">
                   <p className="text-xl text-black">{details.domain}</p>
