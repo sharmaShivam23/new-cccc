@@ -50,7 +50,7 @@ const Landing = () => {
             >
               {"Cloud Computing Lorem,"}
             </TypingAnimation>
-            <p className="text-white mt-4 text-xs md:text-lg">
+            <p className="text-white mt-4 text-xs md:text-lg font-albert">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
               amet
               <br /> Voluptate sunt iure at iste fugiat veritatis obcaeca
@@ -69,9 +69,9 @@ const Landing = () => {
               borderWidth={1}
               duration={2}
               color={["#ff00ff", "#00ff00"]}
-              className="shadow-lg animate-bounce2  hidden md:block  absolute left-36 bottom-40"
+              className="shadow-lg animate-bounce2  cursor-pointer hidden md:block  absolute left-36 bottom-40"
             >
-              <h1 className="text-2xl font-bold bg-transparent text-white text-center">
+              <h1 className="text-2xl font-bold bg-transparent z-50  text-white text-center">
                 Hello, World!
               </h1>
             </ShineBorder>
@@ -81,9 +81,9 @@ const Landing = () => {
               borderWidth={1}
               duration={2}
               color={["#ff00ff", "#00ff00"]}
-              className="shadow-lg animate-bounce2 hidden md:block justify-center  text-center  absolute ml-7 right-0 bottom-40"
+              className="shadow-lg animate-bounce2 hidden  hover:scale-125 cursor-pointer md:block justify-center  text-center  absolute ml-7 right-0 bottom-40"
             >
-              <h1 className="text-2xl font-bold  bg-transparent text-white text-center">
+              <h1 className="text-2xl font-bold cursor-pointer  bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
             </ShineBorder>
@@ -93,9 +93,9 @@ const Landing = () => {
               borderWidth={1}
               duration={2}
               color={["#ff00ff", "#00ff00"]}
-              className="shadow-lg animate-bounce2 md:hidden block  justify-center  text-center  absolute bottom-40"
+              className="shadow-lg animate-bounce2 md:hidden block  cursor-pointer  justify-center  text-center  absolute bottom-40"
             >
-              <h1 className=" text-lg sm:text-2xl font-bold  bg-transparent text-white text-center">
+              <h1 className=" text-lg sm:text-2xl font-bold cursor-pointer bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
             </ShineBorder>

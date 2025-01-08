@@ -18,10 +18,15 @@ const RegisterClose = () => {
       <Particles />
       <div className="max-w-[90vw] m-auto h-auto md:h-screen flex-col  flex justify-center items-center">
         <div>
-          <p className="text-white text-2xl font-bold">Soory! Page not found</p>
+          <p className="text-white text-4xl font-bold text-center">
+            We're sorry, registrations are  closed.
+          </p>
           <img src={notfound} className="h-[70vh]" alt="" />
         </div>
-        <div onClick={home} className="flex justify-center items-center mt-3">
+        <div
+          onClick={home}
+          className="flex justify-center text-center items-center mt-3"
+        >
           <ShimmerButton>Back to Home</ShimmerButton>
         </div>
       </div>

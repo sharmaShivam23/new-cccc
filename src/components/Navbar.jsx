@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import logo from "../images/logo.svg";
 import CCC from "../images/CCC.png";
@@ -20,7 +20,6 @@ export const Navbar = () => {
   return (
     <div className="z-50 ">
       <Sidebar />
-      {/* <ExampleContent/> */}
       <ResNavbar />
       <Social />
     </div>
@@ -99,20 +98,26 @@ const Sidebar = () => {
 const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
   return (
     <>
+    {/* <Link to={to}> */}
+    <a href={to}>
       <motion.button
         layout
         onClick={() => setSelected(title)}
-        className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors ${
+        className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors 
+          ${
           selected === title
-            ? "bg-white"
-            : "hover:text-black text-white hover:bg-purple-700"
-        }`}
+            ? "text-white hover:bg-white hover:text-black"
+            : "hover:text-black text-white hover:bg-white"
+        }
+        `}
       >
         <motion.div
           layout
           className="grid h-full text-3xl  w-10 place-content-center "
         >
           <Icon />
+          {/* <Link to={to}><Icon/> */}
+          
         </motion.div>
         {open && (
           <motion.span
@@ -122,7 +127,8 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
             transition={{ delay: 0.125 }}
             className="text-lg ml-2 font-semibold"
           >
-             <Link to={to}>{title}</Link> 
+             {/* <Link to={to}>{title}</Link>  */}
+             {title}
           </motion.span>
         )}
         {/* <a href={to} className="absolute inset-0"></a> */}
@@ -144,6 +150,11 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
         </motion.span>
       )} */}
       </motion.button>
+  {/* <Link/> */}
+     
+       
+      </a>
+      {/* <Link/>  */}
     </>
   );
 };

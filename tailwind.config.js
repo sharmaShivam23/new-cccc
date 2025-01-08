@@ -34,12 +34,10 @@ export default {
   ],
   theme: {
   	extend: {
-  		fontFamily: {
-  			sans: [
-  				'Poppins',
-  				'sans-serif'
-  			]
-  		},
+  		fontFamily: { poppins: ['Poppins', 'sans-serif'],
+				albert: ['Albert Sans', 'sans-serif'],
+				jetbrains: ['JetBrains Mono', 'sans-serif'],
+		 },
   		keyframes: {
   			zoomUp: {
   				'0%': {
@@ -87,7 +85,7 @@ export default {
   			},
   			sUp: {
   				'0%': {
-  					transform: 'translateY(200%)',
+  					transform: 'translateY(300%)',
   					opacity: '0'
   				},
   				'100%': {
