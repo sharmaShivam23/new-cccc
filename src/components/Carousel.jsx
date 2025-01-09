@@ -96,7 +96,7 @@ const Carousel = () => {
             >
               <div className="sm:flex block justify-center items-center h-full">
                 <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center items-center">
-                  <img src={card.img} alt="" className={`h-40 sm:h-[65vh] animate-bounce`} />
+                  <img src={card.img} alt="" className={`h-56 md:h-96 lg:h-[65vh]  animate-bounce`} />
                 </div>
 
                 <div className="sm:w-4/6 w-full h-[35vh] text-center flex flex-col justify-center items-center p-9">
@@ -109,7 +109,7 @@ const Carousel = () => {
                       y: currentSlide === index ? 0 : 100,
                     }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="font-bold text-xs sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
+                    className="font-bold text-xl max-[480px]:text-xs sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
                   >
                     {card.details}
                   </motion.p>

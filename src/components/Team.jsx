@@ -15,7 +15,7 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center  m-5">
+      className="h-auto sm:h-auto mb-32 w-full flex justify-center items-center mt-16  m-5">
       <div
       //  style={{
       //   backgroundImage: `url(${orbitbg})`,
@@ -35,7 +35,7 @@ const Team = () => {
           Who Are We
         </motion.h1>
 
-        <section className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-16">
+        <section className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-16">
           <motion.div
             initial={{filter: "blur(10px)", opacity: 0 }}
             whileInView={{filter: "blur(0px)", opacity: 1 }}
@@ -54,7 +54,7 @@ const Team = () => {
             initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
             whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
             transition={{ type: "spring", stiffness: 50, duration: 1 }}
-            className="w-full px-2 lg:w-1/2  text-xs md:text-2xl  font-serif text-center lg:text-left"
+            className="w-full px-2 xl:w-1/2  text-xs md:text-xl xl:text-2xl  font-serif text-center lg:text-left"
           >
             <p className="">
               Cloud Computing Cell has been a part of Ajay Kumar Garg

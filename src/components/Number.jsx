@@ -5,9 +5,9 @@ import NumberTicker from './ui/number-ticker';
 
 const Number = () => {
   return (
-    <div className="w-full m-auto h-80 flex justify-center  text-xl sm:text-5xl font-bold items-center  p-8">
+    <div className="w-full m-auto h-auto flex justify-center  text-xl sm:text-3xl font-bold items-center mt-36  p-8">
 
-      <div className="flex justify-around sm:gap-20 gap-10  flex-col sm:flex-row w-full max-w-4xl">
+      <div className="flex justify-around sm:gap-20 gap-10  flex-col lg:flex-row w-full max-w-4xl">
      
         <div className="flex flex-col items-center">
           <div className="text-white mb-5">Followers</div>
@@ -25,7 +25,7 @@ const Number = () => {
 
       
         <div className="flex flex-col items-center">
-          <div className="text-white mb-5">Members</div>
+          <div className="text-white mb-3">Members</div>
           <div className="flex items-center">
             <NumberTicker
               value={50}
