@@ -122,7 +122,7 @@ const Landing = () => {
               animate={{ y: 450 }}
               transition={{ duration: 2, ease: "easeIn" }}
             >
-              <img src={orbitbg} className="" alt="" />
+              <img src={orbitbg} className="hidden lg:block" alt="" />
             </motion.div>
           </div>
         </div>

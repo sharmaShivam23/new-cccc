@@ -16,7 +16,7 @@ const About = () => {
   };
   return (
     <div className="flex justify-center items-center ">
-      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] flex  m-auto flex-col">
+      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] mb-12 flex  m-auto flex-col">
         <div className="flex justify-center items-center text-center text-white ">
           {/* head */}
           <motion.div
@@ -63,16 +63,20 @@ const About = () => {
             <h1 className="text-xl lg:text-2xl underline text-slate-400 tracking-wide">
               About Us
             </h1>
-            <p className="text-xs sm:text-lg xl:text-2xl  font-thin mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
               Cloud Computing Cell has been a part of Ajay Kumar Garg
               Engineering College since February 2016.
             </p>
-            <p className="text-xs sm:text-lg xl:text-2xl font-thin mt-6">
+            {/* <p className="text-xs sm:text-2xl xl:text-2xl  font-thin mt-6">
+              Cloud Computing Cell has been a part of Ajay Kumar Garg
+              Engineering College since February 2016.
+            </p> */}
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
               Cloud Computing Cell has been a part of Ajay Kumar Garg
               Engineering College since February 2016. Lorem ipsum dolor sit,
               amet consectetur adipisicing elit. Soluta cumque atium.
             </p>
-            <p className="text-xs sm:text-lg xl:text-2xl font-thin mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
               Cloud Computing Cell has been a part of Ajay Kumar Garg
               Engineering College since February 2016. Lorem, ipsum dolor sit
               amet consectetur adipisicing elit. Blanditiis voluptatibus dicta

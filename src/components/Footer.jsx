@@ -19,10 +19,10 @@ const Footer = () => {
 
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
         <Meteors />
-        <p className="text-white text-3xl md:text-6xl font-bold">
+        <p className="text-white text-3xl md:text-5xl lg:text-6xl font-bold">
           Be part of the future of
         </p>
-        <p className="text-white text-3xl md:text-5xl font-bold">
+        <p className="text-white text-3xl md:text-4xl lg:text-5xl font-bold">
           Cloud Computing
         </p>
         <p className="text-white mt-4 text-sm md:text-lg">
@@ -37,8 +37,8 @@ const Footer = () => {
       </div>
 
       <div className="flex text-xl text-white text-center font-bold absolute bottom-24 left-20 max-[400px]:left-10">
-        <img src={CCC} className="h-10 mr-4 mb-2 animate-bounce" alt="" />
-        <p>Cloud Computing Cell</p>
+        <img src={CCC} className="h-10 mr-4 mb-2  animate-bounce" alt="" />
+        <p className="text-xs mt-3 lg:mt-1 lg:text-lg">Cloud Computing Cell</p>
       </div>
       <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
-        <ul className="text-white cursor-pointer sm:text-xl text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
+        <ul className="text-white cursor-pointer sm:text-lg lg:text-xl text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/Events">Events</Link></li>
           <li><Link to="/TeamCards">Team</Link></li>

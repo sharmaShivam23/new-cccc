@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Recrutingno = () => {
   return (
-    <div className=" absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 z-40">
+    <div className=" absolute top-1/2  left-1/2  -translate-x-1/2 -translate-y-1/2 z-40">
       <motion.div
         initial={{ filter: "blur(10px)", opacity: 0, scale: 0 }}
         animate={{ filter: "blur(0px)", scale: 1, opacity: 1 }}
@@ -16,15 +16,15 @@ const Recrutingno = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 1 }}
-            className="sm:text-3xl text-xs text-center font-bold"
+            className="lg:text-3xl sm:text-xl text-xs text-center font-bold"
           >
-            Soory we are not Recruting
+            Sorry we are not Recruting
           </motion.p>
           <motion.p
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2 }}
-            className="sm:text-3xl text-xs font-bold"
+            className="lg:text-3xl sm:text-xl text-xs font-bold"
           >
             Right now
           </motion.p>
