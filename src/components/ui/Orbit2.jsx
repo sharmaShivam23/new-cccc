@@ -46,16 +46,16 @@ export default function Orbit2({
             className="stroke-gray-500 stroke-8 dark:stroke-white/10"
             cx="50%"
             cy="50%"
-            r={radius + 100}
+            r={radius + 95}
             fill="none"
             // style={{ strokeWidth: 3 }}
           />
           
           <circle
-            className="stroke-gray-500 stroke-8 dark:stroke-white/10"
+            className="stroke-gray-500 stroke-8  dark:stroke-white/10"
             cx="50%"
             cy="50%"
-            r={radius + 200}
+            r={radius + 190}
             fill="none"
             // style={{ strokeWidth: 3 }}
           />

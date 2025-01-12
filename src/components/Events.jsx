@@ -53,7 +53,6 @@ const EventCarousel = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          // slidesPerView="4"
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -153,12 +152,12 @@ const EventImages = () => {
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-          <a href="/Devclash">
+          {/* <a href="/Devclash">
         <img src={devclash} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
-        </a>
-          {/* <Link to="/Devclash">
+        </a> */}
+          <Link to="/Devclash">
         <img src={devclash} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
-        </Link> */}
+        </Link>
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
