@@ -38,26 +38,27 @@ const Landing = () => {
               duration={60}
               delay={0}
               startOnView={true}
-              className="text-white text-xl md:text-5xl font-bold"
+              className="text-white text-xl md:text-5xl font-jetbrains font-bold"
             >
-              {"Be part of the future of Lorem "}
+              {"Join the Future of Cloud Computing"}
             </TypingAnimation>
             <TypingAnimation
               duration={100}
               delay={200}
               startOnView={true}
-              className="text-white text-xl md:text-4xl mt-1 sm:mt-4 font-bold"
+              className="text-white text-xl md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
             >
-              {"Cloud Computing Lorem,"}
+              {"Innovating the World of Technology and Coding"}
             </TypingAnimation>
-            <p className="text-white mt-4 text-xs md:text-lg font-albert">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              amet
-              <br /> Voluptate sunt iure at iste fugiat veritatis obcaeca
+            <p className="text-white mt-7 text-xs md:text-xl font-jetbrains">
+              {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              amet */}
+               our society empowers tech enthusiasts and professionals to explore coding   and 
+              <br className="mt-3"/>innovative technologies,  shaping the future with passion and expertise
             </p>
 
             <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
-              <ShimmerButton onClick={register} className="cursor-pointer hover:scale-125 transition-all ease-in-out duration-1000 delay-0">
+              <ShimmerButton onClick={register} className="cursor-pointer hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
             </div>
@@ -71,7 +72,7 @@ const Landing = () => {
               color={["#ff00ff", "#00ff00"]}
               className="shadow-lg animate-bounce2  cursor-pointer hidden md:block  absolute left-36 bottom-40"
             >
-              <h1 className="text-2xl font-bold bg-transparent z-50  text-white text-center">
+              <h1 className="text-xl font-bold bg-transparent z-50 font-playwrite  text-white text-center">
                 Hello, World!
               </h1>
             </ShineBorder>
@@ -83,7 +84,7 @@ const Landing = () => {
               color={["#ff00ff", "#00ff00"]}
               className="shadow-lg animate-bounce2 hidden  hover:scale-125 cursor-pointer md:block justify-center  text-center  absolute ml-7 right-0 bottom-40"
             >
-              <h1 className="text-2xl font-bold cursor-pointer  bg-transparent text-white text-center">
+              <h1 className="text-2xl font-bold cursor-pointer font-playwrite  bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
             </ShineBorder>
@@ -95,25 +96,24 @@ const Landing = () => {
               color={["#ff00ff", "#00ff00"]}
               className="shadow-lg animate-bounce2 md:hidden block  cursor-pointer  justify-center  text-center  absolute bottom-40"
             >
-              <h1 className=" text-lg sm:text-2xl font-bold cursor-pointer bg-transparent text-white text-center">
+              <h1 className=" text-lg sm:text-xl font-bold cursor-pointer font-playwrite bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
             </ShineBorder>
-
-           <div className="absolute max-[400px]:hidden max-w-[90vw] m-auto top-60 right-10 sm:right-16">
-            <img
-              src={D}
-              className="h-28 sm:h-40 max-[1000px]:h-24 animate-bounce"
-              alt="D"
-            />
-          </div>
-          <div className="absolute  max-[400px]:hidden max-w-[90vw] m-auto top-60  left-10 sm:left-60">
-            <img
-              src={C}
-              className="h-28 sm:h-40  max-[1000px]:h-24 animate-bounce"
-              alt="C"
-            />
-          </div>
+           <div className="absolute top-60 right-10 sm:right-16 -z-10 max-[400px]:hidden">
+          <img
+            src={D}
+            className="h-28 sm:h-40 max-[1000px]:h-24 animate-bounce"
+            alt="D"
+          />
+        </div>
+        <div className="absolute top-60 left-10 -z-10 sm:left-60 max-[400px]:hidden">
+          <img
+            src={C}
+            className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
+            alt="C"
+          />
+        </div>
         </div>
 
           <div className="absolute top-1/2 left-1/2 -z-10 mt-10 -translate-x-1/2 -translate-y-1/2">
@@ -132,5 +132,4 @@ const Landing = () => {
 };
 
 export default Landing;
-
 

@@ -84,15 +84,15 @@ const Text = () => {
   return (
     <div className="text-white sm:text-center lg:text-start xl:w-6/12 lg:ml-8 w-full p-2 flex flex-col">
       {close && <Recrutingno />}
-      <p className="md:text-5xl text-2xl font-bold m-3  mb-4 sm:mb-12 font-sans">
+      <p className="md:text-5xl text-3xl font-bold m-3 font-rubik  mb-4 sm:mb-12">
         Let's have a look on our <br/> star achievers
       </p>
-      <p className="md:text-3xl text-xl ml-5">
+      <p className="md:text-3xl font-playwrite text-xl ml-5">
         <TypingAnimation
           duration={100}
           delay={0}
           startOnView={true}
-          className="text-white sm:mt-4 mt-2 text-xl sm:text-3xl font-bold"
+          className="text-white sm:mt-4 mt-7 text-lg sm:text-2xl font-bold"
         >
           {"65+ Hackathon Winners"}
         </TypingAnimation>
@@ -100,7 +100,7 @@ const Text = () => {
           duration={200}
           delay={200}
           startOnView={true}
-          className="text-white sm:mt-4 mt-2 text-xl sm:text-3xl font-bold"
+          className="text-white sm:mt-7 mt-7 text-lg sm:text-2xl font-bold"
         >
           {"5+ MLH Winning"}
         </TypingAnimation>
@@ -108,7 +108,7 @@ const Text = () => {
           duration={300}
           delay={400}
           startOnView={true}
-          className="text-white sm:mt-4 mt-2 text-xl sm:text-3xl font-bold"
+          className="text-white sm:mt-7 mt-7 text-lg sm:text-2xl font-bold"
         >
           {"6+ GSOC'r"}
         </TypingAnimation>
@@ -116,13 +116,13 @@ const Text = () => {
           duration={350}
           delay={600}
           startOnView={true}
-          className="text-white sm:mt-4 mt-2 text-xl sm:text-3xl font-bold"
+          className="text-white sm:mt-7 mt-7 text-lg sm:text-2xl font-bold"
         >
           {"5+ Winning"}
         </TypingAnimation>
       </p>
-      <p className="mt-4 sm:mt-10 mb-14 ml-3">
-        <InteractiveHoverButton text="Join Us" onClick={message} className="text-black" />
+      <p className="mt-7 sm:mt-10 mb-14 ml-3">
+        <InteractiveHoverButton text="Join Us" onClick={message} className="text-black font-playwrite" />
       </p>
       {close && (
         <motion.div

@@ -45,7 +45,7 @@ const Carousel = () => {
     {
       img: app,
       domain: 'Mobile App Development',
-      details: 'Mobile app development has revolutionized how we interact with technology. With millions of mobile devices worldwide, the demand for mobile apps continues to grow. Mobile app developers create applications for platforms like iOS and Android, allowing users to engage with services, content, and functionality on-the-go. From social media platforms to banking apps and games, mobile apps have become an integral part of daily life',
+      details: 'Mobile app development has revolutionized how we interact with technology. With millions of mobile devices worldwide, the demand for mobile apps continues to grow. Mobile app developers create applications for platforms like iOS and Android, allowing users to engage with services, content, and functionality on-the-go. From social media platforms to banking apps and games, mobile apps have become an integral part of daily life.',
       from: "#00BFBF",
       to: "#1E10FF",
       height : "[55vh]"
@@ -53,7 +53,7 @@ const Carousel = () => {
     {
       img: ui,
       domain: 'UI/UX Design',
-      details: 'UI/UX Design is essential for creating products that users love to interact with. It focuses on the design of user interfaces (UI) and the overall experience (UX) users have when they interact with a product, whether it’s a website or mobile application. The goal of UI/UX design is to ensure that the product is both visually appealing and functional, making it easy for users to navigate and achieve their goals.In todays digital world, user expectations are higher than ever. Companies need to invest in UI/UX design',
+      details: 'UI/UX design is vital for creating products that users love to interact with. It focuses on both the visual design (UI) and the overall experience (UX) users have when engaging with a product. The goal is to make products visually appealing, easy to navigate, and effective in helping users accomplish their tasks. Companies must prioritize UI/UX design to stay competitive, focusing on user-centered design, ensuring consistency, optimizing for mobile devices, simplifying navigation, enhancing performance, and making products accessible for all users.',
       from: "#8A2BE2",
       to: "#7B90EE",
       height : "[800px]"
@@ -61,7 +61,7 @@ const Carousel = () => {
     {
       img: cloud,
       domain: 'Cloud Computing',
-      details: 'Cloud computing is transforming the way businesses operate and deliver services. It allows companies to store data and run applications on remote servers instead of relying on traditional on-site infrastructure. The cloud offers scalable, cost-effective, and flexible solutions that enable businesses to manage and process data more efficiently. Cloud computing also enhances collaboration by enabling teams to access shared resources and work together seamlessly, regardless of location. It has revolutionized industries like ',
+      details: 'Cloud computing is changing how businesses function and provide services. It enables companies to store data and run applications on remote servers rather than relying on traditional on-site infrastructure. The cloud provides scalable, affordable, and adaptable solutions that help businesses manage and process data more effectively. Additionally, cloud computing improves collaboration by allowing teams to access shared resources and collaborate effortlessly, no matter where they are located.',
       from: "#FF1493",
       to: "#FF6347",
       height : "[800px]"
@@ -74,12 +74,12 @@ const Carousel = () => {
     <motion.h1
               initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
               whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-              transition={{ duration: 1.5, delay: 0.5 }}
-              className="text-white text-center text-2xl sm:text-5xl sm:mb-2 relative top-7 mb-4 md:text-6xl underline font-bold"
+              transition={{ duration: 1, delay: 0.1 }}
+              className="text-white text-center text-2xl sm:text-5xl font-rubik sm:mb-0 relative top-7 mb-4 md:text-6xl  font-bold"
             >
               Our Domains
             </motion.h1>
-      <div className="max-w-[90vw] m-auto h-[80vh]">
+      <div className="max-w-[90vw] m-auto h-[75vh]">
         <Slider {...settings}>
           {data.map((card, index) => (
             <>
@@ -95,13 +95,13 @@ const Carousel = () => {
               }}
             >
               <div className="sm:flex block justify-center items-center h-full">
-                <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center items-center">
+                <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center mt-6 items-center">
                   <img src={card.img} alt="" className={`h-56 md:h-96 lg:h-[65vh]  animate-bounce`} />
                 </div>
 
                 <div className="sm:w-4/6 w-full h-[35vh] text-center flex flex-col justify-center items-center p-9">
                   <p 
-                 className="sm:text-5xl text-2xl mb-7 mt-2 font-bold text-white">{card.domain}</p>
+                 className="sm:text-4xl text-xl mb-7 mt-5 font-playwrite font-bold text-white">{card.domain}</p>
                   <motion.p
                     initial={{ opacity: 0, y: 500 }}
                     animate={{
@@ -109,7 +109,7 @@ const Carousel = () => {
                       y: currentSlide === index ? 0 : 100,
                     }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="font-bold text-xl max-[480px]:text-xs sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
+                    className="font-bold text-xl max-[480px]:text-xs xl:tracking-wider font-major sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
                   >
                     {card.details}
                   </motion.p>
