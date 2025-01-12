@@ -58,7 +58,7 @@ const Image1 = () => {
 const Image2 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={dev} alt=""  className='h-[60vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
+       <img src={dev} alt=""  className='sm:h-[60vh] h-[40vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
     </div>
   )
 }

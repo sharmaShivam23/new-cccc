@@ -124,7 +124,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.125 }}
-            className="text-lg ml-2 font-semibold"
+            className="text-lg ml-2 font-semibold font-rubik"
           >
              {/* <Link to={to}>{title}</Link>  */}
              {title}

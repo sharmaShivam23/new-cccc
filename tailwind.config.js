@@ -37,6 +37,11 @@ export default {
   		fontFamily: { poppins: ['Poppins', 'sans-serif'],
 				albert: ['Albert Sans', 'sans-serif'],
 				jetbrains: ['JetBrains Mono', 'sans-serif'],
+				playwrite: ['Playwrite VN', 'serif'],
+        rubik: ['Rubik Vinyl', 'serif'],
+				bebas: ['Bebas Neue', 'serif'],
+				jersey: ['Jersey 15', 'serif'],
+				major: ['Major Mono Display', 'serif'], 
 		 },
   		keyframes: {
   			zoomUp: {

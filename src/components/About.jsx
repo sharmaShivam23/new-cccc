@@ -16,19 +16,19 @@ const About = () => {
   };
   return (
     <div className="flex justify-center items-center ">
-      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] mb-12 flex  m-auto flex-col">
+      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] mb-28 lg:mb-3 flex  m-auto flex-col">
         <div className="flex justify-center items-center text-center text-white ">
           {/* head */}
           <motion.div
             initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
             whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-            transition={{ duration: 2, ease: "easeInOut" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className="head text-center relative   w-full flex flex-col justify-center items-center "
           >
-            <p className="text-3xl md:text-4xl font-bold mt-6">
+            <p className="text-3xl md:text-4xl font-bold mt-6 font-rubik">
               CLOUD COMPUTING CELL
             </p>
-            <p className="mt-2 text-xl md:text-2xl font-semibold">
+            <p className="mt-2 text-xl md:text-2xl font-semibold font-rubik">
               Think
               <span className="ml-3 border-r-2 mr-3 border-white"></span>
               Develop
@@ -60,32 +60,33 @@ const About = () => {
             style={{ flex: 1 }}
             className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
           >
-            <h1 className="text-xl lg:text-2xl underline text-slate-400 tracking-wide">
+            <h1 className="text-xl  lg:text-2xl font-playwrite underline text-slate-400 tracking-wide">
               About Us
             </h1>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
-              Cloud Computing Cell has been a part of Ajay Kumar Garg
-              Engineering College since February 2016.
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-major mt-6">
+              The Cloud Computing Cell at Ajay Kumar Garg Engineering College,
+              established in February 2016.
             </p>
-            {/* <p className="text-xs sm:text-2xl xl:text-2xl  font-thin mt-6">
-              Cloud Computing Cell has been a part of Ajay Kumar Garg
-              Engineering College since February 2016.
-            </p> */}
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
-              Cloud Computing Cell has been a part of Ajay Kumar Garg
-              Engineering College since February 2016. Lorem ipsum dolor sit,
-              amet consectetur adipisicing elit. Soluta cumque atium.
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-major mt-6">
+             It Provides students with exposure to the latest cloud technologies,
+              enhancing their skills for better placement and research
+              opportunities.
             </p>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-thin mt-6">
-              Cloud Computing Cell has been a part of Ajay Kumar Garg
-              Engineering College since February 2016. Lorem, ipsum dolor sit
-              amet consectetur adipisicing elit. Blanditiis voluptatibus dicta
-              iusto exercitationem, repellendus et repellat vero dignissimos
-              nesciunt autem ratione quos incidunt!e nemo perferendis sint?
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-major mt-6">
+              It offers a platform for managing and deploying cloud services,
+              helping students stay competitive in the job market. The Cell is
+              coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and Dr. Parneet
+              Kaur from the IT Department, who guide students in their academic
+              and professional development.
             </p>
-            <div className="btn flex items-start gap-20 mt-8">
-              <ShimmerButton className="font-bold text-xs sm:text-xl">Know More</ShimmerButton>
-              <ShimmerButton className="font-bold text-xs sm:text-xl" onClick={contact}>
+            <div className="btn flex text-xl items-start gap-20 mt-8">
+              <ShimmerButton className="font-bold text-xs hover:scale-110 transition-all ease-in-out duration-1000  sm:text-lg font-bebas">
+                Know More
+              </ShimmerButton>
+              <ShimmerButton
+                className="font-bold text-xs  hover:scale-110 transition-all ease-in-out duration-1000 sm:text-lg font-bebas"
+                onClick={contact}
+              >
                 Contact Us
               </ShimmerButton>
             </div>

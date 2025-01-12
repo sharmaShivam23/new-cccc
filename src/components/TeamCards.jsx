@@ -50,9 +50,9 @@ export const TeamCards = () => {
       <motion.h1
         initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
+        transition={{ duration: 1, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-white text-center text-xl sm:text-3xl md:text-4xl underline font-bold mb-6 mt-6"
+        className="text-white text-center text-xl sm:text-3xl md:text-5xl font-rubik  font-bold mb-6 mt-6"
       >
         OUR TEAM MEMBERS
       </motion.h1>
@@ -68,7 +68,7 @@ const Buttons = ({ onSelectYear, activeYear }) => {
 
   
   return (
-    <div className="flex justify-evenly">
+    <div className="flex justify-evenly font-jetbrains">
       <div className="max-w-[90vw] sm:mt-10 mt-5 text-xs sm:text-lg m-auto block sm:flex justify-evenly mb-6">
         <ShimmerButton
          shimmerColor = {'#6E45AC'}
@@ -103,63 +103,91 @@ const Buttons = ({ onSelectYear, activeYear }) => {
 };
 
 const FouthYear = () => {
-  const obj = [
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Raghav,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-  ];
+  const [obj , setObj] = useState([])
+  const [loading , setLoading] = useState(false)
+
+  useEffect(() => {
+    const  api = async() =>
+   {
+    setLoading(true)
+    try{
+     const response =  await axios.get("https://website-9egw.onrender.com/api/members/4thyear")
+     setObj(response.data)
+     console.log(response.data);
+     
+    }
+    catch(error){
+      console.log(error);
+      console.log(error.message);
+      if(error.message === "Network Error"){
+      toast.error("Please! connect to Network")
+      }
+    }
+    finally{
+      setLoading(false)
+    }
+  }
+  api()
+
+},[])
+  // const obj = [
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  //   {
+  //     img: Raghav,
+  //     domain: "App Development",
+  //     name: "Raghav Agrawal",
+  //     about: "Raghav Agrawal our fourth year member. ",
+  //   },
+  // ];
 
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
-      <h1 className="mb-10 text-2xl font-serif font-extrabold underline text-[#6E45AC]">
+      <h1 className="mb-10 text-2xl font-jetbrains font-extrabold underline text-[#6E45AC]">
       (Batch 2021-2025)
       </h1>
-
+       
+      {loading ? <Loading/> : (
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div
@@ -173,7 +201,7 @@ const FouthYear = () => {
 
               <div className="w-full img h-full flex justify-center items-center flex-col transform group-hover:translate-x-full   transition-all damber-500">
                 <img
-                  src={details.img}
+                  src={details.profile}
                   alt={details.name}
                   className="h-[13rem] w-[13rem] rounded-full object-cover border-2 border-[#6E45AC] shadow-2xl shadow-[#6E45AC]"
                 />
@@ -212,7 +240,7 @@ const FouthYear = () => {
           </motion.div>
         ))}
       </div>
-    
+      )}
     </div>
   );
 };
@@ -220,110 +248,55 @@ const FouthYear = () => {
 
 
 
-
-
 const ThirdYear = () => {
-  const obj = [
-    {
-      img: sachendraGangwar2,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: yashMishra,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: harshSingh2,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: adityaKumar,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: sahil2,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: manoj,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: akhandSingh2,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: prakharSrivastava,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: akshatSingh,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: kritika,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: Diya,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: kratikaGupta,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: shreyaMohan,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
 
-    {
-      img: arpitaAsthana,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-    {
-      img: shreeyaAggarwal,
-      domain: "App Development",
-      name: "Raghav Agrawal",
-      about: "Raghav Agrawal our fourth year member. ",
-    },
-  ];
-  return (
-    <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
+  const [obj , setObj] = useState([])
+  const [loading , setLoading] = useState(false)
+
+  useEffect(() => {
+    const  api = async() =>
+   {
+    setLoading(true)
+    try{
+     const response =  await axios.get("https://website-9egw.onrender.com/api/members/3rdyear")
+     setObj(response.data)
+     console.log(response.data);
      
+    }
+    catch(error){
+      console.log(error);
+      console.log(error.message);
+      if(error.message === "Network Error"){
+      toast.error("Please! connect to Network")
+      }
+    }
+    finally{
+      setLoading(false)
+    }
+  }
+  api()
 
-      <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-[#66E0CE]">
-      (Batch 2022-2026)
-      </h1>
+},[])
+
+
+  
+
+  return (
+    <>
+     <ToastContainer />
+    <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
+    
+       {loading ? 
+          <h1 className="mb-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
+      </h1> 
+      : 
       
+      <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-[#66E0CE]">
+             (Batch 2022-2026)
+           </h1>
+}
+       
+       {loading ? <Loading/> : (
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {obj.map((details, index) => (
           <motion.div
@@ -337,7 +310,7 @@ const ThirdYear = () => {
              
               <div className="w-full img h-full  flex justify-center items-center flex-col   transition-all ">
                 <img
-                  src={details.img}
+                  src={details.profile}
                   alt={details.name}
                   className="h-[13rem] w-[13rem] object-cover scale-90 rounded-full border-2 border-[#66E0CE] shadow-2xl shadow-[#66E0CE]"
                 />
@@ -375,9 +348,176 @@ const ThirdYear = () => {
           </motion.div>
         ))}
       </div>
+      )}
     </div>
+    </>
   );
 };
+
+
+
+
+
+
+
+
+
+// const ThirdYear = () => {
+//   const obj = [
+//     {
+//       img: sachendraGangwar2,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: yashMishra,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: harshSingh2,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: adityaKumar,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: sahil2,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: manoj,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: akhandSingh2,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: prakharSrivastava,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: akshatSingh,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: kritika,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: Diya,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: kratikaGupta,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: shreyaMohan,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+
+//     {
+//       img: arpitaAsthana,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//     {
+//       img: shreeyaAggarwal,
+//       domain: "App Development",
+//       name: "Raghav Agrawal",
+//       about: "Raghav Agrawal our fourth year member. ",
+//     },
+//   ];
+//   return (
+//     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
+     
+
+//       <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-[#66E0CE]">
+//       (Batch 2022-2026)
+//       </h1>
+      
+//       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+//         {obj.map((details, index) => (
+//           <motion.div
+//             initial={{ opacity: 0, y: 40 }}
+//             whileInView={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, ease: "easeInOut" }}
+//             key={index}
+//             className="flex justify-center items-center"
+//           >
+//             <div className="relative w-[20rem]  cursor-pointer h-[25rem] overflow-hidden border-2 border-[#66E0CE] bg-white rounded-2xl group">
+             
+//               <div className="w-full img h-full  flex justify-center items-center flex-col   transition-all ">
+//                 <img
+//                   src={details.img}
+//                   alt={details.name}
+//                   className="h-[13rem] w-[13rem] object-cover scale-90 rounded-full border-2 border-[#66E0CE] shadow-2xl shadow-[#66E0CE]"
+//                 />
+//                 <div className="mt-6 text-center">
+//                   <p className="text-xl text-black">{details.domain}</p>
+//                   <p className="text-2xl font-bold text-black">
+//                     {details.name}
+//                   </p>
+//                   <img
+//                     src={card3bg}
+//                     className="w-full absolute bottom-0 left-0"
+//                     alt=""
+//                   />
+//                 </div>
+//               </div>
+
+           
+//               <div className="absolute content top-0 left-0 w-full h-full border-[#66E0CE] bg-[#66E0CE] flex justify-center items-center text-red-400 transition-all duration-700 ease-in-out transform group-hover:translate-x-0  -translate-x-full flex-col">
+//                 <div className="tags text-5xl p-3  flex gap-3 text-black">
+//                   <a href="">
+//                     <FaLinkedin />
+//                   </a>
+//                   <a href="">
+//                     <FaSquareGithub />
+//                   </a>
+//                   <a href="">
+//                     <FaSquareInstagram />
+//                   </a>
+//                 </div>
+//                 <p className="mb-4 text-black font-mono p-5 text-center">
+//                   {details.about}
+//                 </p>
+//               </div>
+//             </div>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
 
 
@@ -424,7 +564,7 @@ const SecondYear = () => {
       </h1> 
       : 
       
-      <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline text-amber-500">
+      <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-amber-500">
         (Batch 2023-2027)
       </h1>
 }

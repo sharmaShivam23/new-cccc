@@ -42,8 +42,8 @@ const EventCarousel = () => {
         <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut", delay: 0.5 }}
-          className="text-white text-center text-2xl sm:text-5xl mb-20 md:text-6xl underline font-bold"
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
+          className="text-white text-center text-2xl sm:text-5xl mb-20 md:text-6xl font-rubik  font-bold"
         >
           Events
         </motion.h1>
