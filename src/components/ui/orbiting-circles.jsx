@@ -62,7 +62,7 @@ export default function OrbitingCircles({
             className="stroke-gray-800 stroke-8 dark:stroke-white/10"
             cx="50%"
             cy="50%"
-            r={radius + 300}
+            r={radius + 280}
             fill="none"
             // style={{ strokeWidth: 3 }}
           />

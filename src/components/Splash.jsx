@@ -16,21 +16,21 @@ const Splash = () => {
         </motion.div>
 
       
-        <div className="text text-white font-bold text-2xl mt-6 flex">
+        <div className="text text-white font-bold text-2xl sm:text-3xl mt-6 flex">
           <motion.div initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }} whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 2, delay: 0.5, type: "spring", stiffness: 100 }} 
           // <motion.div initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }} whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 2, delay: 0.5, type: "spring", stiffness: 100 }} 
           >
-            <p className='mr-4'>CLOUD</p>
+            <p className='mr-4 font-rubik'>CLOUD</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }} whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 2, delay: 1, type: "spring", stiffness: 100 }} 
           >
-            <p className='mr-4'>COMPUTING</p>
+            <p className='mr-4 font-rubik'>COMPUTING</p>
           </motion.div>
 
           <motion.div  initial={{ opacity: 0, y: 10, filter: 'blur(10px)' }} whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 2, delay: 1.5, type: "spring", stiffness: 100 }} 
           >
-            <p className='mr-4'>CELL</p>
+            <p className='mr-4 font-rubik'>CELL</p>
           </motion.div>
         </div>
       </div>

@@ -62,13 +62,13 @@ import TypingAnimation from "./ui/typing-animation";
 const Faculty = () => {
   return (
     <div className="sm:max-w-[90vw] mb-28 lg:mb-3 mt-36 sm:mt-0 m-auto w-full text-white lg:h-screen flex justify-center items-center h-auto bg-green-">
-    <div className='flex justify-center rounded-3xl flex-col  bg-neutral-800 items-center border-2 p-1 sm:p-5  border-white w-auto sm:w-[80vw] h-auto lg:h-[65vh]'>
+    <div className='flex justify-center rounded-3xl flex-col  bg-neutral-800 items-center border-2 p-1 sm:p-5  border-white w-auto sm:w-[80vw] h-auto lg:h-[68vh]'>
 
     <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
-          className="text-white text-center text-2xl sm:text-5xl sm:mt-3 md:text-6xl mt-2 font-rubik font-bold"
+          className="text-white text-center text-2xl sm:text-5xl sm:mt-7 md:text-6xl mt-2 font-rubik font-bold"
         >
           Our Faculty
         </motion.h1>
