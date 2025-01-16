@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Subtract from '../EventsImg/Subtract.svg'
 import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
@@ -12,6 +12,12 @@ import Particles from './ui/particles';
 import graphiconp from '../EventsImg/graphiconp.jpg';
 
 export const Egraphicon = () => {
+ useEffect(() => {
+    window.scrollTo({
+      top : 0,
+      behavior : "smooth"
+    })
+  })
   return (
     <>
     <Particles/>

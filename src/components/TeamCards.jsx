@@ -41,6 +41,13 @@ import { ToastContainer, toast } from 'react-toastify';
 export const TeamCards = () => {
   const [activeYear, setActiveYear] = useState("four");
 
+   useEffect(() => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      })
+    })
+
   const handleYearSelect = (year) => {
     setActiveYear(year);
   };
@@ -52,7 +59,7 @@ export const TeamCards = () => {
         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 1, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-white text-center text-xl sm:text-3xl md:text-5xl font-rubik  font-bold mb-6 mt-6"
+        className="text-white text-center text-xl sm:text-3xl md:text-5xl font-poppins  font-bold mb-6 mt-6"
       >
         OUR TEAM MEMBERS
       </motion.h1>

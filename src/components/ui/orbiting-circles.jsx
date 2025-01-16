@@ -62,7 +62,7 @@ export default function OrbitingCircles({
             className="stroke-gray-800 stroke-8 dark:stroke-white/10"
             cx="50%"
             cy="50%"
-            r={radius + 280}
+            r={radius + 300}
             fill="none"
             // style={{ strokeWidth: 3 }}
           />
@@ -151,10 +151,10 @@ export default function OrbitingCircles({
       
       <div className="absolute flex items-center justify-center inset-0 z-10">
         <motion.div 
-         initial={{ rotate: 0 }} 
-         animate={{ rotate: 360 }}
+         initial={{ rotate: 0  }} 
+         animate={{ rotate: 360  }}
          transition={{
-           duration: 15, 
+           duration: 7, 
            repeat: Infinity, 
            ease: "linear", 
          }}

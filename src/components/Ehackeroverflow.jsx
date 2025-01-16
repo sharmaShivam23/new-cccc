@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Subtract from '../EventsImg/Subtract.svg'
 import devclash2 from '../EventsImg/devclash2.svg'
 import dev from '../EventsImg/dev.png';
@@ -20,6 +20,12 @@ import hackerp from '../EventsImg/hackerp.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
 
 export const Ehackeroverflow = () => {
+   useEffect(() => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      })
+    })
   return (
     <>
     <Particles/>

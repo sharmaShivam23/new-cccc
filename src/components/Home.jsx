@@ -16,6 +16,12 @@ import { Alumni } from "./Alumni";
 import MyComponent from "./MyComponent";
 
 const Home = () => {
+  useEffect(() => {
+        window.scrollTo({
+          top : 0,
+          behavior : "smooth"
+        })
+      })
   return (
     <div>
       <>

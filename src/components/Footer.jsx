@@ -25,7 +25,7 @@ const Footer = () => {
         <p className="text-white text-3xl md:text-4xl lg:text-5xl font-bold font-rubik">
           Cloud Computing
         </p>
-        <p className="text-white mt-4 text-sm md:text-lg font-playwrite">
+        <p className="text-white mt-4 text-sm md:text-lg font-poppins">
           {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Quam, laboriosam? Lorem ipsum dolor, sit amet consectetur adipisicing. */}
           Empowering students to innovate, collaborate, and lead in the world of technology.<br/> Join us at Cloud Computing Cell and shape the future!
@@ -41,6 +41,12 @@ const Footer = () => {
         <img src={CCC} className="h-10 mr-4 mb-2 hidden sm:block   animate-bounce" alt="" />
         <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-rubik">Cloud Computing Cell</p>
       </div>
+
+      <div className="flex text-2xl text-white justify-center  items-center text-center font-bold absolute bottom-28 left-0 right-0">
+        <img src={CCC} className="h-10 mr-4 mb-2 block sm:hidden   animate-bounce" alt="" />
+        <p className="text-xl  lg:mt-1 lg:text-lg block sm:hidden font-rubik">Cloud Computing Cell</p>
+      </div>
+
       <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
 
       <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">

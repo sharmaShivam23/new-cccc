@@ -1,7 +1,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -27,6 +27,12 @@ import nimbusp from '../EventsImg/nimbusp.jpg';
 import { Link } from "react-router-dom";
 
 export const Events = () => {
+   useEffect(() => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      })
+    })
   return (
     <div className="flex justify-center items-center flex-col">
       <EventCarousel />

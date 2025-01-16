@@ -1,6 +1,6 @@
 
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Subtract from '../EventsImg/Subtract.svg'
 import devclash2 from '../EventsImg/devclash2.svg'
 import dev from '../EventsImg/dev.png';
@@ -20,6 +20,13 @@ import Confetti from './ui/confetti';
 import Particles from './ui/particles';
 
 export const Edevclash = () => {
+
+  useEffect(()=>{
+    window.scrollTo({
+      top : 0,
+      behavior : "smooth"
+    })
+  })
   return (
     <>
     <Particles/>

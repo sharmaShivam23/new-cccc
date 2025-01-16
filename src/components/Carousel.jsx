@@ -70,16 +70,16 @@ const Carousel = () => {
   
   return (
     <>
-    <div className="max-w-[90vw] m-auto h-[100vh] flex-col text-white flex justify-center items-center overflow-hidden">
+    <div className="max-w-[90vw] m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
     <motion.h1
               initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
               whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
               transition={{ duration: 1, delay: 0.1 }}
-              className="text-white text-center text-2xl sm:text-5xl font-rubik sm:mb-0 relative top-7 mb-4 md:text-6xl  font-bold"
+              className="text-white text-center text-2xl sm:text-5xl font-poppins sm:mb-0 relative top-14 sm:top-7 mb-4 md:text-6xl  font-bold"
             >
               Our Domains
             </motion.h1>
-      <div className="max-w-[90vw] m-auto h-[75vh]">
+      <div className="max-w-[90vw] m-auto h-auto ">
         <Slider {...settings}>
           {data.map((card, index) => (
             <>
@@ -94,14 +94,14 @@ const Carousel = () => {
                 zIndex: 100,
               }}
             >
-              <div className="sm:flex block justify-center items-center h-full">
-                <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center mt-6 items-center">
-                  <img src={card.img} alt="" className={`h-56 md:h-96 lg:h-[65vh]  animate-bounce`} />
+              <div className="sm:flex block justify-center  items-center h-auto">
+                <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center mt-0 sm:mt-6 items-center">
+                  <img src={card.img} alt="" className={`h-52 md:h-96 lg:h-[65vh]  animate-bounce`} />
                 </div>
 
                 <div className="sm:w-4/6 w-full h-[35vh] text-center flex flex-col justify-center items-center p-9">
                   <p 
-                 className="sm:text-4xl text-xl mb-7 mt-5 font-playwrite font-bold text-white">{card.domain}</p>
+                 className="sm:text-4xl text-xl mb-2 sm:mb-7 mt-2 sm:mt-10 font-poppins font-bold  text-white">{card.domain}</p>
                   <motion.p
                     initial={{ opacity: 0, y: 500 }}
                     animate={{
@@ -109,7 +109,7 @@ const Carousel = () => {
                       y: currentSlide === index ? 0 : 100,
                     }}
                     transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="font-bold text-xl max-[480px]:text-xs xl:tracking-wider font-major sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
+                    className="font-bold text-xs xl:tracking-wider font-jetbrains sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
                   >
                     {card.details}
                   </motion.p>
