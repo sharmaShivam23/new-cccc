@@ -33,7 +33,7 @@ const Landing = () => {
             <Particles />
           </OrbitingCircles>
 
-          <div className="absolute inset-0 flex flex-col mb-96 justify-center items-center text-white text-center px-4">
+          <div className="absolute inset-0 flex flex-col mt-16 sm:mt-0 mb-96 justify-center items-center text-white text-center px-4">
             <TypingAnimation
               duration={60}
               delay={0}
@@ -46,7 +46,7 @@ const Landing = () => {
               duration={100}
               delay={200}
               startOnView={true}
-              className="text-white text-xl md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
+              className="text-white text-md md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
             >
               {"Innovating the World of Technology and Coding"}
             </TypingAnimation>
@@ -70,9 +70,9 @@ const Landing = () => {
               borderWidth={1}
               duration={2}
               color={["#ff00ff", "#00ff00"]}
-              className="shadow-lg animate-bounce2  cursor-pointer hidden md:block  absolute left-36 bottom-40"
+              className="shadow-lg animate-bounce2 z-40 cursor-pointer hidden md:block  absolute left-36 bottom-40"
             >
-              <h1 className="text-xl font-bold bg-transparent z-50 font-playwrite  text-white text-center">
+              <h1 className="text-xl font-bold bg-transparent z-50 hover:scale-125 transition-all ease-in-out duration-1000 delay-0 font-poppins cursor-pointer  text-white text-center">
                 Hello, World!
               </h1>
             </ShineBorder>
@@ -82,9 +82,9 @@ const Landing = () => {
               borderWidth={1}
               duration={2}
               color={["#ff00ff", "#00ff00"]}
-              className="shadow-lg animate-bounce2 hidden  hover:scale-125 cursor-pointer md:block justify-center  text-center  absolute ml-7 right-0 bottom-40"
+              className="shadow-lg animate-bounce2 hidden z-40   hover:scale-125 transition-all ease-in-out duration-1000 delay-0 cursor-pointer md:block justify-center  text-center  absolute ml-7 right-0 bottom-40"
             >
-              <h1 className="text-2xl font-bold cursor-pointer font-playwrite  bg-transparent text-white text-center">
+              <h1 className="text-2xl font-bold  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 font-poppins cursor-pointer  bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
             </ShineBorder>

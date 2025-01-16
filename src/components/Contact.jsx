@@ -96,8 +96,15 @@ import ShineBorder from "./ui/shine-border";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Spinner from "./Spinner";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
+   useEffect(() => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      })
+    })
   return (
     <>
       <Particles />
@@ -114,13 +121,14 @@ export const Contact = () => {
 
 const Video = () => {
   return (
-    <div className="flex justify-center items-center w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
+    <div className="flex justify-center items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
       <video
-        className="w-full z-40  h-auto md:h-[100vh]"
+        className="w-full z-40   h-auto md:h-[100vh]"
         autoPlay
         loop
         src={video}
       ></video>
+      {/* <motion.div initial={{opacity : 0 , top : 0}} whileInView={{opacity : 1 , top : 10}} transition={{duration : 1}} className="text text-white text-2xl">dnjbdfb</motion.div> */}
     </div>
   );
 };
@@ -234,14 +242,15 @@ const Form = () => {
   return (
     <>
       <ToastContainer />
-      <div className="flex justify-center items-center text-white  w-full md:w-1/2 bg-yellow- flex-col h-auto md:h-screen p-2">
+      <div className="flex justify-center bg- rounded-l-[6vmin] items-center text-black  w-full md:w-1/2 bg-yellow- flex-col sm:h-auto md:h-screen p-2">
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-2xl text-center font-playwrite text-white font-bold">
+          <p className="sm:text-3xl text-2xl text-center font-poppins text-white font-bold">
             Welcome to Cloud Computing
           </p>
-          <p className="mt-4 sm:text-2xl text-center font-playwrite text-xl">
-            Lorem, ipsum dolor.
-          </p>
+          {/* <p className="mt-4 sm:text-2xl text-center font-poppins text-xl">
+            Lorem, ipsum dolor
+          </p> */}
+          <p className="text-white text-xl mt-4 sm:text-2xl">Lorem, ipsum dolor.</p>
         </div>
 
         <form

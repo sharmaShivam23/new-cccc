@@ -15,7 +15,7 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="h-auto lg:h-screen mb-32 w-full max-[1000px]:mt-36 flex justify-center items-center mt-16  m-5">
+      className="h-auto lg:h-screen mb-20 sm:mb-32 w-full max-[1000px]:mt-36 flex justify-center items-center mt-16  m-5">
       <div
       //  style={{
       //   backgroundImage: `url(${orbitbg})`,
@@ -24,18 +24,18 @@ const Team = () => {
       //   backgroundRepeat : "no-repeat"        
                     
       // }}
-        className="h-auto psud   text-white sm:p-9 w-full bg-neutral-800 border-2 shadow-xl border-white rounded-3xl sm:max-w-[80vw] mx-auto"
+        className="h-auto psud   text-white sm:p-9 w-full min-[450px]:w-[80vw] sm:w-[70vw] bg-neutral-800 border-2 shadow-xl border-white rounded-3xl xl:w-[80vw] mx-auto"
       >
         <motion.h1
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="text-white text-center text-2xl sm:text-5xl font-rubik sm:mb-10 mb-4 md:text-6xl  font-bold"
+          className="text-white text-center text-2xl sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
         >
           Who Are We
         </motion.h1>
 
-        <section className="flex flex-col xl:flex-row justify-center items-center gap-8 lg:gap-16">
+        <section className="flex flex-col xl:flex-row justify-center items-center  lg:gap-16">
           <motion.div
             initial={{filter: "blur(10px)", opacity: 0 }}
             whileInView={{filter: "blur(0px)", opacity: 1 }}
@@ -46,7 +46,7 @@ const Team = () => {
             <img
               src={team}
               alt="Cloud Computing Cell Team"
-              className="rounded-lg object-cover shadow-lg w-[85%]"
+              className="rounded-lg object-cover shadow-lg w-[85%] min-[450px]:w-[68%] sm:w-[85%]"
             />
           </motion.div>
 
@@ -63,7 +63,7 @@ const Team = () => {
             </p>
           </motion.div>
         </section>
-        <div className="flex justify-center items-center mt-7">
+        <div className="flex justify-center items-center sm:mt-7">
           <InteractiveHoverButton
             onClick={teamcard}
             className="text-black text-xs sm:text-lg font-playwrite  font-extrabold mb-2"

@@ -16,7 +16,7 @@ const About = () => {
   };
   return (
     <div className="flex justify-center items-center ">
-      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] mb-28 lg:mb-3 flex  m-auto flex-col">
+      <div className="h-auto xl:h-screen p-8 w-screen sm:max-w-[80vw] sm:mb-28 lg:mb-3 flex  m-auto flex-col">
         <div className="flex justify-center items-center text-center text-white ">
           {/* head */}
           <motion.div
@@ -25,10 +25,10 @@ const About = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             className="head text-center relative   w-full flex flex-col justify-center items-center "
           >
-            <p className="text-3xl md:text-4xl font-bold mt-6 font-rubik">
+            <p className="text-3xl md:text-4xl font-bold mt-6 font-poppins">
               CLOUD COMPUTING CELL
             </p>
-            <p className="mt-2 text-xl md:text-2xl font-semibold font-rubik">
+            <p className="mt-2 text-xl md:text-2xl font-semibold font-poppins">
               Think
               <span className="ml-3 border-r-2 mr-3 border-white"></span>
               Develop
