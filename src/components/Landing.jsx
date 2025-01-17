@@ -16,6 +16,7 @@ import ShimmerButton from "./ui/shimmer-button";
 import ShineBorder from "./ui/shine-border";
 import { BorderBeam } from "./ui/border-beam";
 import { useNavigate } from "react-router-dom";
+import MorphingText from "./ui/morphing-text";
 
 
 const Landing = () => {
@@ -23,6 +24,13 @@ const Landing = () => {
   function register(){
     navigate("/Register")
   }
+  const texts = [
+    "Cloud",
+    "Automaton",
+    "Future",
+    "Security",
+    "Transformation"
+  ];
   return (
     <>
       <div className="">
@@ -32,7 +40,7 @@ const Landing = () => {
           <OrbitingCircles className="">
             <Particles />
           </OrbitingCircles>
-
+           
           <div className="absolute inset-0 flex flex-col mt-16 sm:mt-0 mb-96 justify-center items-center text-white text-center px-4">
             <TypingAnimation
               duration={60}
@@ -62,6 +70,8 @@ const Landing = () => {
                 Register
               </ShimmerButton>
             </div>
+
+            <MorphingText texts={texts} className="your-custom-classes relative top-52 text-white" ></MorphingText>
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
