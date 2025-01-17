@@ -28,7 +28,9 @@ const Footer = () => {
         <p className="text-white mt-4 text-sm md:text-lg font-poppins">
           {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Quam, laboriosam? Lorem ipsum dolor, sit amet consectetur adipisicing. */}
-          Empowering students to innovate, collaborate, and lead in the world of technology.<br/> Join us at Cloud Computing Cell and shape the future!
+          Empowering students to innovate, collaborate, and lead in the world of
+          technology.
+          <br /> Join us at Cloud Computing Cell and shape the future!
         </p>
         <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
           <ShimmerButton className="cursor-pointer hover:scale-125 font-jetbrains font-bold transition-all ease-in-out duration-1000 delay-0">
@@ -38,13 +40,25 @@ const Footer = () => {
       </div>
 
       <div className="flex text-xl text-white text-center font-bold absolute bottom-24 left-20 max-[400px]:left-10">
-        <img src={CCC} className="h-10 mr-4 mb-2 hidden sm:block   animate-bounce" alt="" />
-        <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-rubik">Cloud Computing Cell</p>
+        <img
+          src={CCC}
+          className="h-10 mr-4 mb-2 hidden sm:block   animate-bounce"
+          alt=""
+        />
+        <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-rubik">
+          Cloud Computing Cell
+        </p>
       </div>
 
       <div className="flex text-2xl text-white justify-center  items-center text-center font-bold absolute bottom-28 left-0 right-0">
-        <img src={CCC} className="h-10 mr-4 mb-2 block sm:hidden   animate-bounce" alt="" />
-        <p className="text-xl  lg:mt-1 lg:text-lg block sm:hidden font-rubik">Cloud Computing Cell</p>
+        <img
+          src={CCC}
+          className="h-10 mr-4 mb-2 block sm:hidden   animate-bounce"
+          alt=""
+        />
+        <p className="text-xl  lg:mt-1 lg:text-lg block sm:hidden font-rubik">
+          Cloud Computing Cell
+        </p>
       </div>
 
       <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
@@ -53,18 +67,55 @@ const Footer = () => {
         <FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
         <FaLinkedin className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
         <FaSquareInstagram className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
-        {/* <FaSquareTwitter className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
-        <IoLogoYoutube className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" /> */}
       </div>
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
         <ul className="text-white cursor-pointer sm:text-lg lg:text-xl font-rubik text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/Events">Events</Link></li>
-          <li><Link to="/TeamCards">Team</Link></li>
-          <li><Link to="/Contact">Contact</Link></li>
-          <li><Link to="/Register">Register</Link></li>
-
+          <li className="relative group mt-10">
+            <Link
+              to="/"
+              className="transition-all  ease-in-out duration-300 text-white"
+            >
+              Home
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-[4px] bg-white transition-all ease-in-out duration-500 group-hover:w-full"></span>
+          </li>
+          <li className="relative group mt-10">
+            <Link
+              to="/Events"
+              className="transition-all ease-in-out duration-300 text-white"
+            >
+              Events
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-[4px] bg-white transition-all ease-in-out duration-500 group-hover:w-full"></span>
+          </li>
+          <li className="relative group mt-10">
+            <Link
+              to="/Team"
+              className="transition-all ease-in-out duration-300 text-white"
+            >
+              Team
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-[4px] bg-white transition-all ease-in-out duration-500 group-hover:w-full"></span>
+          </li>
+          <li className="relative group mt-10">
+            <Link
+              to="/Contact"
+              className="transition-all ease-in-out duration-300 text-white"
+            >
+              Contact
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-[4px] bg-white transition-all ease-in-out duration-500 group-hover:w-full"></span>
+          </li>
+          <li className="relative group mt-10">
+            <Link
+              to="/Register"
+              className="transition-all ease-in-out duration-300 text-white"
+            >
+              Register
+            </Link>
+            <span className="absolute left-0 bottom-0 w-0 h-[4px] bg-white transition-all ease-in-out duration-500 group-hover:w-full"></span>
+          </li>
         </ul>
       </div>
 

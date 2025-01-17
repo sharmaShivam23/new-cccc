@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import Particles from "./ui/particles";
 import notfound from "../images/notfound.png";
 import think from "../images/think.png";
+import { CoolMode } from "./ui/cool-mode";
+import MorphingText from "./ui/morphing-text";
 
 const RegisterClose = () => {
   const navigate = useNavigate();
@@ -28,6 +30,7 @@ const RegisterClose = () => {
           className="flex justify-center text-center items-center mt-3"
         >
           <ShimmerButton>Back to Home</ShimmerButton>
+          {/* <CoolMode></CoolMode> */}
         </div>
       </div>
     </>
