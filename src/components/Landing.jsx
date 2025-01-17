@@ -71,7 +71,7 @@ const Landing = () => {
               </ShimmerButton>
             </div>
 
-            <MorphingText texts={texts} className="your-custom-classes relative top-52 text-white" ></MorphingText>
+            <MorphingText texts={texts} className="your-custom-classes relative  top-36 sm:top-52 text-white" ></MorphingText>
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
