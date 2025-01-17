@@ -38,7 +38,7 @@ const Landing = () => {
               duration={60}
               delay={0}
               startOnView={true}
-              className="text-white text-xl md:text-5xl font-jetbrains font-bold"
+              className="text-white text-2xl md:text-5xl font-jetbrains font-bold"
             >
               {"Join the Future of Cloud Computing"}
             </TypingAnimation>

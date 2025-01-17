@@ -304,8 +304,9 @@ function Gototop(){
   return(
     <div onClick={top} className=" text-xl z-50 cursor-pointer   h-12 flex justify-center  items-center w-12  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 rounded-full bg-slate-50 shadow-md hover:shadow-white text-black font-extrabold fixed sm:right-[80px] bottom-20 right-5 sm:bottom-5">
     <FaAnglesLeft 
-        className={` font-bold text-xl transition duration-1000 ease-in-out ${
-          scrollTop && "rotate-90"
+        className={` font-bold text-xl transition duration-1000  ease-in-out ${
+          // scrollTop && "rotate-180"
+          scrollTop ? "rotate-90" : "-rotate-90"
         }`}
         />
     </div>

@@ -30,7 +30,7 @@ const Team = () => {
           initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
           whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="text-white text-center text-2xl sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
+          className="text-white text-center text-2xl underline sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
         >
           Who Are We
         </motion.h1>
@@ -57,24 +57,26 @@ const Team = () => {
             className="w-full px-2 xl:w-1/2  max-[900px]:p-5   text-xs md:text-xl xl:text-2xl  font-serif text-center lg:text-left"
           >
             <p className="font-major tracking-wider">
-            Our team is a vibrant mix of individuals from diverse backgrounds, each bringing unique skills and a shared passion for technology. From budding developers to experienced engineers, we collaborate to explore and innovate in the fields of Web Development, Machine Learning, Cloud Computing, and UI/UX Design.We believe in supporting one another, sharing knowledge, and working together on real-world projects  With a strong focus on growth and collaboration, we aim to empower every member to reach their full potential in the ever-evolving tech landscape.
+           We are a team and our team is a vibrant mix of individuals from diverse backgrounds, each bringing unique skills and a shared passion for technology.  we collaborate to explore and innovate in the fields of Web Development, Machine Learning, Cloud Computing, and UI/UX Design.We believe in supporting one another, sharing knowledge, and working together on real-world projects  With a strong focus on growth and collaboration, we aim to empower every member to reach their full potential in the ever-evolving tech landscape.
 
 
             </p>
           </motion.div>
         </section>
-        <div className="flex justify-center items-center sm:mt-7">
+        <motion.div initial={{scale : 1.3}} whileInView={{scale : 1}} transition={{duration : 1 , ease : "easeIn"}}  className="flex justify-center items-center sm:mt-7">
           <InteractiveHoverButton
             onClick={teamcard}
             className="text-black text-xs sm:text-lg font-playwrite  font-extrabold mb-2"
           >
             More
           </InteractiveHoverButton>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
+
+
 
 export default Team;
 

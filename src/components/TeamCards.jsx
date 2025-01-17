@@ -66,7 +66,7 @@ export const TeamCards = () => {
       <Buttons activeYear={activeYear} onSelectYear={handleYearSelect} />
       {activeYear === "four" && <FouthYear />}
       {activeYear === "three" && <ThirdYear />}
-      {activeYear === "two" && <SecondYear />}
+      {activeYear === "two" && <SecondYear activeYear={activeYear}/>}
     </div>
   );
 };
@@ -528,12 +528,13 @@ const ThirdYear = () => {
 
 
 
-const SecondYear = () => {
+const SecondYear = ({activeYear}) => {
 
   const [obj , setObj] = useState([])
   const [loading , setLoading] = useState(false)
 
-  useEffect(() => {
+  
+ 
     const  api = async() =>
    {
     setLoading(true)
@@ -554,9 +555,14 @@ const SecondYear = () => {
       setLoading(false)
     }
   }
-  api()
 
+
+
+
+useEffect(() => {
+  api()
 },[])
+
 
 
   

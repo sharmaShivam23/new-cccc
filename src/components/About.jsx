@@ -80,11 +80,11 @@ const About = () => {
               and professional development.
             </p>
             <div className="btn flex text-xl items-start gap-20 mt-8">
-              <ShimmerButton className="font-bold text-xs hover:scale-110 transition-all ease-in-out duration-1000  sm:text-lg font-bebas">
+              <ShimmerButton className="font-bold text-xs max-[300px]:text-[7px] hover:scale-110 transition-all ease-in-out duration-1000  sm:text-lg font-bebas">
                 Know More
               </ShimmerButton>
               <ShimmerButton
-                className="font-bold text-xs  hover:scale-110 transition-all ease-in-out duration-1000 sm:text-lg font-bebas"
+                className="font-bold text-xs  hover:scale-110  max-[300px]:text-[7px]  transition-all ease-in-out duration-1000 sm:text-lg font-bebas"
                 onClick={contact}
               >
                 Contact Us
