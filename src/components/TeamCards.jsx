@@ -113,11 +113,11 @@ const FouthYear = () => {
   const [obj , setObj] = useState([])
   const [loading , setLoading] = useState(false)
 
-  if (loading) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
+  // if (loading) {
+  //   document.body.classList.add('no-scroll');
+  // } else {
+  //   document.body.classList.remove('no-scroll');
+  // }
 
 
   useEffect(() => {
@@ -276,11 +276,11 @@ const ThirdYear = () => {
   const [loading , setLoading] = useState(false)
 
   
-  if (loading) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
+  // if (loading) {
+  //   document.body.classList.add('no-scroll');
+  // } else {
+  //   document.body.classList.remove('no-scroll');
+  // }
 
   useEffect(() => {
     const  api = async() =>
@@ -556,11 +556,11 @@ const SecondYear = ({activeYear}) => {
   const [loading , setLoading] = useState(false)
 
    
-  if (loading) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
+  // if (loading) {
+  //   document.body.classList.add('no-scroll');
+  // } else {
+  //   document.body.classList.remove('no-scroll');
+  // }
  
     const  api = async() =>
    {
