@@ -204,7 +204,7 @@ const FouthYear = () => {
           <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
       </h1> 
       : 
-      <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-amber-500">
+      <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-[#6E45AC]">
        (Batch 2021-2025)
       </h1>
 }
