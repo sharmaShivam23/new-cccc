@@ -130,7 +130,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
           className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors 
           ${
             selected === title
-              ? "text-white hover:bg-white hover:text-black"
+              ? "text-black hover:bg-white hover:text-black bg-white"
               : "hover:text-black text-white hover:bg-white"
           }
         `}
@@ -147,7 +147,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.125 }}
-              className="text-lg ml-2 font-semibold font-rubik"
+              className="text-lg ml-2  font-semibold font-rubik"
             >
               {/* <Link to={to}>{title}</Link>  */}
               {title}
