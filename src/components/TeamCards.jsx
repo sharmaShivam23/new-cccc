@@ -59,7 +59,7 @@ export const TeamCards = () => {
         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
         transition={{ duration: 1, delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-white text-center text-xl sm:text-3xl md:text-5xl font-poppins  font-bold mb-6 mt-6"
+        className="text-white text-center text-2xl  sm:text-3xl md:text-5xl font-poppins  font-bold mb-6 mt-6"
       >
         OUR TEAM MEMBERS
       </motion.h1>
@@ -112,6 +112,13 @@ const Buttons = ({ onSelectYear, activeYear }) => {
 const FouthYear = () => {
   const [obj , setObj] = useState([])
   const [loading , setLoading] = useState(false)
+
+  if (loading) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+
 
   useEffect(() => {
     const  api = async() =>
@@ -190,9 +197,17 @@ const FouthYear = () => {
 
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
-      <h1 className="mb-10 text-2xl font-jetbrains font-extrabold underline text-[#6E45AC]">
+      {/* <h1 className="mb-10 text-2xl font-jetbrains font-extrabold underline text-[#6E45AC]">
       (Batch 2021-2025)
+      </h1> */}
+        {loading ? 
+          <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
+      </h1> 
+      : 
+      <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-amber-500">
+       (Batch 2021-2025)
       </h1>
+}
        
       {loading ? <Loading/> : (
       <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -206,7 +221,7 @@ const FouthYear = () => {
           >
             <div className="relative w-[20rem] cursor-pointer h-[25rem] overflow-hidden border-2 border-[#6E45AC] bg-white rounded-3xl hover:rounded-none group">
 
-              <div className="w-full img h-full flex justify-center items-center flex-col transform group-hover:translate-x-full   transition-all damber-500">
+              <div className="w-full img h-full flex justify-center items-center flex-col transform group-hover:translate-x-full   transition-all ease-in-out delay-0 duration-700 damber-500">
                 <img
                   src={details.profile}
                   alt={details.name}
@@ -227,7 +242,7 @@ const FouthYear = () => {
               </div>
 
               {/* team member about */}
-              <div className="absolute content top-0 left-0 w-full h-full bg-[#6E45AC] flex justify-center items-center text-red-400 transition-all duration-700 ease-in-out transform group-hover:translate-x-0  -translate-x-full flex-col">
+              <div className="absolute content top-0 left-0 w-full h-full bg-[#6E45AC] flex justify-center items-center text-red-400 transition-all duration-700 ease-in-out delay-0 transform group-hover:translate-x-0  -translate-x-full flex-col">
                 <div className="tags text-5xl p-3  flex gap-3 text-black">
                   <a href="">
                     <FaLinkedin />
@@ -259,6 +274,13 @@ const ThirdYear = () => {
 
   const [obj , setObj] = useState([])
   const [loading , setLoading] = useState(false)
+
+  
+  if (loading) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
 
   useEffect(() => {
     const  api = async() =>
@@ -294,7 +316,7 @@ const ThirdYear = () => {
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
     
        {loading ? 
-          <h1 className="mb-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
+          <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
       </h1> 
       : 
       
@@ -533,7 +555,12 @@ const SecondYear = ({activeYear}) => {
   const [obj , setObj] = useState([])
   const [loading , setLoading] = useState(false)
 
-  
+   
+  if (loading) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
  
     const  api = async() =>
    {
@@ -573,7 +600,7 @@ useEffect(() => {
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
     
        {loading ? 
-          <h1 className="mb-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
+          <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
       </h1> 
       : 
       
