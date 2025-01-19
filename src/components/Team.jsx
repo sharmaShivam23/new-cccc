@@ -56,8 +56,8 @@ const Team = () => {
             transition={{ type: "spring", stiffness: 50, duration: 1 }}
             className="w-full px-2 xl:w-1/2  max-[900px]:p-5   text-xs md:text-xl xl:text-2xl  font-serif text-center lg:text-left"
           >
-            <p className="font-major tracking-wider">
-           We are a team and our team is a vibrant mix of individuals from diverse backgrounds, each bringing unique skills and a shared passion for technology.  we collaborate to explore and innovate in the fields of Web Development, Machine Learning, Cloud Computing, and UI/UX Design.We believe in supporting one another, sharing knowledge, and working together on real-world projects  With a strong focus on growth and collaboration, we aim to empower every member to reach their full potential in the ever-evolving tech landscape.
+            <p className="font-major">
+           We are a team with vibrant mix of individuals from diverse backgrounds, each bringing unique skills and a shared passion for technology.  we collaborate to explore and innovate in the fields of Web Development, Machine Learning, Cloud Computing, and UI/UX Design.We believe in supporting one another, sharing knowledge, and working together on real-world projects  With a strong focus on growth and collaboration, we aim to empower every member to reach their full potential in the ever-evolving tech landscape.
 
 
             </p>

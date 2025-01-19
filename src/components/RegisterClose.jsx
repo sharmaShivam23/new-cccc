@@ -20,10 +20,10 @@ const RegisterClose = () => {
       <Particles />
       <div className="max-w-[90vw] m-auto h-auto md:h-screen flex-col  flex justify-center items-center">
         <div>
-          <p className="text-white text-4xl font-bold text-center">
+          <p className="text-white sm:text-4xl text-2xl mt-6 font-bold text-center">
             We're sorry, registrations are  closed.
           </p>
-          <img src={notfound} className="h-[70vh]" alt="" />
+          <img src={notfound} className="sm:h-[70vh] h-[40vh]" alt="" />
         </div>
         <div
           onClick={home}
