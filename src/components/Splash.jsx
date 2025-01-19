@@ -64,7 +64,7 @@ const Splash = () => {
             }}
           >
             {/* <p className='mr-4 font-poppins'>CELL</p> */}
-            <SparklesText className="mr-4 sm:text-3xl text-2xl font-poppins" text={"CLOUD"}>
+            <SparklesText className="mr-4 sm:text-3xl text-2xl font-poppins" text={"CELL"}>
               CELL
             </SparklesText>
           </motion.div>

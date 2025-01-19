@@ -17,6 +17,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <div className="z-50 ">
@@ -29,9 +30,12 @@ export const Navbar = () => {
 };
 
 const Sidebar = () => {
+  const location = useLocation()
   const handle = () => {
     setOpen(true);
   };
+
+  
 
   const handles = () => {
     setOpen(false);
@@ -72,6 +76,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+          location={location}
         />
         <Option
           to="/Team"
@@ -80,6 +85,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+          location={location}
         />
         <Option
           to="/Events"
@@ -88,6 +94,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+          location={location}
         />
         <Option
           to="/Contact"
@@ -96,7 +103,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
-          notifs="1"
+          location={location}
         />
         <Option
           to="/Register"
@@ -105,6 +112,8 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+           notifs="1"
+          location={location}
         />
       </div>
 
@@ -119,17 +128,17 @@ const Sidebar = () => {
   );
 };
 
-const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
+const Option = ({ to, Icon, title, selected, setSelected, open, notifs , location }) => {
+  const isSelected = location.pathname === to;
   return (
     <>
-      {/* <a href={to}> */}
       <Link to={to}>
         <motion.button
           layout
           onClick={() => setSelected(title)}
           className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors 
           ${
-            selected === title
+            isSelected
               ? "text-black hover:bg-white hover:text-black bg-white"
               : "hover:text-black text-white hover:bg-white"
           }
@@ -149,7 +158,6 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
               transition={{ delay: 0.125 }}
               className="text-lg ml-2  font-semibold font-rubik"
             >
-              {/* <Link to={to}>{title}</Link>  */}
               {title}
             </motion.span>
           )}
@@ -164,15 +172,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
               {notifs}
             </motion.span>
           )}
-          {/* {notifs && open && (
-        <motion.span initial ={{scale : 0 , opacity : 0}} animate={{opacity : 1 , scale : 1}} transition={{delay : 0.5}} style={{transform : "translateY(-50%)"}} className='absolute right-2  size-4 ronded bg-indigo-500 text-xs text-white top-7'>
-          {notifs}
-        </motion.span>
-      )} */}
         </motion.button>
-        {/* <Link/> */}
-
-        {/* </a> */}
       </Link>
     </>
   );
@@ -202,9 +202,6 @@ const TitleSection = ({ open }) => {
             </motion.div>
           )}
         </div>
-        {/* {open && (
-          <FiChevronDown className="text-white mr-2 text-xl font-bold" />
-        )} */}
       </div>
     </div>
   );
@@ -260,18 +257,6 @@ const ToggleClose = ({ open, setOpen }) => {
             }`}
           />
         </div>
-       
-        {/* {open && (
-          <motion.span
-            layout
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.125 }}
-            className="text-lg font-bold  text-white"
-          >
-        
-          </motion.span>
-        )} */}
       </div>
     </motion.button>
   );
@@ -305,7 +290,6 @@ function Gototop(){
     <div onClick={top} className=" text-xl z-50 cursor-pointer   h-12 flex justify-center  items-center w-12  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 rounded-full bg-slate-50 shadow-md hover:shadow-white text-black font-extrabold fixed sm:right-[80px] bottom-20 right-5 sm:bottom-5">
     <FaAnglesLeft 
         className={` font-bold text-xl transition duration-1000  ease-in-out ${
-          // scrollTop && "rotate-180"
           scrollTop ? "rotate-90" : "-rotate-90"
         }`}
         />
@@ -313,10 +297,10 @@ function Gototop(){
   )
 }
 
-// const ExampleContent = () => <div className='h-[100vh] bg-red-800 w-full'></div>
 
 const ResNavbar = () => {
   const [scrollWidth , setScrollWidth] = useState(0)
+  const location = useLocation() 
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -335,28 +319,21 @@ const ResNavbar = () => {
   return (
     <div className="block sm:hidden fixed left-0 w-full  bottom-0 right-0 z-50 border-t-2 border-violet-800">
       <div className="icons flex text-white bg-black h-16 justify-evenly items-center text-3xl">
-        {/* <motion.div
-          initial={{ x: -80, rotate: 360 }}
-          whileInView={{ x: 0, rotate: 0 }}
-          transition={{ duration: 3 }}
-        > */}
         <img src={CCC} className="h-10" alt="" />
-        {/* </motion.div> */}
-        <div className="border-r border-violet-600 h-full pb-3 mt-3 mb-3"></div>
-        {/* <div className='border-white border-2 m-1 h-full'></div> */}
-        <Link to="/">
-          <FaHome className="hover:scale-110" />
+        <div className="border-r border-violet-600 h-16  pb-3 mt-3 mb-3"></div>
+        <Link to="/" className={`flex justify-evenly items-center ${location.pathname === "/" ?  "bg-white rounded-md h-10  w-10  text-black" : ""}`}>
+          <FaHome  />
         </Link>
-        <Link to="/Team">
+        <Link to="/Team"  className={`flex justify-evenly items-center ${location.pathname === "/Team" ?  "bg-white rounded-md h-10  w-10  text-black" : ""}`}>
           <FaPeopleGroup />
         </Link>
-        <Link to="/Events">
-          <MdEmojiEvents />
+        <Link to="/Events"  className={`flex justify-evenly items-center ${location.pathname === "/Events" ?  "bg-white rounded-md h-10  w-10  text-black" : ""}`}>
+          <MdEmojiEvents  />
         </Link>
-        <Link to="/Contact">
+        <Link to="/Contact"  className={`flex justify-evenly items-center ${location.pathname === "/Contact" ?  "bg-white rounded-md h-10  w-10  text-black" : ""}`}>
           <FaPhoneVolume />
         </Link>
-        <Link to="/Register">
+        <Link to="/Register"  className={`flex justify-evenly items-center ${location.pathname === "/Register" ?  "bg-white rounded-md h-10  w-10  text-black" : ""}`}>
           <GiAchievement />
         </Link>
       </div>
@@ -366,7 +343,6 @@ const ResNavbar = () => {
       ></div>
     </div>
     
-    // <div></div>
   );
 };
 
@@ -484,3 +460,4 @@ const Social = () => {
     </div>
   );
 };
+
