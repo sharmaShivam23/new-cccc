@@ -9,7 +9,7 @@ const SparklesText = ({
   colors = { first: "#FFFFFF", second: "#FF0000" },
   // colors = { first: "#9E7AFF", second: "#FE8BBB" },
   className,
-  sparklesCount = 7,
+  sparklesCount = 4,
   ...props
 }) => {
   const [sparkles, setSparkles] = useState([]);

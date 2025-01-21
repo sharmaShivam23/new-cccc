@@ -40,7 +40,7 @@ const Faculty = () => {
           </motion.div>
 
           <div className="txt lg:w-4/6 w-full h-full flex justify-center items-center sm:p-3  bg-blue-">
-            <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className=" text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[800px]:text-xl tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5">
+            <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className=" text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5">
               With 15 years of teaching experience and 3 years of industry
               experience as a Java Software Developer, Mr. Santosh Mishra is a
               distinguished academic and industry professional. He is a Gold

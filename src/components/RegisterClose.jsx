@@ -18,7 +18,7 @@ const RegisterClose = () => {
   return (
     <>
       <Particles />
-      <div className="max-w-[90vw] m-auto h-auto md:h-screen flex-col  flex justify-center items-center">
+      <div className="max-w-[90vw] z-50 m-auto h-auto md:h-screen flex-col  flex justify-center items-center">
         <div>
           <p className="text-white sm:text-4xl text-2xl mt-6 font-bold text-center">
             We're sorry, registrations are  closed.
