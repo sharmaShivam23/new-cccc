@@ -53,7 +53,7 @@ export const TeamCards = () => {
   };
 
   return (
-    <div className="max-w-[90vw] m-auto">
+    <div className="max-w-[90vw] m-auto z-50">
       <motion.h1
         initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
         whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
@@ -75,7 +75,7 @@ const Buttons = ({ onSelectYear, activeYear }) => {
 
   
   return (
-    <div className="flex justify-evenly font-jetbrains">
+    <div className="flex justify-evenly font-jetbrains z-50">
       <div className="max-w-[90vw] sm:mt-10 mt-5 text-xs sm:text-lg m-auto block sm:flex justify-evenly mb-6">
         <ShimmerButton
          shimmerColor = {'#6E45AC'}
@@ -196,10 +196,7 @@ const FouthYear = () => {
   // ];
 
   return (
-    <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
-      {/* <h1 className="mb-10 text-2xl font-jetbrains font-extrabold underline text-[#6E45AC]">
-      (Batch 2021-2025)
-      </h1> */}
+    <div className="h-auto sm:max-w-[90vw] z-50 w-full flex justify-center flex-col  items-center py-8">
         {loading ? 
           <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
       </h1> 
@@ -313,7 +310,7 @@ const ThirdYear = () => {
   return (
     <>
      <ToastContainer />
-    <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
+    <div className="h-auto sm:max-w-[90vw] w-full z-50 flex justify-center flex-col  items-center py-8">
     
        {loading ? 
           <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">
@@ -597,7 +594,7 @@ useEffect(() => {
   return (
     <>
      <ToastContainer />
-    <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col  items-center py-8">
+    <div className="h-auto sm:max-w-[90vw] w-full z-50 flex justify-center flex-col  items-center py-8">
     
        {loading ? 
           <h1 className="mb-10 mt-10 text-2xl font-serif font-extrabold underline bg-[#333] h-[32px] w-[227px]">

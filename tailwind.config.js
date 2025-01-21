@@ -90,7 +90,7 @@ export default {
   			},
   			sUp: {
   				'0%': {
-  					transform: 'translateY(300%)',
+  					transform: 'translateY(100%)',
   					opacity: '0'
   				},
   				'100%': {

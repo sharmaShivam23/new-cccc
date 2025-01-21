@@ -110,7 +110,7 @@ export const Contact = () => {
       <Particles />
       <div
         id="contact"
-        className="md:h-screen z-10 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p-4 block md:flex"
+        className="md:h-screen z-50 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p-4 block md:flex"
       >
         <Video />
         <Form />

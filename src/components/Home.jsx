@@ -26,7 +26,7 @@ const Home = () => {
     <div>
       <>
         <Navbar />
-        <div className="flex justify-center  items-center p-4 pt-0 flex-col overflow-hidden">
+        <div className="flex justify-center  items-center z-50 p-4 pt-0 flex-col overflow-hidden">
           <Landing></Landing>
           {/* <MyComponent /> */}
           <About />
