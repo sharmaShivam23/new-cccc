@@ -15,7 +15,7 @@ const Splash = () => {
             initial={{ height: 0 }}
             whileInView={{ height: "100vh" }}
             transition={{ duration: 4, ease: "easeInOut" }}
-            className="bg-black z-40 w-screen"
+            className="bg-black z-40 w-screen h-[100vh] sm:h-[100vh] md:sm:h-[100vh] lg:sm:h-[100vh]"
           ></motion.div>
         </div>
         <motion.div
