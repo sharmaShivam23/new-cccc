@@ -32,18 +32,20 @@ const Footer = () => {
           technology.
           <br /> Join us at Cloud Computing Cell and shape the future!
         </p>
-        <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
+        <a className="z-50" href="https://quizaki.vercel.app/">
+        <div className="text-white z-50 text-xl md:text-xl mt-4 font-bold">
           <ShimmerButton className="cursor-pointer hover:scale-125 font-jetbrains font-bold transition-all ease-in-out duration-1000 delay-0">
             Start Now
           </ShimmerButton>
         </div>
+        </a>
       </div>
 
       <div className="flex text-xl text-white text-center font-bold absolute bottom-24 left-20 max-[400px]:left-10">
         <img
           src={CCC}
           className="h-10 mr-4 mb-2 hidden sm:block   animate-bounce"
-          alt=""
+          alt="CCC/image"
         />
         <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-poppins">
           Cloud Computing Cell
@@ -54,7 +56,7 @@ const Footer = () => {
         <img
           src={CCC}
           className="h-10 mr-4 mb-2 block sm:hidden   animate-bounce"
-          alt=""
+          alt="CCC/image"
         />
         <p className="text-xl  lg:mt-1 lg:text-lg block sm:hidden font-rubik">
           Cloud Computing Cell
@@ -64,9 +66,13 @@ const Footer = () => {
       <div className="border-[1px] border-gray-800 w-full absolute bottom-20"></div>
 
       <div className="icons text-white z-40 sm:text-5xl text-3xl gap-10 mt-2 absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center">
-        <FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
+        <a href="https://www.facebook.com/ccc.akgec"><FaFacebook className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
+        </a>
+        <a href="https://www.linkedin.com/company/cloud-computing-cell-akgec/">
         <FaLinkedin className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
-        <FaSquareInstagram className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" />
+        </a>
+        <a href="https://www.instagram.com/ccc_akgec?igsh=YzljYTk1ODg3Zg==">
+        <FaSquareInstagram className="hover:scale-125 cursor-pointer z-50 transition-all ease-in-out duration-1000 delay-0" /></a>
       </div>
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
@@ -126,7 +132,7 @@ const Footer = () => {
             Cloud Computing
           </span>
         </p>
-        <p className="font-playwrite">cccAkgec.ac.in</p>
+        <p className="font-playwrite">cloudcomputing@akgec.ac.in</p>
       </div>
     </div>
   );

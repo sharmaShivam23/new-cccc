@@ -15,7 +15,7 @@
 // import { motion } from "framer-motion";
 // import { FaSquareXTwitter } from "react-icons/fa6";
 // import { FaFacebook } from "react-icons/fa6";
-// import { IoLogoYoutube } from "react-icons/io5";
+// import { IoLogoGithub } from "react-icons/io5";
 // import { FaLinkedin } from "react-icons/fa6";
 // import { FaSquareTwitter } from "react-icons/fa6";
 // import { FaSquareInstagram } from "react-icons/fa6";
@@ -478,7 +478,7 @@
 //             className="relative top hover:text-red-700 hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
 //             href=""
 //           >
-//             <IoLogoYoutube />
+//             <IoLogoGithub />
 //             <div
 //               className={`h-9 rounded-md w-24 absolute top-2  ${
 //                 isHovered5 ? "opacity-100" : "opacity-0"
@@ -512,7 +512,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { FaAnglesLeft } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaFacebook } from "react-icons/fa6";
-import { IoLogoYoutube } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
@@ -739,7 +739,7 @@ const ToggleClose = ({ open, setOpen }) => {
             transition={{ delay: 0.125 }}
             className="text-lg font-bold  text-white"
           >
-            Hide
+            
           </motion.span>
         )}
       </div>
@@ -837,7 +837,7 @@ const Social = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className="relative top hover:text-blue-700  hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
-            href=""
+            href="https://www.facebook.com/ccc.akgec"
           >
             <FaFacebook />
             <div
@@ -852,7 +852,7 @@ const Social = () => {
             onMouseEnter={() => setIsHovered2(true)}
             onMouseLeave={() => setIsHovered2(false)}
             className="relative top  hover:text-blue-900 hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
-            href=""
+            href="https://www.linkedin.com/company/cloud-computing-cell-akgec/"
           >
             <FaLinkedin />
             <div
@@ -867,7 +867,7 @@ const Social = () => {
             onMouseEnter={() => setIsHovered3(true)}
             onMouseLeave={() => setIsHovered3(false)}
             className="relative top  hover:text-orange-700  hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
-            href=""
+            href="https://www.instagram.com/ccc_akgec?igsh=YzljYTk1ODg3Zg=="
           >
             <FaSquareInstagram />
             <div
@@ -896,10 +896,10 @@ const Social = () => {
           <a
             onMouseEnter={() => setIsHovered5(true)}
             onMouseLeave={() => setIsHovered5(false)}
-            className="relative top hover:text-red-700 hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
-            href=""
+            className="relative top hover:text-white hover:scale-110 transition-all ease-in-out duration-1000 z-50 cursor-pointer delay-0"
+            href="https://github.com/cccAKGEC/CCC-Website.git"
           >
-            <IoLogoYoutube />
+            <IoLogoGithub />
             <div
               className={`h-9 rounded-md w-24 absolute top-2  ${
                 isHovered5 ? "opacity-100" : "opacity-0"
