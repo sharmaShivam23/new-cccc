@@ -7,7 +7,7 @@ export const Register = () => {
         top : 0,
         behavior : "smooth"
       })
-    })
+    },[])
   return (
     <>
       <RegisterClose/>

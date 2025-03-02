@@ -34,14 +34,22 @@ const Faculty = () => {
           <motion.div initial={{rotateY : 90, opacity : 0}} whileInView={{rotateY : 0,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className="pht lg:w-2/6 w-full h-full flex justify-center items-center bg-red-">
             <img
               src={sir}
-              className="max-[600px]:h-40 max-[1000px]:h-80 object-contain h-96"
+              className="sm:h-80 h-56 max-[450px]:h-40  object-contain"
+              // className="max-[600px]:h-40 max-[1000px]:h-80  object-contain h-96"
               alt=""
             />
           </motion.div>
 
           <div className="txt lg:w-4/6 w-full h-full flex justify-center items-center sm:p-3  bg-blue-">
-            <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className=" text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5">
-              With 15 years of teaching experience and 3 years of industry
+            <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} 
+            className=" sm:p-4 max-[450px]:hidden flex  max-[500px]:text-xs text-lg sm:text-xl lg:text-2xl  tracking-wide  font-extralight   text-center  lg:text-left font-major lg:mb-5">
+            {/* className="text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5"> */}
+            {/* className=" max-[450px]:hidden w-full px-2 xl:w-1/2 max-[900px]:p-5 max-[400px]:text-xs max-[500px]:text-xs max-[550px]:text-sm max-[750px]:text-xl text-xs md:text-xl xl:text-2xl font-serif text-center lg:text-left
+"> */}
+            {/* className="text-xs   sm:p-4 max-[450px]:hidden xl:text-2xl tracking-wide font-extralight text-center lg:text-left font-major lg:mb-5"> */}
+            {/* className="text-xs  md:text-xl sm:p-4 max-[450px]:hidden xl:text-2xl tracking-wide font-extralight text-center lg:text-left font-major lg:mb-5"> */}
+            {/* <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className="text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5"> */}
+               15 years of teaching experience and 3 years of industry
               experience as a Java Software Developer, Mr. Santosh Mishra is a
               distinguished academic and industry professional. He is a Gold
               Faculty Partner at Infosys and has been recognized with the

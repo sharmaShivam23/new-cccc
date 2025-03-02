@@ -8,6 +8,16 @@ const Splash = () => {
   return (
     <>
       <div className="bg-violet-500 h-screen w-screen relative flex justify-center items-center flex-col">
+
+        
+      <div className="ani z-40 bg-black text-3xl absolute bottom-0 text-white flex justify-center items-start">
+          <motion.div
+            initial={{ height: 0 }}
+            whileInView={{ height: "100vh" }}
+            transition={{ duration: 4, ease: "easeInOut" }}
+            className="bg-black z-40 w-screen"
+          ></motion.div>
+        </div>
         <motion.div
           initial={{ rotate: 0, scale: 0 }}
           whileInView={{ rotate: 360, scale: 1 }}
@@ -70,14 +80,6 @@ const Splash = () => {
           </motion.div>
         </div>
 
-        <div className="ani z-40 bg-black text-3xl absolute bottom-0 text-white flex justify-center items-start">
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: "100vh" }}
-            transition={{ duration: 4, ease: "easeInOut" }}
-            className="bg-black z-40 w-screen"
-          ></motion.div>
-        </div>
       </div>
     </>
   );

@@ -57,13 +57,13 @@ const Loading = () => {
 
   return (
     <div className="h-auto sm:max-w-[90vw] w-full flex justify-center flex-col items-center py-8">
-      <div className="grid container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="flex justify-center items-center flex-wrap gap-7">
         {obj.map((details, index) => (
           <motion.div
             key={index}
             className="flex justify-center items-center"
           >
-            <div className="relative w-[20rem] cursor-pointer h-[25rem] overflow-hidden bg-[#333] rounded-3xl">
+            <div className="relative w-[20rem] m-4 cursor-pointer h-[25rem] overflow-hidden bg-[#333] rounded-3xl">
               <div className="w-full h-full flex justify-center items-center flex-col">
                 <div className="h-[208px] w-[208px] bg-[#444] rounded-full animate-pulse"></div>
 

@@ -1,3 +1,6 @@
+
+
+
 // import React, { useEffect } from "react";
 // import { useState } from "react";
 // import logo from "../images/logo.svg";
@@ -17,27 +20,22 @@
 // import { FaSquareTwitter } from "react-icons/fa6";
 // import { FaSquareInstagram } from "react-icons/fa6";
 // import { Link } from "react-router-dom";
-// import { useLocation } from 'react-router-dom';
+// import { useLocation } from "react-router-dom";
 // export const Navbar = () => {
 //   return (
 //     <div className="z-50 ">
-     
 //       <Sidebar />
 //       <ResNavbar />
 //       <Social />
 //       <Gototop/>
-
 //     </div>
 //   );
 // };
 
 // const Sidebar = () => {
-//   const location = useLocation()
 //   const handle = () => {
 //     setOpen(true);
 //   };
-
-  
 
 //   const handles = () => {
 //     setOpen(false);
@@ -46,6 +44,10 @@
 //   const [open, setOpen] = useState(false);
 //   const [selected, setSelected] = useState("Home");
 //   const [scrollWidth , setScrollWidth] = useState(0)
+//   const location = useLocation()
+
+  
+  
 
 //   const handleScroll = () => {
 //     const scrollTop = window.scrollY;
@@ -66,7 +68,7 @@
 //       layout
 //       onHoverStart={handle}
 //       onHoverEnd={handles}
-//       className={` z-50 fixed top-0 left-0 h-[100vh] hidden cursor-pointer sm:block  border shrink-0 border-violet-800 bg-zinc-800 p-3`}
+//       className={`z-50 fixed  top-0 h-[100vh] hidden cursor-pointer sm:block  border shrink-0 border-violet-800 bg-zinc-800 p-3`}
 //       style={{ width: open ? "235px" : "fit-content" }}
 //     >
 //       <TitleSection open={open} />
@@ -78,7 +80,6 @@
 //           selected={selected}
 //           setSelected={setSelected}
 //           open={open}
-//           location={location}
 //         />
 //         <Option
 //           to="/Team"
@@ -87,7 +88,6 @@
 //           selected={selected}
 //           setSelected={setSelected}
 //           open={open}
-//           location={location}
 //         />
 //         <Option
 //           to="/Events"
@@ -96,7 +96,6 @@
 //           selected={selected}
 //           setSelected={setSelected}
 //           open={open}
-//           location={location}
 //         />
 //         <Option
 //           to="/Contact"
@@ -105,7 +104,7 @@
 //           selected={selected}
 //           setSelected={setSelected}
 //           open={open}
-//           location={location}
+//           notifs="1"
 //         />
 //         <Option
 //           to="/Register"
@@ -114,8 +113,6 @@
 //           selected={selected}
 //           setSelected={setSelected}
 //           open={open}
-//            notifs="1"
-//           location={location}
 //         />
 //       </div>
 
@@ -130,18 +127,18 @@
 //   );
 // };
 
-// const Option = ({ to, Icon, title, selected, setSelected, open, notifs , location }) => {
-//   const isSelected = location.pathname === to;
+// const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
 //   return (
 //     <>
+//       {/* <a href={to}> */}
 //       <Link to={to}>
 //         <motion.button
 //           layout
 //           onClick={() => setSelected(title)}
 //           className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors 
 //           ${
-//             isSelected
-//               ? "text-black hover:bg-white hover:text-black bg-white"
+//             selected === title
+//               ? "text-white hover:bg-white hover:text-black"
 //               : "hover:text-black text-white hover:bg-white"
 //           }
 //         `}
@@ -158,8 +155,9 @@
 //               initial={{ opacity: 0, y: 12 }}
 //               animate={{ opacity: 1, y: 0 }}
 //               transition={{ delay: 0.125 }}
-//               className="text-lg ml-2  font-semibold font-rubik"
+//               className="text-lg ml-2 font-semibold font-rubik"
 //             >
+//               {/* <Link to={to}>{title}</Link>  */}
 //               {title}
 //             </motion.span>
 //           )}
@@ -174,7 +172,15 @@
 //               {notifs}
 //             </motion.span>
 //           )}
+//           {/* {notifs && open && (
+//         <motion.span initial ={{scale : 0 , opacity : 0}} animate={{opacity : 1 , scale : 1}} transition={{delay : 0.5}} style={{transform : "translateY(-50%)"}} className='absolute right-2  size-4 ronded bg-indigo-500 text-xs text-white top-7'>
+//           {notifs}
+//         </motion.span>
+//       )} */}
 //         </motion.button>
+//         {/* <Link/> */}
+
+//         {/* </a> */}
 //       </Link>
 //     </>
 //   );
@@ -204,6 +210,9 @@
 //             </motion.div>
 //           )}
 //         </div>
+//         {/* {open && (
+//           <FiChevronDown className="text-white mr-2 text-xl font-bold" />
+//         )} */}
 //       </div>
 //     </div>
 //   );
@@ -259,6 +268,18 @@
 //             }`}
 //           />
 //         </div>
+       
+//         {/* {open && (
+//           <motion.span
+//             layout
+//             initial={{ opacity: 0, y: 12 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: 0.125 }}
+//             className="text-lg font-bold  text-white"
+//           >
+        
+//           </motion.span>
+//         )} */}
 //       </div>
 //     </motion.button>
 //   );
@@ -281,13 +302,21 @@
 //     window.addEventListener("scroll", handleScroll);
 //   }, []);
 
-//   const  top = () => {
-//   window.scrollTo({
-//     top : 0,
-//     behavior : "smooth"
-//   })
-//   }
+  
 
+//    const top = () => {
+//     if (scrollTop) {
+//       window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth',
+//       });
+//     } else {
+//       window.scrollTo({
+//         top: document.documentElement.scrollHeight,
+//         behavior: 'smooth',
+//       });
+//     }
+//    }
 //   return(
 //     <div onClick={top} className=" text-xl z-50 cursor-pointer   h-12 flex justify-center  items-center w-12  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 rounded-full bg-slate-50 shadow-md hover:shadow-white text-black font-extrabold fixed sm:right-[80px] bottom-20 right-5 sm:bottom-5">
 //     <FaAnglesLeft 
@@ -298,6 +327,7 @@
 //     </div>
 //   )
 // }
+
 
 
 // const ResNavbar = () => {
@@ -347,6 +377,7 @@
     
 //   );
 // };
+
 
 // const Social = () => {
 //   const [isHovered, setIsHovered] = useState(false);
@@ -468,11 +499,8 @@
 
 
 
-
-
-
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
+import { useState , useEffect } from "react";
 import logo from "../images/logo.svg";
 import CCC from "../images/CCC.png";
 import { FiChevronDown } from "react-icons/fi";
@@ -483,11 +511,10 @@ import { GiAchievement } from "react-icons/gi";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { FaAnglesLeft } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
-import { FaSquareTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -497,12 +524,13 @@ export const Navbar = () => {
       <Sidebar />
       <ResNavbar />
       <Social />
-      <Gototop/>
+      <GoToTop/>
     </div>
   );
 };
 
 const Sidebar = () => {
+  const [scrollWidth , setScrollWidth] = useState(0)
   const handle = () => {
     setOpen(true);
   };
@@ -511,30 +539,29 @@ const Sidebar = () => {
     setOpen(false);
   };
 
+  // const handleScroll = () => {
+  //   const scrollTop = window.scrollY;
+  //   const docHeight =
+  //     document.documentElement.scrollHeight - window.innerHeight;
+  //   const scrolled = (scrollTop / docHeight) * 100;
+  //   setScrollWidth(scrolled);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   // return () => {
+  //   //   window.removeEventListener("scroll", handleScroll);
+  //   // };
+  // }, []);
+
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState("Home");
-  const [scrollWidth , setScrollWidth] = useState(0)
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollWidth(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [selected, setSelected] = useState("");
   return (
     <motion.nav
       layout
       onHoverStart={handle}
       onHoverEnd={handles}
-      className={`z-50 fixed  top-0 h-[100vh] hidden cursor-pointer sm:block  border shrink-0 border-violet-800 bg-zinc-800 p-3`}
+      className={`z-50 fixed  top-0 h-[100vh] hidden cursor-pointer sm:block  border-r-2 shrink-0 border-violet-800 bg-zinc-800 p-3`}
       style={{ width: open ? "235px" : "fit-content" }}
     >
       <TitleSection open={open} />
@@ -563,6 +590,7 @@ const Sidebar = () => {
           setSelected={setSelected}
           open={open}
         />
+      
         <Option
           to="/Contact"
           Icon={FaPhoneVolume}
@@ -570,83 +598,73 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
-          notifs="1"
         />
-        <Option
+          <Option
           to="/Register"
           Icon={GiAchievement}
           title="Register"
           selected={selected}
           setSelected={setSelected}
           open={open}
+          notifs="1"
         />
       </div>
-
-      <ToggleClose open={open} setOpen={setOpen} />
-      
-      <div
-        className={`fixed   top-0 w-1 h-1 ${open ? "left-[235px]" : "left-[70px]"} bg-violet-600 rounded-r-2xl`}
+      {/* <div
+        className={`fixed  ${open ? "left-[235px]" : "left-[70px]"} top-0 h-1 w-1 bg-violet-600 rounded-r-2xl`}
         style={{ height: `${scrollWidth}%` }}
-      ></div>
-    
+      ></div> */}
+      <ToggleClose open={open} setOpen={setOpen} />
     </motion.nav>
   );
 };
 
 const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
+
   return (
     <>
-      {/* <a href={to}> */}
-      <Link to={to}>
-        <motion.button
+    <Link to={to}>
+      <motion.button
+        layout
+        onClick={() => setSelected(title)}
+        className={` z-50 relative flex h-16 w-full items-center hover:text-black text-white hover:bg-white rounded-md  transition-colors  
+          `}
+      >
+        <motion.div
           layout
-          onClick={() => setSelected(title)}
-          className={` z-50 relative flex h-16 w-full items-center rounded-md  transition-colors 
-          ${
-            selected === title
-              ? "text-white hover:bg-white hover:text-black"
-              : "hover:text-black text-white hover:bg-white"
-          }
-        `}
+          className="grid h-full text-3xl  w-10 place-content-center "
         >
-          <motion.div
+          <Icon />
+        </motion.div>
+        {open && (
+          <motion.span
             layout
-            className="grid h-full text-3xl  w-10 place-content-center "
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.125 }}
+            className="text-lg ml-2 font-semibold"
           >
-            <Icon />
-          </motion.div>
-          {open && (
-            <motion.span
-              layout
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.125 }}
-              className="text-lg ml-2 font-semibold font-rubik"
-            >
-              {/* <Link to={to}>{title}</Link>  */}
-              {title}
-            </motion.span>
-          )}
-          {notifs && (
-            <motion.span
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-              style={{ transform: "translateY(-50%)" }}
-              className="absolute right-2  size-4 ronded bg-indigo-500 text-xs animate-bounce font-bold  text-white top-7"
-            >
-              {notifs}
-            </motion.span>
-          )}
-          {/* {notifs && open && (
+            {/* {title} */}
+            <Link to={to}>{title}</Link>
+          </motion.span>
+        )}
+  
+        {notifs && (
+          <motion.span
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5 }}
+            style={{ transform: "translateY(-50%)" }}
+            className="absolute right-2  size-4 ronded bg-indigo-500 text-xs animate-bounce font-bold  text-white top-7"
+          >
+            {notifs}
+          </motion.span>
+        )}
+        {/* {notifs && open && (
         <motion.span initial ={{scale : 0 , opacity : 0}} animate={{opacity : 1 , scale : 1}} transition={{delay : 0.5}} style={{transform : "translateY(-50%)"}} className='absolute right-2  size-4 ronded bg-indigo-500 text-xs text-white top-7'>
           {notifs}
         </motion.span>
       )} */}
-        </motion.button>
-        {/* <Link/> */}
-
-        {/* </a> */}
+      </motion.button>
       </Link>
     </>
   );
@@ -676,9 +694,9 @@ const TitleSection = ({ open }) => {
             </motion.div>
           )}
         </div>
-        {/* {open && (
+        {open && (
           <FiChevronDown className="text-white mr-2 text-xl font-bold" />
-        )} */}
+        )}
       </div>
     </div>
   );
@@ -699,27 +717,6 @@ const Logo = () => {
 };
 
 const ToggleClose = ({ open, setOpen }) => {
-  const [scrollWidth , setScrollWidth] = useState(0)
-  const scrollTop = window.scrollY;
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollWidth(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
-
-  const  top = () => {
-  window.scrollTo({
-    top : 0,
-    behavior : "smooth"
-  })
-  }
   return (
     <motion.button
       layout
@@ -728,14 +725,13 @@ const ToggleClose = ({ open, setOpen }) => {
     >
       <div className="flex items-center p-2">
         <div className="grid size-10 place-center text-lg">
-          <FaAnglesLeft onClick={top}
-            className={` font-bold text-xl transition-transform  transition-smooth mt-1 ${
+          <FaAnglesLeft
+            className={` font-bold text-xl transition-transform mt-3 ${
               open && "rotate-180"
             }`}
           />
         </div>
-       
-        {/* {open && (
+        {open && (
           <motion.span
             layout
             initial={{ opacity: 0, y: 12 }}
@@ -743,49 +739,13 @@ const ToggleClose = ({ open, setOpen }) => {
             transition={{ delay: 0.125 }}
             className="text-lg font-bold  text-white"
           >
-        
+            Hide
           </motion.span>
-        )} */}
+        )}
       </div>
     </motion.button>
   );
 };
-
-
-function Gototop(){
-  const [scrollWidth , setScrollWidth] = useState(0)
-  const scrollTop = window.scrollY;
-
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = (scrollTop / docHeight) * 100;
-    setScrollWidth(scrolled);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
-
-  const  top = () => {
-  window.scrollTo({
-    top : 0,
-    behavior : "smooth"
-  })
-  }
-
-  return(
-    <div onClick={top} className=" text-xl z-50 cursor-pointer   h-12 flex justify-center  items-center w-12  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 rounded-full bg-slate-50 shadow-md hover:shadow-white text-black font-extrabold fixed sm:right-[80px] bottom-20 right-5 sm:bottom-5">
-    <FaAnglesLeft 
-        className={` font-bold text-xl transition duration-1000  ease-in-out ${
-          // scrollTop && "rotate-180"
-          scrollTop ? "rotate-90" : "-rotate-90"
-        }`}
-        />
-    </div>
-  )
-}
 
 
 
@@ -836,6 +796,8 @@ const ResNavbar = () => {
     
   );
 };
+
+
 
 
 const Social = () => {
@@ -952,3 +914,42 @@ const Social = () => {
     </div>
   );
 };
+
+
+
+
+function GoToTop(){
+  const [scrollWidth , setScrollWidth] = useState(0)
+  const scrollTop = window.scrollY;
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    console.log(scrollTop);
+    
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (scrollTop / docHeight) * 100;
+    setScrollWidth(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  const  top = () => {
+  window.scrollTo({
+    top : 0,
+    behavior : "smooth"
+  })
+  }
+
+  return(
+    <div onClick={top} className=" text-xl z-50 cursor-pointer   h-12 flex justify-center  items-center w-12  hover:scale-110 transition-all ease-in-out duration-1000 delay-0 rounded-full bg-slate-50 shadow-md hover:shadow-white text-black font-extrabold fixed sm:right-[80px] bottom-20 right-5 sm:bottom-5">
+    <FaAnglesLeft 
+        className={` font-bold text-xl transition duration-1000  ease-in-out ${
+          scrollTop ? "rotate-90" : "-rotate-90"
+        }`}
+        />
+    </div>
+  )
+}
