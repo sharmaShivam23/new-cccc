@@ -45,7 +45,7 @@ const Footer = () => {
           className="h-10 mr-4 mb-2 hidden sm:block   animate-bounce"
           alt=""
         />
-        <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-rubik">
+        <p className="text-xs mt-3 lg:mt-1 lg:text-lg hidden sm:block font-poppins">
           Cloud Computing Cell
         </p>
       </div>
@@ -70,7 +70,7 @@ const Footer = () => {
       </div>
 
       <div className="nav absolute z-50 sm:bottom-24 hidden sm:block  bottom-14 right-14 sm:right-24">
-        <ul className="text-white cursor-pointer sm:text-lg lg:text-xl font-rubik text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
+        <ul className="text-white cursor-pointer sm:text-lg lg:text-xl font-poppins text-center text-xs flex justify-evenly items-center gap-4 mb-4 font-bold">
           <li className="relative group mt-10">
             <Link
               to="/"

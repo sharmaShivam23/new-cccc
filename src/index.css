@@ -4,13 +4,10 @@
 
 body{
   background-color: black;
+  overflow-x: hidden;
 }
 
-/* .landing{
-  background-color: red;
-  max-width: 90.3vw;
-  margin: auto;
-} */
+
 
 @media (max-width : 500px){
   .landing{
@@ -19,13 +16,6 @@ body{
   }
 }
 
-/* .container:hover .content{
-  transform: translateX(0);
-}
-
-.container:hover .img{
-  transform: translateX(100%);
-} */
 
 @layer base {
   :root {
@@ -91,12 +81,3 @@ body{
     @apply bg-background text-foreground;
   }
 }
-
-/* 
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
- */
-

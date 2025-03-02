@@ -1,91 +1,3 @@
-// import React from "react";
-// import Map from "./Map";
-// // import bgwave from '../images/bgwave.svg'
-// // import bgcircle from '../images/bgcircle.svg'
-// import bgwave from '../images/bgwave.png'
-// import bgcircle from '../images/bgcircle.png'
-// const Contact = () => {
-//   return (
-//     <>
-
-//       <div
-//         id="contact"
-//         style={{
-//           // backgroundImage: `url(${bgwave})`,
-//           backgroundRepeat : "no-repeat",
-//           backgroundSize : "cover",
-//           height : "100vh",
-//           width : "100vw"
-//       }}
-//         className="flex  justify-center  items-center bg-gray-1000 flex-col h-screen w-full sm:max-w-[90vw] m-auto"
-//       >
-//         <div
-//          style={{
-//           backgroundImage: `url(${bgcircle})`,
-//           backgroundRepeat : "no-repeat",
-//           backgroundSize : "cover",
-//           // height : "100vh",
-//           // width : "100vw"
-//       }}
-//         className="text-white flex justify-center border-2 border-white items-center flex-col w-11/12 md:w-8/12 lg:w-6/12 xl:w-4/12 shadow-xl shadow-slate-900 bg-gradient-to-t  from-stone-800 to-transparent h-auto py-5 backdrop-blur-xl rounded-2xl m-10">
-//           <h1 className="text-4xl  block text-center">
-//             Let's connect Networks
-//           </h1>
-//           <form action="" className="m-4">
-//             <div className="md:flex block gap-2 justify-center items-center text-center">
-//               <input
-//                 type="text"
-//                 className="border-white border-2  rounded-md font-bolder px-3 md:w-6/12 w-full text-white py-2 mt-3 bg-black"
-//                 placeholder="First Name"
-//               />
-//               <input
-//                 className="border-white border-2  rounded-md font-bolder  md:w-6/12 w-full px-3  text-white py-2 bg-black mt-3"
-//                 type="text"
-//                 placeholder="Last Name"
-//               />
-//             </div>
-//             <div>
-//               <input
-//                 type="text"
-//                 className="border-white border-2  rounded-md font-bolder px-3 text-white py-2 bg-black w-full mt-3"
-//                 placeholder="Email"
-//               />
-//             </div>
-//             <div>
-//               <input
-//                 type="text"
-//                 className="border-white border-2  rounded-md font-bolder px-3 text-white py-2 bg-black  w-full mt-3"
-//                 placeholder="Phone Number"
-//               />
-//             </div>
-
-//             <textarea
-//               Name=""
-//               className="border-white border-2  rounded-md font-bolder px-3 text-white h-28 pt-2 bg-black  w-full mt-3"
-//               placeholder="Enter your message"
-//               id=""
-//             ></textarea>
-//             <div className="flex justify-center items-center mt-3">
-//               <button className="h-10  w-full md:w-96 rounded-md bg-gradient-to-r from-violet-700 to-pink-600 mt-3 text-center">
-//                 Submit
-//               </button>
-//             </div>
-//           </form>
-//         </div>
-//       </div>
-
-//       <Map/>
-
-//     {/* map */}
-
-//     {/* <div className="sm:w-1/2 w-full">
-//       <p className="text-3xl text-white">Map</p>
-//     </div> */}
-//     </>
-//   );
-// };
-
-// export default Contact;
 
 import React, { useEffect } from "react";
 import video from "../images/contactvideo.mp4";
@@ -128,7 +40,6 @@ const Video = () => {
         loop
         src={video}
       ></video>
-      {/* <motion.div initial={{opacity : 0 , top : 0}} whileInView={{opacity : 1 , top : 10}} transition={{duration : 1}} className="text text-white text-2xl">dnjbdfb</motion.div> */}
     </div>
   );
 };
@@ -165,8 +76,8 @@ const Form = () => {
       );
       toast.success(response.data.message);
       clear()
-      console.log(response.data);
-      console.log(response.data.message);
+      // console.log(response.data);
+      // console.log(response.data.message);
     } catch (error) {
       if(error.message === "Network Error"){
         toast.error(error.message)
@@ -178,7 +89,7 @@ const Form = () => {
       ) {
         toast.error("All details are  required");
       } 
-      else if(error.response.data.error === "Contact validation failed: email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."){
+      if(error.response.data.error === "Contact validation failed: email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."){
         toast.error("Email , phone number and message are required");
       }
       else if(error.response.data.error ===  
@@ -215,6 +126,9 @@ const Form = () => {
 
 
   function valid(){
+    // if(Name==="" || phone==="" || email==="" || message===""){
+    //   toast.error("All fields are required");
+    // }
     if(Name){
       if (/\d/.test(Name)) {
         toast.error("Name can't contain numbers.");

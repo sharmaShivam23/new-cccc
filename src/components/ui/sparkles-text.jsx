@@ -7,9 +7,8 @@ import { cn } from "@/lib/utils";
 const SparklesText = ({
   text,
   colors = { first: "#FFFFFF", second: "#FF0000" },
-  // colors = { first: "#9E7AFF", second: "#FE8BBB" },
   className,
-  sparklesCount = 4,
+  sparklesCount = 2,
   ...props
 }) => {
   const [sparkles, setSparkles] = useState([]);
