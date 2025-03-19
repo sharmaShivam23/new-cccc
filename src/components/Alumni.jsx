@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import graphicon from "../EventsImg/graphicon.png";
 import hackerp from "../EventsImg/hackerp.jpg";
@@ -9,6 +7,7 @@ import TypingAnimation from "./ui/typing-animation";
 import { motion } from "framer-motion";
 import Recrutingno from "./Recrutingno";
 import ShimmerButton from "./ui/shimmer-button";
+import download from "../EventsImg2/download.jpeg"
 
 export function Alumni() {
   return (
@@ -19,27 +18,24 @@ export function Alumni() {
   );
 }
 
-
-
-
 const Shufle = () => {
   const [images, setImages] = useState([
-    { id: 1, src: graphicon },
-    { id: 2, src: hackerp },
-    { id: 3, src: spocc23, text: "hello djkjdbbj" },
-    { id: 4, src: graphicon, text: "Image 4" },
-    { id: 5, src: spocc23, text: "Image 5" },
-    { id: 6, src: hackerp, text: "Image 6" },
-    { id: 7, src: spocc23, text: "Image 7" },
-    { id: 8, src: graphicon, text: "Image 8" },
-    { id: 9, src: spocc23, text: "Image 9" },
-    { id: 10, src: spocc23, text: "Image 9" },
-    { id: 11, src: spocc23, text: "Image 9" },
-    { id: 12, src: spocc23, text: "Image 9" },
-    { id: 12, src: spocc23, text: "Image 9" },
-    { id: 12, src: spocc23, text: "Image 9" },
-    { id: 12, src: spocc23, text: "Image 9" },
-    { id: 12, src: spocc23, text: "Image 9" },
+    { id: 1, src: download, text: "Image 5" },
+    { id: 2, src: download , text: "Image 5" },
+    { id: 3, src: download, text: "hello" },
+    { id: 4, src: download, text: "Image 4" },
+    { id: 5, src:download, text: "Image 5" },
+    { id: 6, src: download, text: "Image 6" },
+    { id: 7, src: download, text: "Image 7" },
+    { id: 8, src: download, text: "Image 8" },
+    { id: 9, src: download, text: "Image 9" },
+    { id: 10, src: download, text: "Image 9" },
+    { id: 11, src: download, text: "Image 9" },
+    { id: 12, src: download, text: "Image 9" },
+    { id: 13, src: download, text: "Image 9" },
+    { id: 14, src: download, text: "Image 9" },
+    { id: 15, src: download, text: "Image 9" },
+    { id: 16, src: download, text: "Image 9" },
   ]);
 
   return (
@@ -69,7 +65,6 @@ const Shufle = () => {
   );
 };
 
-
 const Text = () => {
   const [close, setClose] = useState(false);
 
@@ -83,11 +78,11 @@ const Text = () => {
 
   return (
     <div className="text-white sm:text-center lg:text-start xl:w-6/12 lg:ml-8 w-full p-2 flex flex-col">
-      {close && <Recrutingno />}
+      {close && <Recrutingno messageclose={messageclose}/>}
       <p className="md:text-5xl text-3xl font-bold m-3 font-rubik  mb-4 sm:mb-12">
-        Let's have a look on our <br/> star achievers
+        Let's have a look on our <br /> star achievers
       </p>
-      <p className="md:text-3xl font-poppins text-xl ml-5">
+      <div className="md:text-3xl font-poppins text-xl ml-5">
         <TypingAnimation
           duration={100}
           delay={0}
@@ -120,10 +115,14 @@ const Text = () => {
         >
           {"5+ Winning"}
         </TypingAnimation>
-      </p>
-      <p className="mt-7 sm:mt-10 mb-14 ml-3">
-        <InteractiveHoverButton text="Join Us" onClick={message} className="text-black font-playwrite" />
-      </p>
+      </div>
+      <div className="mt-7 sm:mt-10 mb-14 ml-3">
+        <InteractiveHoverButton
+          text="Join Us"
+          onClick={message}
+          className="text-black font-playwrite"
+        />
+      </div>
       {close && (
         <motion.div
           initial={{ scale: 0 }}
@@ -132,10 +131,6 @@ const Text = () => {
           transition={{ duration: 1, delay: 0.4 }}
           className="absolute top-1/2 left-1/2 mt-20 -translate-x-1/2 -translate-y-1/2 z-50"
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-          <button   className="border-2 border-black p-3 text-xs block sm:hidden mb-10 text-white font-black  rounded-lg" onClick={messageclose}>Understood</button> 
-            <ShimmerButton  shimmerSize = {"0.02em"} className="hidden sm:block" onClick={messageclose}>Understood</ShimmerButton>
-          </div>
         </motion.div>
       )}
     </div>

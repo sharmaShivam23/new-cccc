@@ -1,25 +1,18 @@
 
 
 import React, { useEffect } from 'react'
-import Subtract from '../EventsImg/Subtract.svg'
-import devclash2 from '../EventsImg/devclash2.svg'
 import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import web from '../images/web.png';
-import ui from '../images/ui.png';
-import cloud from '../images/cloud.png';
-import app from '../images/app.png';
-import { motion } from 'framer-motion';
-import eventp from '../EventsImg/eventp.svg'
-import confetti from 'canvas-confetti';
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import hackerp from '../EventsImg/hackerp.jpg';
-import nimbusp from '../EventsImg/nimbusp.jpg';
+import CC2 from '../EventsImg2/CC2.jpg';
+import CC3 from '../EventsImg2/CC3.jpg';
+import CC4 from '../EventsImg2/CC4.jpg';
+import dev2cloud from "../EventsImg2/dev2cloud.svg"
 
-export const Ehackeroverflow = () => {
+export const ECloud = () => {
    useEffect(() => {
       window.scrollTo({
         top : 0,
@@ -47,7 +40,7 @@ export const Ehackeroverflow = () => {
 const Head = () => {
   return(
     <div className='text-white text-4xl font-bold underline   mt-6'>
-      Event-HackerOverflow
+      Event-CloudSplore
     </div>
   )
 }
@@ -55,7 +48,7 @@ const Head = () => {
 const Image1 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={hackerp} alt=""  className='h-[50vh] ' />
+       <img src={dev2cloud} alt="cloudSplorepost"  className='sm:h-[60vh] h-[40vh]' />
     </div>
   )
 }
@@ -63,7 +56,7 @@ const Image1 = () => {
 const Image2 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={dev} alt=""  className='h-[50vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
+       <img src={dev} alt="dev"  className='sm:h-[60vh] h-[40vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
     </div>
   )
 }
@@ -99,10 +92,10 @@ const Carousel = () => {
 
  
   const data = [
-    { img: eventp },
-    { img: eventp },
-    { img: eventp},
-    { img: eventp},
+    { img: CC2 },
+    { img: CC3 },
+    { img: CC4},
+    
   ];
 
   return (

@@ -94,11 +94,13 @@ import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Register } from "./components/Register";
 import { Edevclash } from "./components/Edevclash";
-import { Egraphicon } from "./components/Egraphicon";
-import { Ehackeroverflow } from "./components/Ehackeroverflow";
+// import { Egraphicon } from "./components/Ereacticons";
+// import { Ehackeroverflow } from "./components/Ehackeroverflow";
 import { Enimbus } from "./components/Enimbus";
-import { Espocc } from "./components/Espocc";
+import { Techbuzz } from "./components/ETechbuzz";
 import { Contact } from "./components/Contact";
+import { Ereacticons } from "./components/Ereacticons";
+import {ECloud} from "./components/ECloud";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -123,10 +125,10 @@ const App = () => {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Register" element={<Register />} />
             <Route path="/Devclash" element={<Edevclash />} />
-            <Route path="/Graphicon" element={<Egraphicon />} />
-            <Route path="/HackerOverflow" element={<Ehackeroverflow />} />
+            <Route path="/Ereacticons" element={<Ereacticons />} />
+            <Route path="/ECloud" element={<ECloud />} />
             <Route path="/Nimbus" element={<Enimbus />} />
-            <Route path="/Spocc" element={<Espocc />} />
+            <Route path="/Techbuzz" element={<Techbuzz />} />
           </Routes>
           <Footer />
         </>

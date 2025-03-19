@@ -1,7 +1,6 @@
 import React from "react";
 import Meteors from "./ui/meteors";
 import Orbit2 from "./ui/Orbit2";
-// import { BorderBeam } from "./MyComponent";
 import ShimmerButton from "./ui/shimmer-button";
 import CCC from "../images/CCC.png";
 import { FaFacebook } from "react-icons/fa6";
@@ -26,8 +25,6 @@ const Footer = () => {
           Cloud Computing
         </p>
         <p className="text-white mt-4 text-sm md:text-lg font-poppins">
-          {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-          Quam, laboriosam? Lorem ipsum dolor, sit amet consectetur adipisicing. */}
           Empowering students to innovate, collaborate, and lead in the world of
           technology.
           <br /> Join us at Cloud Computing Cell and shape the future!

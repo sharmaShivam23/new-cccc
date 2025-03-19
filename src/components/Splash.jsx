@@ -7,10 +7,8 @@ import SparklesText from "./ui/sparkles-text";
 const Splash = () => {
   return (
     <>
-      <div className="bg-violet-500 h-screen w-screen relative flex justify-center items-center flex-col">
-
-        
-      <div className="ani z-40 bg-black text-3xl absolute bottom-0 text-white flex justify-center items-start">
+      <motion.div className="bg-[#111223] h-[100vh] w-screen relative flex justify-center items-center flex-col">
+        <div className="ani z-40 bg-black text-3xl absolute bottom-0 text-white flex justify-center items-start">
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: "100vh" }}
@@ -29,8 +27,9 @@ const Splash = () => {
 
         <div className="text text-white font-bold text-2xl sm:text-3xl z-50 mt-6 flex">
           <motion.div
-            initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            
+            initial={{ opacity: 0, backdropFilter: "brightness(70%)" }}
+            whileInView={{ opacity: 1, backdropFilter: "brightness(100%)" }}
             transition={{
               duration: 2,
               delay: 0.5,
@@ -38,15 +37,19 @@ const Splash = () => {
               stiffness: 100,
             }}
           >
-            {/* <p className='mr-4 font-poppins'>CLOUD</p> */}
-            <SparklesText className="mr-4 sm:text-3xl text-2xl font-poppins" text={"CLOUD"}>
+          
+            <SparklesText
+              className="mr-4 sm:text-3xl text-2xl font-poppins"
+              text={"CLOUD"}
+            >
               CLOUD
             </SparklesText>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+           initial={{ opacity: 0, backdropFilter: "brightness(70%)" }}
+           whileInView={{ opacity: 1, backdropFilter: "brightness(100%)" }}
+          
             transition={{
               duration: 2,
               delay: 1,
@@ -54,7 +57,7 @@ const Splash = () => {
               stiffness: 100,
             }}
           >
-            {/* <p className='mr-4 font-poppins'>COMPUTING</p> */}
+    
             <SparklesText
               className="mr-4 sm:text-3xl text-2xl font-poppins"
               text={"COMPUTING"}
@@ -64,8 +67,8 @@ const Splash = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+ initial={{ opacity: 0, backdropFilter: "brightness(70%)" }}
+whileInView={{ opacity: 1, backdropFilter: "brightness(100%)" }}
             transition={{
               duration: 2,
               delay: 1.5,
@@ -73,14 +76,16 @@ const Splash = () => {
               stiffness: 100,
             }}
           >
-            {/* <p className='mr-4 font-poppins'>CELL</p> */}
-            <SparklesText className="mr-4 sm:text-3xl text-2xl font-poppins" text={"CELL"}>
+      
+            <SparklesText
+              className="mr-4 sm:text-3xl text-2xl font-poppins"
+              text={"CELL"}
+            >
               CELL
             </SparklesText>
           </motion.div>
         </div>
-
-      </div>
+      </motion.div>
     </>
   );
 };

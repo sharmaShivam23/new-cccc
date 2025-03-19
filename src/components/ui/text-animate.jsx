@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -62,7 +62,7 @@ const defaultItemAnimationVariants = {
       hidden: { opacity: 0, filter: "blur(10px)" },
       show: (i) => ({
         opacity: 1,
-        filter: "blur(0px)",
+        filter: "blur(2px)",
         transition: {
           delay: i * 0.1,
           duration: 0.3,
@@ -81,7 +81,7 @@ const defaultItemAnimationVariants = {
       hidden: { opacity: 0, filter: "blur(10px)", y: 20 },
       show: (delay) => ({
         opacity: 1,
-        filter: "blur(0px)",
+        filter: "blur(2px)",
         y: 0,
         transition: {
           y: { duration: 0.3 },
@@ -107,7 +107,7 @@ const defaultItemAnimationVariants = {
       hidden: { opacity: 0, filter: "blur(10px)", y: -20 },
       show: (delay) => ({
         opacity: 1,
-        filter: "blur(0px)",
+        filter: "blur(2px)",
         y: 0,
         transition: {
           y: { duration: 0.3 },
@@ -292,7 +292,7 @@ export function TextAnimate({
   }
 
   return (
-    (<AnimatePresence mode="popLayout">
+    <AnimatePresence mode="popLayout">
       <MotionComponent
         variants={finalVariants.container}
         initial="hidden"
@@ -300,17 +300,22 @@ export function TextAnimate({
         animate={startOnView ? undefined : "show"}
         exit="exit"
         className={cn("whitespace-pre-wrap", className)}
-        {...props}>
+        {...props}
+      >
         {segments.map((segment, i) => (
           <motion.span
             key={`${by}-${segment}-${i}`}
             variants={finalVariants.item}
             custom={i * staggerTimings[by]}
-            className={cn(by === "line" ? "block" : "inline-block whitespace-pre", segmentClassName)}>
+            className={cn(
+              by === "line" ? "block" : "inline-block whitespace-pre",
+              segmentClassName
+            )}
+          >
             {segment}
           </motion.span>
         ))}
       </MotionComponent>
-    </AnimatePresence>)
+    </AnimatePresence>
   );
 }

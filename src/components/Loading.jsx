@@ -6,11 +6,9 @@ import { motion } from 'framer-motion'
 
 const Loading = () => {
 
-  // if (loading) {
+ 
     document.body.classList.add('no-scroll');
-  // } else {
-  //   document.body.classList.remove('no-scroll');
-  // }
+ 
 
   const obj = [
     {

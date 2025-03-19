@@ -19,11 +19,11 @@ export const Contact = () => {
     })
   return (
     <>
-      <Particles />
       <div
         id="contact"
-        className="md:h-screen z-50 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p-4 block md:flex"
+        className="md:h-screen z-50 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p- block md:flex"
       >
+        
         <Video />
         <Form />
       </div>
@@ -33,13 +33,18 @@ export const Contact = () => {
 
 const Video = () => {
   return (
-    <div className="flex justify-center items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
+    <div className="flex justify-center  items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
       <video
-        className="w-full z-40   h-auto md:h-[100vh]"
+        className="w-full z-40 lg:mb-28 mb-10  h-auto md:h-[100vh]"
         autoPlay
         loop
         src={video}
       ></video>
+      <motion.div className="text-white font-poppins lg:text-3xl hidden lg:block text-center text-2xl relative z-40 bottom-28 text-bold">
+  <div className="m-2 mb-4 animate-su font-bold">We Value Building Strong Relationships</div>
+  <div className="m-2 mb-4 font-bold animate-su">Stay in Touch with us</div>
+</motion.div>
+
     </div>
   );
 };
@@ -60,7 +65,7 @@ const Form = () => {
       phone,
       message,
     };
-    console.log(formdata);
+    // console.log(formdata);
     
     if(valid()){
       setLoading(true)
@@ -76,13 +81,12 @@ const Form = () => {
       );
       toast.success(response.data.message);
       clear()
-      // console.log(response.data);
-      // console.log(response.data.message);
+    
     } catch (error) {
       if(error.message === "Network Error"){
         toast.error(error.message)
       }
-      console.log(error.response.data.error);
+      // console.log(error.response.data.error);
       if (
         error.response.data.error ===
         "Contact validation failed: Name: Path `Name` is required., email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
@@ -126,9 +130,7 @@ const Form = () => {
 
 
   function valid(){
-    // if(Name==="" || phone==="" || email==="" || message===""){
-    //   toast.error("All fields are required");
-    // }
+  
     if(Name){
       if (/\d/.test(Name)) {
         toast.error("Name can't contain numbers.");
@@ -137,7 +139,11 @@ const Form = () => {
   
   }
     if(phone){
-    if(phone.length != 10){
+    if(phone.length > 11){
+      toast.error("Invalid mobile number")
+      return false
+    }
+    else if(phone.length == 11 && !phone.startsWith("0")){
       toast.error("Invalid mobile number")
       return false
     }
@@ -155,50 +161,55 @@ const Form = () => {
  }
   return (
     <>
+    
       <ToastContainer />
-      <div className="flex justify-center bg- rounded-l-[6vmin] items-center text-black  w-full md:w-1/2 bg-yellow- flex-col sm:h-auto md:h-screen p-2">
+      
+      <div className="flex justify-center z-0 lg:border-2   border-r-0   sm:border-violet-500 lg:absolute right-0 lg:bg-[#111122]  rounded-l-[6vmin] items-center text-white  w-full md:w-1/2 h-[90vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
+      <Particles className="z-40"/>
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-2xl text-center font-poppins text-white font-bold">
+          <p className="sm:text-3xl text-2xl text-center font-poppins font-bold">
             Welcome to Cloud Computing
           </p>
-          {/* <p className="mt-4 sm:text-2xl text-center font-poppins text-xl">
-            Lorem, ipsum dolor
-          </p> */}
-          <p className="text-white text-xl mt-4 sm:text-2xl">Lorem, ipsum dolor.</p>
+          <p className="text-xl mt-4 sm:text-xl">Have any questions? Feel free to reach out to us</p>
         </div>
 
         <form
           className="flex justify-center items-center max-[800px]:w-[70vw] flex-col border- border-white h-[70vh] w-full md:w-[30vw]  md:p-7"
           onSubmit={handleForm}
         >
-          <h1 className="text-3xl font-bold font-rubik text-white mb-3 tracking-wider">
+          <h1 className="text-3xl font-bold font-rubik mb-3 tracking-wider">
             Contact Us
           </h1>
           <input
             value={Name}
+            required
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="border-white border-2  rounded-md font-bolder px-3 text-white py-3 bg-black w-full mt-3"
+            className="border-black border-2 text-black  placeholder:text-black placeholder:font-bold rounded-md font-bolder px-3 font-bold  py-3 bg-white w-full mt-3"
             placeholder="Name"
           />
           <input
             value={email}
+            required
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            className="border-white border-2  rounded-md font-bolder px-3 text-white py-3 bg-black w-full mt-3"
+            className="border-white border-2 bg-white text-black placeholder:text-black placeholder:font-bold  rounded-md font-bolder px-3 py-3 w-full mt-3 font-bold "
             placeholder="Email"
           />
           <input
             value={phone}
+            required
             onChange={(e) => setPhone(e.target.value)}
             type="number"
-            className="border-white border-2  rounded-md font-bolder px-3 text-white py-3 bg-black w-full mt-3"
+            className="border-white border-2 text-black bg-white placeholder:text-black placeholder:font-bold rounded-md font-bolder px-3  py-3  w-full mt-3 font-bold "
             placeholder="Phone Number"
           />
+          
           <textarea
+          required
             value={message}
             onChange={(e) => setMsg(e.target.value)}
-            className="border-white border-2  rounded-md font-bolder px-3 text-white h-36 pt-2 bg-black  w-full mt-3"
+            className="border-white border-2  placeholder:text-black placeholder:font-bold rounded-md font-bolder px-3  h-36 pt-2 bg-white w-full text-black mt-3 font-bold "
             placeholder="Enter your message"
           ></textarea>
 
@@ -209,14 +220,15 @@ const Form = () => {
               borderWidth={0.5}
               duration={3}
               color={["#ffffff", "#3B0B59"]}
-              className="mt-8 text-white text-xl hover:scale-110 font-jetbrains transition-all ease-in-out duration-1000  cursor-pointer tracking-wider font-bold"
+              className="mt-8 text-white text-2xl hover:scale-110 font-jetbrains  transition-all ease-in-out duration-1000  cursor-pointer tracking-wider font-bold"
             >
               Submit
             </ShineBorder>
           </button>
           )}
         </form>
+        <Particles className="z-40"/>
       </div>
     </>
   );
-};
+}

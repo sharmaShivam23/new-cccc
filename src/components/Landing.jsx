@@ -16,7 +16,7 @@ import ShimmerButton from "./ui/shimmer-button";
 import ShineBorder from "./ui/shine-border";
 import { BorderBeam } from "./ui/border-beam";
 import { useNavigate } from "react-router-dom";
-import MorphingText from "./ui/morphing-text";
+
 
 
 const Landing = () => {
@@ -24,13 +24,7 @@ const Landing = () => {
   function register(){
     navigate("/Register")
   }
-  const texts = [
-    "Cloud",
-    "Automaton",
-    "Future",
-    "Security",
-    "Transformation"
-  ];
+ 
   return (
     <>
       <div className="">
@@ -69,7 +63,7 @@ const Landing = () => {
               </ShimmerButton>
             </div>
 
-            {/* <MorphingText texts={texts} className="your-custom-classes relative  top-28 sm:top-52 text-white" ></MorphingText> */}
+          
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
@@ -108,10 +102,10 @@ const Landing = () => {
                 Hello, Coders!
               </h1>
             </ShineBorder>
-           <div className="absolute top-60 right-10 gap-10 sm:right-16 -z-10 max-[400px]:hidden">
+           <div className="absolute top-60 right-10 gap-10 sm:right-16  max-[400px]:hidden">
           <img
             src={D}
-            className="h-28 sm:h-40 max-[1000px]:h-24 animate-bounce"
+            className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
             alt="D"
           />
         </div>

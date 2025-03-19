@@ -11,20 +11,19 @@ import dev from "../EventsImg/dev.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
-// import devclash from '../EventsImg/devclash.png';
-import graphicon from '../EventsImg/graphicon.svg';
-import hacker from '../EventsImg/hacker.png';
-import nimbus from '../EventsImg/nimbus.svg';
-import devclash from '../EventsImg/devclash.svg';
-import spocc from '../EventsImg/spocc.svg';
 import spocc22 from '../EventsImg/spocc22.jpg';
 import spocc23 from '../EventsImg/spocc23.jpg';
-import buzz from '../EventsImg/buzz.jpg';
 import graphiconp from '../EventsImg/graphiconp.jpg';
 import hackerrank from '../EventsImg/hackerrank.svg';
 import hackerp from '../EventsImg/hackerp.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
 import { Link } from "react-router-dom";
+import nimbuss from "../EventsImg2/nimbuss.svg"
+import cloud1s from "../EventsImg2/cloud1s.svg"
+import devs1 from "../EventsImg2/devs1.svg"
+import graphs1 from "../EventsImg2/graphs1.svg"
+import reacts from "../EventsImg2/reacts.svg"
+import techs from "../EventsImg2/techs.svg"
 
 export const Events = () => {
    useEffect(() => {
@@ -46,8 +45,8 @@ const EventCarousel = () => {
     <div className="sm:h-[80vh]  sm:mb-20 mb-3 h-[60vh]  w-screen  flex justify-center relative text-center">
       <div className="container mx-auto h-[47rem]   sm:w-screen w-[350px]  sm:h-[40rem] p-[2rem] relative">
         <motion.h1
-          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-          whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
+          whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
           className="text-white text-center text-2xl sm:text-5xl mb-20 md:text-6xl font-rubik  font-bold"
         >
@@ -89,10 +88,10 @@ const EventCarousel = () => {
             1000: {
               slidesPerView: 3,
             },
-            // slidesPerView : 4
+      
           }}
           modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} 
-          className="swiper lg:w-[90%] xl:w-[100%]   relative p-5 h-[30%] sm:h-[80%]"
+          className="swiper lg:w-[90%] xl:w-[100%] mb-10  relative p-5 h-[30%] sm:h-[80%]"
         >
       
           <SwiperSlide>
@@ -156,30 +155,30 @@ const EventCarousel = () => {
 
 const EventImages = () => {
   return (
-    <div className="text-white text-4xl flex flex-wrap justify-center gap-4 items-center max-w-[90vw] h-auto">
+    <div className="text-white text-4xl flex flex-wrap justify-center gap-4 mt-14 items-center max-w-[90vw] h-auto">
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
         
           <Link to="/Devclash">
-        <img src={devclash} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={devs1} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
         </Link>
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-           <Link to="/Graphicon">
-        <img src={graphicon} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
+           <Link to="/ECloud">
+        <img src={cloud1s} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
         </Link>
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-          <Link to="/HackerOverflow">
-        <img src={hackerrank} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
+          <Link to="/Ereacticons">
+        <img src={reacts} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
         </Link>
       </motion.div>
       <motion.div initial={{ scale: 0 }}
@@ -187,15 +186,15 @@ const EventImages = () => {
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
            <Link to="/Nimbus">
-        <img src={nimbus} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
+        <img src={nimbuss} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
         </Link>
       </motion.div>
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}
         className="flex relative justify-center items-center">
-           <Link to="/Spocc">
-        <img src={spocc} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
+           <Link to="/Techbuzz">
+        <img src={techs} className="sm:w-[35vw] w-[70vw] cursor-pointer sm:m-8 m-4 animate-bounce" alt="" />
         </Link>
       </motion.div>
     </div>

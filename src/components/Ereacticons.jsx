@@ -1,32 +1,24 @@
 
 
 import React, { useEffect } from 'react'
-import Subtract from '../EventsImg/Subtract.svg'
-import devclash2 from '../EventsImg/devclash2.svg'
-import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import web from '../images/web.png';
-import ui from '../images/ui.png';
-import cloud from '../images/cloud.png';
-import app from '../images/app.png';
-import { motion } from 'framer-motion';
-import eventp from '../EventsImg/eventp.svg'
-import confetti from 'canvas-confetti';
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import spocc23 from '../EventsImg/spocc23.jpg';
-import nimbusp from '../EventsImg/nimbusp.jpg';
+import Reaction_1 from '../EventsImg2/Reaction_1.jpg';
+import Reaction_2 from '../EventsImg2/Reaction_2.jpg';
+import Reaction_3 from '../EventsImg2/Reaction_3.jpg';
+import reacticonposter from '../EventsImg2/reacticonposter.jpg';
+import reactl from "../EventsImg2/reactl.svg"
 
-export const Espocc = () => {
-  useEffect(() => {
+export const Ereacticons = () => {
+ useEffect(() => {
     window.scrollTo({
       top : 0,
       behavior : "smooth"
     })
   })
-
   return (
     <>
     <Particles/>
@@ -48,7 +40,7 @@ export const Espocc = () => {
 const Head = () => {
   return(
     <div className='text-white text-4xl font-bold underline   mt-6'>
-      Event-Spocc
+      Event-ReactIcons
     </div>
   )
 }
@@ -56,18 +48,23 @@ const Head = () => {
 const Image1 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={Subtract} alt=""  className='h-[50vh] ' />
+       <img src={reactl} alt="reacticonposter"  className='sm:h-[60vh] h-[40vh]' />
     </div>
   )
 }
 
+
 const Image2 = () => {
-  return(
-    <div className='flex justify-center items-center'>
-       <img src={spocc23} alt=""  className='h-[50vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
+  return (
+    <div className="flex justify-center items-center">
+      <img
+        src={reacticonposter}
+        alt=""
+        className="sm:h-[60vh] h-[40vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white"
+      />
     </div>
-  )
-}
+  );
+};
 
 
 
@@ -100,10 +97,10 @@ const Carousel = () => {
 
  
   const data = [
-    { img: eventp },
-    { img: eventp },
-    { img: eventp},
-    { img: eventp},
+    { img: Reaction_1 },
+    { img: Reaction_2 },
+    { img: Reaction_3},
+    
   ];
 
   return (

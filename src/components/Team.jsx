@@ -17,18 +17,12 @@ const Team = () => {
       id="team"
       className="h-auto lg:h-screen mb-20 sm:mb-32 w-full max-[1000px]:mt-36 flex justify-center items-center mt-16  m-5">
       <div
-      //  style={{
-      //   backgroundImage: `url(${orbitbg})`,
-      //   backgroundSize: "50%",
-      //   backgroundPosition: 'center',
-      //   backgroundRepeat : "no-repeat"        
-                    
-      // }}
+     
         className="h-auto psud   text-white sm:p-9 w-full min-[450px]:w-[80vw] sm:w-[70vw] bg-neutral-800 border-2 shadow-xl border-white rounded-3xl xl:w-[80vw] mx-auto"
       >
         <motion.h1
-          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-          whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+          initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
+          whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
           className="text-white text-center text-2xl underline sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
         >
@@ -37,8 +31,8 @@ const Team = () => {
 
         <section className="flex flex-col xl:flex-row justify-center items-center  lg:gap-16">
           <motion.div
-            initial={{filter: "blur(10px)", opacity: 0 }}
-            whileInView={{filter: "blur(0px)", opacity: 1 }}
+            initial={{backdropFilter: "brightness(70%)", opacity: 0 }}
+            whileInView={{backdropFilter: "brightness(100%)", opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full lg:w-1/2  flex justify-center items-center"
           >
@@ -51,8 +45,8 @@ const Team = () => {
           </motion.div>
 
           <motion.div
-            initial={{ translateX: 100, opacity: 0, filter: "blur(10px)" }}
-            whileInView={{ translateX: 0, opacity: 1, filter: "blur(0px)" }}
+            initial={{ translateX: 100, opacity: 0, backdropFilter: "brightness(70%)" }}
+            whileInView={{ translateX: 0, opacity: 1, backdropFilter: "brightness(100%)"}}
             transition={{ type: "spring", stiffness: 50, duration: 1 }}
             className="w-full px-2 xl:w-1/2 max-[900px]:p-5 max-[500px]:text-xs text-lg sm:text-xl lg:text-2xl font-serif text-center lg:text-left">
           

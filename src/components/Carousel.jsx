@@ -1,16 +1,12 @@
-
-
-
-
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import web from '../images/web.png';
-import ui from '../images/ui.png';
-import cloud from '../images/cloud.png';
-import app from '../images/app.png';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import web from "../images/web.png";
+import ui from "../images/ui.png";
+import cloud from "../images/cloud.png";
+import app from "../images/app.png";
+import { motion } from "framer-motion";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,94 +29,98 @@ const Carousel = () => {
   const data = [
     {
       img: web,
-      domain: 'Web Development',
-      details: 'Web development is at the heart of creating online presence for individuals, businesses, and organizations alike. It encompasses everything from building simple static pages to complex dynamic websites and web applications that interact with databases and users in real-time. Web developers use various technologies, such as HTML, CSS, JavaScript, and backend frameworks like Node.js, Ruby on Rails, and Django, to craft websites that are not only functional but also visually appealing.',
+      domain: "Web Development",
+      details:
+        "Web development is at the heart of creating online presence for individuals, businesses, and organizations alike. It encompasses everything from building simple static pages to complex dynamic websites and web applications that interact with databases and users in real-time. Web developers use various technologies, such as HTML, CSS, JavaScript, and backend frameworks like Node.js, Ruby on Rails, and Django, to craft websites that are not only functional but also visually appealing.",
       from: "#ffaa40",
       to: "#9c40ff",
-       height : "[55vh]"
+      height: "[55vh]",
     },
     {
       img: app,
-      domain: 'Mobile App Development',
-      details: 'Mobile app development has revolutionized how we interact with technology. With millions of mobile devices worldwide, the demand for mobile apps continues to grow. Mobile app developers create applications for platforms like iOS and Android, allowing users to engage with services, content, and functionality on-the-go. From social media platforms to banking apps and games, mobile apps have become an integral part of daily life.',
+      domain: "Mobile App Development",
+      details:
+        "Mobile app development has revolutionized how we interact with technology. With millions of mobile devices worldwide, the demand for mobile apps continues to grow. Mobile app developers create applications for platforms like iOS and Android, allowing users to engage with services, content, and functionality on-the-go. From social media platforms to banking apps and games, mobile apps have become an integral part of daily life.",
       from: "#00BFBF",
       to: "#1E10FF",
-      height : "[55vh]"
+      height: "[55vh]",
     },
     {
       img: ui,
-      domain: 'UI/UX Design',
-      details: 'UI/UX design is vital for creating products that users love to interact with. It focuses on both the visual design (UI) and the overall experience (UX) users have when engaging with a product. The goal is to make products visually appealing, easy to navigate, and effective in helping users accomplish their tasks. Companies must prioritize UI/UX design to stay competitive, focusing on user-centered design, ensuring consistency, optimizing for mobile devices, simplifying navigation, enhancing performance, and making products accessible for all users.',
+      domain: "UI/UX Design",
+      details:
+        "UI/UX design is vital for creating products that users love to interact with. It focuses on both the visual design (UI) and the overall experience (UX) users have when engaging with a product. The goal is to make products visually appealing, easy to navigate, and effective in helping users accomplish their tasks. Companies must prioritize UI/UX design to stay competitive, focusing on user-centered design, ensuring consistency, optimizing for mobile devices, simplifying navigation, enhancing performance, and making products accessible for all users.",
       from: "#8A2BE2",
       to: "#7B90EE",
-      height : "[800px]"
+      height: "[800px]",
     },
     {
       img: cloud,
-      domain: 'Cloud Computing',
-      details: 'Cloud computing is changing how businesses function and provide services. It enables companies to store data and run applications on remote servers rather than relying on traditional on-site infrastructure. The cloud provides scalable, affordable, and adaptable solutions that help businesses manage and process data more effectively. Additionally, cloud computing improves collaboration by allowing teams to access shared resources and collaborate effortlessly, no matter where they are located.',
+      domain: "Cloud Computing",
+      details:
+        "Cloud computing is changing how businesses function and provide services. It enables companies to store data and run applications on remote servers rather than relying on traditional on-site infrastructure. The cloud provides scalable, affordable, and adaptable solutions that help businesses manage and process data more effectively. Additionally, cloud computing improves collaboration by allowing teams to access shared resources and collaborate effortlessly, no matter where they are located.",
       from: "#FF1493",
       to: "#FF6347",
-      height : "[800px]"
+      height: "[800px]",
     },
   ];
-  
+
   return (
     <>
-    <div className="max-w-[90vw] m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
-    <motion.h1
-              initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-              whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-              transition={{ duration: 1, delay: 0.1 }}
-              className="text-white text-center text-2xl sm:text-5xl font-poppins sm:mb-0 relative top-14 sm:top-7 mb-4 md:text-6xl  font-bold"
-            >
-              Our Domains
-            </motion.h1>
-      <div className="max-w-[90vw] m-auto h-auto ">
-        <Slider {...settings}>
-          {data.map((card, index) => (
-            <>
-            {/* {console.log('Gradient From:', card.from, 'To:', card.to)} */}
+      <div className="max-w-[90vw] m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
+        <motion.h1
+          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
+          whileInView={{ y: 0, filter: "blur(2px)", opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="text-white text-center text-2xl sm:text-5xl font-poppins sm:mb-0 relative top-14 sm:top-7 mb-4 md:text-6xl  font-bold"
+        >
+          Our Domains
+        </motion.h1>
+        <div className="max-w-[90vw] m-auto h-auto ">
+          <Slider {...settings}>
+            {data.map((card, index) => (
+           <React.Fragment key={index}>
+                <div
+                  key={index}
+                  className="flex w-full justify-center items-center h-[80vh]"
+                  style={{
+                    background: `linear-gradient(to left, ${card.from}, ${card.to})`,
+                    zIndex: 100,
+                  }}
+                >
+                  <div className="sm:flex block justify-center  items-center h-auto">
+                    <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center mt-0 sm:mt-6 items-center">
+                      <img
+                        src={card.img}
+                        alt=""
+                        className={`h-52 md:h-96 lg:h-[65vh]  animate-bounce`}
+                      />
+                    </div>
 
-            <div
-              key={index}
-              className="flex w-full justify-center items-center h-[80vh]"
-             
-              style={{
-                background: `linear-gradient(to left, ${card.from}, ${card.to})`,
-                zIndex: 100,
-              }}
-            >
-              <div className="sm:flex block justify-center  items-center h-auto">
-                <div className="sm:w-3/6 w-full h-[35vh] sm:h-full flex justify-center mt-0 sm:mt-6 items-center">
-                  <img src={card.img} alt="" className={`h-52 md:h-96 lg:h-[65vh]  animate-bounce`} />
+                    <div className="sm:w-4/6 w-full h-[35vh] text-center flex flex-col justify-center items-center p-9">
+                      <p className="sm:text-4xl text-xl mb-2 sm:mb-7 mt-2 sm:mt-10 font-poppins font-bold  text-white">
+                        {card.domain}
+                      </p>
+                      <motion.p
+                        initial={{ opacity: 0, y: 500 }}
+                        animate={{
+                          opacity: currentSlide === index ? 1 : 0,
+                          y: currentSlide === index ? 0 : 100,
+                        }}
+                        transition={{ duration: 1, ease: "easeInOut" }}
+                        className="font-bold  xl:tracking-wider font-jetbrains  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
+                      >
+                        {card.details}
+                      </motion.p>
+                    </div>
+                  </div>
                 </div>
-
-                <div className="sm:w-4/6 w-full h-[35vh] text-center flex flex-col justify-center items-center p-9">
-                  <p 
-                 className="sm:text-4xl text-xl mb-2 sm:mb-7 mt-2 sm:mt-10 font-poppins font-bold  text-white">{card.domain}</p>
-                  <motion.p
-                    initial={{ opacity: 0, y: 500 }}
-                    animate={{
-                      opacity: currentSlide === index ? 1 : 0,
-                      y: currentSlide === index ? 0 : 100,
-                    }}
-                    transition={{ duration: 1, ease: 'easeInOut' }}
-                    className="font-bold  xl:tracking-wider font-jetbrains  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
-                  >
-                    {/* className="font-bold text-xs xl:tracking-wider font-jetbrains sm:text-lg lg:text-2xl mb-6 text-white shadow-none"
-                  > */}
-                    {card.details}
-                  </motion.p>
-                </div>
-              </div>
-            </div>
-            </>
-          ))}
-        </Slider>
+                </React.Fragment>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
-    </>
+      </>
   );
 };
 

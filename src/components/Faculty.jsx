@@ -8,23 +8,16 @@ import { TextAnimate } from "./ui/text-animate";
 const Faculty = () => {
   return (
     <div className="sm:max-w-[90vw] sm:mb-28 lg:mb-3 mt-20 sm:mt-0 m-auto w-full text-white lg:h-screen flex justify-center items-center h-auto bg-green-">
-      {/* <div     className="h-auto psud   text-white sm:p-9 w-full min-[450px]:w-[80vw] lg:h-[75vh] sm:w-[70vw] bg-neutral-800 border-2 shadow-xl border-white rounded-3xl xl:w-[80vw] mx-auto"> */}
+    
       <div className="flex justify-center max-[450px]:w-[90vw] rounded-3xl flex-col   bg-neutral-800 items-center border-2 p-1 sm:p-5  border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto lg:h-[75vh]">
-        {/* <motion.h1
-          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-          whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
-          className="text-white text-center underline text-2xl sm:text-5xl sm:mt-7 md:text-6xl mt-2 font-poppins font-bold"
-        >
-          Our Faculty 
-        </motion.h1> */}
+       
           <TextAnimate
           
         animation="fadeIn"  
         by="word"            
         startOnView={true}   
         className="text-white text-center  text-2xl sm:text-5xl sm:mt-7 md:text-6xl mt-2 font-poppins font-bold"  
-        // segmentClassName="text-blue-500"           
+             
         duration={2}      
       >
         Our Faculty
@@ -35,7 +28,6 @@ const Faculty = () => {
             <img
               src={sir}
               className="sm:h-80 h-56 max-[450px]:h-40  object-contain"
-              // className="max-[600px]:h-40 max-[1000px]:h-80  object-contain h-96"
               alt=""
             />
           </motion.div>
@@ -43,12 +35,6 @@ const Faculty = () => {
           <div className="txt lg:w-4/6 w-full h-full flex justify-center items-center sm:p-3  bg-blue-">
             <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} 
             className=" sm:p-4 max-[450px]:hidden flex  max-[500px]:text-xs text-lg sm:text-xl lg:text-2xl  tracking-wide  font-extralight   text-center  lg:text-left font-major lg:mb-5">
-            {/* className="text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5"> */}
-            {/* className=" max-[450px]:hidden w-full px-2 xl:w-1/2 max-[900px]:p-5 max-[400px]:text-xs max-[500px]:text-xs max-[550px]:text-sm max-[750px]:text-xl text-xs md:text-xl xl:text-2xl font-serif text-center lg:text-left
-"> */}
-            {/* className="text-xs   sm:p-4 max-[450px]:hidden xl:text-2xl tracking-wide font-extralight text-center lg:text-left font-major lg:mb-5"> */}
-            {/* className="text-xs  md:text-xl sm:p-4 max-[450px]:hidden xl:text-2xl tracking-wide font-extralight text-center lg:text-left font-major lg:mb-5"> */}
-            {/* <motion.p initial={{scale : 1.1 , opacity : 0}} whileInView={{scale : 1 ,  opacity : 1}} transition={{duration : 1 , ease : "easeIn"}} className="text-xs md:text-xl sm:p-4 max-[450px]:hidden flex xl:text-2xl max-[500px]:text-xs max-[800px]:text-lg tracking-wide max-[700px]:text-xl max-[450px]:text-xs font-extralight   text-center  lg:text-left font-major lg:mb-5"> */}
                15 years of teaching experience and 3 years of industry
               experience as a Java Software Developer, Mr. Santosh Mishra is a
               distinguished academic and industry professional. He is a Gold
