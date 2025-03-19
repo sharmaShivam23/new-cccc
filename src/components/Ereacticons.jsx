@@ -1,15 +1,11 @@
 
 
 import React, { useEffect } from 'react'
-import Subtract from '../EventsImg/Subtract.svg'
-import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import eventp from '../EventsImg/eventp.svg'
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import graphiconp from '../EventsImg/graphiconp.jpg';
 import Reaction_1 from '../EventsImg2/Reaction_1.jpg';
 import Reaction_2 from '../EventsImg2/Reaction_2.jpg';
 import Reaction_3 from '../EventsImg2/Reaction_3.jpg';

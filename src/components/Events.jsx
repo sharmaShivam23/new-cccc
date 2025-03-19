@@ -11,20 +11,13 @@ import dev from "../EventsImg/dev.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
-import graphicon from '../EventsImg/graphicon.svg';
-import hacker from '../EventsImg/hacker.png';
-import nimbus from '../EventsImg/nimbus.svg';
-import devclash from '../EventsImg/devclash.svg';
-import spocc from '../EventsImg/spocc.svg';
 import spocc22 from '../EventsImg/spocc22.jpg';
 import spocc23 from '../EventsImg/spocc23.jpg';
-import buzz from '../EventsImg/buzz.jpg';
 import graphiconp from '../EventsImg/graphiconp.jpg';
 import hackerrank from '../EventsImg/hackerrank.svg';
 import hackerp from '../EventsImg/hackerp.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
 import { Link } from "react-router-dom";
-// import numbuss from "../EventsImg2/nimbuss.svg"
 import nimbuss from "../EventsImg2/nimbuss.svg"
 import cloud1s from "../EventsImg2/cloud1s.svg"
 import devs1 from "../EventsImg2/devs1.svg"

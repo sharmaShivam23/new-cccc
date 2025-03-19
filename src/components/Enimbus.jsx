@@ -1,22 +1,11 @@
 
 
 import React, { useEffect } from 'react'
-import Subtract from '../EventsImg/Subtract.svg'
-import devclash2 from '../EventsImg/devclash2.svg'
-import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import web from '../images/web.png';
-import ui from '../images/ui.png';
-import cloud from '../images/cloud.png';
-import app from '../images/app.png';
-import { motion } from 'framer-motion';
-import eventp from '../EventsImg/eventp.svg'
-import confetti from 'canvas-confetti';
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import hackerp from '../EventsImg/hackerp.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
 import Nimbus_1 from '../EventsImg2/Nimbus_1.jpg';
 import Nimbus_2 from '../EventsImg2/Nimbus_2.jpg';
