@@ -8,9 +8,9 @@ import devtext from "../EventsImg/devtext.svg";
 import devicon from "../EventsImg/devicon.svg";
 import Confetti from "./ui/confetti";
 import Particles from "./ui/particles";
-import dev_1 from '../EventsImg2/dev_1.jpg';
-import dev_2 from '../EventsImg2/dev_2.jpg';
-import dev_3 from '../EventsImg2/dev_3.jpg';
+import dev_1 from '../EventsImg2/Dev_1.jpg';
+import dev_2 from '../EventsImg2/Dev_2.jpg';
+import dev_3 from '../EventsImg2/Dev_3.jpg';
 import dev2l from "../EventsImg2/dev2l.svg"
 
 
