@@ -16,16 +16,22 @@ import eventp from '../EventsImg/eventp.svg'
 import confetti from 'canvas-confetti';
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import hackerp from '../EventsImg/hackerp.jpg';
+import spocc23 from '../EventsImg/spocc23.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
+import Techbuzz_1 from '../EventsImg2/Techbuzz_1.jpg';
+import Techbuzz_2 from '../EventsImg2/Techbuzz_2.jpg';
+import Techbuzz_3 from '../EventsImg2/Techbuzz_3.jpg';
+import techposter from '../EventsImg2/techposter.jpg';
+import techl from "../EventsImg2/techl.svg"
 
-export const Ehackeroverflow = () => {
-   useEffect(() => {
-      window.scrollTo({
-        top : 0,
-        behavior : "smooth"
-      })
+export const Techbuzz = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top : 0,
+      behavior : "smooth"
     })
+  })
+
   return (
     <>
     <Particles/>
@@ -47,7 +53,7 @@ export const Ehackeroverflow = () => {
 const Head = () => {
   return(
     <div className='text-white text-4xl font-bold underline   mt-6'>
-      Event-HackerOverflow
+      Event-Techbuzz
     </div>
   )
 }
@@ -55,7 +61,7 @@ const Head = () => {
 const Image1 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={hackerp} alt=""  className='h-[50vh] ' />
+       <img src={techl} alt="techposter"  className='sm:h-[60vh] h-[40vh]' />
     </div>
   )
 }
@@ -63,7 +69,7 @@ const Image1 = () => {
 const Image2 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={dev} alt=""  className='h-[50vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
+       <img src={techposter} alt=""  className='sm:h-[60vh] h-[40vh] mt-8 w-[20vw]  sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
     </div>
   )
 }
@@ -99,10 +105,9 @@ const Carousel = () => {
 
  
   const data = [
-    { img: eventp },
-    { img: eventp },
-    { img: eventp},
-    { img: eventp},
+    { img:  Techbuzz_1  },
+    { img:  Techbuzz_2 },
+    { img:  Techbuzz_3},
   ];
 
   return (

@@ -1,27 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// export default {
-//   content: [
-//     "./index.html",
-//     "./src/**/*.{js,ts,jsx,tsx}",
-//   ],
-//   theme: {
-//     extend: {
-//       slideIn : {
-//         '0%' : { transform : 'translateX(-100%)' },
-//         '100%' : { transform : 'translateX(0%)'  },
-//       },
-//       slide : {
-//         '0%' : { scale : 0 },
-//         '100%' : { scale : 1  },
-//       },
-//       animation: {
-//         slideIn: 'slideIn 3s ease-in-out',
-//         slide: 'slide 3s ease-in-out',
-//       },
-//     },
-//   },
-//   plugins: [],
-// }
 
 
 import { transform } from 'framer-motion';
@@ -89,6 +65,26 @@ export default {
   				}
   			},
   			sUp: {
+  				'0%': {
+  					transform: 'translateY(100%)',
+  					opacity: '0'
+  				},
+  				'100%': {
+  					transform: 'translateY(0)',
+  					opacity: '1'
+  				}
+  			},
+  			sUp2: {
+  				'0%': {
+  					transform: 'translateY(100%)',
+  					opacity: '0'
+  				},
+  				'100%': {
+  					transform: 'translateY(0)',
+  					opacity: '1'
+  				}
+  			},
+  			sUp3: {
   				'0%': {
   					transform: 'translateY(100%)',
   					opacity: '0'
@@ -192,7 +188,9 @@ export default {
   			click: 'click 3s ease-in-out',
   			bounce: 'bounce 2s infinite',
   			bounce2: 'bounce2 2s infinite',
-  			su: 'sUp 1s ease-in-out',
+  			su: 'sUp 1s ease-in-out 0s',
+  			su2: 'sUp2 2s ease-in-out 1s',
+  			su3: 'sUp3 3s ease-in-out 2s',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',

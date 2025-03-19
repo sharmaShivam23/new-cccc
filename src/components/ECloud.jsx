@@ -16,17 +16,21 @@ import eventp from '../EventsImg/eventp.svg'
 import confetti from 'canvas-confetti';
 import Confetti from './ui/confetti';
 import Particles from './ui/particles';
-import spocc23 from '../EventsImg/spocc23.jpg';
+import hackerp from '../EventsImg/hackerp.jpg';
 import nimbusp from '../EventsImg/nimbusp.jpg';
+import CC2 from '../EventsImg2/CC2.jpg';
+import CC3 from '../EventsImg2/CC3.jpg';
+import CC4 from '../EventsImg2/CC4.jpg';
+import cloudSplorepost from '../EventsImg2/cloudSplorepost.jpg';
+import dev2cloud from "../EventsImg2/dev2cloud.svg"
 
-export const Espocc = () => {
-  useEffect(() => {
-    window.scrollTo({
-      top : 0,
-      behavior : "smooth"
+export const ECloud = () => {
+   useEffect(() => {
+      window.scrollTo({
+        top : 0,
+        behavior : "smooth"
+      })
     })
-  })
-
   return (
     <>
     <Particles/>
@@ -48,7 +52,7 @@ export const Espocc = () => {
 const Head = () => {
   return(
     <div className='text-white text-4xl font-bold underline   mt-6'>
-      Event-Spocc
+      Event-CloudSplore
     </div>
   )
 }
@@ -56,7 +60,7 @@ const Head = () => {
 const Image1 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={Subtract} alt=""  className='h-[50vh] ' />
+       <img src={dev2cloud} alt="cloudSplorepost"  className='sm:h-[60vh] h-[40vh]' />
     </div>
   )
 }
@@ -64,7 +68,7 @@ const Image1 = () => {
 const Image2 = () => {
   return(
     <div className='flex justify-center items-center'>
-       <img src={spocc23} alt=""  className='h-[50vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
+       <img src={dev} alt="dev"  className='sm:h-[60vh] h-[40vh] mt-8 sm:mt-0 border-2 border-white rounded-lg shadow-lg shadow-white' />
     </div>
   )
 }
@@ -100,10 +104,10 @@ const Carousel = () => {
 
  
   const data = [
-    { img: eventp },
-    { img: eventp },
-    { img: eventp},
-    { img: eventp},
+    { img: CC2 },
+    { img: CC3 },
+    { img: CC4},
+    
   ];
 
   return (

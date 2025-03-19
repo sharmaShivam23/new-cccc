@@ -57,8 +57,8 @@ export const TeamCards = () => {
   return (
     <div className="max-w-[90vw] m-auto z-50">
       <motion.h1
-        initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-        whileInView={{ y: 0, filter: "blur(0px)", opacity: 1 }}
+        initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
+        whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}
         transition={{ duration: 1, delay: 0.1 }}
         viewport={{ once: true }}
         className="text-white text-center text-2xl  sm:text-3xl md:text-5xl font-poppins  font-bold mb-6 mt-6"
@@ -119,11 +119,6 @@ const FouthYear = ({setdata,data}) => {
   const [obj, setObj] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // if (loading) {
-  //   document.body.classList.add('no-scroll');
-  // } else {
-  //   document.body.classList.remove('no-scroll');
-  // }
 
   useEffect(() => {
     const api = async () => {
@@ -163,7 +158,7 @@ const FouthYear = ({setdata,data}) => {
         </h1>
       )}
 
-      <p className="font-bold text-2xl text-white">{data}</p>
+      {/* <p className="font-bold text-2xl text-white">{data}</p> */}
 
       {loading ? (
         <Loading />
@@ -194,7 +189,7 @@ const FouthYear = ({setdata,data}) => {
                       className="w-full absolute bottom-0 left-0"
                       alt=""
                     />
-                    {/* <img src={rec1} className="w-full absolute bottom-0 left-0" alt="" /> */}
+            
                   </div>
                 </div>
 
@@ -375,8 +370,8 @@ const SecondYear = ({ activeYear , data3,setdata3 }) => {
           <div className="flex justify-center items-center flex-wrap gap-7">
             {obj.map((details, index) => (
               <motion.div
-                initial={{ opacity: 0, filter: "blur(30px)", x: -20 }}
-                whileInView={{ opacity: 1, filter: "blur(0px)", x: 0 }}
+                initial={{ opacity: 0, backdropFilter: "brightness(70%)", x: -20 }}
+                whileInView={{ opacity: 1, backdropFilter: "brightness(100%)", x: 0 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 key={index}
                 className="flex justify-center items-center"
