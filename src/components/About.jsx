@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import cloud from "../images/cloud.jpg";
 import ShimmerButton from "./ui/shimmer-button";
 import { useNavigate } from "react-router-dom";
+import cloud1 from "../images/cloud1.mp4"
+import cloud2 from "../images/cloud2.mp4"
+import cloud3 from "../images/cloud3.gif"
 
 const About = () => {
   const navigate = useNavigate();
@@ -37,16 +40,19 @@ const About = () => {
         </div>
 
         {/* CONTENT */}
-        <div className="lg:flex block justify-center gap-0  sm:gap-20 items-center">
+        <div className="lg:flex block justify-center gap-0   sm:gap-20 items-center">
           {/* left */}
           <motion.div
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{ type: "spring", stiffness: 50 }}
-            className="left lg:w-5/12 w-full"
+            className="left lg:w-5/12 m-3 w-full"
             exit={{ x: -100 }}
           >
-            <img src={cloud} alt="" className=" w-full  sm:static" />
+            {/* <video autoPlay 
+        loop src={cloud3} className=""></video> */}
+
+            <img src={cloud3} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" />
           </motion.div>
 
           {/* right */}
@@ -58,7 +64,7 @@ const About = () => {
             style={{ flex: 1 }}
             className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
           >
-            <h1 className="text-xl  lg:text-2xl font-playwrite underline text-slate-400 tracking-wide">
+            <h1 className="text-xl  lg:text-2xl font-poppins underline text-slate-400 tracking-wide">
               About Us
             </h1>
             <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-major mt-6">

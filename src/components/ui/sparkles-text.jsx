@@ -17,7 +17,8 @@ const SparklesText = ({
     const generateStar = () => {
       const starX = `${Math.random() * 100}%`;
       const starY = `${Math.random() * 100}%`;
-      const color = Math.random() > 0.5 ? colors.first : colors.second;
+      // const color = Math.random() > 0.5 ? colors.first : colors.second;
+      const color = colors.first;
       const delay = Math.random() * 2;
       const scale = Math.random() * 1 + 0.3;
       const lifespan = Math.random() * 10 + 5;

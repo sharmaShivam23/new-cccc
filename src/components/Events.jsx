@@ -42,8 +42,8 @@ export const Events = () => {
 
 const EventCarousel = () => {
   return (
-    <div className="sm:h-[80vh]  sm:mb-20 mb-3 h-[60vh]  w-screen  flex justify-center relative text-center">
-      <div className="container mx-auto h-[47rem]   sm:w-screen w-[350px]  sm:h-[40rem] p-[2rem] relative">
+    <div className="sm:h-[80vh] relative   sm:mb-20 mb-3 h-[60vh]  w-screen  flex justify-center  text-center">
+      <div className="container mx-auto h-[47rem]    sm:w-screen w-[350px]  sm:h-[40rem] p-[2rem] ">
         <motion.h1
           initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
           whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}
@@ -91,7 +91,7 @@ const EventCarousel = () => {
       
           }}
           modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} 
-          className="swiper lg:w-[90%] xl:w-[100%] mb-10  relative p-5 h-[30%] sm:h-[80%]"
+          className="swiper relative lg:w-[90%]   xl:w-[100%] mb-10   p-5 h-[30%] sm:h-[80%]"
         >
       
           <SwiperSlide>
@@ -137,7 +137,7 @@ const EventCarousel = () => {
             />
           </SwiperSlide>
 
-          <div className="absolute bottom-0 left-0 right-0 flex justify-between px-4 z-50 space-x-0">
+          <div className="absolute  bottom-0  left-0 right-0 flex justify-center gap-20 px-4 z-50 ">
             <div className="backward text-white text-3xl z-50 transform rotate-180 cursor-pointer">
               <IoMdArrowRoundForward />
             </div>
@@ -155,7 +155,7 @@ const EventCarousel = () => {
 
 const EventImages = () => {
   return (
-    <div className="text-white text-4xl flex flex-wrap justify-center gap-4 mt-14 items-center max-w-[90vw] h-auto">
+    <div className="text-white text-4xl flex flex-wrap justify-center gap-4  md:mt-12 items-center max-w-[90vw] h-auto">
       <motion.div initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 3, type: "spring" }}

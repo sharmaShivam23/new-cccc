@@ -32,8 +32,12 @@ const Carousel = () => {
       domain: "Web Development",
       details:
         "Web development is at the heart of creating online presence for individuals, businesses, and organizations alike. It encompasses everything from building simple static pages to complex dynamic websites and web applications that interact with databases and users in real-time. Web developers use various technologies, such as HTML, CSS, JavaScript, and backend frameworks like Node.js, Ruby on Rails, and Django, to craft websites that are not only functional but also visually appealing.",
-      from: "#ffaa40",
-      to: "#9c40ff",
+      // from: "#0D7377",
+      // to: "#32E0C4",
+      from: "#000000",
+      to: "#000000",
+      // from: "#ffaa40",
+      // to: "#9c40ff",
       height: "[55vh]",
     },
     {
@@ -41,8 +45,10 @@ const Carousel = () => {
       domain: "Mobile App Development",
       details:
         "Mobile app development has revolutionized how we interact with technology. With millions of mobile devices worldwide, the demand for mobile apps continues to grow. Mobile app developers create applications for platforms like iOS and Android, allowing users to engage with services, content, and functionality on-the-go. From social media platforms to banking apps and games, mobile apps have become an integral part of daily life.",
-      from: "#00BFBF",
-      to: "#1E10FF",
+      // from: "#00BFBF",
+      // to: "#1E10FF",
+      from: "#000000",
+      to: "#000000",
       height: "[55vh]",
     },
     {
@@ -50,8 +56,10 @@ const Carousel = () => {
       domain: "UI/UX Design",
       details:
         "UI/UX design is vital for creating products that users love to interact with. It focuses on both the visual design (UI) and the overall experience (UX) users have when engaging with a product. The goal is to make products visually appealing, easy to navigate, and effective in helping users accomplish their tasks. Companies must prioritize UI/UX design to stay competitive, focusing on user-centered design, ensuring consistency, optimizing for mobile devices, simplifying navigation, enhancing performance, and making products accessible for all users.",
-      from: "#8A2BE2",
-      to: "#7B90EE",
+      // from: "#8A2BE2",
+      // to: "#7B90EE",
+      from: "#000000",
+      to: "#000000",
       height: "[800px]",
     },
     {
@@ -59,8 +67,10 @@ const Carousel = () => {
       domain: "Cloud Computing",
       details:
         "Cloud computing is changing how businesses function and provide services. It enables companies to store data and run applications on remote servers rather than relying on traditional on-site infrastructure. The cloud provides scalable, affordable, and adaptable solutions that help businesses manage and process data more effectively. Additionally, cloud computing improves collaboration by allowing teams to access shared resources and collaborate effortlessly, no matter where they are located.",
-      from: "#FF1493",
-      to: "#FF6347",
+      // from: "#FF1493",
+      // to: "#FF6347",
+      from: "#000000",
+      to: "#000000",
       height: "[800px]",
     },
   ];
@@ -69,8 +79,8 @@ const Carousel = () => {
     <>
       <div className="max-w-[90vw] m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
         <motion.h1
-          initial={{ y: -50, filter: "blur(10px)", opacity: 0 }}
-          whileInView={{ y: 0, filter: "blur(2px)", opacity: 1 }}
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
           className="text-white text-center text-2xl sm:text-5xl font-poppins sm:mb-0 relative top-14 sm:top-7 mb-4 md:text-6xl  font-bold"
         >
@@ -82,7 +92,7 @@ const Carousel = () => {
            <React.Fragment key={index}>
                 <div
                   key={index}
-                  className="flex w-full justify-center items-center h-[80vh]"
+                  className="flex w-full justify-center border-t-2 border-b-2 border-violet-600 items-center h-[80vh]"
                   style={{
                     background: `linear-gradient(to left, ${card.from}, ${card.to})`,
                     zIndex: 100,
@@ -108,7 +118,7 @@ const Carousel = () => {
                           y: currentSlide === index ? 0 : 100,
                         }}
                         transition={{ duration: 1, ease: "easeInOut" }}
-                        className="font-bold  xl:tracking-wider font-jetbrains  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
+                        className="font-[550] text-center   font-jetbrains  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
                       >
                         {card.details}
                       </motion.p>

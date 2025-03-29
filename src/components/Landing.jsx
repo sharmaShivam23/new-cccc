@@ -67,7 +67,7 @@ const Landing = () => {
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
-            <ShineBorder
+            {/* <ShineBorder
               borderRadius={8}
               borderWidth={1}
               duration={2}
@@ -77,9 +77,9 @@ const Landing = () => {
               <h1 className="text-xl font-bold bg-transparent z-50 hover:scale-125 transition-all ease-in-out duration-1000 delay-0 font-poppins cursor-pointer  text-white text-center">
                 Hello, World!
               </h1>
-            </ShineBorder>
+            </ShineBorder> */}
             
-            <ShineBorder
+            {/* <ShineBorder
               borderRadius={8}
               borderWidth={1}
               duration={2}
@@ -101,15 +101,15 @@ const Landing = () => {
               <h1 className=" text-lg sm:text-xl font-bold cursor-pointer font-playwrite bg-transparent text-white text-center">
                 Hello, Coders!
               </h1>
-            </ShineBorder>
-           <div className="absolute top-60 right-10 gap-10 sm:right-16  max-[400px]:hidden">
+            </ShineBorder> */}
+           <div className="absolute  right-10 gap-10 sm:right-16  max-[400px]:hidden">
           <img
             src={D}
             className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
             alt="D"
           />
         </div>
-        <div className="absolute top-60 left-10 z-[2px] sm:left-60 max-[400px]:hidden">
+        <div className="absolute  left-10 z-[2px] sm:left-60 max-[400px]:hidden">
           <img
             src={C}
             className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"

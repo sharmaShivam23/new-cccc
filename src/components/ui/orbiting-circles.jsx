@@ -80,7 +80,7 @@ export default function OrbitingCircles({
         </svg>
       )}
 
-      {/* Rotating "Think" text on the first circle */}
+  
       <div
         style={{
           "--duration": duration,
@@ -151,13 +151,6 @@ export default function OrbitingCircles({
       
       <div className="absolute flex items-center justify-center inset-0 z-10">
         <motion.div 
-         initial={{ rotate: 0  }} 
-         animate={{ rotate: 360  }}
-         transition={{
-           duration: 7, 
-           repeat: Infinity, 
-           ease: "linear", 
-         }}
         >
         <img src={CCC} className="sm:h-28 h-14" alt="CCC" />
         </motion.div>
