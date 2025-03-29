@@ -27,7 +27,7 @@ const Footer = () => {
         <p className="text-white mt-4 text-sm md:text-lg font-poppins">
           Empowering students to innovate, collaborate, and lead in the world of
           technology.
-          <br /> Join us at Cloud Computing Cell and shape the future!
+          <br /> Let's have a look on the quiz click on start now to start
         </p>
         <a className="z-50" href="https://quizaki.vercel.app/">
         <div className="text-white z-50 text-xl md:text-xl mt-4 font-bold">
@@ -129,7 +129,7 @@ const Footer = () => {
             Cloud Computing
           </span>
         </p>
-        <p className="font-playwrite">cloudcomputing@akgec.ac.in</p>
+        <p className="font-poppins">cloudcomputing@akgec.ac.in</p>
       </div>
     </div>
   );

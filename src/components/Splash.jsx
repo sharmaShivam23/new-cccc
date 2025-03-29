@@ -7,14 +7,9 @@ import SparklesText from "./ui/sparkles-text";
 const Splash = () => {
   return (
     <>
-      <motion.div className="bg-[#111223] h-[100vh] w-screen relative flex justify-center items-center flex-col">
+      <motion.div className="bg-black h-[100vh] w-screen relative flex justify-center items-center flex-col">
         <div className="ani z-40 bg-black text-3xl absolute bottom-0 text-white flex justify-center items-start">
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: "100vh" }}
-            transition={{ duration: 4, ease: "easeInOut" }}
-            className="bg-black z-40 w-screen h-[100vh] sm:h-[100vh] md:sm:h-[100vh] lg:sm:h-[100vh]"
-          ></motion.div>
+          
         </div>
         <motion.div
           initial={{ rotate: 0, scale: 0 }}

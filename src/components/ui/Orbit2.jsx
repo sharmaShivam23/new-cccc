@@ -127,7 +127,7 @@ export default function Orbit2({
            ease: "linear", 
          }}
         >
-        {/* <img src={CCC} className="h-14" alt="CCC" /> */}
+    
         </motion.div>
         
       </div>
