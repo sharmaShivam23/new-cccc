@@ -120,7 +120,7 @@ const Text = () => {
         <InteractiveHoverButton
           text="Join Us"
           onClick={message}
-          className="text-black font-playwrite"
+          className="text-black font-poppins"
         />
       </div>
       {close && (

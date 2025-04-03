@@ -1,5 +1,6 @@
 import React from "react";
-import team from "../images/23team.png";
+import team from "../images/newTeam.jpg";
+// import team from "../images/23team.png";
 import { motion } from "framer-motion";
 import InteractiveHoverButton from "./ui/interactive-hover-button";
 import { useNavigate } from "react-router-dom";
@@ -51,7 +52,7 @@ const Team = () => {
             className="w-full px-2 xl:w-1/2 max-[900px]:p-5 max-[500px]:text-xs text-lg sm:text-xl lg:text-2xl font-serif text-center lg:text-left">
           
            
-            <p className="font-major">
+            <p className="font-poppins">
            We are a team with vibrant mix of individuals from diverse backgrounds, each bringing unique skills and a shared passion for technology.  we collaborate to explore and innovate in the fields of Web Development, Machine Learning, Cloud Computing, and UI/UX Design.We believe in supporting one another, sharing knowledge, and working together on real-world projects  With a strong focus on growth and collaboration, we aim to empower every member to reach their full potential in the ever-evolving tech landscape.
 
 

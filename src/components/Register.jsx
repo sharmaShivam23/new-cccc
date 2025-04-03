@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import RegisterClose from './RegisterClose'
+import RegisterOpen from './RegisterOpen'
 
 export const Register = () => {
    useEffect(() => {
@@ -10,15 +11,9 @@ export const Register = () => {
     },[])
   return (
     <>
-      <RegisterClose/>
+      {/* <RegisterClose/> */}
+      <RegisterOpen/>
     </>
-  )
-}
-
-
-const RegisterOpen = () => {
-  return(
-    <div></div>
   )
 }
 

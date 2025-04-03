@@ -28,19 +28,19 @@ const Landing = () => {
   return (
     <>
       <div className="">
-        <div className="h-screen w-screen bg-black z-40 overflow-hidden relative">
+        <div className="h-screen w-screen bg-black z-40  overflow-hidden relative">
           <Particles />
           <Meteors />
           <OrbitingCircles className="">
             <Particles />
           </OrbitingCircles>
            
-          <div className="absolute inset-0 flex flex-col mt-16 sm:mt-0 mb-96 justify-center items-center text-white text-center px-4">
+          <div className="absolute inset-0 flex flex-col mt-20 sm:mt-0 mb-96 justify-center items-center text-white text-center px-4">
             <TypingAnimation
               duration={60}
               delay={0}
               startOnView={true}
-              className="text-white z-10 text-2xl md:text-5xl font-jetbrains font-bold"
+              className="text-white z-10 text-2xl md:text-3xl lg:text-5xl font-jetbrains font-bold"
             >
               {"Join the Future of Cloud Computing"}
             </TypingAnimation>
@@ -48,7 +48,7 @@ const Landing = () => {
               duration={100}
               delay={200}
               startOnView={true}
-              className="text-white text-md z-10 md:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
+              className="text-white text-md z-10 md:text-2xl  lg:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
             >
               {"Innovating the World of Technology and Coding"}
             </TypingAnimation>
@@ -57,16 +57,21 @@ const Landing = () => {
               <br className="mt-3"/>innovative technologies,  shaping the future with passion and expertise
             </motion.p>
 
-            <div className="text-white z-40 text-xl md:text-xl mt-4 font-bold">
+            {/* <div className="text-white z-40 text-xl hidden sm:flex md:text-xl mt-4 font-bold absolute top-0  sm:top-0 right-24">
               <ShimmerButton onClick={register} className="cursor-pointer hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
             </div>
+            <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
+              <ShimmerButton onClick={register} className="cursor-pointer hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
+                Register
+              </ShimmerButton>
+            </div> */}
 
           
           </div>
 
-          <div className="absolute inset-0 flex sm:flex-col justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
+          <div className="absolute inset-0 flex sm:flex-col gap-10 justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
             {/* <ShineBorder
               borderRadius={8}
               borderWidth={1}
@@ -102,14 +107,14 @@ const Landing = () => {
                 Hello, Coders!
               </h1>
             </ShineBorder> */}
-           <div className="absolute  right-10 gap-10 sm:right-16  max-[400px]:hidden">
+           <div className="absolute max-[950px]:hidden flex max-[650px]:flex right-10 gap-10 sm:right-16  max-[400px]:hidden">
           <img
             src={D}
             className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
             alt="D"
           />
         </div>
-        <div className="absolute  left-10 z-[2px] sm:left-60 max-[400px]:hidden">
+        <div className="absolute  left-10 max-[950px]:hidden flex max-[650px]:flex z-[2px] sm:left-60 max-[400px]:hidden">
           <img
             src={C}
             className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"

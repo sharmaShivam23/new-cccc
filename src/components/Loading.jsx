@@ -85,3 +85,52 @@ const Loading = () => {
 }
 
 export default Loading;
+
+
+
+
+
+// import React from 'react';
+// import { motion } from 'framer-motion';
+
+ export const Loader = () => {
+  return (
+    <div className="absolute top-0 left-0 bottom-0 w-full h-full flex items-center justify-center bg-[#161D29] bg-opacity-90 backdrop-blur-sm">
+      <div className="text-center">
+        <motion.div
+          className="w-10 h-10 bg-white rounded-full mx-auto"
+          animate={{ y: [0, -30, 0] }}
+          transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+        />
+  
+        <motion.h1
+          className="mt-8 text-xl sm:text-4xl font-bold text-white"
+          animate={{
+            textShadow: [
+              "0px 0px 8px  #8a2be2",
+              "0px 0px 16px  #8a2be2",
+              "0px 0px 8px  #8a2be2"
+            ]
+          }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          Loading, Please Wait...
+        </motion.h1>
+
+        <div className="flex mt-4 space-x-2 justify-center">
+          {[...Array(3)].map((_, i) => (
+            <motion.span
+              key={i}
+              className="w-4 h-4 bg-white rounded-full"
+              animate={{ opacity: [0.3, 1, 0.3] }}
+              transition={{ duration: 1, repeat: Infinity, delay: i * 0.3 }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// export default Loader;
+

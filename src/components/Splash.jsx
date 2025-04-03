@@ -57,7 +57,7 @@ const Splash = () => {
               className="mr-4 sm:text-3xl text-2xl font-poppins"
               text={"COMPUTING"}
             >
-              CLOUD
+              COMPUTING
             </SparklesText>
           </motion.div>
 
