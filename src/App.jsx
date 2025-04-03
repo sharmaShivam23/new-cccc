@@ -101,6 +101,7 @@ import { Techbuzz } from "./components/ETechbuzz";
 import { Contact } from "./components/Contact";
 import { Ereacticons } from "./components/Ereacticons";
 import {ECloud} from "./components/ECloud";
+import Open from "./components/ui/Open";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -118,6 +119,7 @@ const App = () => {
       {isLoaded ? (
         <>
           <Navbar />
+          <Open/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Events" element={<Events />} />

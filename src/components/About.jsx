@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+// import cloud from "../images/cloud.svg";
 import cloud from "../images/cloud.jpg";
 import ShimmerButton from "./ui/shimmer-button";
 import { useNavigate } from "react-router-dom";
@@ -52,7 +53,8 @@ const About = () => {
             {/* <video autoPlay 
         loop src={cloud3} className=""></video> */}
 
-            <img src={cloud3} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" />
+            <img src={cloud} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" />
+            {/* <img src={cloud3} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" /> */}
           </motion.div>
 
           {/* right */}
@@ -67,36 +69,36 @@ const About = () => {
             <h1 className="text-xl  lg:text-2xl font-poppins underline text-slate-400 tracking-wide">
               About Us
             </h1>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-major mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-poppins mt-6">
               The Cloud Computing Cell at Ajay Kumar Garg Engineering College,
               established in February 2016.
             </p>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-major mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-poppins mt-6">
               It Provides students with exposure to the latest cloud
               technologies, enhancing their skills for better placement and
               research opportunities.
             </p>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-major mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-poppins mt-6">
               It offers a platform for managing and deploying cloud services,
               helping students stay competitive in the job market. The Cell is
               coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and Dr. Parneet
               Kaur from the IT Department, who guide students in their academic
               and professional development.
             </p>
-            <div className="btn flex text-xl items-start gap-20 mt-8">
+            <div className="btn flex text-xl items-start gap-10 sm:gap-20 mt-8">
               {/* <a href="https://www.akgec.ac.in/rd/cloud-computing-cell/">
               <ShimmerButton className="font-bold text-xs max-[300px]:text-[7px] hover:scale-110 transition-all ease-in-out duration-1000  sm:text-lg font-bebas">
               Know More
               </ShimmerButton>
               <a/> */}
               <a href="https://www.akgec.ac.in/rd/cloud-computing-cell/">
-                <ShimmerButton className="font-bold text-xs max-[300px]:text-[7px] hover:scale-110 transition-all ease-in-out duration-1000 sm:text-lg font-bebas">
+                <ShimmerButton className="font-bold text-xs max-[300px]:text-[7px] hover:scale-110 transition-all ease-in-out duration-1000 sm:text-lg font-font-poppins">
                   Know More
                 </ShimmerButton>
               </a>
 
               <ShimmerButton
-                className="font-bold text-xs  hover:scale-110  max-[300px]:text-[7px]  transition-all ease-in-out duration-1000 sm:text-lg font-bebas"
+                className="font-bold text-xs max-[300px]:text-[7px] hover:scale-110 transition-all ease-in-out duration-1000 sm:text-lg font-poppinss"
                 onClick={contact}
               >
                 Contact Us

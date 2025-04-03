@@ -118,7 +118,7 @@ const Carousel = () => {
                           y: currentSlide === index ? 0 : 100,
                         }}
                         transition={{ duration: 1, ease: "easeInOut" }}
-                        className="font-[550] text-center   font-jetbrains  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
+                        className="font-[400] text-center   font-poppins  max-[450px]:text-xs text-lg sm:text-xl lg:text-2xl  mb-6 text-white shadow-none"
                       >
                         {card.details}
                       </motion.p>

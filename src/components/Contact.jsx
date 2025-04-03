@@ -32,9 +32,9 @@ export const Contact = () => {
 
 const Video = () => {
   return (
-    <div className="flex justify-center  items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
+    <div className="flex justify-center  relative items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
       <video
-        className="w-full z-40 lg:mb-28 mb-10  h-auto md:h-[100vh]"
+        className="w-full z-40 lg:mb-28 mb-10 border- border-white  h-auto md:h-[60vh]"
         autoPlay
         loop
         src={video}
@@ -46,7 +46,23 @@ const Video = () => {
         <div className="m-2 mb-4 font-bold animate-su">
           Stay in Touch with us
         </div>
+        {/* <div className="div animate-su">
+          <h1 className="font-bold text-xl">Address</h1>
+          <p className="text-lg  mt-2 px-20">Basic IT Lab , Third floor , CS-IT block , Ajay Kumar Garg Engineering College , Ghaziabad-201009</p>
+        </div> */}
+
       </motion.div>
+       {/* <div className="add border-  bottom-5 z-[100] text-white p-24 border-white  w-full">
+        <div className="div">
+          <h1 className="font-bold text-2xl">Adress</h1>
+          <p>Basic IT Lab , Third floor , CS-IT block , Ajay Kumar Garg Engineering College , Ghaziabad-201009</p>
+        </div>
+        <div className="div mt-10">
+          <h1 className="font-bold text-2xl">Email</h1>
+          <p>cloudComputing@akgec.ac.in</p>
+        </div>
+
+      </div>  */}
     </div>
   );
 };
@@ -171,10 +187,10 @@ const Form = () => {
       <ToastContainer />
       {/* lg:bg-[#111122] */}
 
-      <div className="flex justify-center z-0 lg:border-2   border-r-0   sm:border-violet-500 lg:absolute right-0 lg:bg-black  rounded-l-[6vmin] items-center text-white  w-full md:w-1/2 h-[90vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
+      <div className="flex justify-center z-0 lg:border-2 pb-20  border-r-0   sm:border-violet-500 lg:absolute right-0 lg:bg-black  rounded-l-[6vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
         <Particles className="z-40" />
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-2xl mb-2 text-center font-poppins font-bold">
+          <p className="sm:text-3xl text-2xl mb-7 text-center font-poppins font-bold">
             Welcome to Cloud Computing
           </p>
           {/* <p className="text-xl mt-4 m-2 mb-2 sm:text-xl">
@@ -183,10 +199,10 @@ const Form = () => {
         </div>
 
         <form
-          className="flex justify-center items-center max-[800px]:w-[70vw] flex-col border- border-white h-[70vh] w-full md:w-[30vw]  md:p-7"
+          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border-white h-[70vh]  md:w-[30vw] p-0  md:p-7"
           onSubmit={handleForm}
         >
-          <h1 className="text-3xl font-bold font-rubik mb-3 mt-10 tracking-wider">
+          <h1 className="text-2xl m-2 font-bold font-rubik mb-3 mt-10 tracking-wider">
             Contact Us
           </h1>
          
@@ -273,7 +289,7 @@ const Form = () => {
                 borderWidth={0.5}
                 duration={3}
                 color={["#ffffff", "#3B0B59"]}
-                className="mt-8 text-white text-2xl  hover:scale-110 font-jetbrains rounded-2xl  transition-all ease-in-out duration-1000  cursor-pointer tracking-wider font-bold"
+                className="mt-8 text-white text-2xl   hover:scale-110 font-jetbrains rounded-2xl  transition-all ease-in-out duration-1000  cursor-pointer tracking-wider font-bold"
               >
                 Submit
               </ShineBorder>

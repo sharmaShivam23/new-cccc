@@ -6,7 +6,8 @@ import jhanvi from "../2yearImg/jhanvi.jpg"
 import saurabh from "../2yearImg/saurabh.jpg"
 import shivam from "../2yearImg/shivamsharma.jpg"
 // import shruti from "../2yearImg/shruti.jpg"
-import tushar from "../2yearImg/tushar.png"
+// import tushar from "../2yearImg/tushar.png"
+import tushar from "../2yearImg/tushar2.png"
 import utkarsh from "../2yearImg/Utkarsh.jpg"
 
 export  const obj2 = [
