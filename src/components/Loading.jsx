@@ -92,10 +92,11 @@ export default Loading;
 
 // import React from 'react';
 // import { motion } from 'framer-motion';
+// bg-opacity-90 backdrop-blur-sm
 
  export const Loader = () => {
   return (
-    <div className="absolute top-0 left-0 bottom-0 w-full h-full flex items-center justify-center bg-[#161D29] bg-opacity-90 backdrop-blur-sm">
+    <div className="absolute top-0 left-0 bottom-0 w-full h-full flex items-center justify-center bg-[#161D29] ">
       <div className="text-center">
         <motion.div
           className="w-10 h-10 bg-white rounded-full mx-auto"

@@ -89,7 +89,7 @@ import Splash from "./components/Splash";
 import { Events } from "./components/Events";
 import Home from "./components/Home";
 import { TeamCards } from "./components/TeamCards";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Register } from "./components/Register";
@@ -115,7 +115,7 @@ const App = () => {
 
   return (
     <Router>
-      <RouteWithTitle />
+      {/* <RouteWithTitle /> */}
       {isLoaded ? (
         <>
           <Navbar />
@@ -142,18 +142,18 @@ const App = () => {
 };
 
 
-const RouteWithTitle = () => {
-  const location = useLocation();
+// const RouteWithTitle = () => {
+//   const location = useLocation();
 
-  useEffect(() => {
-    if (location.pathname === "/Register") {
-      document.title = "404 not found";
-    } else {
-      document.title = "Cloud Computing Cell - AKGEC";
-    }
-  }, [location]);
+//   useEffect(() => {
+//     if (location.pathname === "/Register") {
+//       document.title = "404 not found";
+//     } else {
+//       document.title = "Cloud Computing Cell - AKGEC";
+//     }
+//   }, [location]);
 
-  return null;
-};
+//   return null;
+// };
 
 export default App;
