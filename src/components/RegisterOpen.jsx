@@ -104,7 +104,8 @@ const RegisterOpen = () => {
       {/* <Meteors/>
       <Meteors/>
       <Particles/>
-      <Toaster /> */}
+    */}
+       <Toaster />
       <div className="left sm:w-[800px] w-[100vw] overflow-x-hidden  sm:px-14">
         <form onSubmit={handleForm} className="mt-2 overflow-x-hidden space-y-5">
         
