@@ -128,7 +128,7 @@ const RegisterOpen = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Enter name here"
-                className=" h-[6vh] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
             {/* <div className="relative w-full">
@@ -151,7 +151,7 @@ const RegisterOpen = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 placeholder="Enter email here"
-                className=" h-[6vh] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -163,7 +163,7 @@ const RegisterOpen = () => {
                 value={formData.studentNumber}
                 onChange={handleInputChange}
                 placeholder="Enter studentNumber here"
-                className=" h-[6vh] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -174,7 +174,7 @@ const RegisterOpen = () => {
                   name="section"
                   value={formData.section}
                   onChange={handleInputChange}
-                  className="h-[6vh] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                  className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                 >
                   <option value="section">Sections</option>
                   <option value="1">1</option>
@@ -205,7 +205,7 @@ const RegisterOpen = () => {
                   name="branch"
                   value={formData.branch}
                   onChange={handleInputChange}
-                  className="h-[6vh] w-full text-[#AFB2BF] bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                  className="h-[54px] w-full text-[#AFB2BF] bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                 >
                   <option value="">Branch</option>
                   <option value="CSE(core)">CSE</option>
@@ -231,7 +231,7 @@ const RegisterOpen = () => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
                 placeholder="Enter phoneNumber here"
-                className=" h-[6vh] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -241,7 +241,7 @@ const RegisterOpen = () => {
                 name="gender"
                 value={formData.gender}
                 onChange={handleInputChange}
-                className="h-[6vh] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               >
                 <option value=""> Gender</option>
                 <option value="Male">Male</option>
@@ -255,7 +255,7 @@ const RegisterOpen = () => {
                 name="residence"
                 value={formData.residence}
                 onChange={handleInputChange}
-                className="h-[6vh]  w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)] flex justify-center items-center"
+                className="h-[54px]  w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)] flex justify-center items-center"
               >
                 <option value="">Select Residence</option>
                 <option value="Hosteller">Hosteller</option>
@@ -276,7 +276,7 @@ const RegisterOpen = () => {
                 />
                 <label
                   htmlFor="fileInput"
-                  className="sm:h-[75px] h-[45px]  w-full bg-[#161D29] text-white font-semibold flex justify-center items-center  shadow-[0px_1px_2px_rgba(255,255,255,0.6)] cursor-pointer hover:bg-[#1f2738] rounded-md transition-all duration-300"
+                  className="sm:h-[75px] h-[60px]  w-full bg-[#161D29] text-white font-semibold flex justify-center items-center  shadow-[0px_1px_2px_rgba(255,255,255,0.6)] cursor-pointer hover:bg-[#1f2738] rounded-md transition-all duration-300"
                 >
                   <span className="mr-2 text-md text-[#AFB2BF]">{fileName}</span>
 
