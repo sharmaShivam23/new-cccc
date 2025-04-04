@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-// import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
@@ -49,7 +48,7 @@ const RegisterOpen = () => {
 
   const handleForm = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     setLoading(true);
     try {
       const formDataToSend = new FormData();
@@ -64,12 +63,12 @@ const RegisterOpen = () => {
           withCredentials: true,
         }
       );
-      console.log(response);
+      // console.log(response);
 
       toast.success(response.data.message);
       clearField();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast.error(error.response.data.message);
     } finally {
       setLoading(false);
@@ -100,13 +99,14 @@ const RegisterOpen = () => {
     }
   };
   return (
-    <div className="signup z-50  px-6 bg-black gap-6 sm:px-32 flex text-white justify-center items-center py-10 sm:flex-row flex-col w-[100vw]">
-      <Meteors/>
+    <div className="signup z-50  overflow-hidden  w-full px-6 bg-black gap-6 sm:px-32 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
+
+      {/* <Meteors/>
       <Meteors/>
       <Particles/>
-      <Toaster />
-      <div className="left sm:w-[800px] w-[100vw]  sm:px-14">
-        <form onSubmit={handleForm} className="mt-2 space-y-5">
+      <Toaster /> */}
+      <div className="left sm:w-[800px] w-[100vw] overflow-x-hidden  sm:px-14">
+        <form onSubmit={handleForm} className="mt-2 overflow-x-hidden space-y-5">
         
 
           <div className="fields flex bg-[#000814] rounded-2xl backdrop-blur-4xl shadow-[1px_1px_6px_rgba(255,255,255,0.6)] sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-7 flex-col gap-3">
@@ -275,7 +275,7 @@ const RegisterOpen = () => {
                 />
                 <label
                   htmlFor="fileInput"
-                  className="h-[9vh]   w-full bg-[#161D29] text-white font-semibold flex justify-center items-center  shadow-[0px_1px_2px_rgba(255,255,255,0.6)] cursor-pointer hover:bg-[#1f2738] rounded-md transition-all duration-300"
+                  className="sm:h-[75px] h-[45px]  w-full bg-[#161D29] text-white font-semibold flex justify-center items-center  shadow-[0px_1px_2px_rgba(255,255,255,0.6)] cursor-pointer hover:bg-[#1f2738] rounded-md transition-all duration-300"
                 >
                   <span className="mr-2 text-md text-[#AFB2BF]">{fileName}</span>
 
