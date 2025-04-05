@@ -72,6 +72,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+           text = "text-3xl"
         />
         <Option
           to="/Team"
@@ -80,6 +81,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+           text = "text-3xl"
         />
         <Option
           to="/Events"
@@ -88,6 +90,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+           text = "text-3xl"
         />
 
         <Option
@@ -97,6 +100,7 @@ const Sidebar = () => {
           selected={selected}
           setSelected={setSelected}
           open={open}
+          text = "text-[27px]"
         />
         <Option
           to="/Register"
@@ -106,6 +110,7 @@ const Sidebar = () => {
           setSelected={setSelected}
           open={open}
           notifs="1"
+           text = "text-3xl"
         />
       </div>
       {/* <div
@@ -117,7 +122,7 @@ const Sidebar = () => {
   );
 };
 
-const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
+const Option = ({ to, Icon, title, selected, setSelected, open, notifs,text }) => {
   return (
     <>
       <Link to={to}>
@@ -129,7 +134,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs }) => {
         >
           <motion.div
             layout
-            className="grid h-full text-3xl  w-10 place-content-center "
+            className={`grid h-full ${text ? text : "text-3xl"} w-10 place-content-center`}
           >
             <Icon />
           </motion.div>
@@ -179,7 +184,7 @@ const TitleSection = ({ open }) => {
               <span className="block text-xs font-bold ">
                 Cloud Computing Cell
               </span>
-              <span className="block text-xs text-slate-600 font-bold">
+              <span className="block text-xs text-slate-400 font-bold">
                 Think Develop Deploy
               </span>
             </motion.div>
@@ -299,7 +304,7 @@ const ResNavbar = () => {
               : ""
           }`}
         >
-          <FaPhoneVolume />
+          <FaPhoneVolume className="text-2xl" />
         </Link>
         <Link
           to="/Register"

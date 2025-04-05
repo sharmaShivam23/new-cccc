@@ -94,17 +94,17 @@ const Buttons = ({ onSelectYear, activeYear }) => {
 };
 
 const FouthYear = ({setdata,data}) => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
  
   
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
 
 
@@ -120,11 +120,12 @@ const FouthYear = ({setdata,data}) => {
         </h1>
 
 
-      {loading ? (
-        <Loading />
-      ) : (
+       
         <div className="flex justify-center items-center flex-wrap gap-7">
-          {obj4.map((details, index) => (
+           {obj4.length === 0 ? (
+            <p className="font-[550] text-white text-2xl ">No data found</p>
+           ) : (
+          obj4.map((details, index) => (
             // <motion.div
             //   initial={{ opacity: 0, rotateY: 90 }}
             //   whileInView={{ opacity: 1, rotateY: 0 }}
@@ -172,6 +173,7 @@ const FouthYear = ({setdata,data}) => {
             //     </div>
             //   </div>
             // </motion.div>
+
             <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -217,9 +219,10 @@ const FouthYear = ({setdata,data}) => {
               </div>
             </div>
           </motion.div>
-          ))}
+          ))
+        )}
         </div>
-      )}
+    
     </div>
   );
 };
@@ -232,12 +235,6 @@ const ThirdYear = ({data2,setdata2}) => {
 
    
 
-     useEffect(() => {
-      const timer = setTimeout(() => {
-         setLoading(false)
-      },1000)
-      return () => clearTimeout(timer);
-     },[])
 
   return (
     <>
@@ -247,12 +244,13 @@ const ThirdYear = ({data2,setdata2}) => {
           <h1 className="mb-10 mt-10 text-2xl font-jetbrains font-extrabold underline text-[#66E0CE]">
             (Batch 2022-2026)
           </h1>
-        {loading ? (
-          <Loading />
-        ) : (
+       
           <div className="flex justify-center items-center flex-wrap gap-7">
-          
-            {obj3.map((details, index) => (
+             {obj3.length === 0 ? (
+            <p className="font-[550] text-white text-2xl ">No data found</p>
+           ) : (
+          obj3.map((details, index) => (
+            // {obj3.map((details, index) => (
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -298,9 +296,10 @@ const ThirdYear = ({data2,setdata2}) => {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))
+          )}
           </div>
-        )}
+        
       </div>
     </>
   );
@@ -310,13 +309,7 @@ const ThirdYear = ({data2,setdata2}) => {
 const SecondYear = ({ activeYear , data3,setdata3 }) => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    },1000)
-
-    return () => setTimeout(timer)
-  },[])
+  
 
     
   return (
@@ -330,11 +323,13 @@ const SecondYear = ({ activeYear , data3,setdata3 }) => {
 
         <p className="font-bold text-2xl text-white">{data3}</p>
 
-        {loading ? (
-          <Loading />
-        ) : (
+       
           <div className="flex justify-center items-center flex-wrap gap-7">
-            {obj2.map((details, index) => (
+             {obj2.length === 0 ? (
+            <p className="font-[550] text-white text-2xl ">No data found</p>
+           ) : (
+          obj2.map((details, index) => (
+            // {obj2.map((details, index) => (
               // <motion.div
               //   initial={{ opacity: 0, backdropFilter: "brightness(70%)", x: -20 }}
               //   whileInView={{ opacity: 1, backdropFilter: "brightness(100%)", x: 0 }}
@@ -426,9 +421,10 @@ const SecondYear = ({ activeYear , data3,setdata3 }) => {
                 </div>
               </div>
             </motion.div>
-            ))}
+            ))
+          )}
           </div>
-        )}
+        
       </div>
     </>
   );

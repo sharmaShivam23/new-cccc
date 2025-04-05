@@ -30,7 +30,7 @@ export const obj4 = [
     
     profile: atul,
     name: "Atul Kumar",
-    domai: "web development",
+    domain: "Web developer",
     github: "",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/atul-kumar-495295222",
@@ -50,7 +50,7 @@ export const obj4 = [
    
     profile: kartik,
     name: "Kartik Tyagi",
-    domain: "web development",
+    domain: "Web developer",
     github: "https://github.com/KartikAKGEC89",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/kartik-tyagi-a96929205/",
@@ -61,7 +61,7 @@ export const obj4 = [
    
     profile: anjani,
     name: "Priti kapoor",
-    domain: "web development",
+    domain: "Web developer",
     github: "https://github.com/Priti2078",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/priti-kapoor-a10b80251/",
@@ -72,7 +72,7 @@ export const obj4 = [
     
     profile: priya,
     name: "Priya Sharma",
-    domain: "web development and Designing",
+    domain: "Web developer and UI/UX Designer",
     github: "",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/priya-sharma-328a8a225",
@@ -83,7 +83,7 @@ export const obj4 = [
     
     profile: raghav,
     name: "Raghav Aggarwal",
-    domain: "App development",
+    domain: "App developer",
     github: "",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/raghav-aggarwal-up19",
@@ -94,7 +94,7 @@ export const obj4 = [
    
     profile: rishabh,
     name: "Rishabh Gupta",
-    domain: "Web development",
+    domain: "Web developer",
     github: "",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/rishabh-gupta-863968244",
@@ -105,7 +105,7 @@ export const obj4 = [
    
     profile: sarthak,
     name: "Sarthak Srivastava",
-    domain: "web development",
+    domain: "Web developer",
     github: "https://github.com/Sarthaksri4",
     instagram: "",
     linkedin: "www.linkedin.com/in/sarthak-srivastava-0114a8230",
@@ -116,7 +116,7 @@ export const obj4 = [
     
     profile: saurabh,
     name: "Saurabh",
-    domain: "web development",
+    domain: "Web developer",
     github: "https://github.com/Saurabhrajput1234",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/saurabh-rajput-135587232/",
@@ -127,7 +127,7 @@ export const obj4 = [
    
     profile: shrasti,
     name: "Shrasti yadav",
-    domain: "web development and designer",
+    domain: "Web developer and  UI/UX Designer",
     github: "",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/shrasti-yadav-9216bb205",
@@ -138,7 +138,7 @@ export const obj4 = [
    
     profile: sonam,
     name: "Sonam Kumari",
-    domain: "web development",
+    domain: "Web developer",
     github: "https://github.com/sonamakgec",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/sonamkumari27",
@@ -149,7 +149,7 @@ export const obj4 = [
    
     profile: taru,
     name: "Taru Pathak",
-    domain: "web development and designer",
+    domain: "Web developer and  UI/UX Designer",
     github: "https://github.com/tarupathak",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/taru-pathak-747660247/",

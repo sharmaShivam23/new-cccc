@@ -32,7 +32,6 @@ const Home = () => {
           <Carousel />
           <Number />
           <Alumni />
-          <Map />
         </div>
       </>
     </div>
