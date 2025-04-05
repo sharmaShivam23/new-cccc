@@ -162,9 +162,9 @@ const Form = () => {
       <div className="flex justify-center z-0 lg:border-2 pb-20  border-violet-500   sm:border-violet- lg:absolute left-0 lg:bg-black  rounded-r-[3vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
         <Particles className="z-40" />
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-xl m-7 sm:mb-2 text-center font-poppins font-bold">
+          {/* <p className="sm:text-3xl text-xl m-7 sm:mb-2 text-center font-poppins font-bold">
             Welcome to Cloud Computing
-          </p>
+          </p> */}
           {/* <p className="text-xl mt-4 m-2 mb-2 sm:text-xl">
             Have any questions? Feel free to reach out to us
           </p> */}
