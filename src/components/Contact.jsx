@@ -178,8 +178,8 @@ const Form = () => {
             Contact Us
           </h1>
          
-          <div className="email mt-3 w-full">
-            <div className="email  flex flex-col gap-2">
+          <div className="email mt-3 w-full  flex flex-col justify-center items-center">
+            <div className="email  gap-2">
               <input
                 type="text"
                 id="ipt1"
@@ -194,7 +194,7 @@ const Form = () => {
 
         
 
-          <div className="email mt-3 w-full">
+          <div className="email mt-3 w-full flex justify-center items-center">
             <div className="email  flex flex-col gap-2">
               <input
                 type="email"
@@ -210,7 +210,7 @@ const Form = () => {
 
          
 
-          <div className="email mt-3 w-full">
+          <div className="email mt-3 w-full flex justify-center items-center">
             <div className="email  flex flex-col gap-2">
               <input
                 type="number"
@@ -226,7 +226,7 @@ const Form = () => {
 
         
 
-          <div className="email mt-3 w-full">
+          <div className="email mt-3 w-full flex justify-center items-center">
             <div className="email  flex flex-col gap-2">
               <textarea
                 type="number"
