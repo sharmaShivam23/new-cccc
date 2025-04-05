@@ -27,8 +27,8 @@ const Landing = () => {
  
   return (
     <>
-      <div className="relative">
-        <div className="h-screen w-screen bg-black z-40  overflow-hidden">
+      <div className="">
+        <div className="h-screen w-screen bg-black z-40 relative  overflow-hidden">
           <Particles />
           <Meteors />
           <OrbitingCircles className="">
