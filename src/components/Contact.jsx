@@ -58,7 +58,7 @@ const Form = () => {
       recaptchaResponse
     
     };
-    console.log(formdata);
+    // console.log(formdata);
 
     if (valid()) {
       setLoading(true);
@@ -72,12 +72,12 @@ const Form = () => {
             },
           }
         );
-        console.log(response);
+        // console.log(response);
         
         toast.success(response.data.message);
         clear();
       } catch (error) {
-        console.log(error);
+        // console.log(error);
          
         if (error.message === "Network Error") {
           toast.error(error.message);
@@ -162,7 +162,7 @@ const Form = () => {
       <div className="flex justify-center z-0 lg:border-2 pb-20  border-violet-500   sm:border-violet- lg:absolute left-0 lg:bg-black  rounded-r-[3vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
         <Particles className="z-40" />
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-xl mb-7 sm:mb-2 text-center font-poppins font-bold">
+          <p className="sm:text-3xl text-xl m-7 sm:mb-2 text-center font-poppins font-bold">
             Welcome to Cloud Computing
           </p>
           {/* <p className="text-xl mt-4 m-2 mb-2 sm:text-xl">
@@ -171,7 +171,7 @@ const Form = () => {
         </div>
 
         <form
-          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border- h-[70vh]  md:w-[30vw] p-0  md:p-7"
+          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border- h-[70vh] max-[1000px]:h-auto  md:w-[30vw] p-0  md:p-7"
           onSubmit={handleForm}
         >
           <h1 className="text-2xl m-2 font-bold font-rubik mb-3 mt-10 tracking-wider">
@@ -187,7 +187,7 @@ const Form = () => {
                 required
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter name"
-                className="w-[100%] h-[7vh] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ const Form = () => {
                 required
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email"
-                className="w-[100%] h-[7vh] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -219,7 +219,7 @@ const Form = () => {
                 required
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter phone number"
-                className="w-[100%] h-[7vh] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -235,7 +235,7 @@ const Form = () => {
                 value={message}
                 onChange={(e) => setMsg(e.target.value)}
                 placeholder="Enter your message"
-                className="w-[100%] h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-full h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -328,7 +328,7 @@ const Video = () => {
       <p><span className="text-white text-xs font-semibold">Email:</span> cloudcomputing@akgec.ac.in</p>
       <p><span className="text-white text-xs font-semibold ">Address:</span> 3rd Floor, CSIT Block</p>
       <p>Ajay Kumar Garg Engineering College</p>
-      <p><span className="text-white font-semibold">Phone:</span> +8707074420</p>
+      <p><span className="text-white font-semibold">Phone:</span> +8707074420, +8433428790</p>
     </div>
   </div>
 </div>

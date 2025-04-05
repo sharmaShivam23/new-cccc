@@ -45,7 +45,7 @@ export const Events = () => {
 
 const EventCarousel = () => {
   return (
-    <div className="sm:h-[80vh] relative   sm:mb-20 mb-3 h-[60vh]  w-screen  flex justify-center  text-center">
+    <div className="sm:h-[80vh] relative   sm:mb-20 mb-3 h-[60vh]  max-w-[90vw] m-auto  flex justify-center  text-center">
       <div className="container mx-auto h-[47rem]    sm:w-screen w-[350px]  sm:h-[40rem] p-[2rem] ">
         <motion.h1
           initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
@@ -67,10 +67,10 @@ const EventCarousel = () => {
             depth: 200,
             modifier: 2.5,
           }}
-          pagination={{
-            el: ".swiper-pagination",
-            clickable: true,
-          }}
+          // pagination={{
+          //   el: ".swiper-pagination",
+          //   clickable: true,
+          // }}
           navigation={{
             nextEl: ".forward",
             prevEl: ".backward",
@@ -138,16 +138,15 @@ const EventCarousel = () => {
             />
           </SwiperSlide>
 
-          <div className="absolute  bottom-52  left-0 right-0 flex justify-between   px-4 z-50 ">
+           <div className="absolute  bottom-52  left-0 right-0 flex justify-between   px-4 z-50 ">
             <div className="backward text-white text-3xl z-50 transform rotate-180 cursor-pointer">
               <IoMdArrowRoundForward />
             </div>
             <div className="forward text-white text-3xl z-50 cursor-pointer">
               <IoMdArrowRoundForward />
             </div>
-          </div>
-
-          <div className="swiper-pagination w-[15rem] mx-auto mt-4 z-50"></div>
+          </div> 
+          {/* <div className="swiper-pagination w-[15rem] mx-auto mt-10 z-50"></div> */}
         </Swiper>
       </div>
     </div>
