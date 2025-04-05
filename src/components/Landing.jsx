@@ -57,16 +57,16 @@ const Landing = () => {
               <br className="mt-3"/>innovative technologies,  shaping the future with passion and expertise
             </motion.p>
 
-             <div className="text-white z-40 text-xl hidden sm:flex md:text-xl mt-4 font-bold absolute top-0  sm:top-10 right-36">
+             <div className="text-white z-40 text-xl  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
               <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
             </div>
-            <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
+            {/* <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
               <ShimmerButton onClick={register} className="cursor-pointer animate-popp hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
-            </div> 
+            </div>  */}
 
           
           </div>
