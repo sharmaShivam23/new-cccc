@@ -32,10 +32,10 @@ const Shufle = () => {
     { id: 10, src: download, text: "Image 9" },
     { id: 11, src: download, text: "Image 9" },
     { id: 12, src: download, text: "Image 9" },
-    { id: 13, src: download, text: "Image 9" },
-    { id: 14, src: download, text: "Image 9" },
-    { id: 15, src: download, text: "Image 9" },
-    { id: 16, src: download, text: "Image 9" },
+    // { id: 13, src: download, text: "Image 9" },
+    // { id: 14, src: download, text: "Image 9" },
+    // { id: 15, src: download, text: "Image 9" },
+    // { id: 16, src: download, text: "Image 9" },
   ]);
 
   return (
@@ -117,11 +117,11 @@ const Text = () => {
         </TypingAnimation>
       </div>
       <div className="mt-7 sm:mt-10 mb-14 ml-3">
-        <InteractiveHoverButton
+        {/* <InteractiveHoverButton
           text="Join Us"
           onClick={message}
           className="text-black font-poppins"
-        />
+        /> */}
       </div>
       {close && (
         <motion.div

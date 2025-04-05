@@ -66,7 +66,7 @@ const About = () => {
             style={{ flex: 1 }}
             className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
           >
-            <h1 className="text-xl  lg:text-2xl font-poppins underline text-slate-400 tracking-wide">
+            <h1 className="text-xl  lg:text-2xl font-poppins text-white underline  tracking-wide">
               About Us
             </h1>
             <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-poppins mt-6">

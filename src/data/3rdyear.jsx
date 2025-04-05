@@ -22,7 +22,7 @@ export   const obj3 = [
         
          profile: adityaKumar,
          name: "Aditya Kumar",
-         domain: "Web Development",
+         domain: "Web Developer",
          github: "https://github.com/aditya-Kumar421",
          instagram: "",
          linkedin: "https://www.linkedin.com/in/aditya-kumar421",
@@ -32,7 +32,7 @@ export   const obj3 = [
        {
         profile: akhandSingh2,
         name: "Akhand Pratap Singh",
-        domain: "Web Development",
+        domain: "Web Developer",
         github: "https://github.com/akhand2210093",
         instagram: "https://www.instagram.com/akhand.__?igsh=N2dkaDZicTc2azZz",
         linkedin: "https://www.linkedin.com/in/akhand01",
@@ -43,7 +43,7 @@ export   const obj3 = [
         
         profile: akshatSingh,
         name: "Akshat Singh",
-        domain: "App Development",
+        domain: "App Developer",
         github: "https://github.com/7singhakshat",
         instagram: "",
         linkedin: "https://www.linkedin.com/in/akshat-singh-77069b293",
@@ -54,7 +54,7 @@ export   const obj3 = [
         
         profile: arpitaAsthana,
         name: "Arpita Asthana",
-        domain: "Web Development",
+        domain: "Web Developer",
         github: "https://github.com/arpitaasth0",
         instagram: "https://www.instagram.com/_arpita_asthana_?igsh=cmRmaDQ5M3Y0b2hh",
         linkedin: "https://www.linkedin.com/in/arpita-asthana-031077333",
@@ -76,7 +76,7 @@ export   const obj3 = [
         
         profile: harshSingh2,
         name: "Harsh Singh",
-        domain: "App Development",
+        domain: "App Developer",
         github: "https://github.com/harshans22",
         instagram: "",
         linkedin: "https://www.linkedin.com/in/harsh-singh-639316291",
@@ -87,7 +87,7 @@ export   const obj3 = [
         
         profile: kratikaGupta,
         name: "Kratika Gupta",
-        domain: "Web Development",
+        domain: "Web Developer",
         github: "https://github.com/kratika182004",
         instagram: "https://www.instagram.com/kratika1081?igsh=a2l5bGJzNGY1YThj",
         linkedin: "https://www.linkedin.com/in/kratika-gupta-043829293",
@@ -109,7 +109,7 @@ export   const obj3 = [
         
         profile: manoj,
         name: "Manoj Samanta",
-        domain: "Designing",
+        domain: " UI/UX Designer",
         github: "https://github.com/TECHNXX",
         instagram: "https://www.instagram.com/erudi.tex?igsh=d2N2NXU4dmNiODFy",
         linkedin: "https://www.linkedin.com/in/manoj-samanta",
@@ -120,7 +120,7 @@ export   const obj3 = [
        
         profile: prakharSrivastava,
         name: "Prakhar Srivastava",
-        domain: "App Development",
+        domain: "App Developer",
         github: "https://github.com/prakharAKGa",
         instagram: "",
         linkedin: "https://www.linkedin.com/in/prakharsrivastava1007",
@@ -132,7 +132,7 @@ export   const obj3 = [
        
         profile: sachendraGangwar2,
         name: "Sachendra Gangwar",
-        domain: "Web Development",
+        domain: "Web Developer",
         github: "https://github.com/Sachendra79",
         instagram: "https://www.instagram.com/sachendra_79?igsh=cG5oaWlnZTBjNzRl",
         linkedin: "https://www.linkedin.com/in/sachendra-gangwar-49904b296",
@@ -176,7 +176,7 @@ export   const obj3 = [
        
         profile: yashMishra,
         name: "Yash Mishra",
-        domain: "Web Development",
+        domain: "Web Developer",
         github: "https://github.com/yash-mishra150",
         instagram: "https://www.instagram.com/yash_mishra150?igsh=YWx4bHBjb2p2cDM=",
         linkedin: "https://www.linkedin.com/in/yash-mishra-87b29725b",

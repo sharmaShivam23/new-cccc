@@ -28,6 +28,18 @@ export default {
   					transform: 'scale(1)'
   				}
   			},
+				popp : {
+					'0%': {
+  					transform: 'scale(1)'
+  				},
+					'50%' : {
+						 transform: 'scale(1.2)'
+					},
+  				'100%': {
+  					transform: 'scale(1)'
+  				}
+          
+				},
   			slideIn: {
   				'0%': {
   					transform: 'translateX(-100%)  rotate(360deg)'
@@ -196,7 +208,8 @@ export default {
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			meteor: 'meteor 5s linear infinite',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+				popp : 'popp 2s ease-in-out infinite'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

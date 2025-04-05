@@ -9,7 +9,8 @@ import { ToastContainer, toast } from "react-toastify";
 import Spinner from "./Spinner";
 import { motion } from "framer-motion";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import { MdMessage } from "react-icons/md";
+import Map from "./Map";
 export const Contact = () => {
   useEffect(() => {
     window.scrollTo({
@@ -21,7 +22,7 @@ export const Contact = () => {
     <>
       <div
         id="contact"
-        className="md:h-screen z-50 h-auto w-screen bg-red- max-w-90vw md:max-w-[90vw] m-auto p- block md:flex"
+        className="xl:h-[120vh] z-50 h-auto w-screen flex-row-reverse  max-w-90vw  md:max-w-[90vw] m-auto p- block md:flex"
       >
         <Video />
         <Form />
@@ -30,42 +31,6 @@ export const Contact = () => {
   );
 };
 
-const Video = () => {
-  return (
-    <div className="flex justify-center  relative items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
-      <video
-        className="w-full z-40 lg:mb-28 mb-10 border- border-white  h-auto md:h-[60vh]"
-        autoPlay
-        loop
-        src={video}
-      ></video>
-      <motion.div className="text-white font-poppins lg:text-3xl hidden lg:block text-center text-2xl relative z-40 bottom-28 text-bold">
-        <div className="m-2 mb-4 animate-su font-bold">
-          We Value Building Strong Relationships
-        </div>
-        <div className="m-2 mb-4 font-bold animate-su">
-          Stay in Touch with us
-        </div>
-        {/* <div className="div animate-su">
-          <h1 className="font-bold text-xl">Address</h1>
-          <p className="text-lg  mt-2 px-20">Basic IT Lab , Third floor , CS-IT block , Ajay Kumar Garg Engineering College , Ghaziabad-201009</p>
-        </div> */}
-
-      </motion.div>
-       {/* <div className="add border-  bottom-5 z-[100] text-white p-24 border-white  w-full">
-        <div className="div">
-          <h1 className="font-bold text-2xl">Adress</h1>
-          <p>Basic IT Lab , Third floor , CS-IT block , Ajay Kumar Garg Engineering College , Ghaziabad-201009</p>
-        </div>
-        <div className="div mt-10">
-          <h1 className="font-bold text-2xl">Email</h1>
-          <p>cloudComputing@akgec.ac.in</p>
-        </div>
-
-      </div>  */}
-    </div>
-  );
-};
 
 const Form = () => {
   const [Name, setName] = useState("");
@@ -91,8 +56,9 @@ const Form = () => {
       phone,
       message,
       recaptchaResponse
+    
     };
-    // console.log(formdata);
+    console.log(formdata);
 
     if (valid()) {
       setLoading(true);
@@ -106,13 +72,20 @@ const Form = () => {
             },
           }
         );
+        console.log(response);
+        
         toast.success(response.data.message);
         clear();
       } catch (error) {
+        console.log(error);
+         
         if (error.message === "Network Error") {
           toast.error(error.message);
         }
         // console.log(error.response.data.error);
+        if(error.response.data.message === "reCAPTCHA verification failed. Please try again.") {
+          toast.error("reCAPTCHA verification failed.");
+        }
         if (
           error.response.data.error ===
           "Contact validation failed: Name: Path `Name` is required., email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
@@ -185,12 +158,11 @@ const Form = () => {
   return (
     <>
       <ToastContainer />
-      {/* lg:bg-[#111122] */}
 
-      <div className="flex justify-center z-0 lg:border-2 pb-20  border-r-0   sm:border-violet-500 lg:absolute right-0 lg:bg-black  rounded-l-[6vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
+      <div className="flex justify-center z-0 lg:border-2 pb-20  border-violet-500   sm:border-violet- lg:absolute left-0 lg:bg-black  rounded-r-[3vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
         <Particles className="z-40" />
         <div className="text flex justify-center items-center flex-col">
-          <p className="sm:text-3xl text-2xl mb-7 text-center font-poppins font-bold">
+          <p className="sm:text-3xl text-xl mb-7 sm:mb-2 text-center font-poppins font-bold">
             Welcome to Cloud Computing
           </p>
           {/* <p className="text-xl mt-4 m-2 mb-2 sm:text-xl">
@@ -199,7 +171,7 @@ const Form = () => {
         </div>
 
         <form
-          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border-white h-[70vh]  md:w-[30vw] p-0  md:p-7"
+          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border- h-[70vh]  md:w-[30vw] p-0  md:p-7"
           onSubmit={handleForm}
         >
           <h1 className="text-2xl m-2 font-bold font-rubik mb-3 mt-10 tracking-wider">
@@ -299,5 +271,68 @@ const Form = () => {
         <Particles className="z-40" />
       </div>
     </>
+  );
+};
+
+
+
+const Video = () => {
+  return (
+    <div className="flex justify-centre  relative items-center flex-col w-auto md:w-1/2 bg-green- h-auto md:h-[100vh]">
+      {/* <video
+        className="w-full z-40 lg:mb-28 mb-10 border- border-white  h-auto md:h-[60vh]"
+        autoPlay
+        loop
+        src={video}
+      ></video>
+      <motion.div className="text-white font-poppins lg:text-3xl hidden lg:block text-center text-2xl relative z-40 bottom-28 text-bold">
+        <div className="m-2 mb-4 animate-su font-bold">
+          We Value Building Strong Relationships
+        </div>
+        <div className="m-2 mb-4 font-bold animate-su">
+          Stay in Touch with us
+        </div>
+        
+
+      </motion.div> */}
+      <Map/>
+{/* 
+      <div className="cont text-white border-2 flex justify-center items-center  w-[35vw] h-[30vh] rounded-2xl border-white">
+        <div className="head"></div>
+        <div className="c flex justify-center items-center font-bold gap-2 flex-col">
+          <p>Any Help Enquiry</p>
+          <div className="line text-left w-[100%] border-b-2 border-white"></div>
+          <p>Cloudcomputing@akgec.ac.in</p>
+          <p> 3rd Floor, CSIT Block</p>
+          <p>  Ajay Kumar garg engineering college</p>
+          <p> +8707074420 </p>
+          
+        </div>
+      </div> */}
+       {/* <div className="flex flex-col justify-center items-center w-full md:w-1/2 bg-gradient-to-br from-[#1a1a1a] to-[#222] p-6 gap-6">
+    
+      <div className="bg-[#161D29] text-white border border-gray-300 rounded-2xl p-6 w-full max-w-md shadow-xl">
+        <h2 className="text-xl font-bold mb-2">Any Help Enquiry</h2>
+        <div className="border-b border-gray-500 mb-3"></div>
+        <p>Cloudcomputing@akgec.ac.in</p>
+        <p>3rd Floor, CSIT Block</p>
+        <p>Ajay Kumar Garg Engineering College</p>
+        <p>+8707074420</p>
+      </div>
+    </div> */}
+    <div className="flex flex-col justify-center items-center   md:w-[35vw] bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a] p-6 gap-6">
+  <div className="bg-[#161D29] text-white border border-gray-700 rounded-2xl p-8 w-full  shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+    <h2 className="lg:text-2xl text-xl font-semibold text-white mb-4 text-center tracking-wide">Need Help?</h2>
+    <div className="border-b border-gray-600 mb-4"></div>
+    <div className="space-y-2 text-gray-300 text-center text-sm sm:text-base font-medium leading-relaxed">
+      <p><span className="text-white text-xs font-semibold">Email:</span> cloudcomputing@akgec.ac.in</p>
+      <p><span className="text-white text-xs font-semibold ">Address:</span> 3rd Floor, CSIT Block</p>
+      <p>Ajay Kumar Garg Engineering College</p>
+      <p><span className="text-white font-semibold">Phone:</span> +8707074420</p>
+    </div>
+  </div>
+</div>
+
+    </div>
   );
 };

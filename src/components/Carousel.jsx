@@ -92,7 +92,7 @@ const Carousel = () => {
            <React.Fragment key={index}>
                 <div
                   key={index}
-                  className="flex w-full justify-center border-t-2 border-b-2 border-violet-600 items-center h-[80vh]"
+                  className="flex w-full justify-center border-2 border-violet-600 items-center h-[80vh]"
                   style={{
                     background: `linear-gradient(to left, ${card.from}, ${card.to})`,
                     zIndex: 100,

@@ -25,7 +25,7 @@ const Team = () => {
           initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
           whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="text-white text-center text-2xl underline sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
+          className="text-white text-center text-2xl  sm:text-5xl mt-4 font-poppins sm:mb-10 mb-4 md:text-6xl  font-bold"
         >
           Who Are We
         </motion.h1>
@@ -62,7 +62,7 @@ const Team = () => {
         <motion.div  className="flex justify-center items-center sm:mt-7">
           <InteractiveHoverButton
             onClick={teamcard}
-            className="text-black text-xs sm:text-lg font-playwrite  font-extrabold mb-2"
+            className="text-black text-xs sm:text-lg font-poppins  font-extrabold mb-2"
           >
             More
           </InteractiveHoverButton>

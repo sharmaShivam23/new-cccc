@@ -31,7 +31,7 @@ const Number = () => {
       
         <div className="flex flex-col items-center">
          
-             <div className="icon text-white mb-4 text-5xl"><FaPeopleGroup/></div>
+             <div className="icon text-white mb-4 text-6xl"><FaPeopleGroup/></div>
           <div className="text-white mb-5 text-3xl">Members</div>
           <div className="flex items-center">
             <NumberTicker

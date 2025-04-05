@@ -9,11 +9,14 @@ import shivam from "../2yearImg/shivamsharma.jpg"
 // import tushar from "../2yearImg/tushar.png"
 import tushar from "../2yearImg/tushar2.png"
 import utkarsh from "../2yearImg/Utkarsh.jpg"
+import samit from "../2yearImg/samit.jpg"
+import alok from "../2yearImg/alok.png"
+import akshat from "../2yearImg/akshat.jpg"
 
 export  const obj2 = [
   {
    
-    profile: "",
+    profile: akshat,
     name: "Akshat",
     domain: "Machine Learning",
     github: "https://github.com/B4K2",
@@ -26,7 +29,7 @@ export  const obj2 = [
    
     profile: aditya,
     name: "Aditya Srivastava",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/adityasriv2317",
     instagram: "https://www.instagram.com/shikhar_2317?igsh=MTRkcDFzaDV0ZHduMg==",
     linkedin: "https://www.linkedin.com/in/aditya2317/",
@@ -37,7 +40,7 @@ export  const obj2 = [
    
     profile: Akshita,
     name: "Akshita Saini ",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/CodeWithAkshi",
     instagram: "https://www.instagram.com/akshiii_138?igsh=MWJsMjM2YWpwcWYxeQ==",
     linkedin: "https://www.linkedin.com/in/akshita2k4/",
@@ -46,9 +49,9 @@ export  const obj2 = [
   },
   {
    
-    profile: "",
+    profile: alok,
     name: "Alok Kumar Yadav ",
-    domain: "App Development",
+    domain: "App Developer",
     github: "https://github.com/alokyadav686",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/alok-kumar-yadav-329a61302/",
@@ -59,7 +62,7 @@ export  const obj2 = [
    
     profile: ayush,
     name: "Ayush Singh",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/AyushInKC",
     instagram: "https://www.instagram.com/thakur__ayush_27?igsh=czZieWNzMXFxMjd5",
     linkedin: "https://www.linkedin.com/in/ayush-singh-b504b226b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -70,7 +73,7 @@ export  const obj2 = [
    
     profile: harshit,
     name: "Harshit Gautam ",
-    domain: "App Development ",
+    domain: "App Developer",
     github: "https://github.com/harshit2313109",
     instagram: "",
     linkedin: "http://www.linkedin.com/in/harshit-gautam-1b609627a",
@@ -81,7 +84,7 @@ export  const obj2 = [
    
     profile: jhanvi,
     name: "Jhanvi Awasthi ",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/Jhanviawasthi03",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/jhanvi-awasthi-357008342",
@@ -90,9 +93,20 @@ export  const obj2 = [
   },
   {
    
+    profile: samit,
+    name: "Samit Srivastava",
+    domain: "Web Developer",
+    github: "https://github.com/samit18   ",
+    instagram: "https://www.instagram.com/samitsrivastava1?utm_source=qr&igsh=M2lidnRhb3JrNWls",
+    linkedin: "https://www.linkedin.com/in/samit-srivastava-a4a219295",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
     profile: saurabh,
     name: "Saurabh Srivastav ",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/Saurabh12325",
     instagram: "https://www.instagram.com/its_saurabh_srivastav55?igsh=MWpqOWFqbGc5aHoyZQ==",
     linkedin: "https://www.linkedin.com/in/saurabh-srivastav-ab7712285/",
@@ -103,7 +117,7 @@ export  const obj2 = [
    
     profile: shivam,
     name: "Shivam Sharma",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/Student-shivamsharma",
     instagram: "https://www.instagram.com/shivamsharma6842?igsh=dGhpaTIwZ3BvMjZq",
     linkedin: "https://www.linkedin.com/in/shivam-sharma-450178302",
@@ -114,7 +128,7 @@ export  const obj2 = [
    
     profile: "",
     name: "Shruti Maurya ",
-    domain: "Web Development",
+    domain: "Web Developer",
     github: "https://github.com/shrutis44",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/shruti-maurya-90a9642a1",
@@ -124,8 +138,8 @@ export  const obj2 = [
   {
    
     profile: tushar,
-    name: "Tushar Sharma ",
-    domain: "Designer",
+    name: "Tushar Sharma",
+    domain: "UI/UX Designer",
     github: "https://github.com/tushar4758",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/tushar4758",
@@ -137,7 +151,7 @@ export  const obj2 = [
    
     profile: utkarsh,
     name: "Utkarsh Tiwari ",
-    domain: "Designer",
+    domain: "UI/UX Designer",
     github: "https://github.com/cosmickdd",
     instagram: "",
     linkedin: "https://www.linkedin.com/in/cosmickdd/",
