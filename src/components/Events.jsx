@@ -46,7 +46,7 @@ export const Events = () => {
 const EventCarousel = () => {
   return (
     <div className="sm:h-[80vh] relative   sm:mb-20 mb-3 h-[60vh]  w-screen m-auto  flex justify-center  text-center">
-      <div className="container mx-auto h-[47rem]    sm:w-[85vw] w-[350px]  sm:h-[40rem] p-[2rem] ">
+      <div className="container mx-auto h-[47rem]    sm:w-[90vw] w-[350px]  sm:h-[40rem] p-[2rem] ">
         <motion.h1
           initial={{ y: -50, backdropFilter: "brightness(70%)", opacity: 0 }}
           whileInView={{ y: 0, backdropFilter: "brightness(100%)", opacity: 1 }}

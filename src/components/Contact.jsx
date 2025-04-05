@@ -187,7 +187,7 @@ const Form = () => {
                 required
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter name"
-                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ const Form = () => {
                 required
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email"
-                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -219,7 +219,7 @@ const Form = () => {
                 required
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter phone number"
-                className="w-[302px] sm:w-full h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -235,7 +235,7 @@ const Form = () => {
                 value={message}
                 onChange={(e) => setMsg(e.target.value)}
                 placeholder="Enter your message"
-                className="w-[302px] sm:w-full h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] sm:w-[30vw] h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
