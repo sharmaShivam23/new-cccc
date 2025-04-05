@@ -27,8 +27,8 @@ const Landing = () => {
  
   return (
     <>
-      <div className="">
-        <div className="h-screen w-screen bg-black z-40  overflow-hidden relative">
+      <div className="relative">
+        <div className="h-screen w-screen bg-black z-40  overflow-hidden">
           <Particles />
           <Meteors />
           <OrbitingCircles className="">
@@ -52,21 +52,21 @@ const Landing = () => {
             >
               {"Innovating the World of Technology and Coding"}
             </TypingAnimation>
-            <motion.p  className="text-white mt-7 z-10 text-xs md:text-xl font-jetbrains">
+            <motion.p  className="text-white mt-2 sm:mt-7 z-10 text-xs md:text-xl font-jetbrains">
                our society empowers tech enthusiasts and professionals to explore coding   and 
-              <br className="mt-3"/>innovative technologies,  shaping the future with passion and expertise
+              <br className="sm:mt-3 mt-0"/>innovative technologies,  shaping the future with passion and expertise
             </motion.p>
 
-             <div className="text-white z-40 text-xl  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
-              <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
+             <div className="text-white z-40 text-xl hidden  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
+              <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">     
                 Register
               </ShimmerButton>
             </div>
-            {/* <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
+            <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
               <ShimmerButton onClick={register} className="cursor-pointer animate-popp hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
-            </div>  */}
+            </div> 
 
           
           </div>
