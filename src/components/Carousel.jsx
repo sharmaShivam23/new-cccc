@@ -77,7 +77,7 @@ const Carousel = () => {
 
   return (
     <>
-      <div className="max-w-[90vw] m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
+      <div className="max-w-[88vw]  m-auto  h-[100vh]  flex-col text-white flex justify-center items-center overflow-hidden">
         <motion.h1
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -92,7 +92,7 @@ const Carousel = () => {
            <React.Fragment key={index}>
                 <div
                   key={index}
-                  className="flex w-full justify-center border-2 border-violet-600 items-center h-[80vh]"
+                  className="flex w-[88vw] justify-center border-2 border-violet-600 items-center h-[80vh]"
                   style={{
                     background: `linear-gradient(to left, ${card.from}, ${card.to})`,
                     zIndex: 100,

@@ -12,9 +12,9 @@ export const Data = [
      link  :"/ECloud"
   },
   {
-    name : "REACTION",
+    name : "REACT-ION",
     date : "10th & 11th June 2023",
-    content : "This is a short description. It looks clean and minimal, perfect for dark mode lovers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, fugit et soluta aperiam iste est obcaecati quis animi debitis quod.",
+    content : "Cloud Computing Cell has conducted a workshop with name React-ion, a hanson workshop  on fundamentals of HTML, CSS , REACT FRAMEWORKS ",
      link  :"/Ereacticons"
   },
   {

@@ -22,7 +22,7 @@ export const Contact = () => {
     <>
       <div
         id="contact"
-        className="xl:h-[120vh] z-50 h-auto w-screen flex-row-reverse  max-w-90vw  md:max-w-[90vw] m-auto p- block md:flex"
+        className="xl:h-auto z-50 h-auto w-screen flex-row-reverse  max-w-90vw  md:max-w-[90vw] m-auto p- block md:flex"
       >
         <Video />
         <Form />
@@ -33,7 +33,7 @@ export const Contact = () => {
 
 
 const Form = () => {
-  const [Name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMsg] = useState("");
@@ -47,18 +47,20 @@ const Form = () => {
    setRecaptcharesponse(token)
    
   }
+  
+
 
   const handleForm = async (e) => {
     e.preventDefault();
     const formdata = {
-      Name,
+      name,
       email,
       phone,
       message,
       recaptchaResponse
     
     };
-    // console.log(formdata);
+    console.log(formdata);
 
     if (valid()) {
       setLoading(true);
@@ -72,12 +74,12 @@ const Form = () => {
             },
           }
         );
-        // console.log(response);
+        console.log(response);
         
         toast.success(response.data.message);
         clear();
       } catch (error) {
-        // console.log(error);
+        console.log(error);
          
         if (error.message === "Network Error") {
           toast.error(error.message);
@@ -88,7 +90,7 @@ const Form = () => {
         }
         if (
           error.response.data.error ===
-          "Contact validation failed: Name: Path `Name` is required., email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
+          "Contact validation failed:  : name: Path ` : name` is required., email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
         ) {
           toast.error("All details are  required");
         }
@@ -104,13 +106,13 @@ const Form = () => {
           toast.error("phone number and message are required");
         } else if (
           error.response.data.error ===
-          "Contact validation failed: Name: Path `Name` is required."
+          "Contact validation failed:  : name: Path ` : name` is required."
         ) {
         } else if (
           error.response.data.error ===
-          "Contact validation failed: Name: Path `Name` is required."
+          "Contact validation failed:  : name: Path ` : name` is required."
         ) {
-          toast.error("Name is required");
+          toast.error(" : name is required");
         } else if (
           error.response.data.error ===
           "Contact validation failed: email: Path `email` is required."
@@ -129,9 +131,9 @@ const Form = () => {
   };
 
   function valid() {
-    if (Name) {
-      if (/\d/.test(Name)) {
-        toast.error("Name can't contain numbers.");
+    if (name) {
+      if (/\d/.test(name)) {
+        toast.error(" : name can't contain numbers.");
         return false;
       }
     }
@@ -158,23 +160,21 @@ const Form = () => {
   return (
     <>
       <ToastContainer />
+      
 
-      <div className="flex justify-center z-0 lg:border-2 pb-20  border-violet-500   sm:border-violet- lg:absolute left-0 lg:bg-black  rounded-r-[3vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2">
+      <div className=" md:w-1/2 w-full flex justify-center h-[100vh] items-center pb-2  lg:border-2 lg:border-l-0 border-violet-500 rounded-3xl">
+{/* 
+      <div className="flex justify-center  z-0 lg:border-2 pb-20  border-violet-500   sm:border-violet- lg:absolute left-0   rounded-r-[3vmin] items-center text-white  w-full md:w-1/2 h-[100vh] bg-yellow- flex-col sm:h-auto md:h-screen p-2"> */}
         <Particles className="z-40" />
         <div className="text flex justify-center items-center flex-col">
-          {/* <p className="sm:text-3xl text-xl m-7 sm:mb-2 text-center font-poppins font-bold">
-            Welcome to Cloud Computing
-          </p> */}
-          {/* <p className="text-xl mt-4 m-2 mb-2 sm:text-xl">
-            Have any questions? Feel free to reach out to us
-          </p> */}
         </div>
 
+      
         <form
-          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col border- border- h-[70vh] max-[1000px]:h-auto  md:w-[30vw] p-0  md:p-7"
+          className="flex justify-center items-center   max-[800px]:w-[70vw] flex-col  h-[70vh] max-[1000px]:h-auto  md:w-[30vw] p-0  md:p-7"
           onSubmit={handleForm}
         >
-          <h1 className="text-2xl m-2 font-bold font-rubik mb-3 mt-10 tracking-wider">
+          <h1 className="text-3xl m-2 text-center font-bold text-white font-poppins mb-3 mt-10 tracking-wider">
             Contact Us
           </h1>
          
@@ -183,11 +183,11 @@ const Form = () => {
               <input
                 type="text"
                 id="ipt1"
-                value={Name}
+                value={name}
                 required
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter name"
-                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] text-white sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ const Form = () => {
                 required
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter email"
-                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] text-white sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -219,7 +219,7 @@ const Form = () => {
                 required
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter phone number"
-                className="w-[302px] sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] text-white sm:w-[30vw] h-[60px] bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -235,7 +235,7 @@ const Form = () => {
                 value={message}
                 onChange={(e) => setMsg(e.target.value)}
                 placeholder="Enter your message"
-                className="w-[302px] sm:w-[30vw] h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="w-[302px] text-white sm:w-[30vw] h-36 p-2 bg-[#161D29] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
           </div>
@@ -269,7 +269,7 @@ const Form = () => {
           )}
         </form>
         <Particles className="z-40" />
-      </div>
+      </div> 
     </>
   );
 };

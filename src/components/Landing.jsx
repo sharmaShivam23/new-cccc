@@ -44,21 +44,25 @@ const Landing = () => {
             >
               {"Join the Future of Cloud Computing"}
             </TypingAnimation>
-            <TypingAnimation
+            {/* <TypingAnimation
               duration={100}
               delay={200}
               startOnView={true}
               className="text-white text-md z-10 md:text-2xl  lg:text-3xl mt-1 sm:mt-4 font-jetbrains font-bold"
-            >
-              {"Innovating the World of Technology and Coding"}
-            </TypingAnimation>
-            <motion.p  className="text-white mt-2 sm:mt-7 z-10 text-xs md:text-xl font-jetbrains">
+            > */}
+              {/* {"Innovating the World of Technology and Coding"} */}
+            {/* </TypingAnimation> */}
+            <motion.p  className="text-white mt-2 sm:mt-4 z-10 text-xs md:text-xl font-jetbrains">
+            Our society is a space for tech enthusiasts to learn, code, and grow together. <br className="sm:mt-3 mt-0"/> We explore cloud computing, programming,  and modern technologies. {/*through <br className="sm:mt-3 mt-0"/> hands-on projects and teamwork. 
+              <br className="sm:mt-3 mt-0"/>*/}
+            </motion.p>
+            {/* <motion.p  className="text-white mt-2 sm:mt-7 z-10 text-xs md:text-xl font-jetbrains">
                our society empowers tech enthusiasts and professionals to explore coding   and 
               <br className="sm:mt-3 mt-0"/>innovative technologies,  shaping the future with passion and expertise
-            </motion.p>
+            </motion.p> */}
 
              <div className="text-white z-40 text-xl hidden  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
-              <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">     
+              <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0">     
                 Register
               </ShimmerButton>
             </div>
