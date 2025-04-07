@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import cloud from "../images/cloud.jpg";
 import ShimmerButton from "./ui/shimmer-button";
 import { useNavigate } from "react-router-dom";
+import cl from "../images/cl.png"
 import cloud1 from "../images/cloud1.mp4"
 import cloud2 from "../images/cloud2.mp4"
 import cloud3 from "../images/cloud3.gif"
@@ -47,13 +48,14 @@ const About = () => {
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{ type: "spring", stiffness: 50 }}
-            className="left lg:w-5/12 m-3 w-full"
+            className="left lg:w-5/12 m-3 w-full flex justify-center items-center"
             exit={{ x: -100 }}
           >
             {/* <video autoPlay 
         loop src={cloud3} className=""></video> */}
 
-            <img src={cloud} alt="" className=" w-full mt-3   object-cover sm:static" />
+            <img src={cl} alt="" className=" w-[60vw] xl:h-[70vh] mt-3 animate-bounce2  object-cover sm:static" />
+            {/* <img src={cloud} alt="" className=" w-full mt-3   object-cover sm:static" /> */}
             {/* <img src={cloud3} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" /> */}
           </motion.div>
 
@@ -64,25 +66,24 @@ const About = () => {
             exit={{ x: 100 }}
             transition={{ type: "spring", stiffness: 50 }}
             style={{ flex: 1 }}
-            className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-10"
+            className="right lg:w-7/12 w-full text-white  flex-col p-2 mt-"
           >
             <h1 className="text-xl  lg:text-2xl font-poppins text-white underline  tracking-wide">
               About Us
             </h1>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl  font-poppins mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-[23px]  font-poppins mt-6">
               The Cloud Computing Cell at Ajay Kumar Garg Engineering College,
               established in February 2016.
             </p>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-poppins mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-[23px] font-poppins mt-6">
               It Provides students with exposure to the latest cloud
               technologies, enhancing their skills for better placement and
               research opportunities.
             </p>
-            <p className="text-xl max-[400px]:text-xs sm:text-2xl font-poppins mt-6">
+            <p className="text-xl max-[400px]:text-xs sm:text-[25p3] font-poppins mt-6">
               It offers a platform for managing and deploying cloud services,
               helping students stay competitive in the job market. The Cell is
-              coordinated by Dr. J.K. Seth, Ms. Anupama Sharma, and Dr. Parneet
-              Kaur from the IT Department, who guide students in their academic
+              coordinated by Mr. Santosh Kumar Mishra and Ms. Shikha Agrawal from the IT Department, who guide students in their academic
               and professional development.
             </p>
             <div className="btn flex text-xl items-start gap-10 sm:gap-20 mt-8">

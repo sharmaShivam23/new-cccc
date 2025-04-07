@@ -12,6 +12,8 @@ import utkarsh from "../2yearImg/Utkarsh.jpg"
 import samit from "../2yearImg/samit.jpg"
 import alok from "../2yearImg/alok.png"
 import akshat from "../2yearImg/akshat.jpg"
+import shruti from "../2yearImg/shruti.jpg"
+
 
 export  const obj2 = [
   {
@@ -126,7 +128,7 @@ export  const obj2 = [
   },
   {
    
-    profile: "",
+    profile: shruti,
     name: "Shruti Maurya ",
     domain: "Web Developer",
     github: "https://github.com/shrutis44",
