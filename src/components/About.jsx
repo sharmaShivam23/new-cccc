@@ -54,7 +54,7 @@ const About = () => {
             {/* <video autoPlay 
         loop src={cloud3} className=""></video> */}
 
-            <img src={cl} alt="" className=" w-[60vw] xl:h-[70vh] mt-3 animate-bounce2  object-cover sm:static" />
+            <img src={cl} alt="" className=" w-[60vw] xl:h-[70vh] mt-3 animate-bounce3  object-cover sm:static" />
             {/* <img src={cloud} alt="" className=" w-full mt-3   object-cover sm:static" /> */}
             {/* <img src={cloud3} alt="" className=" w-full mt-3 xl:h-[60vh] md:h-[50vh] sm:h-[35vh] h-[30vh]  object-cover sm:static" /> */}
           </motion.div>
@@ -113,3 +113,5 @@ const About = () => {
 };
 
 export default About;
+
+

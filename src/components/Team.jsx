@@ -16,7 +16,7 @@ const Team = () => {
   return (
     <div
       id="team"
-      className="h-auto lg:h-screen mb-20 sm:mb-32 w-full max-[1000px]:mt-36 flex justify-center items-center mt-16  m-5">
+      className="h-auto lg:h-screen mb-20 sm:mb-32 w-full mt-36 flex justify-center items-center   m-5">
       <div
      
         className="h-auto psud   text-white sm:p-9 w-full min-[450px]:w-[80vw] sm:w-[70vw] bg-neutral-800 border-2 shadow-xl border-white rounded-3xl xl:w-[80vw] mx-auto"
