@@ -134,6 +134,36 @@ export default {
   					animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
   				}
   			},
+  			bounce3: {
+  				'0%, 100%': {
+  					transform: 'translateY(-4%)',
+  					animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+  				},
+  				'50%': {
+  					transform: 'translateY(0)',
+  					animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+  				}
+  			},
+  			// bounce4: {
+  			// 	'0%, 100%': {
+  			// 		transform: 'translateY(-30%)',
+  			// 		animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+  			// 	},
+  			// 	'50%': {
+  			// 		transform: 'translateY(0)',
+  			// 		animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+  			// 	}
+  			// },
+				bounce4: {
+          '0%, 100%': {
+            transform: 'translateY(-10%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          }
+				},
   			'shimmer-slide': {
   				to: {
   					transform: 'translate(calc(100cqw - 100%), 0)'
@@ -200,6 +230,10 @@ export default {
   			click: 'click 3s ease-in-out',
   			bounce: 'bounce 2s infinite',
   			bounce2: 'bounce2 2s infinite',
+  			bounce3: 'bounce3 2s infinite',
+  			bounce4: 'bounce4 1s infinite 0s ease-in-out',
+  			bounce5: 'bounce4 1s infinite 0.4s ease-in-out',
+  			bounce6: 'bounce4 1s infinite 0.8s ease-in-out',
   			su: 'sUp 1s ease-in-out 0s',
   			su2: 'sUp2 2s ease-in-out 1s',
   			su3: 'sUp3 3s ease-in-out 2s',

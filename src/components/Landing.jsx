@@ -62,12 +62,12 @@ const Landing = () => {
             </motion.p> */}
 
              <div className="text-white z-40 text-xl hidden  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
-              <ShimmerButton onClick={register} className="cursor-pointer animate-popp  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0">     
+              <ShimmerButton onClick={register} className="cursor-pointer   hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0">     
                 Register
               </ShimmerButton>
             </div>
             <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
-              <ShimmerButton onClick={register} className="cursor-pointer animate-popp hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
+              <ShimmerButton onClick={register} className="cursor-pointer  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0">
                 Register
               </ShimmerButton>
             </div> 
@@ -114,17 +114,19 @@ const Landing = () => {
            <div className="absolute max-[950px]:hidden flex max-[650px]:flex right-10 gap-10 sm:right-16  max-[400px]:hidden">
           <img
             src={D}
-            className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
+            className="h-28 sm:h-40 z-50 max-[1000px]:h-24 animate-bounce"
             alt="D"
           />
         </div>
         <div className="absolute  left-10 max-[950px]:hidden flex max-[650px]:flex z-[2px] sm:left-60 max-[400px]:hidden">
           <img
             src={C}
-            className="h-28 sm:h-40 -z-10 max-[1000px]:h-24 animate-bounce"
+            className="h-28 sm:h-40 z-50 max-[1000px]:h-24 animate-bounce"
             alt="C"
           />
         </div>
+      
+
         </div>
 
           <div className="absolute top-1/2 left-1/2 -z-10 mt-10 -translate-x-1/2 -translate-y-1/2">
