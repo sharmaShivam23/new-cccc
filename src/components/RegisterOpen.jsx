@@ -100,10 +100,11 @@ const RegisterOpen = () => {
   const valid = () => {
    
     const nameParts = formData.name.trim().split(" ");
-
+if(name){
 if (nameParts.length === 1) {
   toast.error("Last name is required after space");
   return false;
+}
 }
 
 
@@ -172,19 +173,19 @@ if (nameParts.length === 1) {
     }
   };
   return (
-    <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-3 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
+    <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-1.5 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
       {/* <Meteors/>
       <Meteors/>
       <Particles/>
     */}
       <Toaster />
       {/* <div className="left md:w-[800px]  bg-green-400 w-full overflow-x-hidden  sm:px-14"> */}
-      <div className="left sm:w-[800px]    w-full overflow-x-hidden  sm:px-14">
+      <div className="left sm:w-[800px]   w-full overflow-x-hidden  sm:px-14">
         <form
           onSubmit={handleForm}
           className="mt-2 overflow-x-hidden   space-y-5"
         >
-          <div className="fields shad w-full flex bg-[#000814]  border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3 flex-col gap-3">
+          <div className="fields shad w-full flex bg-[#000814]  border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
             {/* <div className="fields w-full flex bg-[#000814] border-white rounded-2xl  shadow-[0_10px_20px_rgba(255,255,255,0.6)] sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4 max-[350px]:p-4 p-3 flex-col gap-3"> */}
 
             <div className="flex justify-between mt-3 sm:mt-5 items-center flex-col">
