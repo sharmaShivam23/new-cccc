@@ -41,7 +41,7 @@ const RegisterOpen = () => {
   });
 
   const handleRecaptchaChange = (token) => {
-    console.log(token);
+    // console.log(token);
 
     setFormData((prev) => ({ ...prev, recaptchaValue: token }));
   };
@@ -204,8 +204,8 @@ if (nameParts.length === 1) {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                placeholder="Enter name here"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                placeholder="Enter Name Here"
+                className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -216,8 +216,8 @@ if (nameParts.length === 1) {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Enter email here"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                placeholder="Enter Email Here"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -228,8 +228,8 @@ if (nameParts.length === 1) {
                 name="studentNumber"
                 value={formData.studentNumber}
                 onChange={handleInputChange}
-                placeholder="Enter studentNumber here"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                placeholder="Enter Student Number Here"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -240,7 +240,7 @@ if (nameParts.length === 1) {
                   name="section"
                   value={formData.section}
                   onChange={handleInputChange}
-                  className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                  className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                 >
                   <option value="section">Sections</option>
                   <option value="1">1</option>
@@ -271,7 +271,7 @@ if (nameParts.length === 1) {
                   name="branch"
                   value={formData.branch}
                   onChange={handleInputChange}
-                  className="h-[54px] w-full text-[#AFB2BF] bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                  className="h-[54px] w-full  text-[#AFB2BF] bg-[#161D29] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                 >
                   <option value="">Branch</option>
                   <option value="CSE(core)">CSE</option>
@@ -296,8 +296,8 @@ if (nameParts.length === 1) {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
-                placeholder="Enter phoneNumber here"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                placeholder="Enter Phone Number Here"
+                className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -307,13 +307,14 @@ if (nameParts.length === 1) {
                 name="gender"
                 value={formData.gender}
                 onChange={handleInputChange}
-                className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               >
                 <option value=""> Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
             </div>
+           
 
             {/* residence */}
             <div className="residence">
@@ -321,7 +322,7 @@ if (nameParts.length === 1) {
                 name="residence"
                 value={formData.residence}
                 onChange={handleInputChange}
-                className="h-[54px]  w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)] flex justify-center items-center"
+                className="h-[54px]  w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)] flex justify-center items-center"
               >
                 <option value="">Select Residence</option>
                 <option value="Hosteller">Hosteller</option>
