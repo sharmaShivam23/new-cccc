@@ -125,7 +125,7 @@ const Footer = () => {
       <div className="text-white mt-9  text-center font-albert  sm:mt-4 absolute bottom-0 left-0 right-0 flex flex-col justify-center items-center text-sm md:text-lg py-4">
         <p>
           Crafted with passion by Team -
-          <span className="mx-2 font-extrabold text-indigo-800">
+          <span className="mx-2 font-extrabold text-violet-800">
             Cloud Computing
           </span>
         </p>

@@ -217,7 +217,7 @@ if (nameParts.length === 1) {
                 Registration Form
               </p>
               <p className="head2 text-lg font-bold text-[#AFB2BF] mt-0 mb-2 flex justify-center items-center">
-                Cloud Computing Cell
+                NIMBUS 2.0
               </p>
             </div>
 
@@ -361,7 +361,7 @@ if (nameParts.length === 1) {
                 name="transactionID"
                 value={formData.transactionID}
                 onChange={handleInputChange}
-                placeholder="Enter transaction ID Here"
+                placeholder="Enter Transaction ID Here"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
@@ -393,8 +393,8 @@ if (nameParts.length === 1) {
 
       {QRCode && (
   // <div className=" flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
- <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%] w-full backdrop-blur-sm"> 
-    <div className="bg-white p-8 rounded-2xl w-[80vw] sm:w-[500px] shadow-2xl  text-center relative">
+ <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%]  w-full backdrop-blur-sm"> 
+    <div className="bg-white p-8 rounded-2xl w-[88vw] sm:w-[500px] shadow-2xl  text-center relative">
       
       {/* Close Button */}
       <button
@@ -413,9 +413,10 @@ if (nameParts.length === 1) {
 
       {/* QR Instructions */}
       <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
-        <p>1. Scan the QR code using any UPI app</p>
+        <p>1. Scan the QR code or using below link</p>
         <p>2. Pay ₹100 as the registration fee</p>
         <p>3. Enter the Transaction ID in the form</p>
+
       </div>
       {/* QR Image */}
       <img
