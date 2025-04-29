@@ -9,9 +9,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Particles from "./ui/particles";
 import Meteors from "./ui/meteors";
+import { ImCross } from "react-icons/im";
 const RegisterOpen = () => {
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
+  const [QRCode , setQRCode] = useState(false)
   // const [fileName, setFileName] = useState("Payment Screenshot");
 
   const branchMap = {
@@ -19,8 +21,8 @@ const RegisterOpen = () => {
     11: "CSIT",
     12: "CS",
     13: "IT",
-    14: "AIML",
-    15: "CSE(DS)",
+    15: "AIML",
+    14: "CSE(DS)",
     16: "CSE(AIML)",
     17: "ECE/EN",
     18: "ME",
@@ -37,6 +39,7 @@ const RegisterOpen = () => {
     gender: "",
     residence: "",
     recaptchaValue: "",
+    transactionID : ""
     // file: null,
   });
 
@@ -87,12 +90,24 @@ const RegisterOpen = () => {
 
       toast.success(response?.data?.message);
       clearField();
-    } catch (error) {
+    } 
+    // catch (error) {
+    //   console.log(error);
+    //   const errorMessage =
+    //     error?.response?.data?.message || "An unexpected error occurred.";
+    //   toast.error(errorMessage);
+    // }
+    catch (error) {
       console.log(error);
-      const errorMessage =
-        error?.response?.data?.message || "An unexpected error occurred.";
-      toast.error(errorMessage);
-    } finally {
+      if (error?.response?.status === 429) {
+        toast.error("Too many requests. Please wait a while before trying again.");
+      } else {
+        const errorMessage = error?.response?.data?.message || "An unexpected error occurred.";
+        toast.error(errorMessage);
+      }
+    }
+    
+     finally {
       setLoading(false);
     }
   };
@@ -100,7 +115,7 @@ const RegisterOpen = () => {
   const valid = () => {
    
     const nameParts = formData.name.trim().split(" ");
-if(name){
+if(formData.name){
 if (nameParts.length === 1) {
   toast.error("Last name is required after space");
   return false;
@@ -140,6 +155,15 @@ if (nameParts.length === 1) {
         return false;
       }
     }
+   
+    
+    if(formData.transactionID){
+     if(formData.transactionID.length < 5 || formData.transactionID.length > 25){
+      toast.error("Invalid Transaction ID");
+      return false;
+    }
+  }
+  
 
     const code = formData.studentNumber.slice(2, 4);
     const expectedBranch = branchMap[code];
@@ -164,6 +188,7 @@ if (nameParts.length === 1) {
       gender: "",
       residence: "",
       recaptchaValue: "",
+      transactionID : ""
       // file: null,
     });
 
@@ -175,17 +200,16 @@ if (nameParts.length === 1) {
   return (
     <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-1.5 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
       {/* <Meteors/>
-      <Meteors/>
-      <Particles/>
-    */}
+      <Meteors/> */}
+   
       <Toaster />
       {/* <div className="left md:w-[800px]  bg-green-400 w-full overflow-x-hidden  sm:px-14"> */}
-      <div className="left sm:w-[800px]   w-full overflow-x-hidden  sm:px-14">
+      <div className="left sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">
         <form
           onSubmit={handleForm}
           className="mt-2 overflow-x-hidden   space-y-5"
         >
-          <div className="fields shad w-full flex bg-[#000814]  border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
+          <div className="fields shad w-full flex bg-[#000814]   border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
             {/* <div className="fields w-full flex bg-[#000814] border-white rounded-2xl  shadow-[0_10px_20px_rgba(255,255,255,0.6)] sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4 max-[350px]:p-4 p-3 flex-col gap-3"> */}
 
             <div className="flex justify-between mt-3 sm:mt-5 items-center flex-col">
@@ -197,7 +221,7 @@ if (nameParts.length === 1) {
               </p>
             </div>
 
-            {/* name */}
+            
             <div className="name">
               <input
                 type="text"
@@ -209,19 +233,19 @@ if (nameParts.length === 1) {
               />
             </div>
 
-            {/* email */}
+             
             <div className="email">
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Enter Email Here"
+                placeholder="Enter College Email Here"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
-            {/* studentNumber */}
+          
             <div className="studentNumber">
               <input
                 type="number"
@@ -235,7 +259,7 @@ if (nameParts.length === 1) {
 
             {/* branch , section */}
             <div className="two flex-col sm:flex-row flex gap-4 w-full">
-              <div className="branch w-full sm:w-1/2">
+              <div className="section w-full sm:w-1/2">
                 <select
                   name="section"
                   value={formData.section}
@@ -330,8 +354,95 @@ if (nameParts.length === 1) {
               </select>
             </div>
 
+              <div className="f sm:flex gap-3">
+            <div className="transactionID sm:w-1/2 w-full">
+              <input
+                type="transactionID"
+                name="transactionID"
+                value={formData.transactionID}
+                onChange={handleInputChange}
+                placeholder="Enter transaction ID Here"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+              />
+            </div>
+            {/* <div className="flex justify-center sm:w-1/2 mb-5 sm:mb-0  w-full   items-center">
+                <motion.button
+                  whileHover={{ scale: 1, boxShadow: "0px 0px 10px #8a2be2" }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-violet-600 hover:bg-violet-800 lg:h-[54px]   w-full transition-all text-white px-6 py-3 rounded-md text-xl font-semibold border border-violet-500  shadow-md"
+                >
+                Pay ₹100
+                </motion.button>
+              </div> */}
+              <div onClick={() => setQRCode(true)} className="transactionID cursor-pointer w-full mt-4 sm:mt-0 sm:w-1/2">
+              <span
+                type="transactionID"
+                name="transactionID"
+                value={formData.transactionID}
+                onChange={handleInputChange}
+                placeholder="Pay ₹100"
+                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+              >
+                Pay ₹100
+              </span>
+            </div>
+              
+              </div>
+
+          
+
+      {QRCode && (
+  // <div className=" flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+ <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%] w-full backdrop-blur-sm"> 
+    <div className="bg-white p-8 rounded-2xl w-[80vw] sm:w-[500px] shadow-2xl  text-center relative">
+      
+      {/* Close Button */}
+      <button
+        className="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
+        onClick={() => setQRCode(false)}
+        aria-label="Close"
+      >
+        <ImCross />
+      </button>
+
+      {/* Header */}
+      <h3 className="text-black mb-4 text-xl sm:text-3xl font-bold">Proceed to Payment</h3>
+      <p className="text-gray-600 mb-6 text-xs sm:text-sm">
+        Please scan the QR code below using any UPI app to pay ₹100. After the payment is completed, enter your Transaction ID in the registration form to complete the process.
+      </p>
+
+      {/* QR Instructions */}
+      <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
+        <p>1. Scan the QR code using any UPI app</p>
+        <p>2. Pay ₹100 as the registration fee</p>
+        <p>3. Enter the Transaction ID in the form</p>
+      </div>
+      {/* QR Image */}
+      <img
+        src="QR.jpg"
+        alt="QR Code"
+        className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
+      />
+
+      <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div>
+      <hr/>
+
+      <div className="p text-blue-500 text-md sm:text-xl font-semibold italic">
+    <a href="upi://pay?pa=8433428790@ptsbi&pn=Manoj%20Samanta&am=100&cu=INR&tn=Payment%20to%20Manoj
+">👉 Pay ₹100(only for mobile users) </a>
+</div>
+    </div>  
+    
+    
+
+  </div>
+)}
+
+          
+
             <div className="pa w-full flex lg:flex-row flex-col gap-4">
-              {/*  <div className="sm:w-1/2 w-full">
+
+                {/* <div className="sm:w-1/2 w-full">
                 <input
                   type="file"
                   id="fileInput"
@@ -355,7 +466,7 @@ if (nameParts.length === 1) {
                     </div>
                   )}
                 </label>
-              </div> */}
+              </div>  */}
 
               {/* recaptcha */}
               <div className="block gap-2 mt-4  cursor-pointer w-full">
@@ -373,7 +484,7 @@ if (nameParts.length === 1) {
                 <motion.button
                   whileHover={{ scale: 1, boxShadow: "0px 0px 10px #8a2be2" }}
                   transition={{ duration: 0.3 }}
-                  className="bg-violet-600 hover:bg-violet-800 lg:h-[74px]   w-full transition-all text-white px-6 py-3 rounded-md text-lg font-semibold border border-violet-500  shadow-md"
+                  className="bg-violet-600 hover:bg-violet-800 lg:h-[74px]   w-full transition-all text-white px-6 py-3 rounded-md text-xl font-semibold border border-violet-500  shadow-md"
                 >
                   {loading ? (
                     <div className="flex justify-center items-center space-x-2">
@@ -386,26 +497,13 @@ if (nameParts.length === 1) {
                   )}
                 </motion.button>
               </div>
+
+           
             </div>
 
-            {/* loading */}
-            {/* {loading && <Loader />} */}
-
-            {/* button */}
-            {/* <button className="w-full bg-[#FFD60A] text-black py-3 rounded-xl font-[550]">
-                Submit
-              </button> */}
-            {/* <div className="flex justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1, boxShadow: "0px 0px 10px #8a2be2" }}
-                transition={{ duration: 0.3 }}
-                className="bg-violet-600 hover:bg-violet-800 mt-5  w-full transition-all text-white px-6 py-3 rounded-md text-lg font-semibold border border-violet-500  shadow-md"
-              >
-               Submit
-              
-              </motion.button>
-            </div> */}
+             {/* //button */}
           </div>
+      
         </form>
       </div>
     </div>
