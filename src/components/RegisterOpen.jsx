@@ -100,7 +100,7 @@ const RegisterOpen = () => {
     catch (error) {
       console.log(error);
       if (error?.response?.status === 429) {
-        toast.error("Too many requests. Please wait a while before trying again.");
+        toast.error("Too many requests. Try after 15 minutes");
       } else {
         const errorMessage = error?.response?.data?.message || "An unexpected error occurred.";
         toast.error(errorMessage);
