@@ -114,40 +114,49 @@ const RegisterOpen = () => {
 
   const valid = () => {
    
-    const nameParts = formData.name.trim().split(" ");
-if(formData.name){
-if (nameParts.length === 1) {
-  toast.error("Last name is required after space");
-  return false;
-}
-}
+//     const nameParts = formData.name.trim().split(" ");
+// if(formData.name){
+// if (nameParts.length === 1) {
+//   toast.error("Last name is required after space");
+//   return false;
+// }
+// }
 
 
     if (formData.name) {
       if (!/^[a-zA-Z\s]*$/i.test(formData.name)) {
-        toast.error("Invalid Student  Name");
+        toast.error("Invalid Student Name");
         return false;
       }
     }
 
-
+   
     if (formData.email) {
-      if (!/^[a-zA-Z]{2,20}24\d{5,7}@akgec\.ac\.in$/gm.test(formData.email)) {
-        toast.error("Invalid Student Email");
+      const emailRegex = new RegExp(`^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`);
+      if (!emailRegex.test(formData.email)) {
+        toast.error("Invalid Student Email or Student number");
         return false;
       }
     }
+    
 
-    if (formData.studentNumber) {
-      if (
-        !/^(24)(00|10|1[123]|15[34]|16[49]|31|40|15)([0-9]{3,8})$/.test(
-          formData.studentNumber
-        )
-      ) {
+    // if (formData.studentNumber) {
+    //   if (
+    //     !/^(24)(00|10|1[123]|15[34]|16[49]|31|40|15)([0-9]{3,8})$/.test(
+    //       formData.studentNumber
+    //     )
+    //   ) {
+    //     toast.error("Invalid Student Number");
+    //     return false;
+    //   }
+    // }
+    if(formData.studentNumber){
+      if(!(formData.studentNumber.startsWith('24') && (formData.studentNumber.length === 7 || formData.studentNumber.length === 8))){
         toast.error("Invalid Student Number");
         return false;
       }
     }
+    
 
     if (formData.phoneNumber) {
       if (!/^[6-9]\d{9}$/.test(formData.phoneNumber)) {
@@ -165,14 +174,14 @@ if (nameParts.length === 1) {
   }
   
 
-    const code = formData.studentNumber.slice(2, 4);
-    const expectedBranch = branchMap[code];
-    if (expectedBranch && expectedBranch !== formData.branch) {
-      toast.error(
-        `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
-      );
-      return false;
-    }
+    // const code = formData.studentNumber.slice(2, 4);
+    // const expectedBranch = branchMap[code];
+    // if (expectedBranch && expectedBranch !== formData.branch) {
+    //   toast.error(
+    //     `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
+    //   );
+    //   return false;
+    // }
 
     return true;
   };
@@ -228,7 +237,7 @@ if (nameParts.length === 1) {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                placeholder="Enter Name Here"
+                placeholder="Enter Name"
                 className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
@@ -240,7 +249,7 @@ if (nameParts.length === 1) {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Enter College Email Here"
+                placeholder="Enter College Email"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
@@ -252,7 +261,7 @@ if (nameParts.length === 1) {
                 name="studentNumber"
                 value={formData.studentNumber}
                 onChange={handleInputChange}
-                placeholder="Enter Student Number Here"
+                placeholder="Enter Student Number"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
@@ -267,26 +276,26 @@ if (nameParts.length === 1) {
                   className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                 >
                   <option value="section">Sections</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
+                  <option value="1">S1</option>
+                  <option value="2">S2</option>
+                  <option value="3">S3</option>
+                  <option value="4">S4</option>
+                  <option value="5">S5</option>
+                  <option value="6">S6</option>
+                  <option value="7">S7</option>
+                  <option value="8">S8</option>
+                  <option value="9">S9</option>
+                  <option value="10">S10</option>
+                  <option value="11">S11</option>
+                  <option value="12">S12</option>
+                  <option value="13">S13</option>
+                  <option value="14">S14</option>
+                  <option value="15">S15</option>
+                  <option value="16">S16</option>
+                  <option value="17">S17</option>
+                  <option value="18">S18</option>
+                  <option value="19">S19</option>
+                  <option value="20">S20</option>
                 </select>
               </div>
 
@@ -320,7 +329,7 @@ if (nameParts.length === 1) {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
-                placeholder="Enter Phone Number Here"
+                placeholder="Enter Phone Number"
                 className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
@@ -333,7 +342,7 @@ if (nameParts.length === 1) {
                 onChange={handleInputChange}
                 className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               >
-                <option value=""> Gender</option>
+                <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
@@ -361,7 +370,7 @@ if (nameParts.length === 1) {
                 name="transactionID"
                 value={formData.transactionID}
                 onChange={handleInputChange}
-                placeholder="Enter Transaction ID Here"
+                placeholder="Enter Transaction ID"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
