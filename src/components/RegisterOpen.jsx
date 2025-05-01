@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Particles from "./ui/particles";
 import Meteors from "./ui/meteors";
 import { ImCross } from "react-icons/im";
+import html2canvas from "html2canvas";
 const RegisterOpen = () => {
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
@@ -206,6 +207,21 @@ const RegisterOpen = () => {
       reset.current.reset();
     }
   };
+  const captureRef = useRef()
+ const handleScreenshot = () => {
+ 
+  html2canvas(captureRef.current).then(
+    canvas => {
+      const link = document.createElement('a');
+      link.download = 'QRcode.png'
+      link.href = canvas.toDataURL()
+      link.click()
+    }
+  )
+
+ }
+
+
   return (
     <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-1.5 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
       {/* <Meteors/>
@@ -414,25 +430,27 @@ const RegisterOpen = () => {
         <ImCross />
       </button>
 
-      {/* Header */}
+    
       <h3 className="text-black mb-4 text-xl sm:text-3xl font-bold">Proceed to Payment</h3>
       <p className="text-gray-600 mb-6 text-xs sm:text-sm">
         Please scan the QR code below using any UPI app to pay ₹100. After the payment is completed, enter your Transaction ID in the registration form to complete the process.
       </p>
 
-      {/* QR Instructions */}
+    
       <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
         <p>1. Scan the QR code or using below link</p>
         <p>2. Pay ₹100 as the registration fee</p>
         <p>3. Enter the Transaction ID in the form</p>
 
       </div>
-      {/* QR Image */}
+    
       <img
+      ref={captureRef}
         src="QR.jpg"
         alt="QR Code"
         className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
       />
+      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 cursor-pointer font-bold">Take Screenshot</p>
 
       <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div>
       <hr/>
