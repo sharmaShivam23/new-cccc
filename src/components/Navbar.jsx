@@ -156,7 +156,7 @@ const Option = ({ to, Icon, title, selected, setSelected, open, notifs,text }) =
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
               style={{ transform: "translateY(-50%)" }}
-              className="absolute right-2  size-4 ronded bg-indigo-500 text-xs animate-bounce font-bold  text-white top-7"
+              className="absolute right-2  size-4 ronded bg-indigo-500 text-xs animate-bounce4 font-bold  text-white top-7"
             >
               {notifs}
             </motion.span>

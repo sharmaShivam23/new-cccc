@@ -157,7 +157,7 @@ import shikha from "../images/shikha2.svg";
 
 const Faculty = () => {
   return (
-    <div className="sm:max-w-[90vw]  lg:mb-3 mb-96 mt-20 sm:mt-0 m-auto w-full text-white flex justify-center items-center h-auto bg-green-">
+    <div className="sm:max-w-[90vw]  lg:mb-3 mb- mt-20 sm:mt-0 m-auto w-full text-white flex justify-center items-center h-auto bg-green-">
       <div className="flex flex-col justify-center max-[450px]:w-[90vw] items-center pb-10 rounded-3xl bg-neutral-800 border-2 p-5 border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto">
       {/* flex justify-center max-[450px]:w-[90vw] pb-10 rounded-3xl flex-col   bg-neutral-800 items-center border-2 p-5 border-white w-[80vw] sm:w-[70vw] xl:w-[80vw] h-auto */}
         {/* Heading */}
@@ -187,12 +187,12 @@ const Faculty = () => {
               alt="Santosh Sir"
             />
             <div className="text-center mt-4">
-              <h1 className="text-lg sm:text-2xl font-[550]">
-                Assistant Professor, IT Dept
-              </h1>
               <p className="text-md sm:text-xl sm:mt-3 font-[500]">
                 Mr. Santosh Kumar Mishra
               </p>
+              <h1 className="text-lg sm:text-2xl font-[550]">
+                Assistant Professor, IT Dept
+              </h1>
             </div>
             <div className="p-2 sm:p-4 text-xs sm:text-lg font-[500] text-center">
               Santosh Mishra, Assistant Professor in IT department, having
@@ -214,12 +214,12 @@ const Faculty = () => {
               alt="Shikha Ma'am"
             />
             <div className="text-center mt-4">
-              <h1 className="text-lg sm:text-2xl font-[550]">
-                Assistant Professor, IT Dept
-              </h1>
               <p className="text-md sm:text-xl sm:mt-3 font-[500]">
                 Ms. Shikha Agarwal
               </p>
+              <h1 className="text-lg sm:text-2xl font-[550]">
+                Assistant Professor, IT Dept
+              </h1>
             </div>
             <div className="p-2 sm:p-4 text-xs sm:text-lg font-[500] text-center">
               Shikha Agarwal, Assistant Professor in IT department, passionate
