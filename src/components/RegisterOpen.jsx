@@ -117,7 +117,7 @@ const RegisterOpen = () => {
     //   }
     // }
     catch (error) {
-      console.log(error);
+      // console.log(error);
     
       if (error?.response) {
         const errorMessage = error?.response?.data?.message || "An unexpected error occurred";
