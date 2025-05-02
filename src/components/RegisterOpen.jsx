@@ -22,12 +22,13 @@ const RegisterOpen = () => {
     11: "CSIT",
     12: "CS",
     13: "IT",
-    15: "AIML",
-    14: "CSE(DS)",
-    16: "CSE(AIML)",
-    17: "ECE/EN",
-    18: "ME",
-    19: "CE",
+    153: "AIML",
+    154: "CSE(DS)",
+    153: "CSE(AIML)",
+    20: "EN",
+    31: "ECE",
+    40: "ME",
+    "00": "CE",
   };
 
   const [formData, setFormData] = useState({
@@ -361,7 +362,8 @@ const RegisterOpen = () => {
                   <option value="IT">IT</option>
                   <option value="CSIT">CSIT</option>
                   <option value="AIML">AIML</option>
-                  <option value="ECE/EN">ECE/EN</option>
+                  <option value="ECE">ECE</option>
+                  <option value="EN">EN</option>
                   <option value="ME">ME</option>
                   <option value="CE">CE</option>
                 </select>
