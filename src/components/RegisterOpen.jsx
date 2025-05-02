@@ -82,8 +82,8 @@ const RegisterOpen = () => {
       );
 
       const response = await axios.post(
-        // "https://register-backend-rouge.vercel.app/api/register/signUp",
-        "https://registerbackend-4dz1.onrender.com/api/register/signup",
+        "https://register-backend-rouge.vercel.app/api/register/signUp",
+        // "https://registerbackend-4dz1.onrender.com/api/register/signup",
         formDataToSend,
         {
           withCredentials: true,
@@ -117,7 +117,7 @@ const RegisterOpen = () => {
     //   }
     // }
     catch (error) {
-      console.log(error);
+      // console.log(error);
     
       if (error?.response) {
         const errorMessage = error?.response?.data?.message || "An unexpected error occurred";
@@ -206,14 +206,14 @@ const RegisterOpen = () => {
   }
   
 
-    // const code = formData.studentNumber.slice(2, 4);
-    // const expectedBranch = branchMap[code];
-    // if (expectedBranch && expectedBranch !== formData.branch) {
-    //   toast.error(
-    //     `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
-    //   );
-    //   return false;
-    // }
+    const code = formData.studentNumber.slice(2, 4);
+    const expectedBranch = branchMap[code];
+    if (expectedBranch && expectedBranch !== formData.branch) {
+      toast.error(
+        `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
+      );
+      return false;
+    }
 
     return true;
   };
