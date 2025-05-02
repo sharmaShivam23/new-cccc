@@ -131,11 +131,18 @@ const RegisterOpen = () => {
       }
     }
 
+    if(formData.studentNumber){
+      if(!(formData.studentNumber.startsWith('24') && (formData.studentNumber.length === 7 || formData.studentNumber.length === 8))){
+        toast.error("Invalid Student Number");
+        return false;
+      }
+    }
+
    
-    if (formData.email) {
+    if (formData.email && formData.studentNumber) {
       const emailRegex = new RegExp(`^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`);
       if (!emailRegex.test(formData.email)) {
-        toast.error("Invalid Student Email or Student number");
+        toast.error("Invalid Student Email");
         return false;
       }
     }
@@ -151,12 +158,7 @@ const RegisterOpen = () => {
     //     return false;
     //   }
     // }
-    if(formData.studentNumber){
-      if(!(formData.studentNumber.startsWith('24') && (formData.studentNumber.length === 7 || formData.studentNumber.length === 8))){
-        toast.error("Invalid Student Number");
-        return false;
-      }
-    }
+   
     
 
     if (formData.phoneNumber) {
@@ -450,7 +452,7 @@ const RegisterOpen = () => {
         alt="QR Code"
         className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
       />
-      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 cursor-pointer font-bold">Take Screenshot</p>
+      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 cursor-pointer font-bold">Click here to take Screenshot</p>
 
       <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div>
       <hr/>
