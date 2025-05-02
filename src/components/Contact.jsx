@@ -325,8 +325,8 @@ const Video = () => {
     <h2 className="lg:text-2xl text-xl font-semibold text-white mb-4 text-center tracking-wide">Need Help?</h2>
     <div className="border-b border-gray-600 mb-4"></div>
     <div className="space-y-2 text-gray-300 text-center text-sm sm:text-base font-medium leading-relaxed">
-      <p><span className="text-white text-xs font-semibold">Email:</span> cloudcomputing@akgec.ac.in</p>
-      <p><span className="text-white text-xs font-semibold ">Address:</span> 3rd Floor, CSIT Block</p>
+      <p><span className="text-white text-md font-semibold">Email:</span> cloudcomputing@akgec.ac.in</p>
+      <p><span className="text-white text-md font-semibold ">Address:</span> 3rd Floor, CSIT Block</p>
       <p>Ajay Kumar Garg Engineering College</p>
       <p><span className="text-white font-semibold">Phone:</span> +8707074420, +8433428790</p>
     </div>

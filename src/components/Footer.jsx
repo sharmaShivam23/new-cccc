@@ -29,13 +29,15 @@ const Footer = () => {
           technology.
           <br /> Let's have a look on the quiz click on start now to start
         </p>
-        <a className="z-50" href="https://quizaki.vercel.app/">
+        {/* <a className="z-50" href="https://new-cccc.vercel.app/"> */}
+        <Link className="z-50" to="/Register" >
         <div className="text-white z-50 text-xl md:text-xl mt-4 font-bold">
           <ShimmerButton className="cursor-pointer hover:scale-125 font-jetbrains font-bold transition-all ease-in-out duration-1000 delay-0">
-            Start Now
+            Register Now
           </ShimmerButton>
         </div>
-        </a>
+        </Link>
+        {/* </a> */}
       </div>
 
       <div className="flex text-xl text-white text-center font-bold absolute bottom-24 left-20 max-[400px]:left-10">
