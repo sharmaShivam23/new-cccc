@@ -98,15 +98,42 @@ const RegisterOpen = () => {
     //     error?.response?.data?.message || "An unexpected error occurred.";
     //   toast.error(errorMessage);
     // }
+    // catch (error) {
+    //   console.log(error);
+    //   if (error?.response?.status === 429) {
+    //     toast.error("Too many requests. Try after 15 minutes");
+    //   } else if(error?.response?.status === 400) {
+    //     const errorMessage = error?.response?.data?.message;
+    //     toast.error(errorMessage);
+    //   }
+    //   else if(error?.response?.status === 500){
+    //     const errorMessage = error?.response?.data?.message;
+    //     toast.error(errorMessage);
+    //   }
+    //   else {
+    //    toast.error("An unexpected error occurred")
+    //   }
+    // }
     catch (error) {
       console.log(error);
-      if (error?.response?.status === 429) {
-        toast.error("Too many requests. Try after 15 minutes");
+    
+      if (error?.response) {
+        const errorMessage = error?.response?.data?.message || "An unexpected error occurred";
+    
+        if (error?.response?.status === 429) {
+          toast.error("Too many requests. Try again after 15 minutes");
+        } else if (error?.response?.status === 400) {
+          toast.error(errorMessage); 
+        } else if (error?.response?.status === 500) {
+          toast.error(errorMessage); 
+        } else {
+          toast.error(errorMessage); 
+        }
       } else {
-        const errorMessage = error?.response?.data?.message || "An unexpected error occurred.";
-        toast.error(errorMessage);
+        toast.error("An unexpected error occurred. Please try again");
       }
     }
+    
     
      finally {
       setLoading(false);
