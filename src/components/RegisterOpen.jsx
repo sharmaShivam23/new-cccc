@@ -81,6 +81,7 @@ const RegisterOpen = () => {
       );
 
       const response = await axios.post(
+        // "https://register-backend-rouge.vercel.app/api/register/signUp",
         "https://registerbackend-4dz1.onrender.com/api/register/signup",
         formDataToSend,
         {
@@ -479,15 +480,15 @@ const RegisterOpen = () => {
         alt="QR Code"
         className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
       />
-      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 cursor-pointer font-bold">Click here to take Screenshot</p>
+      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 italic cursor-pointer font-bold">Click here to take Screenshot of QR code</p>
 
-      <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div>
+      {/* <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div> */}
       <hr/>
 
-      <div className="p text-blue-500 text-md sm:text-xl font-semibold italic">
+      {/* <div className="p text-blue-500 text-md sm:text-xl font-semibold italic">
     <a href="upi://pay?pa=8433428790@ptsbi&pn=Manoj%20Samanta&am=100&cu=INR&tn=Payment%20to%20Manoj
 ">👉 Pay ₹100(only for mobile users) </a>
-</div>
+</div> */}
     </div>  
     
     

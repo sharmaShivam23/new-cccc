@@ -187,10 +187,10 @@ const Faculty = () => {
               alt="Santosh Sir"
             />
             <div className="text-center mt-4">
-              <p className="text-md sm:text-xl sm:mt-3 font-[500]">
+              <p className=" text-lg sm:text-2xl sm:mt-3 font-[500]">
                 Mr. Santosh Kumar Mishra
               </p>
-              <h1 className="text-lg sm:text-2xl font-[550]">
+              <h1 className="text-md sm:text-xl font-[550]">
                 Assistant Professor, IT Dept
               </h1>
             </div>
@@ -214,10 +214,10 @@ const Faculty = () => {
               alt="Shikha Ma'am"
             />
             <div className="text-center mt-4">
-              <p className="text-md sm:text-xl sm:mt-3 font-[500]">
+              <p className="text-lg sm:text-2xl sm:mt-3 font-[500]">
                 Ms. Shikha Agarwal
               </p>
-              <h1 className="text-lg sm:text-2xl font-[550]">
+              <h1 className=" text-md sm:text-xl font-[550]">
                 Assistant Professor, IT Dept
               </h1>
             </div>
