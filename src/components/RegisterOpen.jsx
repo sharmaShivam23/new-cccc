@@ -245,8 +245,6 @@ const RegisterOpen = () => {
 
   return (
     <div className="signup z-50  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col">
-      {/* <Meteors/>
-      <Meteors/> */}
 
       <Toaster />
       {!success ? (
