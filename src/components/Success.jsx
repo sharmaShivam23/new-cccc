@@ -30,6 +30,10 @@ const Success = () => {
       </div>
       <div className="p text-center mt-2 text-lg sm:text-xl font-semibold">Save the Dates: <br/> 13th-14th May 2025</div>
       <div className="p text-sm mt-2 text-center  text-[#2D2D2D]">Get ready to stand out from the  crowd and level up your <br/>  skills in  advance technologies.</div>
+
+      <div className="p text-center mt-2 sm:text-lg text-xs font-semibold">
+        If you have not done payment ,<br/> you can do it offline
+      </div>
     </div>
     </div>
   )
