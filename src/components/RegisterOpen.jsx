@@ -12,10 +12,12 @@ import Meteors from "./ui/meteors";
 import { ImCross } from "react-icons/im";
 import html2canvas from "html2canvas";
 import Confetti from "./ui/confetti";
+import Success from "./Success";
 const RegisterOpen = () => {
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
   const [QRCode, setQRCode] = useState(false);
+  const [success , setSuccess] = useState(false)
 
   // const [fileName, setFileName] = useState("Payment Screenshot");
 
@@ -24,9 +26,10 @@ const RegisterOpen = () => {
     11: "CSIT",
     12: "CS",
     13: "IT",
-    153: "AIML",
+    164: "AIML",
     154: "CSE(DS)",
     153: "CSE(AIML)",
+    169: "CSE(H)",
     20: "EN",
     31: "ECE",
     40: "ME",
@@ -60,19 +63,28 @@ const RegisterOpen = () => {
   //     setFileName(file.name);
   //   }
   // };
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-
-    if (name === "studentNumber" && value.length >= 4) {
-      const code = value.slice(2, 4);
-      const branch = branchMap[code] || "";
+  
+    if (name === "studentNumber" && value.length >= 5) {
+      const threeDigitCode = value.slice(2, 5);
+      const twoDigitCode = value.slice(2, 4);
+      
+      let branch = "";
+      if (branchMap[threeDigitCode]) {
+        branch = branchMap[threeDigitCode];
+      } else if (branchMap[twoDigitCode]) {
+        branch = branchMap[twoDigitCode];
+      }
+  
       setFormData((prev) => ({ ...prev, branch }));
     }
   };
+  
 
   const handleForm = async (e) => {
+    localStorage.setItem("registeredName", formData.name);
     e.preventDefault();
     // console.log(formData);
     if (!valid()) return;
@@ -91,34 +103,15 @@ const RegisterOpen = () => {
           withCredentials: true,
         }
       );
+      if(response?.data?.success === true){
+        setSuccess(true)
+      }
       // console.log(response);
 
       toast.success(response?.data?.message);
       clearField();
     } catch (error) {
-      // catch (error) {
-      //   console.log(error);
-      //   const errorMessage =
-      //     error?.response?.data?.message || "An unexpected error occurred.";
-      //   toast.error(errorMessage);
-      // }
-      // catch (error) {
-      //   console.log(error);
-      //   if (error?.response?.status === 429) {
-      //     toast.error("Too many requests. Try after 15 minutes");
-      //   } else if(error?.response?.status === 400) {
-      //     const errorMessage = error?.response?.data?.message;
-      //     toast.error(errorMessage);
-      //   }
-      //   else if(error?.response?.status === 500){
-      //     const errorMessage = error?.response?.data?.message;
-      //     toast.error(errorMessage);
-      //   }
-      //   else {
-      //    toast.error("An unexpected error occurred")
-      //   }
-      // }
-      // console.log(error);
+// console.log(error);
 
       if (error?.response) {
         const errorMessage =
@@ -208,14 +201,14 @@ const RegisterOpen = () => {
       }
     }
 
-    const code = formData.studentNumber.slice(2, 4);
-    const expectedBranch = branchMap[code];
-    if (expectedBranch && expectedBranch !== formData.branch) {
-      toast.error(
-        `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
-      );
-      return false;
-    }
+    // const code = formData.studentNumber.slice(2, 5);
+    // const expectedBranch = branchMap[code];
+    // if (expectedBranch && expectedBranch !== formData.branch) {
+    //   toast.error(
+    //     `Student Number doesn't match selected branch. Did you mean ${expectedBranch}?`
+    //   );
+    //   return false;
+    // }
 
     return true;
   };
@@ -251,16 +244,21 @@ const RegisterOpen = () => {
   };
 
   return (
-    <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-1.5 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
+    <div className="signup z-50  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-10 sm:flex-row flex-col">
       {/* <Meteors/>
       <Meteors/> */}
 
       <Toaster />
-      {/* <div className="left md:w-[800px]  bg-green-400 w-full overflow-x-hidden  sm:px-14"> */}
-      <div className="left sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">
+      {!success ? (
+        <>
+      <div className="left lg:w-5/12 flex md:hidden lg:flex w-full h-full  sm:px-14">
+        <img src="/nimbus.svg" className="object-cover h-full w-full" alt="" />
+      </div>
+
+      <div className="right sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">
         <form
           onSubmit={handleForm}
-          className="mt-2 overflow-x-hidden   space-y-5"
+          className="sm:mt-2 overflow-x-hidden   space-y-5"
         >
           <div className="fields shad w-full flex bg-[#000814]   border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
             {/* <div className="fields w-full flex bg-[#000814] border-white rounded-2xl  shadow-[0_10px_20px_rgba(255,255,255,0.6)] sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4 max-[350px]:p-4 p-3 flex-col gap-3"> */}
@@ -351,7 +349,7 @@ const RegisterOpen = () => {
                   <option value="CSE(core)">CSE</option>
                   <option value="CSE(AIML)">CSE(AIML)</option>
                   <option value="CSE(DS)">CSE(DS)</option>
-                  <option value="CSE">CSE(Hindi)</option>
+                  <option value="CSE(H)">CSE(Hindi)</option>
                   <option value="CS">CS</option>
                   <option value="IT">IT</option>
                   <option value="CSIT">CSIT</option>
@@ -556,6 +554,10 @@ const RegisterOpen = () => {
           </div>
         </form>
       </div>
+      </>
+      ) : (
+        <Success/>
+      )}
     </div>
   );
 };
