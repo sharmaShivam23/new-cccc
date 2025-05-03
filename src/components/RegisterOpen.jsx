@@ -244,21 +244,21 @@ const RegisterOpen = () => {
   };
 
   return (
-    <div className="signup z-50  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-10 sm:flex-row flex-col">
+    <div className="signup z-50  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col">
       {/* <Meteors/>
       <Meteors/> */}
 
       <Toaster />
       {!success ? (
         <>
-      <div className="left lg:w-5/12 flex md:hidden lg:flex w-full h-full  sm:px-14">
-        <img src="/nimbus.png" className="object-cover h-full w-full" alt="" />
+      <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
+        <img src="/post4.png" className="object-cover sm:mb-10   h-full w-full" alt="" />
       </div>
 
-      <div className="right sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">
+      <div className="right  sm:w-[800px]   w-full overflow-x-hidden  sm:px-14">
         <form
           onSubmit={handleForm}
-          className="sm:mt-2 overflow-x-hidden   space-y-5"
+          className="sm:mt-2   w-full space-y-5"
         >
           <div className="fields shad w-full flex bg-[#000814]   border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
             {/* <div className="fields w-full flex bg-[#000814] border-white rounded-2xl  shadow-[0_10px_20px_rgba(255,255,255,0.6)] sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4 max-[350px]:p-4 p-3 flex-col gap-3"> */}
@@ -370,7 +370,7 @@ const RegisterOpen = () => {
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
                 placeholder="Enter Phone Number"
-                className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                className=" h-[54px] w-full bg-[#161D29]   text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
 
@@ -403,28 +403,11 @@ const RegisterOpen = () => {
             </div>
 
             <div className="f sm:flex gap-3">
-              <div className="transactionID sm:w-1/2 w-full">
-                <input
-                  type="transactionID"
-                  name="transactionID"
-                  value={formData.transactionID}
-                  onChange={handleInputChange}
-                  placeholder="Enter Transaction ID"
-                  className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
-                />
-              </div>
-              {/* <div className="flex justify-center sm:w-1/2 mb-5 sm:mb-0  w-full   items-center">
-                <motion.button
-                  whileHover={{ scale: 1, boxShadow: "0px 0px 10px #8a2be2" }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-violet-600 hover:bg-violet-800 lg:h-[54px]   w-full transition-all text-white px-6 py-3 rounded-md text-xl font-semibold border border-violet-500  shadow-md"
-                >
-                Pay ₹100
-                </motion.button>
-              </div> */}
+             
+            
               <div
                 onClick={() => setQRCode(true)}
-                className="transactionID cursor-pointer w-full mt-4 sm:mt-0 sm:w-1/2"
+                className="transactionID cursor-pointer w-full   sm:w-1/2"
               >
                 <span
                   type="transactionID"
@@ -436,6 +419,16 @@ const RegisterOpen = () => {
                 >
                   Pay ₹100
                 </span>
+              </div>
+              <div className="transactionID mt-4 sm:mt-0 sm:w-1/2 w-full">
+                <input
+                  type="transactionID"
+                  name="transactionID"
+                  value={formData.transactionID}
+                  onChange={handleInputChange}
+                  placeholder="Enter Transaction ID"
+                  className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                />
               </div>
             </div>
 
@@ -475,9 +468,9 @@ const RegisterOpen = () => {
                   />
                   <p
                     onClick={handleScreenshot}
-                    className="text-indigo-800 mt-1 italic cursor-pointer font-bold"
+                    className="text-indigo-800 mt-1 italic underline cursor-pointer font-bold"
                   >
-                    Click here to take Screenshot of QR code
+                     Download QR Code
                   </p>
 
                   <div className="p text-lg text-black mt-4 mb-4 font-bold">
