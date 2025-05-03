@@ -15,7 +15,7 @@ import Confetti from "./ui/confetti";
 const RegisterOpen = () => {
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
-  const [QRCode , setQRCode] = useState(false)
+  const [QRCode, setQRCode] = useState(false);
 
   // const [fileName, setFileName] = useState("Payment Screenshot");
 
@@ -43,7 +43,7 @@ const RegisterOpen = () => {
     gender: "",
     residence: "",
     recaptchaValue: "",
-    transactionID : ""
+    transactionID: "",
     // file: null,
   });
 
@@ -95,65 +95,60 @@ const RegisterOpen = () => {
 
       toast.success(response?.data?.message);
       clearField();
-    } 
-    // catch (error) {
-    //   console.log(error);
-    //   const errorMessage =
-    //     error?.response?.data?.message || "An unexpected error occurred.";
-    //   toast.error(errorMessage);
-    // }
-    // catch (error) {
-    //   console.log(error);
-    //   if (error?.response?.status === 429) {
-    //     toast.error("Too many requests. Try after 15 minutes");
-    //   } else if(error?.response?.status === 400) {
-    //     const errorMessage = error?.response?.data?.message;
-    //     toast.error(errorMessage);
-    //   }
-    //   else if(error?.response?.status === 500){
-    //     const errorMessage = error?.response?.data?.message;
-    //     toast.error(errorMessage);
-    //   }
-    //   else {
-    //    toast.error("An unexpected error occurred")
-    //   }
-    // }
-    catch (error) {
+    } catch (error) {
+      // catch (error) {
+      //   console.log(error);
+      //   const errorMessage =
+      //     error?.response?.data?.message || "An unexpected error occurred.";
+      //   toast.error(errorMessage);
+      // }
+      // catch (error) {
+      //   console.log(error);
+      //   if (error?.response?.status === 429) {
+      //     toast.error("Too many requests. Try after 15 minutes");
+      //   } else if(error?.response?.status === 400) {
+      //     const errorMessage = error?.response?.data?.message;
+      //     toast.error(errorMessage);
+      //   }
+      //   else if(error?.response?.status === 500){
+      //     const errorMessage = error?.response?.data?.message;
+      //     toast.error(errorMessage);
+      //   }
+      //   else {
+      //    toast.error("An unexpected error occurred")
+      //   }
+      // }
       // console.log(error);
-    
+
       if (error?.response) {
-        const errorMessage = error?.response?.data?.message || "An unexpected error occurred";
-    
+        const errorMessage =
+          error?.response?.data?.message || "An unexpected error occurred";
+
         if (error?.response?.status === 429) {
           toast.error("Too many requests. Try again after 15 minutes");
         } else if (error?.response?.status === 400) {
-          toast.error(errorMessage); 
+          toast.error(errorMessage);
         } else if (error?.response?.status === 500) {
-          toast.error(errorMessage); 
+          toast.error(errorMessage);
         } else {
-          toast.error(errorMessage); 
+          toast.error(errorMessage);
         }
       } else {
         toast.error("An unexpected error occurred. Please try again");
       }
-    }
-    
-    
-     finally {
+    } finally {
       setLoading(false);
     }
   };
 
   const valid = () => {
-   
-//     const nameParts = formData.name.trim().split(" ");
-// if(formData.name){
-// if (nameParts.length === 1) {
-//   toast.error("Last name is required after space");
-//   return false;
-// }
-// }
-
+    //     const nameParts = formData.name.trim().split(" ");
+    // if(formData.name){
+    // if (nameParts.length === 1) {
+    //   toast.error("Last name is required after space");
+    //   return false;
+    // }
+    // }
 
     if (formData.name) {
       if (!/^[a-zA-Z\s]*$/i.test(formData.name)) {
@@ -162,22 +157,28 @@ const RegisterOpen = () => {
       }
     }
 
-    if(formData.studentNumber){
-      if(!(formData.studentNumber.startsWith('24') && (formData.studentNumber.length === 7 || formData.studentNumber.length === 8))){
+    if (formData.studentNumber) {
+      if (
+        !(
+          formData.studentNumber.startsWith("24") &&
+          (formData.studentNumber.length === 7 ||
+            formData.studentNumber.length === 8)
+        )
+      ) {
         toast.error("Invalid Student Number");
         return false;
       }
     }
 
-   
     if (formData.email && formData.studentNumber) {
-      const emailRegex = new RegExp(`^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`);
+      const emailRegex = new RegExp(
+        `^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`
+      );
       if (!emailRegex.test(formData.email)) {
         toast.error("Invalid Student Email");
         return false;
       }
     }
-    
 
     // if (formData.studentNumber) {
     //   if (
@@ -189,8 +190,6 @@ const RegisterOpen = () => {
     //     return false;
     //   }
     // }
-   
-    
 
     if (formData.phoneNumber) {
       if (!/^[6-9]\d{9}$/.test(formData.phoneNumber)) {
@@ -198,15 +197,16 @@ const RegisterOpen = () => {
         return false;
       }
     }
-   
-    
-    if(formData.transactionID){
-     if(formData.transactionID.length < 5 || formData.transactionID.length > 25){
-      toast.error("Invalid Transaction ID");
-      return false;
+
+    if (formData.transactionID) {
+      if (
+        formData.transactionID.length < 5 ||
+        formData.transactionID.length > 25
+      ) {
+        toast.error("Invalid Transaction ID");
+        return false;
+      }
     }
-  }
-  
 
     const code = formData.studentNumber.slice(2, 4);
     const expectedBranch = branchMap[code];
@@ -231,36 +231,30 @@ const RegisterOpen = () => {
       gender: "",
       residence: "",
       recaptchaValue: "",
-      transactionID : ""
+      transactionID: "",
       // file: null,
     });
-    
 
     // setFileName("payment Screenshot");
     if (reset.current) {
       reset.current.reset();
     }
   };
-  const captureRef = useRef()
- const handleScreenshot = () => {
- 
-  html2canvas(captureRef.current).then(
-    canvas => {
-      const link = document.createElement('a');
-      link.download = 'QRcode.png'
-      link.href = canvas.toDataURL()
-      link.click()
-    }
-  )
-
- }
-
+  const captureRef = useRef();
+  const handleScreenshot = () => {
+    html2canvas(captureRef.current).then((canvas) => {
+      const link = document.createElement("a");
+      link.download = "QRcode.png";
+      link.href = canvas.toDataURL();
+      link.click();
+    });
+  };
 
   return (
     <div className="signup z-50  overflow-hidden pb-10   w-full  bg-black gap-6 sm:px-5 p-1.5 flex text-white justify-center items-center py-10 sm:flex-row flex-col">
       {/* <Meteors/>
       <Meteors/> */}
-   
+
       <Toaster />
       {/* <div className="left md:w-[800px]  bg-green-400 w-full overflow-x-hidden  sm:px-14"> */}
       <div className="left sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">
@@ -280,7 +274,6 @@ const RegisterOpen = () => {
               </p>
             </div>
 
-            
             <div className="name">
               <input
                 type="text"
@@ -292,7 +285,6 @@ const RegisterOpen = () => {
               />
             </div>
 
-             
             <div className="email">
               <input
                 type="email"
@@ -304,7 +296,6 @@ const RegisterOpen = () => {
               />
             </div>
 
-          
             <div className="studentNumber">
               <input
                 type="number"
@@ -398,7 +389,6 @@ const RegisterOpen = () => {
                 <option value="Female">Female</option>
               </select>
             </div>
-           
 
             {/* residence */}
             <div className="residence">
@@ -414,18 +404,18 @@ const RegisterOpen = () => {
               </select>
             </div>
 
-              <div className="f sm:flex gap-3">
-            <div className="transactionID sm:w-1/2 w-full">
-              <input
-                type="transactionID"
-                name="transactionID"
-                value={formData.transactionID}
-                onChange={handleInputChange}
-                placeholder="Enter Transaction ID"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
-              />
-            </div>
-            {/* <div className="flex justify-center sm:w-1/2 mb-5 sm:mb-0  w-full   items-center">
+            <div className="f sm:flex gap-3">
+              <div className="transactionID sm:w-1/2 w-full">
+                <input
+                  type="transactionID"
+                  name="transactionID"
+                  value={formData.transactionID}
+                  onChange={handleInputChange}
+                  placeholder="Enter Transaction ID"
+                  className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                />
+              </div>
+              {/* <div className="flex justify-center sm:w-1/2 mb-5 sm:mb-0  w-full   items-center">
                 <motion.button
                   whileHover={{ scale: 1, boxShadow: "0px 0px 10px #8a2be2" }}
                   transition={{ duration: 0.3 }}
@@ -434,78 +424,78 @@ const RegisterOpen = () => {
                 Pay ₹100
                 </motion.button>
               </div> */}
-              <div onClick={() => setQRCode(true)} className="transactionID cursor-pointer w-full mt-4 sm:mt-0 sm:w-1/2">
-              <span
-                type="transactionID"
-                name="transactionID"
-                value={formData.transactionID}
-                onChange={handleInputChange}
-                placeholder="Pay ₹100"
-                className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+              <div
+                onClick={() => setQRCode(true)}
+                className="transactionID cursor-pointer w-full mt-4 sm:mt-0 sm:w-1/2"
               >
-                Pay ₹100
-              </span>
-            </div>
-              
+                <span
+                  type="transactionID"
+                  name="transactionID"
+                  value={formData.transactionID}
+                  onChange={handleInputChange}
+                  placeholder="Pay ₹100"
+                  className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                >
+                  Pay ₹100
+                </span>
               </div>
+            </div>
 
-          
+            {QRCode && (
+              // <div className=" flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
+              <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%]  w-full backdrop-blur-sm">
+                <div className="bg-white p-8 rounded-2xl w-[88vw] sm:w-[500px] shadow-2xl  text-center relative">
+                  {/* Close Button */}
+                  <button
+                    className="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
+                    onClick={() => setQRCode(false)}
+                    aria-label="Close"
+                  >
+                    <ImCross />
+                  </button>
 
-      {QRCode && (
-  // <div className=" flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
- <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%]  w-full backdrop-blur-sm"> 
-    <div className="bg-white p-8 rounded-2xl w-[88vw] sm:w-[500px] shadow-2xl  text-center relative">
-      
-      {/* Close Button */}
-      <button
-        className="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
-        onClick={() => setQRCode(false)}
-        aria-label="Close"
-      >
-        <ImCross />
-      </button>
+                  <h3 className="text-black mb-4 text-xl sm:text-3xl font-bold">
+                    Proceed to Payment
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-xs sm:text-sm">
+                    Please scan the QR code below using any UPI app to pay ₹100.
+                    After the payment is completed, enter your Transaction ID in
+                    the registration form to complete the process.
+                  </p>
 
-    
-      <h3 className="text-black mb-4 text-xl sm:text-3xl font-bold">Proceed to Payment</h3>
-      <p className="text-gray-600 mb-6 text-xs sm:text-sm">
-        Please scan the QR code below using any UPI app to pay ₹100. After the payment is completed, enter your Transaction ID in the registration form to complete the process.
-      </p>
+                  <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
+                    <p>1. Scan the QR code</p>
+                    <p>2. Pay ₹100 as the registration fee</p>
+                    <p>3. Enter the Transaction ID in the form</p>
+                  </div>
 
-    
-      <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
-        <p>1. Scan the QR code</p>
-        <p>2. Pay ₹100 as the registration fee</p>
-        <p>3. Enter the Transaction ID in the form</p>
+                  <img
+                    ref={captureRef}
+                    src="QR.jpg"
+                    alt="QR Code"
+                    className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
+                  />
+                  <p
+                    onClick={handleScreenshot}
+                    className="text-indigo-800 mt-1 italic cursor-pointer font-bold"
+                  >
+                    Click here to take Screenshot of QR code
+                  </p>
 
-      </div>
-    
-      <img
-      ref={captureRef}
-        src="QR.jpg"
-        alt="QR Code"
-        className="mx-auto h-56 w-auto object-contain rounded-lg border border-gray-300"
-      />
-      <p onClick={handleScreenshot} className="text-indigo-500 mt-1 italic cursor-pointer font-bold">Click here to take Screenshot of QR code</p>
+                  <div className="p text-lg text-black mt-4 mb-4 font-bold">
+                    Or
+                  </div>
+                  
 
-      {/* <div className="p text-lg text-black mt-4 mb-4 font-bold">Or</div> */}
-      <hr/>
-
-      {/* <div className="p text-blue-500 text-md sm:text-xl font-semibold italic">
-    <a href="upi://pay?pa=8433428790@ptsbi&pn=Manoj%20Samanta&am=100&cu=INR&tn=Payment%20to%20Manoj
-">👉 Pay ₹100(only for mobile users) </a>
-</div> */}
-    </div>  
-    
-    
-
-  </div>
-)}
-
-          
+                  <div className="p text-black text-md sm:text-xl font-semibold">
+                   Go for Offline Payment (no need to add transactionID)
+                  </div>
+                </div>
+              </div>
+            )}
 
             <div className="pa w-full flex lg:flex-row flex-col gap-4">
-
-                {/* <div className="sm:w-1/2 w-full">
+              {/* <div className="sm:w-1/2 w-full">
                 <input
                   type="file"
                   id="fileInput"
@@ -560,13 +550,10 @@ const RegisterOpen = () => {
                   )}
                 </motion.button>
               </div>
-
-           
             </div>
 
-             {/* //button */}
+            {/* //button */}
           </div>
-      
         </form>
       </div>
     </div>
