@@ -470,7 +470,7 @@ const RegisterOpen = () => {
 
     
       <div className="flex flex-col gap-2 text-black text-sm sm:text-base font-medium mb-6">
-        <p>1. Scan the QR code or using below link</p>
+        <p>1. Scan the QR code</p>
         <p>2. Pay ₹100 as the registration fee</p>
         <p>3. Enter the Transaction ID in the form</p>
 
