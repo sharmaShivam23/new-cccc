@@ -22,6 +22,7 @@ import { Contact } from "./components/Contact";
 import { Ereacticons } from "./components/Ereacticons";
 import {ECloud} from "./components/ECloud";
 import Open from "./components/ui/Open";
+import Success from "./components/Success";
 
 const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="/ECloud" element={<ECloud />} />
             <Route path="/Nimbus" element={<Enimbus />} />
             <Route path="/Techbuzz" element={<Techbuzz />} />
+          
           </Routes>
           <Footer />
         </>

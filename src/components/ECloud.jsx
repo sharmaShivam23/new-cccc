@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react'
 import dev from '../EventsImg/dev.png';
 import Slider from 'react-slick';
