@@ -85,7 +85,7 @@ const RegisterOpen = () => {
 
       const response = await axios.post(
         // "https://register-backend-rouge.vercel.app/api/register/signUp",
-        "https://registerbackend-4dz1.onrender.com/api/register/signup",
+        "https://registerbackend-4dz1.onrender.com/api/register/signUp",
         formDataToSend,
         {
           withCredentials: true,
