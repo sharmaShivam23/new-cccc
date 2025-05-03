@@ -252,7 +252,7 @@ const RegisterOpen = () => {
       {!success ? (
         <>
       <div className="left lg:w-5/12 flex md:hidden lg:flex w-full h-full  sm:px-14">
-        <img src="/nimbus.svg" className="object-cover h-full w-full" alt="" />
+        <img src="/nimbus.png" className="object-cover h-full w-full" alt="" />
       </div>
 
       <div className="right sm:w-[800px]  w-full overflow-x-hidden  sm:px-14">

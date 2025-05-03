@@ -28,7 +28,7 @@ const Success = () => {
       <div className="name text-3xl m-1 font-bold font-jersey">
         Nimbus 2.0
       </div>
-      <div className="p text-center mt-2 text-lg sm:text-xl font-semibold">Saves the Date: <br/> 13th-14th May 2025</div>
+      <div className="p text-center mt-2 text-lg sm:text-xl font-semibold">Save the Dates: <br/> 13th-14th May 2025</div>
       <div className="p text-sm mt-2 text-center  text-[#2D2D2D]">Get ready to stand out from the  crowd and level up your <br/>  skills in  advance technologies.</div>
     </div>
     </div>
