@@ -11,10 +11,12 @@ import Particles from "./ui/particles";
 import Meteors from "./ui/meteors";
 import { ImCross } from "react-icons/im";
 import html2canvas from "html2canvas";
+import Confetti from "./ui/confetti";
 const RegisterOpen = () => {
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
   const [QRCode , setQRCode] = useState(false)
+
   // const [fileName, setFileName] = useState("Payment Screenshot");
 
   const branchMap = {
@@ -232,6 +234,7 @@ const RegisterOpen = () => {
       transactionID : ""
       // file: null,
     });
+    
 
     // setFileName("payment Screenshot");
     if (reset.current) {
@@ -296,7 +299,7 @@ const RegisterOpen = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="Enter College Email"
+                placeholder="Enter College Email Id"
                 className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
               />
             </div>
