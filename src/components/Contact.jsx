@@ -60,13 +60,14 @@ const Form = () => {
       recaptchaResponse
     
     };
-    console.log(formdata);
+    // console.log(formdata);
 
     if (valid()) {
       setLoading(true);
       try {
         const response = await axios.post(
-          "https://website-9egw.onrender.com/api/contact",
+          "https://website-seven-khaki-57.vercel.app/api/contact",
+          // "https://website-9egw.onrender.com/api/contact",
           formdata,
           {
             headers: {
@@ -74,57 +75,29 @@ const Form = () => {
             },
           }
         );
-        console.log(response);
+        // console.log(response);
         
         toast.success(response.data.message);
         clear();
-      } catch (error) {
-        console.log(error);
-         
-        if (error.message === "Network Error") {
-          toast.error(error.message);
+      } 
+     
+      catch (error) {
+          // console.log(error);
+          if (error?.response?.status === 429) {
+            toast.error("Too many requests. Try after 15 minutes");
+          } else if(error?.response?.status === 400) {
+            const errorMessage = error?.response?.data?.message;
+            toast.error(errorMessage);
+          }
+          else if(error?.response?.status === 500){
+            const errorMessage = error?.response?.data?.message;
+            toast.error(errorMessage);
+          }
+          else {
+           toast.error("An unexpected error occurred! try again")
+          }
         }
-        // console.log(error.response.data.error);
-        if(error.response.data.message === "reCAPTCHA verification failed. Please try again.") {
-          toast.error("reCAPTCHA verification failed.");
-        }
-        if (
-          error.response.data.error ===
-          "Contact validation failed:  : name: Path ` : name` is required., email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
-        ) {
-          toast.error("All details are  required");
-        }
-        if (
-          error.response.data.error ===
-          "Contact validation failed: email: Path `email` is required., phone: Path `phone` is required., message: Path `message` is required."
-        ) {
-          toast.error("Email , phone number and message are required");
-        } else if (
-          error.response.data.error ===
-          "Contact validation failed: phone: Path `phone` is required., message: Path `message` is required."
-        ) {
-          toast.error("phone number and message are required");
-        } else if (
-          error.response.data.error ===
-          "Contact validation failed:  : name: Path ` : name` is required."
-        ) {
-        } else if (
-          error.response.data.error ===
-          "Contact validation failed:  : name: Path ` : name` is required."
-        ) {
-          toast.error(" : name is required");
-        } else if (
-          error.response.data.error ===
-          "Contact validation failed: email: Path `email` is required."
-        ) {
-          toast.error("Email is required");
-        } else if (
-          error.response.data.error ===
-          "Contact validation failed: message: Path `message` is required."
-        ) {
-          toast.error("Message is required");
-        }
-      } finally {
+       finally {
         setLoading(false);
       }
     }
@@ -133,7 +106,7 @@ const Form = () => {
   function valid() {
     if (name) {
       if (/\d/.test(name)) {
-        toast.error(" : name can't contain numbers.");
+        toast.error("name can't contain numbers.");
         return false;
       }
     }

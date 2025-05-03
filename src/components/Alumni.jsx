@@ -20,18 +20,18 @@ export function Alumni() {
 
 const Shufle = () => {
   const [images, setImages] = useState([
-    { id: 1, src: download, text: "Image 5" },
-    { id: 2, src: download , text: "Image 5" },
-    { id: 3, src: download, text: "hello" },
-    { id: 4, src: download, text: "Image 4" },
-    { id: 5, src:download, text: "Image 5" },
-    { id: 6, src: download, text: "Image 6" },
-    { id: 7, src: download, text: "Image 7" },
-    { id: 8, src: download, text: "Image 8" },
-    { id: 9, src: download, text: "Image 9" },
-    { id: 10, src: download, text: "Image 9" },
-    { id: 11, src: download, text: "Image 9" },
-    { id: 12, src: download, text: "Image 9" },
+    { id: 1, src: "/A1.png", text: "Shivangi" },
+    { id: 2, src: "/a2.jpg" , text: "Harsh" },
+    { id: 3, src: "/a3.jpg", text: "Rahul" },
+    { id: 4, src: "a4.jpg", text: "Abhishek" },
+    { id: 5, src: "/a5.jpg", text: "Shivam" },
+    { id: 6, src: "/a6.jpg", text: "Shreya" },
+    { id: 7, src: "/abhishek.jpg", text: "Abhishek" },
+    { id: 8, src: "/ashna.jpg", text: "Ashna" },
+    { id: 9, src: "/meenakshi.ac.jpg", text: "Meenakshi" },
+    { id: 10, src: "/money.jpg", text: "Money" },
+    { id: 11, src: "satyam.png", text: "Satyam" },
+    { id: 12, src: "shrey.jpg", text: "Shrey" },
     // { id: 13, src: download, text: "Image 9" },
     // { id: 14, src: download, text: "Image 9" },
     // { id: 15, src: download, text: "Image 9" },
@@ -55,7 +55,7 @@ const Shufle = () => {
           />
 
           {image.text && (
-            <p className="absolute bottom-0 left-0 right-0 w-20 sm:w-full text-center text-white sm:text-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 p-2 group-hover:animate-su">
+            <p className="absolute bottom-0 left-0  right-0 w-full sm:w-full text-center text-white sm:text-xl text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 p-2 group-hover:animate-su">
               {image.text}
             </p>
           )}
@@ -89,7 +89,7 @@ const Text = () => {
           startOnView={true}
           className="text-white sm:mt-4 mt-7 text-lg sm:text-3xl font-bold"
         >
-          {"65+ Hackathon Winners"}
+          {"10+ Hackathon Winners"}
         </TypingAnimation>
         <TypingAnimation
           duration={200}
@@ -113,7 +113,7 @@ const Text = () => {
           startOnView={true}
           className="text-white sm:mt-7 mt-7 text-lg sm:text-3xl font-bold"
         >
-          {"5+ Winning"}
+          {"5+ SIH Winners"}
         </TypingAnimation>
       </div>
       <div className="mt-7 sm:mt-10 mb-14 ml-3">
