@@ -111,7 +111,7 @@ const RegisterOpen = () => {
       toast.success(response?.data?.message);
       clearField();
     } catch (error) {
-console.log(error);
+// console.log(error);
 
       if (error?.response) {
         const errorMessage =

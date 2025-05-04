@@ -9,7 +9,7 @@ const Success = () => {
     <div className='flex flex-col'>
     {/* <Confetti className="absolute top-0"/> */}
     <div className = "absolute top-0 left-0 w-full flex justify-center items-center">
-         <Confetti   particleCount= {1000} spread= {500}></Confetti>
+         <Confetti  spread= {500}></Confetti>
          </div>
     <div className='h-auto flex flex-col text-black p-5 rounded-2xl w-[400px] max-[400px]:w-[300px] max-[300px]:w-[200px] text-xl font-poppins justify-center items-center  sm:w-[600px] bg-white'>
     <div className="p sm:text-3xl text-xl font-bold">{name}</div>
