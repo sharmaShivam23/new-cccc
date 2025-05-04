@@ -111,7 +111,7 @@ const RegisterOpen = () => {
       toast.success(response?.data?.message);
       clearField();
     } catch (error) {
-// console.log(error);
+console.log(error);
 
       if (error?.response) {
         const errorMessage =
@@ -432,8 +432,8 @@ const RegisterOpen = () => {
 
             {QRCode && (
               // <div className=" flex items-center justify-center bg-black bg-opacity-70 backdrop-blur-sm">
-              <div className="absolute inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0 mt-20 -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%]  w-full backdrop-blur-sm">
-                <div className="bg-white p-8 rounded-2xl w-[88vw] sm:w-[500px] shadow-2xl  text-center relative">
+              <div className="absolute  inset-0 z-50 pb-8 -translate-x-1/2 sm:mt-0  -translate-y-1/2 top-[50%] left-[50%] flex items-center justify-center bg-black bg-opacity-70 h-[100%]  w-full backdrop-blur-sm">
+                <div className="bg-white p-8 mt-[800px] sm:mt-0 rounded-2xl w-[88vw] sm:w-[500px] shadow-2xl  text-center relative">
                   {/* Close Button */}
                   <button
                     className="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
