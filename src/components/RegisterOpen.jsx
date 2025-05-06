@@ -189,7 +189,7 @@ const RegisterOpen = () => {
         return false;
       }
     }
-    
+
     if (!formData.transactionID) {
       toast.error("Transaction ID is required");
       return false;
@@ -405,21 +405,6 @@ const RegisterOpen = () => {
                 </div>
 
                 <div className="f sm:flex gap-3">
-                  <div
-                    onClick={() => setQRCode(true)}
-                    className="transactionID cursor-pointer w-full   sm:w-1/2"
-                  >
-                    <span
-                      type="transactionID"
-                      name="transactionID"
-                      value={formData.transactionID}
-                      onChange={handleInputChange}
-                      placeholder="Pay ₹100"
-                      className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
-                    >
-                      Pay ₹100
-                    </span>
-                  </div>
                   <div className="transactionID mt-4 sm:mt-0 sm:w-1/2 w-full">
                     <input
                       type="transactionID"
@@ -427,8 +412,23 @@ const RegisterOpen = () => {
                       value={formData.transactionID}
                       onChange={handleInputChange}
                       placeholder="Enter Transaction ID"
-                      className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                      className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                     />
+                  </div>
+                  <div
+                    onClick={() => setQRCode(true)}
+                    className="transactionID cursor-pointer w-full my-auto  sm:w-1/2"
+                  >
+                    <span
+                      type="transactionID"
+                      name="transactionID"
+                      value={formData.transactionID}
+                      onChange={handleInputChange}
+                      placeholder="Pay ₹100"
+                      className=" h-[46px] w-full bg-violet-500 hover:bg-violet-800 flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                    >
+                      Pay ₹100
+                    </span>
                   </div>
                 </div>
 
