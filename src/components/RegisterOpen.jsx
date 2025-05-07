@@ -199,15 +199,15 @@ const RegisterOpen = () => {
       }
     }
 
-    // if (formData.email && formData.studentNumber) {
-    //   const emailRegex = new RegExp(
-    //     `^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`
-    //   );
-    //   if (!emailRegex.test(formData.email)) {
-    //     toast.error("Invalid Student Email");
-    //     return false;
-    //   }
-    // }
+    if (formData.email && formData.studentNumber) {
+      const emailRegex = new RegExp(
+        `^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`
+      );
+      if (!emailRegex.test(formData.email)) {
+        toast.error("Invalid Student Email");
+        return false;
+      }
+    }
 
     // if (formData.studentNumber) {
     //   if (
@@ -250,6 +250,10 @@ const RegisterOpen = () => {
   };
 
   const handleVerify = () => {
+    if(!formData.email){
+      toast.error("Please enter your email id to verify");
+      return false
+    }
     setShowEmail(true);
     VerifyOtp();
   };
