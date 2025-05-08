@@ -560,7 +560,7 @@ const RegisterOpen = () => {
                       value={formData.transactionID}
                       onChange={handleInputChange}
                       placeholder="Pay ₹100"
-                      className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                      className=" h-[54px] w-full bg-violet-700 hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                     >
                       Pay ₹100
                     </span>
