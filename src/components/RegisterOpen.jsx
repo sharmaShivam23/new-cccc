@@ -254,6 +254,7 @@ const RegisterOpen = () => {
       toast.error("Please enter your email id to verify");
       return false
     }
+    if (!valid()) return;
     setShowEmail(true);
     VerifyOtp();
   };
@@ -323,6 +324,17 @@ const RegisterOpen = () => {
                     onChange={handleInputChange}
                     placeholder="Enter Name"
                     className=" h-[54px] w-full bg-[#161D29]  text-[#AFB2BF] font-[600] hover:bg-[#1f2738] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                  />
+                </div>
+
+                <div className="studentNumber">
+                  <input
+                    type="number"
+                    name="studentNumber"
+                    value={formData.studentNumber}
+                    onChange={handleInputChange}
+                    placeholder="Enter Student Number"
+                    className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                   />
                 </div>
 
@@ -438,16 +450,7 @@ const RegisterOpen = () => {
                   </div>
                 )}
 
-                <div className="studentNumber">
-                  <input
-                    type="number"
-                    name="studentNumber"
-                    value={formData.studentNumber}
-                    onChange={handleInputChange}
-                    placeholder="Enter Student Number"
-                    className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738]  text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
-                  />
-                </div>
+              
 
                 {/* branch , section */}
                 <div className="two flex-col sm:flex-row flex gap-4 w-full">
@@ -557,7 +560,7 @@ const RegisterOpen = () => {
                       value={formData.transactionID}
                       onChange={handleInputChange}
                       placeholder="Pay ₹100"
-                      className=" h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
+                      className=" h-[54px] w-full bg-violet-700 hover:bg-[#1f2738] flex justify-start items-center text-white font-bold placeholder:font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                     >
                       Pay ₹100
                     </span>
