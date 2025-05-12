@@ -11,8 +11,8 @@ export const Register = () => {
     },[])
   return (
     <div className='overflow-hidden'>
-      {/* <RegisterClose/> */}
-      <RegisterOpen/>
+      <RegisterClose/>
+      {/* <RegisterOpen/> */}
     </div>
   )
 }
