@@ -29,10 +29,12 @@
     "react-router-dom": "^7.0.2",
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.2",
+    "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.15",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
