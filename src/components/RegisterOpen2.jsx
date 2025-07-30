@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState, useRef } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -11,6 +6,7 @@ import { Toaster, toast } from "react-hot-toast";
 import { motion } from "framer-motion";
 import Success from "./Success";
 import { useEffect } from "react";
+import ParticlesBackground from "./ParticlesBg";
 
 const RegisterOpen2 = () => {
   const reset = useRef("");
@@ -118,76 +114,80 @@ const RegisterOpen2 = () => {
       return false;
     }
 
-
     return true;
   };
 
   function getCookieValue(name) {
-    const match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    const match = document.cookie.match(
+      new RegExp("(^| )" + name + "=([^;]+)")
+    );
     if (match) return match[2];
   }
-  
 
   useEffect(() => {
     const getCSRFToken = async () => {
       try {
+        // await axios.get("http://localhost:5000/api/get-csrf-token",
         await axios.get("https://drive-zzhh.onrender.com/api/get-csrf-token", {
-          withCredentials: true
+          withCredentials: true,
         });
         console.log("CSRF token fetched & stored in cookie");
       } catch (error) {
-        console.error("Error fetching CSRF token:", error);
-        // Don't show error to user as this is not critical for form submission
+        toast.error("Error fetching CSRF token:", error);
       }
     };
 
     getCSRFToken();
   }, []);
 
-  
-
   const handleForm = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setLoading(true);
-    
+
     try {
       const formDataToSend = new FormData();
       Object.entries(formData).forEach(([key, value]) =>
         formDataToSend.append(key, value)
       );
-      
+
       const xsrfToken = getCookieValue("XSRF-TOKEN");
-      
+
       const headers = {
         withCredentials: true,
       };
-      
+
       // Only add CSRF token if it exists
       if (xsrfToken) {
         headers.headers = {
-          "X-XSRF-TOKEN": xsrfToken
+          "X-XSRF-TOKEN": xsrfToken,
         };
       }
-      
+
       const response = await axios.post(
+        // "http://localhost:5000/api/register/Drive",
         "https://drive-zzhh.onrender.com/api/register/Drive",
         formDataToSend,
-        headers
+        {
+          withCredentials: true,
+          headers: {
+            "X-XSRF-TOKEN": xsrfToken,
+          },
+        }
       );
-      
+
       if (response?.data?.success === true) {
         setSuccess(true);
         localStorage.setItem("registeredName", formData.name);
       }
-      
+
       toast.success(response?.data?.message);
       clearForm();
     } catch (error) {
       console.error("Registration error:", error);
-      
+
       if (error?.response) {
         const errorMessage =
           error?.response?.data?.message || "An unexpected error occurred";
@@ -214,9 +214,9 @@ const RegisterOpen2 = () => {
       toast.error("Please enter your email id to verify");
       return;
     }
-    
+
     if (!validateForm()) return;
-    
+
     setShowEmail(true);
     // VerifyOtp function would be implemented here
   };
@@ -236,8 +236,45 @@ const RegisterOpen2 = () => {
   };
 
   return (
-    <div className={`signup z-50 ${!showEmail ? "bg-black bg-opacity-70 backdrop-blur-sm" : ""}  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col`}>
-      <Toaster />
+    <div
+      className={`signup z-50 ${
+        !showEmail ? "bg-black bg-opacity-70 backdrop-blur-sm" : ""
+      }  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col`}
+    >
+      {/* <Toaster className = "fixed top-20" /> */}
+      <ParticlesBackground />
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: "rgba(255, 255, 255, 0.25)",
+            color: "white",
+            border: "2px solid #8b5cf6",
+            padding: "16px 24px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            borderRadius: "12px",
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            zIndex: 9999,
+          },
+          success: {
+            iconTheme: {
+              primary: "#10b981",
+              secondary: "#ffffff",
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: "#ef4444",
+              secondary: "#ffffff",
+            },
+          },
+        }}
+      />
+
       {!success ? (
         <>
           <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
@@ -292,7 +329,6 @@ const RegisterOpen2 = () => {
                     className="h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 pr-14 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                   />
                 </div>
-
 
                 {/* branch , section */}
                 <div className="two flex-col sm:flex-row flex gap-4 w-full">
@@ -415,14 +451,16 @@ const RegisterOpen2 = () => {
                       }}
                       disabled={loading}
                       transition={{ duration: 0.3 }}
-                      className={`${loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} bg-violet-600 flex justify-center items-center hover:bg-violet-800 lg:h-[55px]   w-full transition-all text-white px-6 py-3 rounded-md text-xl font-semibold border border-violet-500  shadow-md`}
+                      className={`${
+                        loading
+                          ? "opacity-50 cursor-not-allowed"
+                          : "cursor-pointer"
+                      } bg-violet-600 flex justify-center items-center hover:bg-violet-800 lg:h-[55px]   w-full transition-all text-white px-6 py-3 rounded-md text-xl font-semibold border border-violet-500  shadow-md`}
                     >
                       {loading ? "Registering..." : "Register"}
                     </motion.div>
                   </div>
                 </div>
-
-                
               </div>
             </form>
           </div>
