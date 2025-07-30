@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import RegisterClose from './RegisterClose'
 import RegisterOpen from './RegisterOpen'
+import RegisterOpen2 from './RegisterOpen2'
 
 export const Register = () => {
    useEffect(() => {
@@ -11,8 +12,8 @@ export const Register = () => {
     },[])
   return (
     <div className='overflow-hidden'>
-      <RegisterClose/>
-      {/* <RegisterOpen/> */}
+      {/* <RegisterClose/> */}
+      <RegisterOpen2/>
     </div>
   )
 }

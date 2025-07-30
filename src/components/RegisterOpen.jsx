@@ -852,6 +852,11 @@ const RegisterOpen = () => {
     // }
     // }
 
+    if(!formData.name || !formData.studentNumber || !formData.email || !formData.phoneNumber || !formData.transactionID){
+      toast.error("Please fill all the fields");
+      return false
+    }
+
     if (formData.name) {
       if (!/^[a-zA-Z\s]*$/i.test(formData.name)) {
         toast.error("Invalid Student Name");
@@ -1043,14 +1048,7 @@ const RegisterOpen = () => {
                         in the field below to proceed. You have 5 minutes to enter a otp.
                       </div>
 
-                      {/* <input
-                        type="number"
-                        name="otp"
-                        value={formData.otp}
-                        onChange={handleInputChange}
-                        placeholder="Enter OTP here"
-                        className="w-full h-[50px] mt-8 px-4 rounded-xl bg-[#161D29] hover:bg-[#1f2738] text-[#AFB2BF] placeholder:text-[#6c7383] placeholder:font-semibold font-semibold border border-[#2c3344] focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
-                      /> */}
+                     
                       <div className="otp flex  justify-center items-center gap-2 mt-4">
                         <OtpInput
                           value={formData.otp}
