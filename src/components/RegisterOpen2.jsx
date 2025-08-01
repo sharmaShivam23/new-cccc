@@ -44,9 +44,7 @@ const RegisterOpen2 = () => {
     recaptchaValue: "",
   });
 
-  const handleRecaptchaChange = (token) => {
-    setFormData((prev) => ({ ...prev, recaptchaValue: token }));
-  };
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -128,63 +126,33 @@ const RegisterOpen2 = () => {
     return true;
   };
 
-  // // Get CSRF token on component mount
-  // useEffect(() => {
-  //   const getCSRFToken = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://localhost:5000/api/get-csrf-token",
-  //         // "https://drive-zzhh.onrender.com/api/get-csrf-token",
-  //         {
-  //           withCredentials: true,
-  //         }
-  //       );
-
-  //       if (response.data.csrfToken) {
-  //         setCsrfToken(response.data.csrfToken);
-  //       }
-
-  //       console.log("CSRF token fetched successfully");
-  //     } catch (error) {
-  //       console.error("Error fetching CSRF token:", error);
-  //       toast.error("Failed to initialize security token");
-  //     }
-  //   };
-
-  //   getCSRFToken();
-  // }, []);
-
-  const handleForm = async (e) => {
+ 
+  const handleForm = async (e , recaptchaToken) => {
     e.preventDefault();
+
 
     if (!validateForm()) return;
 
     setLoading(true);
 
     try {
-      const formDataToSend = new FormData();
-      Object.entries(formData).forEach(([key, value]) =>
-        formDataToSend.append(key, value)
-      );
 
-      // Prepare headers with CSRF token
+       const submissionData = {
+      ...formData,
+      recaptchaValue: recaptchaToken,
+    };
+
+    const formDataToSend = new FormData();
+    Object.entries(submissionData).forEach(([key, value]) =>
+      formDataToSend.append(key, value)
+    );
+
+      
       const headers = {
         "Content-Type": "multipart/form-data",
       };
 
-      // if (csrfToken) {
-      //   headers["X-XSRF-TOKEN"] = csrfToken;
-      // }
-
-      // const response = await axios.post(
-      //   // "http://localhost:5000/api/register/Drive/",
-      //   "https://drive-zzhh.onrender.com/api/register/Drive",
-      //   formDataToSend,
-      //   {
-      //     withCredentials: true,
-      //     headers,
-      //   }
-      // );
+    
       const response = await apiConnect(
         "POST",
         register.REGISTER_API,
@@ -456,21 +424,11 @@ const RegisterOpen2 = () => {
                   </select>
                 </div>
 
-                {/* <div className="block gap-2 mt-4  cursor-pointer w-full">
-                  <div className="flex justify-center  items-center  z-50">
-                    <ReCAPTCHA
-                      sitekey="6Le3-QArAAAAADn9ym4vDs6qMQN3DpD0yZe183m-"
-                      onChange={handleRecaptchaChange}
-                      className="cursor-pointer "
-                      ref={reset}
-                    />
-                  </div>
-                </div> */}
+              
                 <ReCAPTCHA
-                  sitekey="6LctyZYrAAAAANH0NNM_BRUiyRcyCoUMKhQ-4kis" // your actual invisible site key
+                  sitekey="6LctyZYrAAAAANH0NNM_BRUiyRcyCoUMKhQ-4kis" 
                   size="invisible"
                   badge="bottomright"
-                  onChange={handleRecaptchaChange}
                   ref={reset}
                 />
 
@@ -481,10 +439,7 @@ const RegisterOpen2 = () => {
                         scale: 1,
                         boxShadow: "0px 0px 10px #8a2be2",
                       }}
-                      // onClick={async (e) => {
-                      //   e.preventDefault();
-                      //   handleForm(e);
-                      // }}
+                     
                       onClick={async (e) => {
                         e.preventDefault();
 
@@ -492,13 +447,13 @@ const RegisterOpen2 = () => {
                           return;
                         }
 
-                        const token = await reset.current.executeAsync(); 
-                        reset.current.reset(); 
-                        setFormData((prev) => ({
-                          ...prev,
-                          recaptchaValue: token,
-                        })); // 
-                        await handleForm(e); //
+                        try {
+                          const token = await reset.current.executeAsync();
+                          reset.current.reset();
+                          await handleForm(e, token);
+                        } catch (err) {
+                          toast.error("reCAPTCHA verification failed");
+                        }
                       }}
                       disabled={loading}
                       transition={{ duration: 0.3 }}
