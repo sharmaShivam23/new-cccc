@@ -131,11 +131,13 @@ useEffect(() => {
   async function csrfFetching(){
     try{
       const r = await apiConnect("GET" , csrf.CSRF_API )
-      // console.log(r);
+      console.log(r);
       
       // setCsrfToken(r?.data?.csrfToken);
     }
     catch(err){
+      console.log(err);
+      
       toast.error("Error to fetch CSRF token");
     }
 
@@ -195,7 +197,7 @@ useEffect(() => {
         clearForm();
       }
     } catch (error) {
-      // console.log(error);
+      console.log(error);
       
       // console.error("Registration error:", error);
       // toast.error(error?.response?.data?.message || "Registration failed");
