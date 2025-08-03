@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import ParticlesBackground from "./ParticlesBg";
 import { apiConnect } from "@/APIhandler/apiconnect";
 import { register } from "@/APIhandler/apis";
+import { csrf } from "@/APIhandler/apis";
 
 const RegisterOpen2 = () => {
   const reset = useRef("");
@@ -126,6 +127,24 @@ const RegisterOpen2 = () => {
     return true;
   };
 
+useEffect(() => {
+  async function csrfFetching(){
+    try{
+      const r = await apiConnect("GET" , csrf.CSRF_API )
+      // console.log(r);
+      
+      // setCsrfToken(r?.data?.csrfToken);
+    }
+    catch(err){
+      toast.error("Error to fetch CSRF token");
+    }
+
+  }
+  
+    csrfFetching()
+  },[])
+  
+
  
   const handleForm = async (e , recaptchaToken) => {
     e.preventDefault();
@@ -147,9 +166,17 @@ const RegisterOpen2 = () => {
       formDataToSend.append(key, value)
     );
 
+    function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+
       
       const headers = {
         "Content-Type": "multipart/form-data",
+          "X-CSRF-Token": getCookie("XSRF-TOKEN"),
       };
 
     
@@ -168,6 +195,8 @@ const RegisterOpen2 = () => {
         clearForm();
       }
     } catch (error) {
+      // console.log(error);
+      
       // console.error("Registration error:", error);
       // toast.error(error?.response?.data?.message || "Registration failed");
 
@@ -442,10 +471,6 @@ const RegisterOpen2 = () => {
                      
                       onClick={async (e) => {
                         e.preventDefault();
-
-                        if (!validateForm()) {
-                          return;
-                        }
 
                         try {
                           const token = await reset.current.executeAsync();
