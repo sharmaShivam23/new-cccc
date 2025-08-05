@@ -133,7 +133,7 @@ useEffect(() => {
       const r = await apiConnect("GET" , csrf.CSRF_API )
       console.log(r);
       
-      // setCsrfToken(r?.data?.csrfToken);
+      setCsrfToken(r?.data?.csrfToken);
     }
     catch(err){
       console.log(err);
@@ -168,17 +168,17 @@ useEffect(() => {
       formDataToSend.append(key, value)
     );
 
-    function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
+//     function getCookie(name) {
+//   const value = `; ${document.cookie}`;
+//   const parts = value.split(`; ${name}=`);
+//   if (parts.length === 2) return parts.pop().split(';').shift();
+// }
 
 
       
       const headers = {
         "Content-Type": "multipart/form-data",
-          "X-CSRF-Token": getCookie("XSRF-TOKEN"),
+          "X-CSRF-Token": csrfToken,
       };
 
     
