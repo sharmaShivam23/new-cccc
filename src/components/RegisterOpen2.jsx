@@ -10,6 +10,7 @@ import ParticlesBackground from "./ParticlesBg";
 import { apiConnect } from "@/APIhandler/apiconnect";
 import { register } from "@/APIhandler/apis";
 import { csrf } from "@/APIhandler/apis";
+import { useMediaQuery } from "react-responsive";
 
 const RegisterOpen2 = () => {
   const reset = useRef("");
@@ -17,6 +18,7 @@ const RegisterOpen2 = () => {
   const [success, setSuccess] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
   const [csrfToken, setCsrfToken] = useState("");
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const branchMap = {
     10: "CSE(core)",
@@ -51,7 +53,6 @@ const RegisterOpen2 = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Auto-detect branch from student number
     if (name === "studentNumber" && value.length >= 5) {
       const threeDigitCode = value.slice(2, 5);
       const twoDigitCode = value.slice(2, 4);
@@ -79,7 +80,6 @@ const RegisterOpen2 = () => {
       { field: "phoneNumber", label: "Phone Number" },
       { field: "gender", label: "Gender" },
       { field: "residence", label: "Residence" },
-      // { field: "recaptchaValue", label: "reCAPTCHA" },
     ];
 
     for (const { field, label } of requiredFields) {
@@ -89,13 +89,11 @@ const RegisterOpen2 = () => {
       }
     }
 
-    // Validate name format
     if (!/^[a-zA-Z\s]*$/i.test(formData.name)) {
       toast.error("Invalid Student Name");
       return false;
     }
 
-    // Validate student number format
     if (
       !(
         formData.studentNumber.startsWith("24") &&
@@ -107,7 +105,6 @@ const RegisterOpen2 = () => {
       return false;
     }
 
-    // Validate email format
     if (formData.email && formData.studentNumber) {
       const emailRegex = new RegExp(
         `^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`
@@ -118,7 +115,6 @@ const RegisterOpen2 = () => {
       }
     }
 
-    // Validate phone number format
     if (!/^[6-9]\d{9}$/.test(formData.phoneNumber)) {
       toast.error("Invalid Phone Number");
       return false;
@@ -131,13 +127,12 @@ useEffect(() => {
   async function csrfFetching(){
     try{
       const r = await apiConnect("GET" , csrf.CSRF_API )
-      console.log(r);
+      // console.log(r);
       
       setCsrfToken(r?.data?.csrfToken);
     }
     catch(err){
-      console.log(err);
-      
+      // console.log(err);
       toast.error("Error to fetch CSRF token");
     }
 
@@ -197,7 +192,7 @@ useEffect(() => {
         clearForm();
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       
       // console.error("Registration error:", error);
       // toast.error(error?.response?.data?.message || "Registration failed");
@@ -235,16 +230,6 @@ useEffect(() => {
     }
   };
 
-  const handleVerify = () => {
-    if (!formData.email) {
-      toast.error("Please enter your email id to verify");
-      return;
-    }
-
-    if (!validateForm()) return;
-
-    setShowEmail(true);
-  };
 
   const clearForm = () => {
     setFormData({
@@ -266,14 +251,16 @@ useEffect(() => {
   };
 
   return (
+    
     <div
       className={`signup z-50 ${
         !showEmail ? "bg-black bg-opacity-70 backdrop-blur-sm" : ""
       }  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col`}
     >
       <ParticlesBackground />
-      <Toaster
+       <Toaster
         position="top-center"
+        top = "0px"
         toastOptions={{
           duration: 4000,
           style: {
@@ -287,6 +274,8 @@ useEffect(() => {
             backdropFilter: "blur(12px)",
             WebkitBackdropFilter: "blur(12px)",
             zIndex: 9999,
+            position: "relative",
+           top: isMobile ? "450px" : "0px", 
           },
           success: {
             iconTheme: {
@@ -302,6 +291,7 @@ useEffect(() => {
           },
         }}
       />
+     
 
       {!success ? (
         <>
@@ -464,7 +454,7 @@ useEffect(() => {
                 />
 
                 <div className="pa w-full flex lg:flex-row flex-col gap-4">
-                  <div className="flex justify-center mb-5 sm:mb-0  w-full sm:mt-4  items-center">
+                  <div className="flex justify-center mb-5 sm:mb-0  w-full sm:mt-0  items-center">
                     <motion.div
                       whileHover={{
                         scale: 1,

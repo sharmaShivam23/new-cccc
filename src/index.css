@@ -81,3 +81,11 @@ body{
     @apply bg-background text-foreground;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .react-hot-toast > div {
+    top: 400px !important;
+  }
+}
