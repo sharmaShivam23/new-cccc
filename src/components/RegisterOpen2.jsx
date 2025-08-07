@@ -11,8 +11,9 @@ import { apiConnect } from "@/APIhandler/apiconnect";
 import { register } from "@/APIhandler/apis";
 import { csrf } from "@/APIhandler/apis";
 import { useMediaQuery } from "react-responsive";
-
+ const captcha = import.meta.env.VITE_API_CAPTCHA_KEY
 const RegisterOpen2 = () => {
+  
   const reset = useRef("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -123,13 +124,15 @@ const RegisterOpen2 = () => {
     return true;
   };
 
+ 
+
 useEffect(() => {
   async function csrfFetching(){
     try{
       const r = await apiConnect("GET" , csrf.CSRF_API )
       // console.log(r);
-      
       setCsrfToken(r?.data?.csrfToken);
+       
     }
     catch(err){
       // console.log(err);
@@ -163,16 +166,13 @@ useEffect(() => {
       formDataToSend.append(key, value)
     );
 
-//     function getCookie(name) {
-//   const value = `; ${document.cookie}`;
-//   const parts = value.split(`; ${name}=`);
-//   if (parts.length === 2) return parts.pop().split(';').shift();
-// }
+    console.log("s",submissionData);
+    
 
 
       
       const headers = {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
           "X-CSRF-Token": csrfToken,
       };
 
@@ -216,7 +216,7 @@ useEffect(() => {
             errorMessage = "Too many requests. Try again after 15 minutes";
             break;
           case 500:
-            errorMessage = "Server error. Please try again later";
+            errorMessage =  "Server error. Please try again later";
             break;
           default:
             errorMessage = data?.message || "Request failed";
@@ -447,7 +447,7 @@ useEffect(() => {
 
               
                 <ReCAPTCHA
-                  sitekey="6LctyZYrAAAAANH0NNM_BRUiyRcyCoUMKhQ-4kis" 
+                  sitekey={captcha}
                   size="invisible"
                   badge="bottomright"
                   ref={reset}
