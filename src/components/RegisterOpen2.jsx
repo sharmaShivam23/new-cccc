@@ -22,6 +22,7 @@ const RegisterOpen2 = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [errors, setErrors] = useState({}); //error
   const nameRef = useRef(null);
+  const [errMsg , setErrMsg] = useState("")
 const studentNumberRef = useRef(null);
 const emailRef = useRef(null);
 const genderRef = useRef(null);
@@ -168,7 +169,7 @@ if (name === "name") {
   if (!formData.email) newErrors.email = "Email is required";
   else if (formData.email && formData.studentNumber) {
     const emailRegex = new RegExp(
-      `^[a-zA-Z]{2,20}${formData.studentNumber}@akgec\\.ac\\.in$`
+      `^[a-zA-Z]{3,20}${formData.studentNumber}@akgec\\.ac\\.in$`
     );
     if (!emailRegex.test(formData.email))
       newErrors.email = "Invalid student email";
@@ -214,7 +215,7 @@ if (name === "name") {
         setCsrfToken(r?.data?.csrfToken);
       } catch (err) {
         // console.log(err);
-        toast.error("Failed to fetch CSRF token");
+        toast.error("Security token missing, refresh and try again");
       }
     }
 
@@ -226,6 +227,15 @@ if (name === "name") {
 
     if (!validateForm()) return;
 
+    if (!csrfToken) {
+    toast.error("Security token missing, refresh and try again");
+    return;
+  }
+
+  if (!reset.current) {
+    toast.error("reCAPTCHA not loaded");
+    return;
+  }
     setLoading(true);
 
     try {
@@ -233,6 +243,9 @@ if (name === "name") {
         ...formData,
         recaptchaValue: recaptchaToken,
       };
+
+      console.log(submissionData);
+      
 
       const formDataToSend = new FormData();
       Object.entries(submissionData).forEach(([key, value]) =>
@@ -294,6 +307,7 @@ if (name === "name") {
         errorMessage = "Network error. Please check your connection";
       }
       toast.error(errorMessage);
+      setErrMsg(errorMessage)
     } finally {
       setLoading(false);
     }
@@ -325,39 +339,52 @@ if (name === "name") {
       }  overflow-hidden pb-10  w-full sm:max-w-[92vw] m-auto  bg-black gap-1 sm:px-5 p-1.5 flex text-white justify-center items-center sm:py-7  sm:flex-row flex-col`}
     >
       <ParticlesBackground />
-      <Toaster
-        position="top-center"
-        bottom="30px"
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: "rgba(255, 255, 255, 0.25)",
-            color: "white",
-            padding: "16px 24px",
-            fontSize: "16px",
-            fontWeight: "bold",
-            borderRadius: "12px",
-            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            zIndex: 9999,
-            // position: "relative",
-            // top: isMobile ? "450px" : "0px",
-          },
-          success: {
-            iconTheme: {
-              primary: "#10b981",
-              secondary: "#ffffff",
-            },
-          },
-          error: {
-            iconTheme: {
-              primary: "#ef4444",
-              secondary: "#ffffff",
-            },
-          },
-        }}
-      />
+     <Toaster
+  position="top-center"
+  toastOptions={{
+    duration: 4000,
+    style: {
+      background: "rgba(30, 30, 30, 0.85)",
+      color: "#f9fafb", 
+      padding: "14px 22px",
+      fontSize: "15px",
+      fontWeight: 500,
+      borderRadius: "14px",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.2)",
+      backdropFilter: "blur(14px) saturate(180%)",
+      WebkitBackdropFilter: "blur(14px) saturate(180%)",
+      border: "1px solid rgba(255, 255, 255, 0.15)",
+      letterSpacing: "0.3px",
+    },
+    success: {
+      style: {
+        background: "rgba(16, 185, 129, 0.85)",
+        color: "#fff",
+      },
+      iconTheme: {
+        primary: "#ffffff",
+        secondary: "#10b981",
+      },
+    },
+    error: {
+      style: {
+        background: "rgba(239, 68, 68, 0.85)", 
+        color: "#fff",
+      },
+      iconTheme: {
+        primary: "#ffffff",
+        secondary: "#ef4444",
+      },
+    },
+    loading: {
+      style: {
+        background: "rgba(59, 130, 246, 0.85)", 
+        color: "#fff",
+      },
+    },
+  }}
+/>
+
 
       {!success ? (
         <>
@@ -569,6 +596,7 @@ if (name === "name") {
                   )}
                 </div>
 
+
                 <ReCAPTCHA
                   sitekey={captcha}
                   size="invisible"
@@ -590,6 +618,7 @@ if (name === "name") {
                           const token = await reset.current.executeAsync();
                           reset.current.reset();
                           await handleForm(e, token);
+
                         } catch (err) {
                           toast.error("reCAPTCHA verification failed");
                         }
@@ -604,8 +633,11 @@ if (name === "name") {
                     >
                       {loading ? "Registering..." : "Register"}
                     </motion.div>
+                    
                   </div>
+                  
                 </div>
+                 {errMsg && <div className="text-sm text-center text-red-500">{errMsg}</div>}
               </div>
             </form>
           </div>
