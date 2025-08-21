@@ -122,6 +122,8 @@ if (name === "name") {
 
   if (name === "gender" && !value) fieldError = "Gender is required";
   if (name === "branch" && !value) fieldError = "Branch is required";
+ 
+
   if (name === "residence" && !value) fieldError = "Residence is required";
 
   setErrors((prev) => ({ ...prev, [name]: fieldError }));
@@ -183,6 +185,8 @@ if (name === "name") {
   else if (!/^[6-9]\d{9}$/.test(formData.phoneNumber))
     newErrors.phoneNumber = "Invalid phone number";
 
+ 
+
   if (!formData.residence) newErrors.residence = "Residence is required";
 
   setErrors(newErrors);
@@ -207,30 +211,30 @@ if (name === "name") {
 };
 
 
-  useEffect(() => {
-    async function csrfFetching() {
-      try {
-        const r = await apiConnect("GET", csrf.CSRF_API);
-        // console.log(r);
-        setCsrfToken(r?.data?.csrfToken);
-      } catch (err) {
-        // console.log(err);
-        toast.error("Security token missing, refresh and try again");
-      }
-    }
+  // useEffect(() => {
+  //   async function csrfFetching() {
+  //     try {
+  //       const r = await apiConnect("GET", csrf.CSRF_API);
+  //       console.log(r);
+  //       setCsrfToken(r?.data?.csrfToken);
+  //     } catch (err) {
+  //       // console.log(err);
+  //       toast.error("Security token missing, refresh and try again");
+  //     }
+  //   }
 
-    csrfFetching();
-  }, []);
+  //   csrfFetching();
+  // }, []);
 
   const handleForm = async (e, recaptchaToken) => {
     e.preventDefault();
 
     if (!validateForm()) return;
 
-    if (!csrfToken) {
-    toast.error("Security token missing, refresh and try again");
-    return;
-  }
+  //   if (!csrfToken) {
+  //   toast.error("Security token missing, refresh and try again");
+  //   return;
+  // }
 
   if (!reset.current) {
     toast.error("reCAPTCHA not loaded");
@@ -244,7 +248,7 @@ if (name === "name") {
         recaptchaValue: recaptchaToken,
       };
 
-      console.log(submissionData);
+      // console.log(submissionData);
       
 
       const formDataToSend = new FormData();
@@ -256,7 +260,7 @@ if (name === "name") {
 
       const headers = {
         "Content-Type": "application/json",
-        "X-CSRF-Token": csrfToken,
+        // "X-CSRF-Token": csrfToken,
       };
 
       const response = await apiConnect(
@@ -295,7 +299,7 @@ if (name === "name") {
             errorMessage = "Access forbidden";
             break;
           case 429:
-            errorMessage = "Too many requests. Try again after 15 minutes";
+            errorMessage =  data?.message || "Too many requests. Try again after 15 minutes";
             break;
           case 500:
             errorMessage = "Server error. Please try again later";
@@ -575,6 +579,11 @@ if (name === "name") {
                     className="h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 pr-14 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                   />
                 </div>
+                 {errors.unstopId && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.unstopId}
+                    </p>
+                  )}
 
                 {/* residence */}
                 <div className="residence">
