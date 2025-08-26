@@ -10,12 +10,12 @@ const Success = () => {
   const navigate = useNavigate();
 
   const handleHome = () => {
-    navigate("/"); // adjust your home route accordingly
+    navigate("/");
   };
 
   return (
     <div className="relative min-h-screen w-full bg-black flex items-center justify-center overflow-hidden px-4 py-10">
-      {/* Confetti animation */}
+  
      
     <div className="absolute top-0 inset-0 flex justify-center  pointer-events-none z-[100]">
   <Confetti spread={1000} />
@@ -24,7 +24,7 @@ const Success = () => {
 </div>
 
 
-      {/* Main Card */}
+
 
       
       <motion.div
@@ -33,7 +33,7 @@ const Success = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative z-20 w-full max-w-[700px] bg-[#111111] text-white rounded-3xl shadow-[0_0_20px_rgba(255,255,255,0.05)] border border-[#2A2A2A] px-10 py-10 flex flex-col items-center text-center space-y-4"
       >
-        {/* User Name */}
+        
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const Success = () => {
           You are
         </motion.p>
 
-        {/* Check Icon */}
+    
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -63,7 +63,7 @@ const Success = () => {
         </motion.div>
 
  <ParticlesBackground/>
-        {/* Success Message */}
+    
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,26 +82,26 @@ const Success = () => {
           For
         </motion.p>
 
-        {/* Event Name with glow */}
+    
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
-          className="text-4xl sm:text-5xl font-extrabold text-violet-500 tracking-wider glow-text"
+          className="text-4xl sm:text-5xl font-extrabold text-violet-500 tracking-wider"
         >
-          Nimbus 2.0
+          SPOCC'25
         </motion.div>
 
-        {/* Event Dates */}
+      
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1 }}
           className="text-lg sm:text-xl text-white mt-4 font-semibold"
         >
-          Save the Dates:
+          Save the Date :
           <br />
-          <span className="text-violet-300 font-bold">13th - 14th May 2025</span>
+          <span className="text-violet-300 font-bold">2nd september 2025</span>
         </motion.p>
 
         {/* Tech message */}
