@@ -63,7 +63,7 @@ const Buttons = ({ onSelectYear, activeYear }) => {
             activeYear === "Alumni"
               ? "scale-110 text-amber-500 font-extrabold"
               : ""
-          }  mr-0 sm:mr-16 transition-all ease-in-out duration-300`}
+          }  mr-0 mb-5 sm:mb-0 sm:mr-16  transition-all ease-in-out duration-300`}
           onClick={() => onSelectYear("Alumni")}
         >
           Alumni
