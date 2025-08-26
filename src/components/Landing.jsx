@@ -67,11 +67,11 @@ const Landing = () => {
                 onClick={register}
                 shimmerSize = "4px"
                   background = "rgba(36, 36, 36, 1)"
-                className="cursor-pointer   hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
+                className="cursor-pointer  shadow-md shake shadow-violet-700  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
               >
                 {/* <div className="p h-[15px] w-[15px] mr-4 animate-pulse rounded-full bg-violet-700"></div>  */}
                 <motion.div
-                  className="h-[15px] w-[15px] mr-4 rounded-full bg-violet-700 border-4 border-violet-400"
+                  className="h-[15px]  w-[15px] mr-4 rounded-full bg-violet-700 border-4 border-violet-400"
                   initial={{ scale: 1, borderColor: "#7c3aed" }}
                   animate={{
                     scale: [1, 1.2, 1],
@@ -88,19 +88,14 @@ const Landing = () => {
               </ShimmerButton>
             </div>
             <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
-              {/* <ShimmerButton
-                onClick={register}
-                className="cursor-pointer  hover:scale-125 font-rubik transition-all ease-in-out duration-1000 delay-0"
-              >
-                Register
-              </ShimmerButton> */}
+             
                <ShimmerButton
                 shimmerSize = "4px"
                   background = "rgba(36, 36, 36, 1)"
                 onClick={register}
-                className="cursor-pointer   hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
+                className="cursor-pointer shake shadow-sm shadow-violet-700  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
               >
-                {/* <div className="p h-[15px] w-[15px] mr-4 animate-pulse rounded-full bg-violet-700"></div>  */}
+              
                 <motion.div
                   className="h-[10px] w-[10px] mr-2 rounded-full bg-violet-700 border-4 border-white"
                   initial={{ scale: 1, borderColor: "#7c3aed" }}

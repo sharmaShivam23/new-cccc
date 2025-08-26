@@ -403,7 +403,7 @@ if (name === "unstopId") {
           <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
             <img
               src="/poster.png"
-              className="object-cover sm:mb-10   h-[20%] w-full"
+              className="object-cover sm:mb-10"
               alt=""
             />
           </div>

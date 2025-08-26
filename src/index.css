@@ -89,3 +89,27 @@ body{
     top: 400px !important;
   }
 }
+/* Remove number input arrows (cross-browser) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+
+@keyframes shake {
+  0%, 10%, 20%, 30%, 40% { transform: translateX(0); }
+  5% { transform: translateX(-5px); }
+  15% { transform: translateX(5px); }
+  25% { transform: translateX(-5px); }
+  35% { transform: translateX(5px); }
+  50%, 100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 2s ease-in-out infinite; 
+}
