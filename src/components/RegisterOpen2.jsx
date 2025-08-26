@@ -18,7 +18,7 @@ const RegisterOpen2 = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [showEmail, setShowEmail] = useState(false);
-  const [csrfToken, setCsrfToken] = useState("");
+  // const [csrfToken, setCsrfToken] = useState("");
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const [errors, setErrors] = useState({}); //error
   const nameRef = useRef(null);
@@ -122,13 +122,21 @@ if (name === "name") {
 
   if (name === "gender" && !value) fieldError = "Gender is required";
   if (name === "branch" && !value) fieldError = "Branch is required";
- 
+   
+if (name === "unstopId") {
+  if (value.length > 20) {
+    fieldError = "Unstop ID is too long";
+  } else if (!/^[a-zA-Z0-9._]{3,30}$/.test(value)) {
+    fieldError = "Unstop ID contains only numbers, letters, dot and underscore";
+  }
+}
+
 
   if (name === "residence" && !value) fieldError = "Residence is required";
 
   setErrors((prev) => ({ ...prev, [name]: fieldError }));
 
-  // branch auto-detect logic (keep yours here)
+  // branch auto-detect logic
   if (name === "studentNumber" && value.length >= 5) {
     const threeDigitCode = value.slice(2, 5);
     const twoDigitCode = value.slice(2, 4);
@@ -142,7 +150,7 @@ if (name === "name") {
 
     if (detectedBranch) {
       setFormData((prev) => ({ ...prev, branch: detectedBranch }));
-      setErrors((prev) => ({ ...prev, branch: "" })); // clear branch error if auto-filled
+      setErrors((prev) => ({ ...prev, branch: "" })); 
     }
   }
 };
@@ -394,8 +402,8 @@ if (name === "name") {
         <>
           <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
             <img
-              src="/post4.png"
-              className="object-cover sm:mb-10   h-full w-full"
+              src="/poster.png"
+              className="object-cover sm:mb-10   h-[20%] w-full"
               alt=""
             />
           </div>
@@ -408,7 +416,7 @@ if (name === "name") {
                     Registration Form
                   </p>
                   <p className="head2 text-lg font-bold text-[#AFB2BF] mt-0 mb-2 flex justify-center items-center">
-                    NIMBUS 2.0
+                    SPOCC'25
                   </p>
                 </div>
 
@@ -575,7 +583,7 @@ if (name === "name") {
                     name="unstopId"
                     value={formData.unstopId}
                     onChange={handleInputChange}
-                    placeholder="Enter Unstop Id or (Na)"
+                    placeholder="Enter Unstop Id or (NaN)"
                     className="h-[54px] w-full bg-[#161D29] hover:bg-[#1f2738] text-[#AFB2BF] font-[600] placeholder:font-[600] pl-3 pr-14 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
                   />
                 </div>
