@@ -1,186 +1,164 @@
-import adityaKumar from "../3yearImg/adityaKumar.jpeg";
-import harshSingh from "../3yearImg/harshSingh.jpeg";
-import harshSingh2 from "../3yearImg/harshSingh2.jpeg";
-import kratikaGupta from "../3yearImg/kratikaGupta.jpg";
-import akhandSingh from "../3yearImg/akhandSingh.jpg";
-import akhandSingh2 from "../3yearImg/akhandSingh2.jpg";
-import akshatSingh from "../3yearImg/akshatSingh.jpg";
-import arpitaAsthana from "../3yearImg/arpitaAsthana.jpg";
-import sachendraGangwar from "../3yearImg/sachendraGangwar.jpg";
-import sachendraGangwar2 from "../3yearImg/sachendraGangwar2.jpg";
-import sahil from "../3yearImg/sahil.jpg";
-import sahil2 from "../3yearImg/sahil2.jpg";
-import yashMishra from "../3yearImg/yashMishra.jpg";
-import prakharSrivastava from "../3yearImg/prakharSrivastava.jpg";
-import manoj from "../3yearImg/manoj.jpg";
-import kritika from "../3yearImg/kritika.jpg";
-import shreeyaAggarwal from "../3yearImg/shreeyaAggarwal.jpg";
-import shreyaMohan from "../3yearImg/shreyaMohan.jpg";
-import Diya from "../3yearImg/Diya.jpg";
-export   const obj3 = [
-       {
-        
-         profile: adityaKumar,
-         name: "Aditya Kumar",
-         domain: "Web Developer",
-         github: "https://github.com/aditya-Kumar421",
-         instagram: "",
-         linkedin: "https://www.linkedin.com/in/aditya-kumar421",
-         year: "3rdyear",
-         "__v": 0
-       },
-       {
-        profile: akhandSingh2,
-        name: "Akhand Pratap Singh",
-        domain: "Web Developer",
-        github: "https://github.com/akhand2210093",
-        instagram: "https://www.instagram.com/akhand.__?igsh=N2dkaDZicTc2azZz",
-        linkedin: "https://www.linkedin.com/in/akhand01",
-        year: "3rdyear",
-        "__v": 0
-      },
-       {
-        
-        profile: akshatSingh,
-        name: "Akshat Singh",
-        domain: "App Developer",
-        github: "https://github.com/7singhakshat",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/akshat-singh-77069b293",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: arpitaAsthana,
-        name: "Arpita Asthana",
-        domain: "Web Developer",
-        github: "https://github.com/arpitaasth0",
-        instagram: "https://www.instagram.com/_arpita_asthana_?igsh=cmRmaDQ5M3Y0b2hh",
-        linkedin: "https://www.linkedin.com/in/arpita-asthana-031077333",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: Diya,
-        name: "Diya Sirohi",
-        domain: "Cloud developer",
-        github: "https://github.com/DiyaSirohi44",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/diya-sirohi-206a01272",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: harshSingh2,
-        name: "Harsh Singh",
-        domain: "App Developer",
-        github: "https://github.com/harshans22",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/harsh-singh-639316291",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: kratikaGupta,
-        name: "Kratika Gupta",
-        domain: "Web Developer",
-        github: "https://github.com/kratika182004",
-        instagram: "https://www.instagram.com/kratika1081?igsh=a2l5bGJzNGY1YThj",
-        linkedin: "https://www.linkedin.com/in/kratika-gupta-043829293",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: kritika,
-        name: "Kritika Agrawal",
-        domain: "Machine Learning",
-        github: "https://github.com/kritikaagr0409/",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/kritikaagrawal910",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: manoj,
-        name: "Manoj Samanta",
-        domain: " UI/UX Designer",
-        github: "https://github.com/TECHNXX",
-        instagram: "https://www.instagram.com/erudi.tex?igsh=d2N2NXU4dmNiODFy",
-        linkedin: "https://www.linkedin.com/in/manoj-samanta",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-       
-        profile: prakharSrivastava,
-        name: "Prakhar Srivastava",
-        domain: "App Developer",
-        github: "https://github.com/prakharAKGa",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/prakharsrivastava1007",
-        year: "3rdyear",
-        "__v": 0
-      },
-      
-      {
-       
-        profile: sachendraGangwar2,
-        name: "Sachendra Gangwar",
-        domain: "Web Developer",
-        github: "https://github.com/Sachendra79",
-        instagram: "https://www.instagram.com/sachendra_79?igsh=cG5oaWlnZTBjNzRl",
-        linkedin: "https://www.linkedin.com/in/sachendra-gangwar-49904b296",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: sahil2,
-        name: "Sahil Tomar",
-        domain: "Machine Learning",
-        github: "https://github.com/dev-S-t",
-        instagram: "https://www.instagram.com/derek_k.l.i?igsh=a3IzdnV6aTk2aThl",
-        linkedin: "https://www.linkedin.com/in/dev-s-t",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: shreeyaAggarwal,
-        name: "Shreeya Agarwal",
-        domain: "Machine Learning",
-        github: "https://github.com/ShreeyaA11",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/shreeya-agarwal-50697a268",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-        
-        profile: shreyaMohan,
-        name: "Shreya Mohan",
-        domain: "Cloud developer",
-        github: "https://github.com/Shreyamohan101",
-        instagram: "",
-        linkedin: "https://www.linkedin.com/in/shreya-mohan-b6a369287",
-        year: "3rdyear",
-        "__v": 0
-      },
-      {
-       
-        profile: yashMishra,
-        name: "Yash Mishra",
-        domain: "Web Developer",
-        github: "https://github.com/yash-mishra150",
-        instagram: "https://www.instagram.com/yash_mishra150?igsh=YWx4bHBjb2p2cDM=",
-        linkedin: "https://www.linkedin.com/in/yash-mishra-87b29725b",
-        year: "3rdyear",
-        "__v": 0
-      },
-     ]
+import aditya from "../2yearImg/Aditya_id.jpg"
+import Akshita from "../2yearImg/Akshita.jpg"
+import ayush from "../2yearImg/ayush.jpg"
+import harshit from "../2yearImg/harshit.jpg"
+import jhanvi from "../2yearImg/jhanvi.jpg"
+import saurabh from "../2yearImg/saurabh.jpg"
+import shivam from "../2yearImg/shivamsharma.jpg"
+// import shruti from "../2yearImg/shruti.jpg"
+// import tushar from "../2yearImg/tushar.png"
+import tushar from "../2yearImg/tushar2.png"
+import utkarsh from "../2yearImg/Utkarsh.jpg"
+import samit from "../2yearImg/samit.jpg"
+import alok from "../2yearImg/alok.png"
+import akshat from "../2yearImg/akshat.jpg"
+import shruti from "../2yearImg/shruti.jpg"
+
+
+export  const obj3 = [
+  {
+   
+    profile: akshat,
+    name: "Akshat",
+    domain: "Machine Learning",
+    github: "https://github.com/B4K2",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/akshat-balyan-886947293/",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: aditya,
+    name: "Aditya Srivastava",
+    domain: "Web Developer",
+    github: "https://github.com/adityasriv2317",
+    instagram: "https://www.instagram.com/shikhar_2317?igsh=MTRkcDFzaDV0ZHduMg==",
+    linkedin: "https://www.linkedin.com/in/aditya2317/",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: Akshita,
+    name: "Akshita Saini ",
+    domain: "Web Developer",
+    github: "https://github.com/CodeWithAkshi",
+    instagram: "https://www.instagram.com/akshiii_138?igsh=MWJsMjM2YWpwcWYxeQ==",
+    linkedin: "https://www.linkedin.com/in/akshita2k4/",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: alok,
+    name: "Alok Kumar Yadav ",
+    domain: "App Developer",
+    github: "https://github.com/alokyadav686",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/alok-kumar-yadav-329a61302/",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: ayush,
+    name: "Ayush Singh",
+    domain: "Web Developer",
+    github: "https://github.com/AyushInKC",
+    instagram: "https://www.instagram.com/thakur__ayush_27?igsh=czZieWNzMXFxMjd5",
+    linkedin: "https://www.linkedin.com/in/ayush-singh-b504b226b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: harshit,
+    name: "Harshit Gautam ",
+    domain: "App Developer",
+    github: "https://github.com/harshit2313109",
+    instagram: "",
+    linkedin: "http://www.linkedin.com/in/harshit-gautam-1b609627a",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: jhanvi,
+    name: "Jhanvi Awasthi ",
+    domain: "Web Developer",
+    github: "https://github.com/Jhanviawasthi03",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/jhanvi-awasthi-357008342",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: samit,
+    name: "Samit Srivastava",
+    domain: "Web Developer",
+    github: "https://github.com/samit18   ",
+    instagram: "https://www.instagram.com/samitsrivastava1?utm_source=qr&igsh=M2lidnRhb3JrNWls",
+    linkedin: "https://www.linkedin.com/in/samit-srivastava-a4a219295",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: saurabh,
+    name: "Saurabh Srivastav ",
+    domain: "Web Developer",
+    github: "https://github.com/Saurabh12325",
+    instagram: "https://www.instagram.com/its_saurabh_srivastav55?igsh=MWpqOWFqbGc5aHoyZQ==",
+    linkedin: "https://www.linkedin.com/in/saurabh-srivastav-ab7712285/",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: shivam,
+    name: "Shivam Sharma",
+    domain: "Web Developer",
+    github: "https://github.com/Student-shivamsharma",
+    instagram: "https://www.instagram.com/shivamsharma6842?igsh=dGhpaTIwZ3BvMjZq",
+    linkedin: "https://www.linkedin.com/in/shivam-sharma-450178302",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: shruti,
+    name: "Shruti Maurya ",
+    domain: "Web Developer",
+    github: "https://github.com/shrutis44",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/shruti-maurya-90a9642a1",
+    year: "2ndyear",
+    "__v": 0
+  },
+  {
+   
+    profile: tushar,
+    name: "Tushar Sharma",
+    domain: "UI/UX Designer",
+    github: "https://github.com/tushar4758",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/tushar4758",
+    year: "2ndyear",
+    "__v": 0
+  },
+ 
+  {
+   
+    profile: utkarsh,
+    name: "Utkarsh Tiwari ",
+    domain: "UI/UX Designer",
+    github: "https://github.com/cosmickdd",
+    instagram: "",
+    linkedin: "https://www.linkedin.com/in/cosmickdd/",
+    year: "2ndyear",
+    "__v": 0
+  },
+ 
+ ]
