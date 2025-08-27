@@ -273,7 +273,7 @@ if (name === "unstopId") {
 
       const response = await apiConnect(
         "POST",
-        register.REGISTER_API,
+        "https://drive-zzhh.onrender.com/api/register/Drive",
         formDataToSend,
         headers
       );
@@ -615,7 +615,7 @@ if (name === "unstopId") {
 
 
                 <ReCAPTCHA
-                  sitekey={captcha}
+                  sitekey="6LctyZYrAAAAANH0NNM_BRUiyRcyCoUMKhQ-4kis"
                   size="invisible"
                   badge="bottomright"
                   ref={reset}
