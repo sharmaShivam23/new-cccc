@@ -1,5 +1,5 @@
 
-
+import ParticlesBackground from "./ParticlesBg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Particles from "./ui/particles";
@@ -7,7 +7,7 @@ import Particles from "./ui/particles";
 const RegisterClose = () => {
   return (
     <>
-  
+    <ParticlesBackground/>
     <div className="max-w-[90vw] m-auto h-screen flex flex-col justify-center items-center text-center bg-black relative overflow-hidden">
      
       <div className="absolute inset-0 pointer-events-none z-[-1]">
