@@ -61,7 +61,7 @@ const Landing = () => {
                our society empowers tech enthusiasts and professionals to explore coding   and 
               <br className="sm:mt-3 mt-0"/>innovative technologies,  shaping the future with passion and expertise
             </motion.p> */}
-
+{/* 
             <div className="text-white z-40 text-xl hidden  sm:flex md:text-xl mt-4 font-bold right-10 absolute top-0  sm:top-5 sm:right-36">
               <ShimmerButton
                 onClick={register}
@@ -69,7 +69,7 @@ const Landing = () => {
                   background = "rgba(36, 36, 36, 1)"
                 className="cursor-pointer  shadow-md shake shadow-violet-700  hover:scale-125 font-poppins transition-all ease-in-out duration-1000 delay-0"
               >
-                {/* <div className="p h-[15px] w-[15px] mr-4 animate-pulse rounded-full bg-violet-700"></div>  */}
+               
                 <motion.div
                   className="h-[15px]  w-[15px] mr-4 rounded-full bg-violet-700 border-4 border-violet-400"
                   initial={{ scale: 1, borderColor: "#7c3aed" }}
@@ -86,8 +86,8 @@ const Landing = () => {
                 />
                 Register
               </ShimmerButton>
-            </div>
-            <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
+            </div> */}
+            {/* <div className="text-white z-40 sm:hidden text-xl md:text-xl mt-4 font-bold">
              
                <ShimmerButton
                 shimmerSize = "4px"
@@ -112,7 +112,7 @@ const Landing = () => {
                 />
                 Register
               </ShimmerButton>
-            </div>
+            </div> */}
           </div>
 
           <div className="absolute inset-0 flex sm:flex-col gap-10 justify-center items-center sm:max-w-[90vw] w-full  text-white text-center px-4">
