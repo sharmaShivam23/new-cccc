@@ -400,17 +400,56 @@ if (name === "unstopId") {
 
       {!success ? (
         <>
-          <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
+          {/* <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24  lg:flex w-full  mt-3 ">
             <img
               src="/poster.png"
               className="object-cover sm:mb-10"
               alt=""
             />
-          </div>
+          </div> */}
+          
+          <div className="left sm:ml-14 lg:w-5/12 flex md:hidden sm:mb-24 lg:flex w-full mt-3 justify-center relative">
+  {/* Ripple Wrapper */}
+  <div className="relative">
+    {/* Ripple background effect */}
+    <span className="absolute inset-0 rounded-3xl bg-violet-500/20 animate-rippleWave blur-xl"></span>
+
+    {/* Poster Image */}
+    <img
+      src="/poster.png"
+      className="object-cover sm:mb-10 w-full relative  z-10 shadow-[0_0_30px_rgba(0,0,0,0.2)]"
+      alt="Poster"
+    />
+  </div>
+
+  {/* Animation styles */}
+  <style>
+    {`
+      @keyframes rippleWave {
+        0% {
+          transform: scale(0.95);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.05);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.95);
+          opacity: 0.6;
+        }
+      }
+      .animate-rippleWave {
+        animation: rippleWave 3s ease-in-out infinite;
+      }
+    `}
+  </style>
+</div>
+
 
           <div className="right  sm:w-[800px]   w-full overflow-x-hidden  sm:px-14">
             <form onSubmit={handleForm} className="sm:mt-2   w-full space-y-5">
-              <div className="fields shad w-full flex bg-[#000814]   border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
+              <div className="fields shad w-full flex bg-transparent   border-[rgba(255,255,255,0.6)] border-[0.4px] rounded-2xl   sm:pl-14 sm:pr-14 sm:pb-14 sm:pt-4  max-[350px]:p-4 p-3.5 flex-col gap-3">
                 <div className="flex justify-between mt-3 sm:mt-5 items-center flex-col">
                   <p className="text-3xl font-poppins text-white text-center font-bold  flex justify-center items-center">
                     Registration Form
@@ -467,36 +506,6 @@ if (name === "unstopId") {
 
                 {/* branch , section */}
                 <div className="two flex-col sm:flex-row flex gap-4 w-full">
-                  {/* <div className="section w-full sm:w-1/2">
-                    <select
-                      name="section"
-                      value={formData.section}
-                      onChange={handleInputChange}
-                      className="h-[54px] w-full bg-[#161D29] text-[#AFB2BF] hover:bg-[#1f2738] font-[600] pl-3 rounded-xl shadow-[0px_1px_2px_rgba(255,255,255,0.6)]"
-                    >
-                      <option value="">Sections</option>
-                      <option value="1">S1</option>
-                      <option value="2">S2</option>
-                      <option value="3">S3</option>
-                      <option value="4">S4</option>
-                      <option value="5">S5</option>
-                      <option value="6">S6</option>
-                      <option value="7">S7</option>
-                      <option value="8">S8</option>
-                      <option value="9">S9</option>
-                      <option value="10">S10</option>
-                      <option value="11">S11</option>
-                      <option value="12">S12</option>
-                      <option value="13">S13</option>
-                      <option value="14">S14</option>
-                      <option value="15">S15</option>
-                      <option value="16">S16</option>
-                      <option value="17">S17</option>
-                      <option value="18">S18</option>
-                      <option value="19">S19</option>
-                      <option value="20">S20</option>
-                    </select>
-                  </div> */}
 
                                   {/* gender */}
                 <div className="gender w-full sm:w-1/2">
